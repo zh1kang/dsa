@@ -1,0 +1,55 @@
+{
+  "leetcode_id": "486",
+  "slug": "predict-the-winner",
+  "title": "Predict the Winner",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Math",
+    "Dynamic Programming",
+    "Recursion",
+    "Minimax",
+    "Game Theory",
+    "Zero-Sum Game"
+  ],
+  "leetcode_url": "https://leetcode.com/problems/predict-the-winner/",
+  "first_solved_at": "2026-08-04T12:08:13+00:00",
+  "last_solved_at": "2026-08-04T12:08:13+00:00",
+  "attempts": [
+    {
+      "submission_id": "2093940219",
+      "submitted_at": "2026-08-04T12:08:13+00:00",
+      "status": "Accepted",
+      "language": "python3",
+      "code_path": "solutions/486-predict-the-winner/2093940219.py",
+      "runtime": "1 ms",
+      "memory": "19.8 MB",
+      "leetcode_notes": null,
+      "raw_comments": [
+        "Choice 1: take the leftmost number",
+        "Choice 2: take the rightmost number",
+        "maximize current player's score ",
+        "this means that the current player (e.g. player 1) has the higher score b/c the score diff is positive"
+      ],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    }
+  ],
+  "review": {
+    "state": "new",
+    "stability": null,
+    "difficulty": null,
+    "retrievability": null,
+    "last_review": null,
+    "next_review": "2026-08-04T12:08:13+00:00",
+    "reps": 0,
+    "lapses": 0
+  }
+}

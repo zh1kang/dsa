@@ -1,0 +1,66 @@
+{
+  "leetcode_id": "55",
+  "slug": "jump-game",
+  "title": "Jump Game",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Dynamic Programming",
+    "Greedy"
+  ],
+  "leetcode_url": "https://leetcode.com/problems/jump-game/",
+  "first_solved_at": "2025-10-19T05:01:02+00:00",
+  "last_solved_at": "2025-10-19T05:10:47+00:00",
+  "attempts": [
+    {
+      "submission_id": "1805613521",
+      "submitted_at": "2025-10-19T05:01:02+00:00",
+      "status": "Accepted",
+      "language": "python3",
+      "code_path": "solutions/55-jump-game/1805613521.py",
+      "runtime": "9 ms",
+      "memory": "18.6 MB",
+      "leetcode_notes": null,
+      "raw_comments": [],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    },
+    {
+      "submission_id": "1805619508",
+      "submitted_at": "2025-10-19T05:10:47+00:00",
+      "status": "Accepted",
+      "language": "python3",
+      "code_path": "solutions/55-jump-game/1805619508.py",
+      "runtime": "11 ms",
+      "memory": "18.7 MB",
+      "leetcode_notes": null,
+      "raw_comments": [],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    }
+  ],
+  "review": {
+    "state": "new",
+    "stability": null,
+    "difficulty": null,
+    "retrievability": null,
+    "last_review": null,
+    "next_review": "2025-10-19T05:10:47+00:00",
+    "reps": 0,
+    "lapses": 0
+  }
+}

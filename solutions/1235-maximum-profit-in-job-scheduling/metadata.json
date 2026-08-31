@@ -1,0 +1,55 @@
+{
+  "leetcode_id": "1235",
+  "slug": "maximum-profit-in-job-scheduling",
+  "title": "Maximum Profit in Job Scheduling",
+  "difficulty": "Hard",
+  "tags": [
+    "Array",
+    "Binary Search",
+    "Dynamic Programming",
+    "Sorting"
+  ],
+  "leetcode_url": "https://leetcode.com/problems/maximum-profit-in-job-scheduling/",
+  "first_solved_at": "2026-01-07T02:48:09+00:00",
+  "last_solved_at": "2026-01-07T02:48:09+00:00",
+  "attempts": [
+    {
+      "submission_id": "1877077758",
+      "submitted_at": "2026-01-07T02:48:09+00:00",
+      "status": "Accepted",
+      "language": "python3",
+      "code_path": "solutions/1235-maximum-profit-in-job-scheduling/1877077758.py",
+      "runtime": "84 ms",
+      "memory": "33.3 MB",
+      "leetcode_notes": null,
+      "raw_comments": [
+        "sort the job by end time",
+        "find the rightmost index with end_time[prev] <= start",
+        "the jobs that can be included in job i must satisfy this condition",
+        "bisect_right gives us the first value of ends[i] > start so we -1 ",
+        "profit if we take:",
+        "profit if we skip:",
+        "best up to i"
+      ],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    }
+  ],
+  "review": {
+    "state": "new",
+    "stability": null,
+    "difficulty": null,
+    "retrievability": null,
+    "last_review": null,
+    "next_review": "2026-01-07T02:48:09+00:00",
+    "reps": 0,
+    "lapses": 0
+  }
+}

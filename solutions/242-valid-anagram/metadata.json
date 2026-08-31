@@ -1,0 +1,46 @@
+{
+  "leetcode_id": "242",
+  "slug": "valid-anagram",
+  "title": "Valid Anagram",
+  "difficulty": "Easy",
+  "tags": [
+    "Hash Table",
+    "String",
+    "Sorting"
+  ],
+  "leetcode_url": "https://leetcode.com/problems/valid-anagram/",
+  "first_solved_at": "2026-01-05T06:15:42+00:00",
+  "last_solved_at": "2026-01-05T06:15:42+00:00",
+  "attempts": [
+    {
+      "submission_id": "1874956747",
+      "submitted_at": "2026-01-05T06:15:42+00:00",
+      "status": "Accepted",
+      "language": "python3",
+      "code_path": "solutions/242-valid-anagram/1874956747.py",
+      "runtime": "14 ms",
+      "memory": "17.7 MB",
+      "leetcode_notes": null,
+      "raw_comments": [],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    }
+  ],
+  "review": {
+    "state": "new",
+    "stability": null,
+    "difficulty": null,
+    "retrievability": null,
+    "last_review": null,
+    "next_review": "2026-01-05T06:15:42+00:00",
+    "reps": 0,
+    "lapses": 0
+  }
+}

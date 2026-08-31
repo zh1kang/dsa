@@ -1,0 +1,71 @@
+{
+  "leetcode_id": "133",
+  "slug": "clone-graph",
+  "title": "Clone Graph",
+  "difficulty": "Medium",
+  "tags": [
+    "Hash Table",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Graph Theory"
+  ],
+  "leetcode_url": "https://leetcode.com/problems/clone-graph/",
+  "first_solved_at": "2026-01-04T00:26:48+00:00",
+  "last_solved_at": "2026-08-01T05:55:54+00:00",
+  "attempts": [
+    {
+      "submission_id": "1873652534",
+      "submitted_at": "2026-01-04T00:26:48+00:00",
+      "status": "Accepted",
+      "language": "python3",
+      "code_path": "solutions/133-clone-graph/1873652534.py",
+      "runtime": "44 ms",
+      "memory": "17.7 MB",
+      "leetcode_notes": null,
+      "raw_comments": [
+        "\n# Definition for a Node.\nclass Node:\n    def __init__(self, val = 0, neighbors = None):\n        self.val = val\n        self.neighbors = neighbors if neighbors is not None else []\n"
+      ],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    },
+    {
+      "submission_id": "2089533320",
+      "submitted_at": "2026-08-01T05:55:54+00:00",
+      "status": "Accepted",
+      "language": "python3",
+      "code_path": "solutions/133-clone-graph/2089533320.py",
+      "runtime": "55 ms",
+      "memory": "19.7 MB",
+      "leetcode_notes": null,
+      "raw_comments": [
+        "\n# Definition for a Node.\nclass Node:\n    def __init__(self, val = 0, neighbors = None):\n        self.val = val\n        self.neighbors = neighbors if neighbors is not None else []\n"
+      ],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    }
+  ],
+  "review": {
+    "state": "new",
+    "stability": null,
+    "difficulty": null,
+    "retrievability": null,
+    "last_review": null,
+    "next_review": "2026-08-01T05:55:54+00:00",
+    "reps": 0,
+    "lapses": 0
+  }
+}

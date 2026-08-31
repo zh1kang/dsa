@@ -1,0 +1,71 @@
+{
+  "leetcode_id": "46",
+  "slug": "permutations",
+  "title": "Permutations",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Backtracking"
+  ],
+  "leetcode_url": "https://leetcode.com/problems/permutations/",
+  "first_solved_at": "2025-12-29T07:23:32+00:00",
+  "last_solved_at": "2026-07-30T14:02:33+00:00",
+  "attempts": [
+    {
+      "submission_id": "1868192137",
+      "submitted_at": "2025-12-29T07:23:32+00:00",
+      "status": "Accepted",
+      "language": "python3",
+      "code_path": "solutions/46-permutations/1868192137.py",
+      "runtime": "2 ms",
+      "memory": "17.6 MB",
+      "leetcode_notes": null,
+      "raw_comments": [],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    },
+    {
+      "submission_id": "2087584129",
+      "submitted_at": "2026-07-30T14:02:33+00:00",
+      "status": "Accepted",
+      "language": "python3",
+      "code_path": "solutions/46-permutations/2087584129.py",
+      "runtime": "3 ms",
+      "memory": "19.5 MB",
+      "leetcode_notes": null,
+      "raw_comments": [
+        "base case ",
+        "loop through ",
+        "if this value is already used, return",
+        "if not used, set value to used, append, backtrack, and then undo",
+        "undo, and set value back to false "
+      ],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    }
+  ],
+  "review": {
+    "state": "new",
+    "stability": null,
+    "difficulty": null,
+    "retrievability": null,
+    "last_review": null,
+    "next_review": "2026-07-30T14:02:33+00:00",
+    "reps": 0,
+    "lapses": 0
+  }
+}

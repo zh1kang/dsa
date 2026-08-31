@@ -1,0 +1,135 @@
+{
+  "leetcode_id": "105",
+  "slug": "construct-binary-tree-from-preorder-and-inorder-traversal",
+  "title": "Construct Binary Tree from Preorder and Inorder Traversal",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Divide and Conquer",
+    "Tree",
+    "Binary Tree"
+  ],
+  "leetcode_url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/",
+  "first_solved_at": "2026-07-20T13:27:02+00:00",
+  "last_solved_at": "2026-07-20T13:54:33+00:00",
+  "attempts": [
+    {
+      "submission_id": "2074602375",
+      "submitted_at": "2026-07-20T13:27:02+00:00",
+      "status": "Accepted",
+      "language": "python3",
+      "code_path": "solutions/105-construct-binary-tree-from-preorder-and-inorder-traversal/2074602375.py",
+      "runtime": "84 ms",
+      "memory": "90.9 MB",
+      "leetcode_notes": "[ Time taken: 1d 2hrs 27m 23s ]",
+      "raw_comments": [
+        "Definition for a binary tree node.",
+        "class TreeNode:",
+        "    def __init__(self, val=0, left=None, right=None):",
+        "        self.val = val",
+        "        self.left = left",
+        "        self.right = right",
+        "preorder is always Root -> Left -> Right",
+        "innorder is always Left -> Root -> Right ",
+        "innorder will tell us the size of the left and right of the root, which is good becasue ",
+        "preorder only gives us the root first and we don't actually know the size of the left and right subtrees ",
+        "we take the root from the first number from the preorder list ",
+        "this root value is our partition value to seperate the left and right in the innorder traversal",
+        "base case"
+      ],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    },
+    {
+      "submission_id": "2074613443",
+      "submitted_at": "2026-07-20T13:37:34+00:00",
+      "status": "Accepted",
+      "language": "python3",
+      "code_path": "solutions/105-construct-binary-tree-from-preorder-and-inorder-traversal/2074613443.py",
+      "runtime": "88 ms",
+      "memory": "91 MB",
+      "leetcode_notes": null,
+      "raw_comments": [
+        "Definition for a binary tree node.",
+        "class TreeNode:",
+        "    def __init__(self, val=0, left=None, right=None):",
+        "        self.val = val",
+        "        self.left = left",
+        "        self.right = right",
+        "preorder is always Root -> Left -> Right",
+        "innorder is always Left -> Root -> Right ",
+        "innorder will tell us the size of the left and right of the root, which is good becasue ",
+        "preorder only gives us the root first and we don't actually know the size of the left and right subtrees ",
+        "we take the root from the first number from the preorder list ",
+        "this root value is our partition value to seperate the left and right in the innorder traversal",
+        "base case",
+        "set the root value to first",
+        "initialize the tree with this root value",
+        "split the tree ",
+        "recursively build left and right subtree",
+        "it is mid + 1 because splicing excludes the last index "
+      ],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    },
+    {
+      "submission_id": "2074632203",
+      "submitted_at": "2026-07-20T13:54:33+00:00",
+      "status": "Accepted",
+      "language": "python3",
+      "code_path": "solutions/105-construct-binary-tree-from-preorder-and-inorder-traversal/2074632203.py",
+      "runtime": "4 ms",
+      "memory": "20.9 MB",
+      "leetcode_notes": null,
+      "raw_comments": [
+        "Definition for a binary tree node.",
+        "class TreeNode:",
+        "    def __init__(self, val=0, left=None, right=None):",
+        "        self.val = val",
+        "        self.left = left",
+        "        self.right = right",
+        "preorder is always Root -> Left -> Right",
+        "innorder is always Left -> Root -> Right ",
+        "innorder will tell us the size of the left and right of the root, which is good becasue ",
+        "preorder only gives us the root first and we don't actually know the size of the left and right subtrees ",
+        "we take the root from the first number from the preorder list ",
+        "this root value is our partition value to seperate the left and right in the innorder traversal",
+        "instead of using index to iterate trhough all the numbers to find the value we split, create a mapping of a key and value in inorder arrray with a hashmap before we recurse so we access in O(1) instead of O(n)"
+      ],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    }
+  ],
+  "review": {
+    "state": "new",
+    "stability": null,
+    "difficulty": null,
+    "retrievability": null,
+    "last_review": null,
+    "next_review": "2026-07-20T13:54:33+00:00",
+    "reps": 0,
+    "lapses": 0
+  }
+}

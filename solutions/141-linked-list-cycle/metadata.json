@@ -1,0 +1,53 @@
+{
+  "leetcode_id": "141",
+  "slug": "linked-list-cycle",
+  "title": "Linked List Cycle",
+  "difficulty": "Easy",
+  "tags": [
+    "Hash Table",
+    "Linked List",
+    "Two Pointers",
+    "Floyd's Cycle Finding Algorithm"
+  ],
+  "leetcode_url": "https://leetcode.com/problems/linked-list-cycle/",
+  "first_solved_at": "2026-01-04T04:13:27+00:00",
+  "last_solved_at": "2026-01-04T04:13:27+00:00",
+  "attempts": [
+    {
+      "submission_id": "1873762068",
+      "submitted_at": "2026-01-04T04:13:27+00:00",
+      "status": "Accepted",
+      "language": "python3",
+      "code_path": "solutions/141-linked-list-cycle/1873762068.py",
+      "runtime": "48 ms",
+      "memory": "19.3 MB",
+      "leetcode_notes": null,
+      "raw_comments": [
+        "Definition for singly-linked list.",
+        "class ListNode:",
+        "    def __init__(self, x):",
+        "        self.val = x",
+        "        self.next = None"
+      ],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    }
+  ],
+  "review": {
+    "state": "new",
+    "stability": null,
+    "difficulty": null,
+    "retrievability": null,
+    "last_review": null,
+    "next_review": "2026-01-04T04:13:27+00:00",
+    "reps": 0,
+    "lapses": 0
+  }
+}

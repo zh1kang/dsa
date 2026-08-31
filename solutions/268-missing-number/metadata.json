@@ -1,0 +1,49 @@
+{
+  "leetcode_id": "268",
+  "slug": "missing-number",
+  "title": "Missing Number",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Math",
+    "Binary Search",
+    "Bit Manipulation",
+    "Sorting"
+  ],
+  "leetcode_url": "https://leetcode.com/problems/missing-number/",
+  "first_solved_at": "2025-12-31T08:00:29+00:00",
+  "last_solved_at": "2025-12-31T08:00:29+00:00",
+  "attempts": [
+    {
+      "submission_id": "1870083547",
+      "submitted_at": "2025-12-31T08:00:29+00:00",
+      "status": "Accepted",
+      "language": "python3",
+      "code_path": "solutions/268-missing-number/1870083547.py",
+      "runtime": "3 ms",
+      "memory": "18.7 MB",
+      "leetcode_notes": null,
+      "raw_comments": [],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    }
+  ],
+  "review": {
+    "state": "new",
+    "stability": null,
+    "difficulty": null,
+    "retrievability": null,
+    "last_review": null,
+    "next_review": "2025-12-31T08:00:29+00:00",
+    "reps": 0,
+    "lapses": 0
+  }
+}

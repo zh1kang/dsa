@@ -1,0 +1,75 @@
+{
+  "leetcode_id": "1510",
+  "slug": "stone-game-iv",
+  "title": "Stone Game IV",
+  "difficulty": "Hard",
+  "tags": [
+    "Math",
+    "Dynamic Programming",
+    "Minimax",
+    "Game Theory",
+    "Nim Game",
+    "Sprague–Grundy Theorem",
+    "Zero-Sum Game"
+  ],
+  "leetcode_url": "https://leetcode.com/problems/stone-game-iv/",
+  "first_solved_at": "2026-08-10T12:11:38+00:00",
+  "last_solved_at": "2026-08-10T12:18:01+00:00",
+  "attempts": [
+    {
+      "submission_id": "2101501764",
+      "submitted_at": "2026-08-10T12:11:38+00:00",
+      "status": "Accepted",
+      "language": "python3",
+      "code_path": "solutions/1510-stone-game-iv/2101501764.py",
+      "runtime": "1776 ms",
+      "memory": "50.2 MB",
+      "leetcode_notes": null,
+      "raw_comments": [
+        "so if n is a perfect root, Alice will win always because she can win in one move ",
+        "we try all the possible non-zero square number less than or equal to the remaining stones "
+      ],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    },
+    {
+      "submission_id": "2101507647",
+      "submitted_at": "2026-08-10T12:18:01+00:00",
+      "status": "Accepted",
+      "language": "python3",
+      "code_path": "solutions/1510-stone-game-iv/2101507647.py",
+      "runtime": "602 ms",
+      "memory": "20.1 MB",
+      "leetcode_notes": null,
+      "raw_comments": [
+        "so if n is a perfect root, Alice will win always because she can win in one move "
+      ],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    }
+  ],
+  "review": {
+    "state": "new",
+    "stability": null,
+    "difficulty": null,
+    "retrievability": null,
+    "last_review": null,
+    "next_review": "2026-08-10T12:18:01+00:00",
+    "reps": 0,
+    "lapses": 0
+  }
+}

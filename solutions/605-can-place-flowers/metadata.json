@@ -1,0 +1,85 @@
+{
+  "leetcode_id": "605",
+  "slug": "can-place-flowers",
+  "title": "Can Place Flowers",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Greedy"
+  ],
+  "leetcode_url": "https://leetcode.com/problems/can-place-flowers/",
+  "first_solved_at": null,
+  "last_solved_at": null,
+  "attempts": [
+    {
+      "submission_id": "1845535189",
+      "submitted_at": "2025-12-03T03:15:48+00:00",
+      "status": "Wrong Answer",
+      "language": "python3",
+      "code_path": "solutions/605-can-place-flowers/1845535189.py",
+      "runtime": "N/A",
+      "memory": "N/A",
+      "leetcode_notes": null,
+      "raw_comments": [],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    },
+    {
+      "submission_id": "1845536055",
+      "submitted_at": "2025-12-03T03:17:33+00:00",
+      "status": "Wrong Answer",
+      "language": "python3",
+      "code_path": "solutions/605-can-place-flowers/1845536055.py",
+      "runtime": "N/A",
+      "memory": "N/A",
+      "leetcode_notes": null,
+      "raw_comments": [],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    },
+    {
+      "submission_id": "1845536359",
+      "submitted_at": "2025-12-03T03:18:08+00:00",
+      "status": "Wrong Answer",
+      "language": "python3",
+      "code_path": "solutions/605-can-place-flowers/1845536359.py",
+      "runtime": "N/A",
+      "memory": "N/A",
+      "leetcode_notes": null,
+      "raw_comments": [],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    }
+  ],
+  "review": {
+    "state": "new",
+    "stability": null,
+    "difficulty": null,
+    "retrievability": null,
+    "last_review": null,
+    "next_review": null,
+    "reps": 0,
+    "lapses": 0
+  }
+}

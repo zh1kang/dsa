@@ -1,0 +1,177 @@
+{
+  "leetcode_id": "211",
+  "slug": "design-add-and-search-words-data-structure",
+  "title": "Design Add and Search Words Data Structure",
+  "difficulty": "Medium",
+  "tags": [
+    "String",
+    "Depth-First Search",
+    "Design",
+    "Trie"
+  ],
+  "leetcode_url": "https://leetcode.com/problems/design-add-and-search-words-data-structure/",
+  "first_solved_at": "2026-01-30T22:03:26+00:00",
+  "last_solved_at": "2026-01-30T22:03:43+00:00",
+  "attempts": [
+    {
+      "submission_id": "1902429743",
+      "submitted_at": "2026-01-30T21:57:55+00:00",
+      "status": "Wrong Answer",
+      "language": "python3",
+      "code_path": "solutions/211-design-add-and-search-words-data-structure/1902429743.py",
+      "runtime": "N/A",
+      "memory": "N/A",
+      "leetcode_notes": null,
+      "raw_comments": [
+        "Your WordDictionary object will be instantiated and called as such:",
+        "obj = WordDictionary()",
+        "obj.addWord(word)",
+        "param_2 = obj.search(word)"
+      ],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    },
+    {
+      "submission_id": "1902430140",
+      "submitted_at": "2026-01-30T21:58:57+00:00",
+      "status": "Wrong Answer",
+      "language": "python3",
+      "code_path": "solutions/211-design-add-and-search-words-data-structure/1902430140.py",
+      "runtime": "N/A",
+      "memory": "N/A",
+      "leetcode_notes": null,
+      "raw_comments": [
+        "Your WordDictionary object will be instantiated and called as such:",
+        "obj = WordDictionary()",
+        "obj.addWord(word)",
+        "param_2 = obj.search(word)"
+      ],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    },
+    {
+      "submission_id": "1902430491",
+      "submitted_at": "2026-01-30T21:59:56+00:00",
+      "status": "Wrong Answer",
+      "language": "python3",
+      "code_path": "solutions/211-design-add-and-search-words-data-structure/1902430491.py",
+      "runtime": "N/A",
+      "memory": "N/A",
+      "leetcode_notes": null,
+      "raw_comments": [
+        "Your WordDictionary object will be instantiated and called as such:",
+        "obj = WordDictionary()",
+        "obj.addWord(word)",
+        "param_2 = obj.search(word)"
+      ],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    },
+    {
+      "submission_id": "1902430550",
+      "submitted_at": "2026-01-30T22:00:06+00:00",
+      "status": "Wrong Answer",
+      "language": "python3",
+      "code_path": "solutions/211-design-add-and-search-words-data-structure/1902430550.py",
+      "runtime": "N/A",
+      "memory": "N/A",
+      "leetcode_notes": null,
+      "raw_comments": [
+        "Your WordDictionary object will be instantiated and called as such:",
+        "obj = WordDictionary()",
+        "obj.addWord(word)",
+        "param_2 = obj.search(word)"
+      ],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    },
+    {
+      "submission_id": "1902431706",
+      "submitted_at": "2026-01-30T22:03:26+00:00",
+      "status": "Accepted",
+      "language": "python3",
+      "code_path": "solutions/211-design-add-and-search-words-data-structure/1902431706.py",
+      "runtime": "937 ms",
+      "memory": "68.5 MB",
+      "leetcode_notes": null,
+      "raw_comments": [
+        "Your WordDictionary object will be instantiated and called as such:",
+        "obj = WordDictionary()",
+        "obj.addWord(word)",
+        "param_2 = obj.search(word)"
+      ],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    },
+    {
+      "submission_id": "1902431795",
+      "submitted_at": "2026-01-30T22:03:43+00:00",
+      "status": "Accepted",
+      "language": "python3",
+      "code_path": "solutions/211-design-add-and-search-words-data-structure/1902431795.py",
+      "runtime": "943 ms",
+      "memory": "68.4 MB",
+      "leetcode_notes": null,
+      "raw_comments": [
+        "Your WordDictionary object will be instantiated and called as such:",
+        "obj = WordDictionary()",
+        "obj.addWord(word)",
+        "param_2 = obj.search(word)"
+      ],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    }
+  ],
+  "review": {
+    "state": "new",
+    "stability": null,
+    "difficulty": null,
+    "retrievability": null,
+    "last_review": null,
+    "next_review": "2026-01-30T22:03:43+00:00",
+    "reps": 0,
+    "lapses": 0
+  }
+}

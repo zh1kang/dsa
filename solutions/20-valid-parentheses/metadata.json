@@ -1,0 +1,49 @@
+{
+  "leetcode_id": "20",
+  "slug": "valid-parentheses",
+  "title": "Valid Parentheses",
+  "difficulty": "Easy",
+  "tags": [
+    "String",
+    "Stack",
+    "Bracket Sequences"
+  ],
+  "leetcode_url": "https://leetcode.com/problems/valid-parentheses/",
+  "first_solved_at": "2025-11-25T07:11:46+00:00",
+  "last_solved_at": "2025-11-25T07:11:46+00:00",
+  "attempts": [
+    {
+      "submission_id": "1839188382",
+      "submitted_at": "2025-11-25T07:11:46+00:00",
+      "status": "Accepted",
+      "language": "python3",
+      "code_path": "solutions/20-valid-parentheses/1839188382.py",
+      "runtime": "2 ms",
+      "memory": "18.1 MB",
+      "leetcode_notes": null,
+      "raw_comments": [
+        "makes sure the stacks always starts with the proper opening parenthesis",
+        "if we come across a closing parenthesis"
+      ],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    }
+  ],
+  "review": {
+    "state": "new",
+    "stability": null,
+    "difficulty": null,
+    "retrievability": null,
+    "last_review": null,
+    "next_review": "2025-11-25T07:11:46+00:00",
+    "reps": 0,
+    "lapses": 0
+  }
+}

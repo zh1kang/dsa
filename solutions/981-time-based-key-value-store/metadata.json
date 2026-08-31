@@ -1,0 +1,105 @@
+{
+  "leetcode_id": "981",
+  "slug": "time-based-key-value-store",
+  "title": "Time Based Key-Value Store",
+  "difficulty": "Medium",
+  "tags": [
+    "Hash Table",
+    "String",
+    "Binary Search",
+    "Design"
+  ],
+  "leetcode_url": "https://leetcode.com/problems/time-based-key-value-store/",
+  "first_solved_at": "2026-07-22T13:29:49+00:00",
+  "last_solved_at": "2026-07-22T13:33:20+00:00",
+  "attempts": [
+    {
+      "submission_id": "2077155377",
+      "submitted_at": "2026-07-22T13:29:49+00:00",
+      "status": "Accepted",
+      "language": "python3",
+      "code_path": "solutions/981-time-based-key-value-store/2077155377.py",
+      "runtime": "143 ms",
+      "memory": "69.9 MB",
+      "leetcode_notes": null,
+      "raw_comments": [
+        "if the timestamp_prev is <= current timestamp",
+        "Your TimeMap object will be instantiated and called as such:",
+        "obj = TimeMap()",
+        "obj.set(key,value,timestamp)",
+        "param_2 = obj.get(key,timestamp)"
+      ],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    },
+    {
+      "submission_id": "2077158849",
+      "submitted_at": "2026-07-22T13:32:49+00:00",
+      "status": "Runtime Error",
+      "language": "python3",
+      "code_path": "solutions/981-time-based-key-value-store/2077158849.py",
+      "runtime": "N/A",
+      "memory": "N/A",
+      "leetcode_notes": null,
+      "raw_comments": [
+        "if the timestamp_prev is <= current timestamp",
+        "Your TimeMap object will be instantiated and called as such:",
+        "obj = TimeMap()",
+        "obj.set(key,value,timestamp)",
+        "param_2 = obj.get(key,timestamp)"
+      ],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    },
+    {
+      "submission_id": "2077159374",
+      "submitted_at": "2026-07-22T13:33:20+00:00",
+      "status": "Accepted",
+      "language": "python3",
+      "code_path": "solutions/981-time-based-key-value-store/2077159374.py",
+      "runtime": "158 ms",
+      "memory": "69.6 MB",
+      "leetcode_notes": null,
+      "raw_comments": [
+        "if the timestamp_prev is <= current timestamp",
+        "Your TimeMap object will be instantiated and called as such:",
+        "obj = TimeMap()",
+        "obj.set(key,value,timestamp)",
+        "param_2 = obj.get(key,timestamp)"
+      ],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    }
+  ],
+  "review": {
+    "state": "new",
+    "stability": null,
+    "difficulty": null,
+    "retrievability": null,
+    "last_review": null,
+    "next_review": "2026-07-22T13:33:20+00:00",
+    "reps": 0,
+    "lapses": 0
+  }
+}

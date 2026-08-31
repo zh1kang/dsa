@@ -1,0 +1,102 @@
+{
+  "leetcode_id": "146",
+  "slug": "lru-cache",
+  "title": "LRU Cache",
+  "difficulty": "Medium",
+  "tags": [
+    "Hash Table",
+    "Linked List",
+    "Design",
+    "Doubly-Linked List"
+  ],
+  "leetcode_url": "https://leetcode.com/problems/lru-cache/",
+  "first_solved_at": "2026-01-04T07:47:41+00:00",
+  "last_solved_at": "2026-01-04T08:16:07+00:00",
+  "attempts": [
+    {
+      "submission_id": "1873955434",
+      "submitted_at": "2026-01-04T07:47:41+00:00",
+      "status": "Accepted",
+      "language": "python3",
+      "code_path": "solutions/146-lru-cache/1873955434.py",
+      "runtime": "109 ms",
+      "memory": "77.3 MB",
+      "leetcode_notes": null,
+      "raw_comments": [
+        "Your LRUCache object will be instantiated and called as such:",
+        "obj = LRUCache(capacity)",
+        "param_1 = obj.get(key)",
+        "obj.put(key,value)"
+      ],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    },
+    {
+      "submission_id": "1873965351",
+      "submitted_at": "2026-01-04T07:59:21+00:00",
+      "status": "Accepted",
+      "language": "python3",
+      "code_path": "solutions/146-lru-cache/1873965351.py",
+      "runtime": "128 ms",
+      "memory": "77.2 MB",
+      "leetcode_notes": null,
+      "raw_comments": [
+        "Your LRUCache object will be instantiated and called as such:",
+        "obj = LRUCache(capacity)",
+        "param_1 = obj.get(key)",
+        "obj.put(key,value)"
+      ],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    },
+    {
+      "submission_id": "1873979015",
+      "submitted_at": "2026-01-04T08:16:07+00:00",
+      "status": "Accepted",
+      "language": "python3",
+      "code_path": "solutions/146-lru-cache/1873979015.py",
+      "runtime": "149 ms",
+      "memory": "77.8 MB",
+      "leetcode_notes": null,
+      "raw_comments": [
+        "Your LRUCache object will be instantiated and called as such:",
+        "obj = LRUCache(capacity)",
+        "param_1 = obj.get(key)",
+        "obj.put(key,value)"
+      ],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    }
+  ],
+  "review": {
+    "state": "new",
+    "stability": null,
+    "difficulty": null,
+    "retrievability": null,
+    "last_review": null,
+    "next_review": "2026-01-04T08:16:07+00:00",
+    "reps": 0,
+    "lapses": 0
+  }
+}

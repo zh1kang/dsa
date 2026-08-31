@@ -1,0 +1,55 @@
+{
+  "leetcode_id": "542",
+  "slug": "01-matrix",
+  "title": "01 Matrix",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Dynamic Programming",
+    "Breadth-First Search",
+    "Matrix"
+  ],
+  "leetcode_url": "https://leetcode.com/problems/01-matrix/",
+  "first_solved_at": "2026-08-30T05:07:20+00:00",
+  "last_solved_at": "2026-08-30T05:07:20+00:00",
+  "attempts": [
+    {
+      "submission_id": "2124645352",
+      "submitted_at": "2026-08-30T05:07:20+00:00",
+      "status": "Accepted",
+      "language": "python3",
+      "code_path": "solutions/542-01-matrix/2124645352.py",
+      "runtime": "101 ms",
+      "memory": "22.3 MB",
+      "leetcode_notes": null,
+      "raw_comments": [
+        "nearest = min ",
+        "we can use multi-source bfs from a cell, if we hit a zero, we just return the current distance for each cell to a zero ",
+        "initialize a 2d grid with the distances set at -1 ",
+        "TC: O(RC); Space: O(RC) every cell is visited at most once",
+        "divergences:",
+        "had to remember how multisource bfs worked; our initial state and what we're measuring the distance from are the cells that are already 0, which is why we put it into the queue",
+        "then whatever distance we return must be the min because bfs works level by level"
+      ],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    }
+  ],
+  "review": {
+    "state": "new",
+    "stability": null,
+    "difficulty": null,
+    "retrievability": null,
+    "last_review": null,
+    "next_review": "2026-08-30T05:07:20+00:00",
+    "reps": 0,
+    "lapses": 0
+  }
+}

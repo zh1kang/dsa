@@ -1,0 +1,56 @@
+{
+  "leetcode_id": "54",
+  "slug": "spiral-matrix",
+  "title": "Spiral Matrix",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Matrix",
+    "Simulation"
+  ],
+  "leetcode_url": "https://leetcode.com/problems/spiral-matrix/",
+  "first_solved_at": "2026-08-11T13:29:20+00:00",
+  "last_solved_at": "2026-08-11T13:29:20+00:00",
+  "attempts": [
+    {
+      "submission_id": "2102877541",
+      "submitted_at": "2026-08-11T13:29:20+00:00",
+      "status": "Accepted",
+      "language": "python3",
+      "code_path": "solutions/54-spiral-matrix/2102877541.py",
+      "runtime": "0 ms",
+      "memory": "19.3 MB",
+      "leetcode_notes": null,
+      "raw_comments": [
+        "this is just matrix traversal, but we always start top left,",
+        "if we hit a boundary from right -> left, we go down, if we hit a boundry we go left, and if we hit another one we go up, but we have to keep track ",
+        "of which ones been visited so we dont run in a cycle, and thne if we bump into a visited node we go right so we end the spiral. ",
+        "O(1)",
+        "right, down, left, up ",
+        "O(m * n)",
+        "visit current cell",
+        "where do we go next",
+        "% allows us to wrap back around "
+      ],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    }
+  ],
+  "review": {
+    "state": "new",
+    "stability": null,
+    "difficulty": null,
+    "retrievability": null,
+    "last_review": null,
+    "next_review": "2026-08-11T13:29:20+00:00",
+    "reps": 0,
+    "lapses": 0
+  }
+}

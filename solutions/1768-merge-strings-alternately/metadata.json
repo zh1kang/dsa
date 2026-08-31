@@ -1,0 +1,45 @@
+{
+  "leetcode_id": "1768",
+  "slug": "merge-strings-alternately",
+  "title": "Merge Strings Alternately",
+  "difficulty": "Easy",
+  "tags": [
+    "Two Pointers",
+    "String"
+  ],
+  "leetcode_url": "https://leetcode.com/problems/merge-strings-alternately/",
+  "first_solved_at": "2025-01-21T21:48:55+00:00",
+  "last_solved_at": "2025-01-21T21:48:55+00:00",
+  "attempts": [
+    {
+      "submission_id": "1516230580",
+      "submitted_at": "2025-01-21T21:48:55+00:00",
+      "status": "Accepted",
+      "language": "java",
+      "code_path": "solutions/1768-merge-strings-alternately/1516230580.java",
+      "runtime": "1 ms",
+      "memory": "42 MB",
+      "leetcode_notes": null,
+      "raw_comments": [],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    }
+  ],
+  "review": {
+    "state": "new",
+    "stability": null,
+    "difficulty": null,
+    "retrievability": null,
+    "last_review": null,
+    "next_review": "2025-01-21T21:48:55+00:00",
+    "reps": 0,
+    "lapses": 0
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "leetcode_id": "438",
+  "slug": "find-all-anagrams-in-a-string",
+  "title": "Find All Anagrams in a String",
+  "difficulty": "Medium",
+  "tags": [
+    "Hash Table",
+    "String",
+    "Sliding Window"
+  ],
+  "leetcode_url": "https://leetcode.com/problems/find-all-anagrams-in-a-string/",
+  "first_solved_at": "2026-08-04T13:32:07+00:00",
+  "last_solved_at": "2026-08-04T13:33:45+00:00",
+  "attempts": [
+    {
+      "submission_id": "2094035281",
+      "submitted_at": "2026-08-04T13:32:07+00:00",
+      "status": "Accepted",
+      "language": "python3",
+      "code_path": "solutions/438-find-all-anagrams-in-a-string/2094035281.py",
+      "runtime": "46 ms",
+      "memory": "19.8 MB",
+      "leetcode_notes": null,
+      "raw_comments": [
+        "Intial thoughts, create a frequency/anagram map of p so we know how many characters there are ",
+        "Then we have a sliding window to go through s, and the window size is len(p)",
+        "we scan and if the frequency map is not 0, then it is not an anagram and we proceed to the next window"
+      ],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    },
+    {
+      "submission_id": "2094037509",
+      "submitted_at": "2026-08-04T13:33:45+00:00",
+      "status": "Accepted",
+      "language": "python3",
+      "code_path": "solutions/438-find-all-anagrams-in-a-string/2094037509.py",
+      "runtime": "39 ms",
+      "memory": "19.8 MB",
+      "leetcode_notes": null,
+      "raw_comments": [
+        "Intial thoughts, create a frequency/anagram map of p so we know how many characters there are ",
+        "Then we have a sliding window to go through s, and the window size is len(p)",
+        "we scan and if the frequency map is not 0, then it is not an anagram and we proceed to the next window",
+        "add the right character to the window frequency of characters",
+        "if the window is larger, shrink and remove the character from the window",
+        "increment",
+        "if the window is equal to the anagram length we check if the window includes the anagram, if it does we append the leftmost value (e.g. left) of this window"
+      ],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    }
+  ],
+  "review": {
+    "state": "new",
+    "stability": null,
+    "difficulty": null,
+    "retrievability": null,
+    "last_review": null,
+    "next_review": "2026-08-04T13:33:45+00:00",
+    "reps": 0,
+    "lapses": 0
+  }
+}

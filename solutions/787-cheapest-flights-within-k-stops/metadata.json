@@ -1,0 +1,79 @@
+{
+  "leetcode_id": "787",
+  "slug": "cheapest-flights-within-k-stops",
+  "title": "Cheapest Flights Within K Stops",
+  "difficulty": "Medium",
+  "tags": [
+    "Dynamic Programming",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Graph Theory",
+    "Heap (Priority Queue)",
+    "Shortest Path"
+  ],
+  "leetcode_url": "https://leetcode.com/problems/cheapest-flights-within-k-stops/",
+  "first_solved_at": "2026-08-03T14:28:35+00:00",
+  "last_solved_at": "2026-08-03T14:28:35+00:00",
+  "attempts": [
+    {
+      "submission_id": "2092733110",
+      "submitted_at": "2026-08-03T14:26:13+00:00",
+      "status": "Wrong Answer",
+      "language": "python3",
+      "code_path": "solutions/787-cheapest-flights-within-k-stops/2092733110.py",
+      "runtime": "N/A",
+      "memory": "N/A",
+      "leetcode_notes": null,
+      "raw_comments": [
+        "this is the perfect question for bellman ford, dijkstras doesn't work because",
+        "of its greedy approach, which can sometimes ignore the true 'cheapest' path",
+        "initialize distance and predecessor",
+        "relax the edges |V| - 1 times"
+      ],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    },
+    {
+      "submission_id": "2092736419",
+      "submitted_at": "2026-08-03T14:28:35+00:00",
+      "status": "Accepted",
+      "language": "python3",
+      "code_path": "solutions/787-cheapest-flights-within-k-stops/2092736419.py",
+      "runtime": "96 ms",
+      "memory": "19.9 MB",
+      "leetcode_notes": null,
+      "raw_comments": [
+        "this is the perfect question for bellman ford, dijkstras doesn't work because",
+        "of its greedy approach, which can sometimes ignore the true 'cheapest' path",
+        "initialize distance and predecessor",
+        "relax the edges |V| - 1 times"
+      ],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    }
+  ],
+  "review": {
+    "state": "new",
+    "stability": null,
+    "difficulty": null,
+    "retrievability": null,
+    "last_review": null,
+    "next_review": "2026-08-03T14:28:35+00:00",
+    "reps": 0,
+    "lapses": 0
+  }
+}

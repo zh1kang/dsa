@@ -1,0 +1,70 @@
+{
+  "leetcode_id": "122",
+  "slug": "best-time-to-buy-and-sell-stock-ii",
+  "title": "Best Time to Buy and Sell Stock II",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Dynamic Programming",
+    "Greedy"
+  ],
+  "leetcode_url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/",
+  "first_solved_at": "2025-10-16T08:14:08+00:00",
+  "last_solved_at": "2025-10-16T08:14:08+00:00",
+  "attempts": [
+    {
+      "submission_id": "1803176644",
+      "submitted_at": "2025-10-16T08:14:00+00:00",
+      "status": "Runtime Error",
+      "language": "python3",
+      "code_path": "solutions/122-best-time-to-buy-and-sell-stock-ii/1803176644.py",
+      "runtime": "N/A",
+      "memory": "N/A",
+      "leetcode_notes": null,
+      "raw_comments": [
+        "greedy approach"
+      ],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    },
+    {
+      "submission_id": "1803176734",
+      "submitted_at": "2025-10-16T08:14:08+00:00",
+      "status": "Accepted",
+      "language": "python3",
+      "code_path": "solutions/122-best-time-to-buy-and-sell-stock-ii/1803176734.py",
+      "runtime": "0 ms",
+      "memory": "18.7 MB",
+      "leetcode_notes": null,
+      "raw_comments": [
+        "greedy approach"
+      ],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    }
+  ],
+  "review": {
+    "state": "new",
+    "stability": null,
+    "difficulty": null,
+    "retrievability": null,
+    "last_review": null,
+    "next_review": "2025-10-16T08:14:08+00:00",
+    "reps": 0,
+    "lapses": 0
+  }
+}

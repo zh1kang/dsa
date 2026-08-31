@@ -1,0 +1,54 @@
+{
+  "leetcode_id": "102",
+  "slug": "binary-tree-level-order-traversal",
+  "title": "Binary Tree Level Order Traversal",
+  "difficulty": "Medium",
+  "tags": [
+    "Tree",
+    "Breadth-First Search",
+    "Binary Tree"
+  ],
+  "leetcode_url": "https://leetcode.com/problems/binary-tree-level-order-traversal/",
+  "first_solved_at": "2026-07-19T13:01:32+00:00",
+  "last_solved_at": "2026-07-19T13:01:32+00:00",
+  "attempts": [
+    {
+      "submission_id": "2073478071",
+      "submitted_at": "2026-07-19T13:01:32+00:00",
+      "status": "Accepted",
+      "language": "python3",
+      "code_path": "solutions/102-binary-tree-level-order-traversal/2073478071.py",
+      "runtime": "3 ms",
+      "memory": "19.9 MB",
+      "leetcode_notes": null,
+      "raw_comments": [
+        "Definition for a binary tree node.",
+        "class TreeNode:",
+        "    def __init__(self, val=0, left=None, right=None):",
+        "        self.val = val",
+        "        self.left = left",
+        "        self.right = right",
+        "isnt this just BFS..."
+      ],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    }
+  ],
+  "review": {
+    "state": "new",
+    "stability": null,
+    "difficulty": null,
+    "retrievability": null,
+    "last_review": null,
+    "next_review": "2026-07-19T13:01:32+00:00",
+    "reps": 0,
+    "lapses": 0
+  }
+}

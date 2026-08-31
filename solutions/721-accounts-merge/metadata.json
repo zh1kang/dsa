@@ -1,0 +1,57 @@
+{
+  "leetcode_id": "721",
+  "slug": "accounts-merge",
+  "title": "Accounts Merge",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Union-Find",
+    "Sorting"
+  ],
+  "leetcode_url": "https://leetcode.com/problems/accounts-merge/",
+  "first_solved_at": "2026-08-12T14:26:04+00:00",
+  "last_solved_at": "2026-08-12T14:26:04+00:00",
+  "attempts": [
+    {
+      "submission_id": "2104294714",
+      "submitted_at": "2026-08-12T14:26:04+00:00",
+      "status": "Accepted",
+      "language": "python3",
+      "code_path": "solutions/721-accounts-merge/2104294714.py",
+      "runtime": "27 ms",
+      "memory": "26.7 MB",
+      "leetcode_notes": "[ Time taken: 16m 12s ]",
+      "raw_comments": [
+        "can we not like think of this question as like a graph question?",
+        "we can create an adjacency list of these account emails and if they ",
+        "contain the same person we just merge the emails right (?)",
+        "then we can like DFS through ",
+        "we connect the first email to the rest of the emails the account has",
+        "DFS portion"
+      ],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    }
+  ],
+  "review": {
+    "state": "new",
+    "stability": null,
+    "difficulty": null,
+    "retrievability": null,
+    "last_review": null,
+    "next_review": "2026-08-12T14:26:04+00:00",
+    "reps": 0,
+    "lapses": 0
+  }
+}

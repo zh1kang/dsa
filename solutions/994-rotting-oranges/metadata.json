@@ -1,0 +1,93 @@
+{
+  "leetcode_id": "994",
+  "slug": "rotting-oranges",
+  "title": "Rotting Oranges",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Breadth-First Search",
+    "Matrix"
+  ],
+  "leetcode_url": "https://leetcode.com/problems/rotting-oranges/",
+  "first_solved_at": "2025-12-05T22:32:08+00:00",
+  "last_solved_at": "2026-08-02T07:10:27+00:00",
+  "attempts": [
+    {
+      "submission_id": "1847945894",
+      "submitted_at": "2025-12-05T22:32:08+00:00",
+      "status": "Accepted",
+      "language": "python3",
+      "code_path": "solutions/994-rotting-oranges/1847945894.py",
+      "runtime": "0 ms",
+      "memory": "17.9 MB",
+      "leetcode_notes": null,
+      "raw_comments": [],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    },
+    {
+      "submission_id": "2091026699",
+      "submitted_at": "2026-08-02T07:07:21+00:00",
+      "status": "Accepted",
+      "language": "python3",
+      "code_path": "solutions/994-rotting-oranges/2091026699.py",
+      "runtime": "2 ms",
+      "memory": "19.1 MB",
+      "leetcode_notes": null,
+      "raw_comments": [
+        "pop the rotten oranges row, col"
+      ],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    },
+    {
+      "submission_id": "2091030025",
+      "submitted_at": "2026-08-02T07:10:27+00:00",
+      "status": "Accepted",
+      "language": "python3",
+      "code_path": "solutions/994-rotting-oranges/2091030025.py",
+      "runtime": "3 ms",
+      "memory": "19.3 MB",
+      "leetcode_notes": null,
+      "raw_comments": [
+        "pop the rotten oranges (row, col)",
+        "search a level (in this case the adjacent oranges) of the rotten roanges ",
+        "rot the fresh oranges next to the current rotten oraange",
+        "append the coordiates of the new rotten oranges "
+      ],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    }
+  ],
+  "review": {
+    "state": "new",
+    "stability": null,
+    "difficulty": null,
+    "retrievability": null,
+    "last_review": null,
+    "next_review": "2026-08-02T07:10:27+00:00",
+    "reps": 0,
+    "lapses": 0
+  }
+}

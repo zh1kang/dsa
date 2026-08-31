@@ -1,0 +1,117 @@
+{
+  "leetcode_id": "278",
+  "slug": "first-bad-version",
+  "title": "First Bad Version",
+  "difficulty": "Easy",
+  "tags": [
+    "Binary Search",
+    "Interactive"
+  ],
+  "leetcode_url": "https://leetcode.com/problems/first-bad-version/",
+  "first_solved_at": "2026-07-23T15:48:16+00:00",
+  "last_solved_at": "2026-07-23T15:48:16+00:00",
+  "attempts": [
+    {
+      "submission_id": "2078592688",
+      "submitted_at": "2026-07-23T15:46:04+00:00",
+      "status": "Wrong Answer",
+      "language": "python3",
+      "code_path": "solutions/278-first-bad-version/2078592688.py",
+      "runtime": "N/A",
+      "memory": "N/A",
+      "leetcode_notes": null,
+      "raw_comments": [
+        "The isBadVersion API is already defined for you.",
+        "def isBadVersion(version: int) -> bool:"
+      ],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    },
+    {
+      "submission_id": "2078593661",
+      "submitted_at": "2026-07-23T15:46:52+00:00",
+      "status": "Wrong Answer",
+      "language": "python3",
+      "code_path": "solutions/278-first-bad-version/2078593661.py",
+      "runtime": "N/A",
+      "memory": "N/A",
+      "leetcode_notes": null,
+      "raw_comments": [
+        "The isBadVersion API is already defined for you.",
+        "def isBadVersion(version: int) -> bool:"
+      ],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    },
+    {
+      "submission_id": "2078594622",
+      "submitted_at": "2026-07-23T15:47:39+00:00",
+      "status": "Wrong Answer",
+      "language": "python3",
+      "code_path": "solutions/278-first-bad-version/2078594622.py",
+      "runtime": "N/A",
+      "memory": "N/A",
+      "leetcode_notes": null,
+      "raw_comments": [
+        "The isBadVersion API is already defined for you.",
+        "def isBadVersion(version: int) -> bool:"
+      ],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    },
+    {
+      "submission_id": "2078595406",
+      "submitted_at": "2026-07-23T15:48:16+00:00",
+      "status": "Accepted",
+      "language": "python3",
+      "code_path": "solutions/278-first-bad-version/2078595406.py",
+      "runtime": "46 ms",
+      "memory": "19.1 MB",
+      "leetcode_notes": null,
+      "raw_comments": [
+        "The isBadVersion API is already defined for you.",
+        "def isBadVersion(version: int) -> bool:"
+      ],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    }
+  ],
+  "review": {
+    "state": "new",
+    "stability": null,
+    "difficulty": null,
+    "retrievability": null,
+    "last_review": null,
+    "next_review": "2026-07-23T15:48:16+00:00",
+    "reps": 0,
+    "lapses": 0
+  }
+}

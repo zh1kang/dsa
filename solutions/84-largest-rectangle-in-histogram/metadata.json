@@ -1,0 +1,107 @@
+{
+  "leetcode_id": "84",
+  "slug": "largest-rectangle-in-histogram",
+  "title": "Largest Rectangle in Histogram",
+  "difficulty": "Hard",
+  "tags": [
+    "Array",
+    "Stack",
+    "Monotonic Stack",
+    "Range Minimum/Maximum Query"
+  ],
+  "leetcode_url": "https://leetcode.com/problems/largest-rectangle-in-histogram/",
+  "first_solved_at": "2026-08-12T12:44:46+00:00",
+  "last_solved_at": "2026-08-12T12:46:30+00:00",
+  "attempts": [
+    {
+      "submission_id": "2094063759",
+      "submitted_at": "2026-08-04T13:52:36+00:00",
+      "status": "Wrong Answer",
+      "language": "python3",
+      "code_path": "solutions/84-largest-rectangle-in-histogram/2094063759.py",
+      "runtime": "N/A",
+      "memory": "N/A",
+      "leetcode_notes": null,
+      "raw_comments": [],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    },
+    {
+      "submission_id": "2104173024",
+      "submitted_at": "2026-08-12T12:44:46+00:00",
+      "status": "Accepted",
+      "language": "python3",
+      "code_path": "solutions/84-largest-rectangle-in-histogram/2104173024.py",
+      "runtime": "122 ms",
+      "memory": "36.6 MB",
+      "leetcode_notes": null,
+      "raw_comments": [
+        "we can solve this by creating a stack, and then adding tuples of (height, index) to the stack, and when we have a candidate we append to the stack, and",
+        "when the height of the next possible candidate is lower than the one we currently have",
+        "we pop the candidate and then we check for the maximum height, and we continue this throughout the possible heights, keeping track of the maximum height we get",
+        "if the most recent candidate has a larger height than the current candidate, we pop",
+        "find max area",
+        "then we start at the new candidate so we append ",
+        "there can still be possible candidates on the stack so we have to check those as well"
+      ],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    },
+    {
+      "submission_id": "2104174858",
+      "submitted_at": "2026-08-12T12:46:30+00:00",
+      "status": "Accepted",
+      "language": "python3",
+      "code_path": "solutions/84-largest-rectangle-in-histogram/2104174858.py",
+      "runtime": "123 ms",
+      "memory": "36.3 MB",
+      "leetcode_notes": null,
+      "raw_comments": [
+        "we can solve this by creating a stack, and then adding tuples of (height, index) to the stack, and when we have a candidate we append to the stack, and",
+        "when the height of the next possible candidate is lower than the one we currently have",
+        "we pop the candidate and then we check for the maximum height, and we continue this throughout the possible heights, keeping track of the maximum height we get",
+        "O(n)",
+        "if the most recent candidate has a larger height than the current candidate, we pop",
+        "O(1)",
+        "find max area",
+        "then we start at the new candidate so we append ",
+        "there can still be possible candidates on the stack so we have to check those as well",
+        "O(1)",
+        "O(n)"
+      ],
+      "notes": {
+        "thought_process": "",
+        "core_insight": "",
+        "pattern": "",
+        "mistakes": "",
+        "edge_cases": "",
+        "time_complexity": "",
+        "space_complexity": ""
+      }
+    }
+  ],
+  "review": {
+    "state": "new",
+    "stability": null,
+    "difficulty": null,
+    "retrievability": null,
+    "last_review": null,
+    "next_review": "2026-08-12T12:46:30+00:00",
+    "reps": 0,
+    "lapses": 0
+  }
+}
