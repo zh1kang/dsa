@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import time
 from typing import Any
+from urllib.parse import urlparse
 
 from playwright.sync_api import Error as PlaywrightError, sync_playwright
 
@@ -34,6 +35,12 @@ async ({ query, variables }) => {
   return { status: response.status, body: await response.text() };
 }
 """
+
+
+def is_leetcode_url(url: str) -> bool:
+    """Return whether a browser URL belongs to LeetCode."""
+    hostname = (urlparse(url).hostname or "").lower()
+    return hostname == "leetcode.com" or hostname.endswith(".leetcode.com")
 
 
 class LeetCodeSession:
@@ -105,6 +112,8 @@ class LeetCodeSession:
         deadline = time.monotonic() + timeout_seconds
         while time.monotonic() < deadline:
             time.sleep(5)
+            if not is_leetcode_url(self.page.url):
+                continue
             status = self.user_status()
             if status["is_signed_in"]:
                 print(f"signed in as {status['username']}")
