@@ -2,7 +2,7 @@
 import sys
 import tempfile
 import unittest
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
@@ -31,7 +31,7 @@ class SchedulerBase(unittest.TestCase):
         self._tmp = tempfile.TemporaryDirectory()
         self.root = Path(self._tmp.name)
         self.addCleanup(self._tmp.cleanup)
-        self.data = {"schema_version": 1, "problems": {}}
+        self.data = {"schema_version": 2, "problems": {}}
         tracker.import_submission(self.root, self.data, submission(
             "1001", "1", "two-sum", "Two Sum", "2025-05-01T10:00:00+00:00"))
         tracker.import_submission(self.root, self.data, submission(
@@ -65,8 +65,52 @@ class TestNewCardPolicy(SchedulerBase):
         reviews = fsrs_scheduler.compute_reviews(self.data, [], 0.9, NOW)
         self.assertNotIn("42-trapping-rain-water", reviews)
 
+    def test_tracking_cutoff_excludes_older_accepted_problems(self):
+        reviews = fsrs_scheduler.compute_reviews(
+            self.data,
+            [],
+            0.9,
+            NOW,
+            tracking_start_date=date(2025, 5, 15),
+            local_timezone=timezone.utc,
+        )
+        self.assertEqual(reviews, {})
+
+        tracker.import_submission(self.root, self.data, submission(
+            "1005", "1", "two-sum", "Two Sum", "2025-05-15T09:00:00+00:00"
+        ))
+        reviews = fsrs_scheduler.compute_reviews(
+            self.data,
+            [],
+            0.9,
+            NOW,
+            tracking_start_date=date(2025, 5, 15),
+            local_timezone=timezone.utc,
+        )
+        self.assertEqual(set(reviews), {"1-two-sum"})
+        self.assertEqual(
+            reviews["1-two-sum"]["next_review"],
+            "2025-05-15T09:00:00+00:00",
+        )
+
 
 class TestReplay(SchedulerBase):
+    def test_tracking_cutoff_replays_only_current_events(self):
+        events = [
+            event("1-two-sum", "good", "2025-05-02T10:00:00+00:00"),
+            event("1-two-sum", "hard", "2025-05-20T10:00:00+00:00"),
+        ]
+        review = fsrs_scheduler.compute_reviews(
+            self.data,
+            events,
+            0.9,
+            NOW,
+            tracking_start_date=date(2025, 5, 15),
+            local_timezone=timezone.utc,
+        )["1-two-sum"]
+        self.assertEqual(review["reps"], 1)
+        self.assertEqual(review["last_review"], "2025-05-20T10:00:00+00:00")
+
     def test_replay_is_event_only(self):
         events = [event("1-two-sum", "good", "2025-05-02T10:00:00+00:00")]
         before = fsrs_scheduler.compute_reviews(self.data, events, 0.9, NOW)
@@ -127,7 +171,7 @@ class TestSchedule(SchedulerBase):
         self.assertEqual(entry["leetcode_url"], "https://leetcode.com/problems/two-sum/")
         self.assertEqual(entry["difficulty"], "Easy")
         self.assertEqual(entry["tags"], ["Array"])
-        self.assertEqual(entry["latest_solution"], "solutions/1-two-sum/1001.py")
+        self.assertEqual(entry["latest_solution"], "1-two-sum.py")
         self.assertEqual(entry["raw_comments"], ["solution 1001"])
         self.assertEqual(entry["next_review"], "2025-05-01")
         self.assertNotIn("code", entry)
@@ -180,6 +224,7 @@ class TestLogValidation(SchedulerBase):
     def test_invalid_optionals_are_rejected(self):
         base = event("1-two-sum", "good", "2025-05-02T10:00:00+00:00")
         for bad in ({"elapsed_minutes": -1}, {"hints_used": -2}, {"notes": 5},
+                    {"failure_stage": 3},
                     {"solved_without_help": "yes"}):
             with self.assertRaises(tracker.DataError):
                 fsrs_scheduler.validate_review_log([{**base, **bad}], self.known())

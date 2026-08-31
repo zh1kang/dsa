@@ -4,6 +4,7 @@ import io
 import sys
 import tempfile
 import unittest
+from datetime import timezone
 from pathlib import Path
 from types import SimpleNamespace
 from unittest.mock import patch
@@ -16,7 +17,8 @@ from comment_parser import NOTE_FIELDS
 
 
 def make_tracker(tmp: Path):
-    data = {"schema_version": 1, "problems": {}}
+    (tmp / "1-two-sum.py").unlink(missing_ok=True)
+    data = {"schema_version": 2, "problems": {}}
     tracker.import_submission(tmp, data, {
         "submission_id": "1001", "frontend_id": "1", "slug": "two-sum",
         "title": "Two Sum", "difficulty": "Easy", "tags": ["Array", "Hash Table"],
@@ -25,7 +27,11 @@ def make_tracker(tmp: Path):
         "runtime": "50 ms", "memory": "17 MB",
         "leetcode_notes": "=IMPORTXML(\"https://evil\",\"//x\")",
         "raw_comments": ["first comment", "second comment"],
-        "notes": {"thought_process": "hash map", "time_complexity": "O(n)"},
+        "notes": {
+            "thought_process": "hash map",
+            "notes": "forgot the empty input",
+            "time_complexity": "O(n)",
+        },
     })
     tracker.import_submission(tmp, data, {
         "submission_id": "1000", "frontend_id": "1", "slug": "two-sum",
@@ -72,6 +78,7 @@ class TestRows(unittest.TestCase):
 
     def test_structured_notes_in_separate_columns(self):
         self.assertEqual(self.cell(self.rows[1], "thought_process"), "hash map")
+        self.assertEqual(self.cell(self.rows[1], "notes"), "forgot the empty input")
         self.assertEqual(self.cell(self.rows[1], "time_complexity"), "O(n)")
         self.assertEqual(self.cell(self.rows[1], "core_insight"), "")
 
@@ -90,7 +97,7 @@ class TestRows(unittest.TestCase):
         self.assertEqual(self.cell(self.rows[1], "url"),
                          "https://leetcode.com/problems/two-sum/")
         self.assertEqual(self.cell(self.rows[1], "code_path"),
-                         "solutions/1-two-sum/1001.py")
+                         "1-two-sum.py")
 
     def test_sheet_cell_limit_is_checked_before_upload(self):
         rows = [list(google_sheets.HEADER), [""] * len(google_sheets.HEADER)]
@@ -98,29 +105,182 @@ class TestRows(unittest.TestCase):
         with self.assertRaises(ValueError):
             google_sheets.validate_sheet_rows(rows)
 
+    def test_review_rows_match_reference_field_order(self):
+        tracker_data = make_tracker(self.root)
+        events = [{
+            "problem": "1-two-sum",
+            "grade": "Good",
+            "reviewed_at": "2025-06-01T12:00:00+00:00",
+            "failure_stage": "implementation",
+            "elapsed_minutes": 12.5,
+            "hints_used": 0,
+            "notes": "clean retry",
+        }]
+        rows = google_sheets.build_review_rows(tracker_data, events)
+        self.assertEqual(rows[0], google_sheets.REVIEW_HEADER)
+        self.assertEqual(rows[1], [
+            "2025-06-01T12:00:00+00:00", "Two Sum", "pass",
+            "implementation", "12.5", "0", "clean retry",
+        ])
+
+    def test_hinted_pass_maps_to_partial_reference_result(self):
+        tracker_data = make_tracker(self.root)
+        rows = google_sheets.build_review_rows(tracker_data, [{
+            "problem": "1-two-sum", "grade": "Easy",
+            "reviewed_at": "2025-06-01T12:00:00+00:00",
+            "hints_used": 1,
+        }])
+        self.assertEqual(rows[1][google_sheets.REVIEW_HEADER.index("result")], "partial")
+
+    def test_template_rows_separate_thoughts_and_notes(self):
+        tracker_data = make_tracker(self.root)
+        problems = google_sheets.build_problem_rows(
+            tracker_data, [], "zh1kang/dsa"
+        )
+        submissions = google_sheets.build_submission_rows(
+            tracker_data, "zh1kang/dsa"
+        )
+        problem = problems[1]
+        self.assertEqual(
+            problem[google_sheets.PROBLEMS_HEADER.index("Thought Process")],
+            "hash map",
+        )
+        self.assertEqual(
+            problem[google_sheets.PROBLEMS_HEADER.index("Notes")],
+            "forgot the empty input",
+        )
+        self.assertEqual(len(submissions), 3)
+        accepted = next(row for row in submissions[1:] if row[0] == "1001")
+        self.assertEqual(
+            accepted[google_sheets.SUBMISSIONS_HEADER.index("Notes")],
+            "forgot the empty input",
+        )
+
+    def test_problem_rows_contain_live_review_formulas(self):
+        rows = google_sheets.build_problem_rows(
+            make_tracker(self.root), [], "zh1kang/dsa"
+        )
+        status = rows[1][google_sheets.PROBLEMS_HEADER.index("Review Status")]
+        days = rows[1][google_sheets.PROBLEMS_HEADER.index("Days Until Due")]
+        self.assertTrue(status.startswith("=IF("))
+        self.assertTrue(days.startswith("=IF("))
+
+    def test_push_updates_template_tables_and_dashboard(self):
+        class Worksheet:
+            def __init__(self, title, rows, cols):
+                self.title = title
+                self.row_count = rows
+                self.col_count = cols
+                self.updated = None
+                self.frozen = False
+                self.formatted = []
+                self.batch_updates = []
+                self.cleared = []
+
+            def resize(self, rows, cols):
+                self.row_count = rows
+                self.col_count = cols
+
+            def update(self, **kwargs):
+                self.updated = kwargs
+
+            def batch_clear(self, ranges):
+                self.cleared.extend(ranges)
+
+            def freeze(self, **kwargs):
+                self.frozen = kwargs == {"rows": 1}
+
+            def format(self, range_name, cell_format):
+                self.formatted.append((range_name, cell_format))
+
+            def batch_update(self, values, **kwargs):
+                self.batch_updates.append((values, kwargs))
+
+        class Spreadsheet:
+            def __init__(self):
+                self.worksheets = {
+                    "Problems": Worksheet("Problems", 1000, 35),
+                    "Submissions": Worksheet("Submissions", 1000, 23),
+                    "Reviews": Worksheet("Reviews", 1000, 20),
+                    "README": Worksheet("README", 1000, 26),
+                    "Due Today": Worksheet("Due Today", 1000, 26),
+                    "Config": Worksheet("Config", 1000, 26),
+                }
+                self.requests = []
+
+            def worksheet(self, title):
+                return self.worksheets[title]
+
+            def fetch_sheet_metadata(self):
+                tables = {"Problems": "1", "Submissions": "2", "Reviews": "3"}
+                return {"sheets": [
+                    {
+                        "properties": {"title": title, "sheetId": index},
+                        "tables": ([{"tableId": tables[title]}]
+                                   if title in tables else []),
+                    }
+                    for index, title in enumerate(self.worksheets, start=10)
+                ]}
+
+            def batch_update(self, body):
+                self.requests.extend(body["requests"])
+
+        spreadsheet = Spreadsheet()
+        module = SimpleNamespace(
+            oauth=lambda **kwargs: SimpleNamespace(open_by_key=lambda key: spreadsheet),
+        )
+        credentials = self.root / "client.json"
+        credentials.write_text("{}")
+        config = SimpleNamespace(
+            spreadsheet_id="sheet", google_credentials_file=credentials,
+            google_token_file=self.root / "token.json",
+            problems_worksheet="Problems",
+            submissions_worksheet="Submissions",
+            reviews_worksheet="Reviews",
+            github_repository="zh1kang/dsa",
+            tracking_start_date=None,
+            timezone=timezone.utc,
+        )
+        with patch.dict(sys.modules, {"gspread": module}):
+            google_sheets.push_tracker(config, make_tracker(self.root), [])
+        for title in ("Problems", "Submissions", "Reviews"):
+            worksheet = spreadsheet.worksheets[title]
+            self.assertTrue(worksheet.frozen)
+            self.assertEqual(worksheet.updated["value_input_option"], "USER_ENTERED")
+        self.assertTrue(spreadsheet.worksheets["README"].batch_updates)
+        self.assertEqual(
+            spreadsheet.worksheets["Due Today"].updated["value_input_option"],
+            "USER_ENTERED",
+        )
+        self.assertEqual(
+            spreadsheet.worksheets["Config"].updated["value_input_option"],
+            "RAW",
+        )
+        self.assertEqual(
+            sum("updateTable" in request for request in spreadsheet.requests), 3
+        )
+
     def test_failed_update_does_not_clear_existing_rows(self):
         class Worksheet:
             row_count = 3
-            col_count = len(google_sheets.HEADER)
+            col_count = len(google_sheets.PROBLEMS_HEADER)
             batch_cleared = False
+            def freeze(self, **kwargs):
+                pass
+            def format(self, *args, **kwargs):
+                pass
+            def set_basic_filter(self, *args, **kwargs):
+                pass
             def update(self, **kwargs):
                 raise RuntimeError("network failed")
             def batch_clear(self, ranges):
                 self.batch_cleared = True
         worksheet = Worksheet()
         spreadsheet = SimpleNamespace(worksheet=lambda name: worksheet)
-        module = SimpleNamespace(
-            oauth=lambda **kwargs: SimpleNamespace(open_by_key=lambda key: spreadsheet),
-            exceptions=SimpleNamespace(WorksheetNotFound=type("WorksheetNotFound", (Exception,), {})),
-        )
-        credentials = self.root / "client.json"
-        credentials.write_text("{}")
-        config = SimpleNamespace(
-            spreadsheet_id="sheet", google_credentials_file=credentials,
-            google_token_file=self.root / "token.json", worksheet="LeetCode",
-        )
-        with patch.dict(sys.modules, {"gspread": module}), self.assertRaises(RuntimeError):
-            google_sheets.push_rows(config, [list(google_sheets.HEADER)])
+        with self.assertRaises(RuntimeError):
+            google_sheets._update_worksheet(
+                spreadsheet, "Problems", [list(google_sheets.PROBLEMS_HEADER)]
+            )
         self.assertFalse(worksheet.batch_cleared)
 
 

@@ -22,7 +22,7 @@ import update_review_schedule
 from config import load_config
 
 GENERATED_PATHS = ["review-log.json", "tracker.json", "review-schedule.json",
-                   "google-sheets.csv", "solutions"]
+                   "google-sheets.csv", "mindsolve-log.csv"]
 
 
 def resolve_problem(tracker_data: dict[str, Any], identifier: str) -> str:
@@ -46,7 +46,8 @@ def resolve_problem(tracker_data: dict[str, Any], identifier: str) -> str:
 
 
 def build_event(key: str, rating: str, now: datetime, minutes: float | None,
-                hints: int | None, notes: str | None) -> dict[str, Any]:
+                hints: int | None, notes: str | None,
+                failure_stage: str | None = None) -> dict[str, Any]:
     grade = fsrs_scheduler.GRADE_BY_CASEFOLD.get(rating.casefold())
     if grade is None:
         raise tracker.DataError(f"invalid grade {rating!r}")
@@ -59,6 +60,7 @@ def build_event(key: str, rating: str, now: datetime, minutes: float | None,
         "elapsed_minutes": minutes,
         "hints_used": hints,
         "notes": notes,
+        "failure_stage": failure_stage,
         "solved_without_help": rating.casefold() != "again" and (hints or 0) == 0,
     }
 
@@ -72,6 +74,8 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--hints", type=int, default=None,
                         help="number of hints used")
     parser.add_argument("--notes", default=None, help="free-form review note")
+    parser.add_argument("--failure-stage", default=None,
+                        help="stage where the review failed, if applicable")
     parser.add_argument("--no-push", action="store_true",
                         help="commit locally but do not push")
     args = parser.parse_args(argv)
@@ -91,14 +95,17 @@ def main(argv: list[str] | None = None) -> int:
     key = resolve_problem(tracker_data, args.identifier)
     events = tracker.load_json(root / "review-log.json", list)
     now = datetime.now(timezone.utc)
-    event = build_event(key, args.grade, now, args.minutes, args.hints, args.notes)
+    event = build_event(
+        key, args.grade, now, args.minutes, args.hints, args.notes,
+        args.failure_stage,
+    )
     accepted = {problem_key for problem_key, problem in tracker_data["problems"].items()
                 if problem.get("last_solved_at")}
     fsrs_scheduler.validate_review_log(events + [event], accepted)
     tracker.atomic_json_write(root / "review-log.json", events + [event])
     print(f"recorded review: {key} {event['grade']}")
 
-    schedule, rows = update_review_schedule.regenerate(config, now)
+    schedule, _, _ = update_review_schedule.regenerate(config, now)
     entry = next(e for e in schedule["problems"] if e["problem_id"] == key)
     print(f"next review for {key}: {entry['next_review']}")
 
@@ -120,7 +127,11 @@ def main(argv: list[str] | None = None) -> int:
                         failed = True
     if config.spreadsheet_id:
         try:
-            google_sheets.push_rows(config, rows)
+            google_sheets.push_tracker(
+                config,
+                tracker.load_tracker(root / "tracker.json"),
+                events + [event],
+            )
             print("google sheet updated")
         except Exception as exc:
             print(f"error: Google Sheets update failed: {exc}", file=sys.stderr)

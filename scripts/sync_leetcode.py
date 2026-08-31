@@ -26,7 +26,15 @@ import update_review_schedule
 from config import Config, load_config
 from leetcode_api import LeetCodeAPIError
 
-SYNC_PATHS = ["tracker.json", "review-schedule.json", "google-sheets.csv", "solutions"]
+SYNC_PATHS = [
+    "tracker.json", "review-schedule.json", "google-sheets.csv",
+    "mindsolve-log.csv",
+]
+
+
+def push_google_sheet(config: Config, tracker_data: dict[str, Any]) -> None:
+    events = tracker.load_json(config.root / "review-log.json", list)
+    google_sheets.push_tracker(config, tracker_data, events)
 
 
 def bind_local_account(config: Config, status: dict[str, Any]) -> None:
@@ -144,32 +152,30 @@ def fetch_submissions(session: Any, stubs: list[dict[str, Any]]) -> list[dict[st
 def import_submissions(
     root: Path, tracker_data: dict[str, Any], submissions: list[dict[str, Any]]
 ) -> tuple[dict[str, Any], int, int]:
-    """Import a validated batch and remove new source files if validation fails."""
+    """Import a validated batch and restore every flat file if the batch fails."""
     updated = deepcopy(tracker_data)
-    created: list[Path] = []
+    originals: dict[Path, bytes | None] = {}
     original_ids = tracker.known_submission_ids(tracker_data)
     imported = 0
     changed = 0
     try:
         for submission in submissions:
-            key = tracker.canonical_id(submission["frontend_id"], submission["slug"])
-            source = root / "solutions" / key / (
-                f"{submission['submission_id']}.{tracker.extension_for(submission['language'])}"
+            source = root / tracker.solution_path(
+                submission["frontend_id"], submission["slug"], submission["language"]
             )
-            if not source.exists():
-                created.append(source)
+            if source not in originals:
+                originals[source] = source.read_bytes() if source.exists() else None
             if tracker.import_submission(root, updated, submission):
                 if str(submission["submission_id"]) in original_ids:
                     changed += 1
                 else:
                     imported += 1
     except BaseException:
-        for source in created:
-            source.unlink(missing_ok=True)
-            try:
-                source.parent.rmdir()
-            except OSError:
-                pass
+        for source, original in originals.items():
+            if original is None:
+                source.unlink(missing_ok=True)
+            else:
+                tracker.atomic_bytes_write(source, original)
         raise
     return updated, imported, changed
 
@@ -196,7 +202,7 @@ def run_sync(config: Config, headless: bool, no_push: bool) -> int:
             print("no new or changed submissions")
             if config.spreadsheet_id:
                 try:
-                    google_sheets.push_rows(config, google_sheets.build_rows(tracker_data))
+                    push_google_sheet(config, tracker_data)
                     print("google sheet updated")
                 except Exception as exc:
                     print(f"error: Google Sheets update failed: {exc}", file=sys.stderr)
@@ -211,19 +217,27 @@ def run_sync(config: Config, headless: bool, no_push: bool) -> int:
         print("no new or changed submissions")
         if config.spreadsheet_id:
             try:
-                google_sheets.push_rows(config, google_sheets.build_rows(tracker_data))
+                push_google_sheet(config, tracker_data)
                 print("google sheet updated")
             except Exception as exc:
                 print(f"error: Google Sheets update failed: {exc}", file=sys.stderr)
                 return 1
         return 0
     tracker.write_tracker(root, updated)
-    _, rows = update_review_schedule.regenerate(config, datetime.now(timezone.utc))
+    update_review_schedule.regenerate(
+        config, datetime.now(timezone.utc)
+    )
     print(f"imported {imported} new and refreshed {changed} changed submissions")
 
     failed = False
     if (imported or changed) and in_repo:
-        git_utils.stage(root, SYNC_PATHS)
+        solution_paths = sorted({
+            tracker.solution_path(
+                submission["frontend_id"], submission["slug"], submission["language"]
+            ).as_posix()
+            for submission in submissions
+        })
+        git_utils.stage(root, SYNC_PATHS + solution_paths)
         if git_utils.has_staged_changes(root):
             if changed:
                 message = f"leetcode: sync {imported} new, {changed} changed submissions"
@@ -244,7 +258,9 @@ def run_sync(config: Config, headless: bool, no_push: bool) -> int:
                         failed = True
     if config.spreadsheet_id:
         try:
-            google_sheets.push_rows(config, rows)
+            push_google_sheet(
+                config, tracker.load_tracker(root / "tracker.json")
+            )
             print("google sheet updated")
         except Exception as exc:
             print(f"error: Google Sheets update failed: {exc}", file=sys.stderr)

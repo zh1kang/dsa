@@ -54,15 +54,16 @@ class TestImport(unittest.TestCase):
         self._tmp = tempfile.TemporaryDirectory()
         self.root = Path(self._tmp.name)
         self.addCleanup(self._tmp.cleanup)
-        self.data = {"schema_version": 1, "problems": {}}
+        self.data = {"schema_version": 2, "problems": {}}
 
     def test_import_creates_problem_attempt_and_code_file(self):
         self.assertTrue(tracker.import_submission(self.root, self.data, make_submission()))
         problem = self.data["problems"]["1-two-sum"]
         self.assertEqual(len(problem["attempts"]), 1)
         code_path = self.root / problem["attempts"][0]["code_path"]
-        self.assertEqual(code_path, self.root / "solutions" / "1-two-sum" / "1001.py")
+        self.assertEqual(code_path, self.root / "1-two-sum.py")
         self.assertEqual(code_path.read_text(), make_submission()["code"])
+        self.assertEqual(len(problem["attempts"][0]["code_sha256"]), 64)
         self.assertEqual(problem["first_solved_at"], "2025-05-01T10:00:00+00:00")
 
     def test_reimport_is_idempotent(self):
@@ -90,12 +91,33 @@ class TestImport(unittest.TestCase):
                                       make_submission(code="print('different')\n"))
 
     def test_existing_file_with_different_bytes_is_never_overwritten(self):
-        target = self.root / "solutions" / "1-two-sum" / "1001.py"
-        target.parent.mkdir(parents=True)
+        tracker.import_submission(self.root, self.data, make_submission())
+        target = self.root / "1-two-sum.py"
         target.write_text("original bytes\n")
         with self.assertRaises(tracker.DataError):
             tracker.import_submission(self.root, self.data, make_submission())
         self.assertEqual(target.read_text(), "original bytes\n")
+
+    def test_untracked_flat_file_is_never_overwritten(self):
+        target = self.root / "1-two-sum.py"
+        target.write_text("user file\n")
+        with self.assertRaises(tracker.DataError):
+            tracker.import_submission(self.root, self.data, make_submission())
+        self.assertEqual(target.read_text(), "user file\n")
+
+    def test_new_submission_is_appended_with_a_comment(self):
+        tracker.import_submission(self.root, self.data, make_submission())
+        tracker.import_submission(self.root, self.data, make_submission(
+            submission_id="1002",
+            submitted_at="2025-05-02T10:00:00+00:00",
+            code="# second\nclass Solution: pass\n",
+            raw_comments=["second"],
+        ))
+        contents = (self.root / "1-two-sum.py").read_text()
+        self.assertIn("# submission 1002 - 2025-05-02T10:00:00+00:00", contents)
+        self.assertLess(contents.index("# note"), contents.index("# second"))
+        attempts = self.data["problems"]["1-two-sum"]["attempts"]
+        self.assertEqual({attempt["code_path"] for attempt in attempts}, {"1-two-sum.py"})
 
     def test_nonaccepted_attempts_are_stored_but_do_not_solve(self):
         tracker.import_submission(self.root, self.data,
@@ -122,11 +144,70 @@ class TestImport(unittest.TestCase):
                     make_submission(frontend_id="../1")):
             with self.assertRaises(tracker.DataError):
                 tracker.import_submission(self.root, self.data, bad)
-        self.assertFalse((self.root / "solutions").exists())
+        self.assertEqual(list(self.root.iterdir()), [])
 
     def test_known_submission_ids(self):
         tracker.import_submission(self.root, self.data, make_submission())
         self.assertEqual(tracker.known_submission_ids(self.data), {"1001"})
+
+
+class TestFlatMigration(unittest.TestCase):
+    def test_migrates_submission_files_and_removes_metadata_directory(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            old = root / "solutions" / "1-two-sum"
+            old.mkdir(parents=True)
+            (old / "1001.py").write_text("# first\nclass Solution: pass\n")
+            (old / "1002.py").write_text("# second\nclass Solution: pass\n")
+            (old / "metadata.json").write_text("{}")
+            data = {
+                "schema_version": 1,
+                "problems": {
+                    "1-two-sum": {
+                        "leetcode_id": "1",
+                        "slug": "two-sum",
+                        "title": "Two Sum",
+                        "difficulty": "Easy",
+                        "tags": ["Array"],
+                        "leetcode_url": "https://leetcode.com/problems/two-sum/",
+                        "first_solved_at": "2025-05-01T10:00:00+00:00",
+                        "last_solved_at": "2025-05-02T10:00:00+00:00",
+                        "attempts": [
+                            {
+                                "submission_id": "1001",
+                                "submitted_at": "2025-05-01T10:00:00+00:00",
+                                "status": "Accepted",
+                                "language": "python3",
+                                "code_path": "solutions/1-two-sum/1001.py",
+                            },
+                            {
+                                "submission_id": "1002",
+                                "submitted_at": "2025-05-02T10:00:00+00:00",
+                                "status": "Accepted",
+                                "language": "python3",
+                                "code_path": "solutions/1-two-sum/1002.py",
+                            },
+                        ],
+                        "review": dict(tracker.EMPTY_REVIEW),
+                    }
+                },
+            }
+            migrated = tracker.migrate_flat_solution_layout(root, data)
+            self.assertEqual(migrated["schema_version"], 2)
+            self.assertFalse((root / "solutions").exists())
+            flat = root / "1-two-sum.py"
+            self.assertTrue(flat.is_file())
+            self.assertIn("# submission 1002", flat.read_text())
+            self.assertTrue(all(
+                attempt["code_path"] == "1-two-sum.py"
+                and len(attempt["code_sha256"]) == 64
+                for attempt in migrated["problems"]["1-two-sum"]["attempts"]
+            ))
+
+            loaded = tracker.migrate_flat_solution_layout(
+                root, tracker.load_tracker(root / "tracker.json")
+            )
+            self.assertEqual(loaded, migrated)
 
 
 if __name__ == "__main__":

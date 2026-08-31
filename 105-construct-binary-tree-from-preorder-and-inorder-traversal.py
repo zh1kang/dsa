@@ -1,0 +1,144 @@
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def buildTree(self, preorder: List[int], inorder: List[int]) -> Optional[TreeNode]:
+
+        # preorder is always Root -> Left -> Right
+        # innorder is always Left -> Root -> Right 
+        # innorder will tell us the size of the left and right of the root, which is good becasue 
+        # preorder only gives us the root first and we don't actually know the size of the left and right subtrees 
+        # we take the root from the first number from the preorder list 
+        # this root value is our partition value to seperate the left and right in the innorder traversal
+
+        # base case
+        if not preorder or not inorder:
+            return None
+
+        root_val = preorder[0]
+        root = TreeNode(root_val)
+
+        mid = inorder.index(root_val)
+
+        root.left = self.buildTree(preorder[1 : mid + 1], inorder[:mid])
+        root.right = self.buildTree(preorder[mid + 1:], inorder[mid + 1:])
+
+        return root
+
+
+
+
+
+
+
+
+        
+
+
+
+        
+        
+
+# submission 2074613443 - 2026-07-20T13:37:34+00:00
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def buildTree(self, preorder: List[int], inorder: List[int]) -> Optional[TreeNode]:
+
+        # preorder is always Root -> Left -> Right
+        # innorder is always Left -> Root -> Right 
+        # innorder will tell us the size of the left and right of the root, which is good becasue 
+        # preorder only gives us the root first and we don't actually know the size of the left and right subtrees 
+        # we take the root from the first number from the preorder list 
+        # this root value is our partition value to seperate the left and right in the innorder traversal
+
+        # base case
+        if not preorder or not inorder:
+            return None
+        
+        # set the root value to first
+        root_val = preorder[0]
+        # initialize the tree with this root value
+        root = TreeNode(root_val)
+        
+        # split the tree 
+        mid = inorder.index(root_val)
+        
+        # recursively build left and right subtree
+        # it is mid + 1 because splicing excludes the last index 
+        root.left = self.buildTree(preorder[1 : mid + 1], inorder[:mid])
+        root.right = self.buildTree(preorder[mid + 1:], inorder[mid + 1:])
+
+        return root
+
+
+
+
+
+
+
+
+        
+
+
+
+        
+        
+
+# submission 2074632203 - 2026-07-20T13:54:33+00:00
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def buildTree(self, preorder: List[int], inorder: List[int]) -> Optional[TreeNode]:
+
+        # preorder is always Root -> Left -> Right
+        # innorder is always Left -> Root -> Right 
+        # innorder will tell us the size of the left and right of the root, which is good becasue 
+        # preorder only gives us the root first and we don't actually know the size of the left and right subtrees 
+        # we take the root from the first number from the preorder list 
+        # this root value is our partition value to seperate the left and right in the innorder traversal
+
+        # instead of using index to iterate trhough all the numbers to find the value we split, create a mapping of a key and value in inorder arrray with a hashmap before we recurse so we access in O(1) instead of O(n)
+        inorder_map = {}
+        for i in range(len(inorder)):
+            inorder_map[inorder[i]] = i 
+        
+        preorder_index = 0 
+
+        def build(left, right):
+            nonlocal preorder_index
+
+            if left > right:
+                return None 
+            root_val = preorder[preorder_index]
+            preorder_index += 1
+        
+            root = TreeNode(root_val)
+
+            mid = inorder_map[root_val]
+
+            root.left = build(left, mid - 1)
+            root.right = build(mid + 1, right)
+
+            return root
+        return build(0, len(inorder) - 1)
+
+            
+
+        
+
+
+
+        
+        

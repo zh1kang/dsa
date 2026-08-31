@@ -111,6 +111,41 @@ class TestStructuredNotes(unittest.TestCase):
         comment_parser.parse_structured_notes(comments)
         self.assertEqual(comments, before)
 
+    def test_divergences_split_thoughts_from_notes(self):
+        comments = [
+            "use multi-source BFS",
+            "each level adds one",
+            "divergences:",
+            "forgot to seed every zero",
+            "queue setup defines the source",
+        ]
+        notes = comment_parser.parse_structured_notes(comments)
+        self.assertEqual(
+            notes["thought_process"],
+            "use multi-source BFS\neach level adds one",
+        )
+        self.assertEqual(
+            notes["notes"],
+            "forgot to seed every zero\nqueue setup defines the source",
+        )
+
+    def test_divergences_supports_inline_and_multiline_text(self):
+        comments = [
+            "plan first\ndivergences: mostly syntax\nmissed a semicolon",
+            "wrong return type",
+        ]
+        notes = comment_parser.parse_structured_notes(comments)
+        self.assertEqual(notes["thought_process"], "plan first")
+        self.assertEqual(
+            notes["notes"],
+            "mostly syntax\nmissed a semicolon\nwrong return type",
+        )
+
+    def test_unlabeled_comments_without_divergences_are_not_inferred(self):
+        notes = comment_parser.parse_structured_notes(["plan first", "then code"])
+        self.assertEqual(notes["thought_process"], "")
+        self.assertEqual(notes["notes"], "")
+
 
 if __name__ == "__main__":
     unittest.main()

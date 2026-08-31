@@ -2,12 +2,13 @@
 import sys
 import unittest
 from pathlib import Path
+from types import SimpleNamespace
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
 import leetcode_api
 import sync_leetcode
-from types import SimpleNamespace
+import tracker
 
 
 class PagingSession:
@@ -110,11 +111,34 @@ class TestBatchImport(unittest.TestCase):
                "slug": "bad", "difficulty": "Unknown"}
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
-            data = {"schema_version": 1, "problems": {}}
+            data = {"schema_version": 2, "problems": {}}
             with self.assertRaises(Exception):
                 sync_leetcode.import_submissions(root, data, [base, bad])
-            self.assertFalse((root / "solutions" / "1-two-sum" / "1.py").exists())
+            self.assertFalse((root / "1-two-sum.py").exists())
             self.assertEqual(data["problems"], {})
+
+    def test_later_failure_restores_an_existing_flat_file(self):
+        import tempfile
+        first = {
+            "submission_id": "1", "frontend_id": "1", "slug": "two-sum",
+            "title": "Two Sum", "difficulty": "Easy", "tags": ["Array"],
+            "submitted_at": "2025-01-01T00:00:00+00:00", "language": "python3",
+            "status": "Accepted", "code": "# first\n", "raw_comments": ["first"],
+            "notes": {},
+        }
+        second = {**first, "submission_id": "2",
+                  "submitted_at": "2025-01-02T00:00:00+00:00", "code": "# second\n"}
+        bad = {**first, "submission_id": "3", "frontend_id": "3",
+               "slug": "bad", "difficulty": "Unknown"}
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            data = {"schema_version": 2, "problems": {}}
+            tracker.import_submission(root, data, first)
+            before = (root / "1-two-sum.py").read_bytes()
+            with self.assertRaises(Exception):
+                sync_leetcode.import_submissions(root, data, [second, bad])
+            self.assertEqual((root / "1-two-sum.py").read_bytes(), before)
+            self.assertEqual(len(data["problems"]["1-two-sum"]["attempts"]), 1)
 
 
 class TestAccountBinding(unittest.TestCase):
@@ -150,6 +174,29 @@ class TestDetailFetch(unittest.TestCase):
         self.assertEqual(results[0]["raw_comments"], ["core insight: use a map"])
         self.assertEqual(results[0]["notes"]["core_insight"], "use a map")
         self.assertEqual(results[0]["leetcode_notes"], "keep it simple")
+
+    def test_divergence_notes_are_scraped_from_ordered_comments(self):
+        session = DetailSession()
+        original = session.graphql
+
+        def graphql(query, variables):
+            response = original(query, variables)
+            if query == leetcode_api.SUBMISSION_DETAILS_QUERY:
+                response["submissionDetails"]["code"] = (
+                    "# try a hash map\n"
+                    "class Solution: pass\n"
+                    "# divergences:\n"
+                    "# forgot duplicate values\n"
+                )
+            return response
+
+        session.graphql = graphql
+        result = sync_leetcode.fetch_submissions(session, [{
+            "submission_id": "30", "title_slug": "two-sum",
+            "runtime": "30 ms", "memory": "30 MB",
+        }])[0]
+        self.assertEqual(result["notes"]["thought_process"], "try a hash map")
+        self.assertEqual(result["notes"]["notes"], "forgot duplicate values")
 
 
 if __name__ == "__main__":

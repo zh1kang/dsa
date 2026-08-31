@@ -9,7 +9,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 import record_review
 import tracker
 
-DATA = {"schema_version": 1, "problems": {
+DATA = {"schema_version": 2, "problems": {
     "1-two-sum": {"leetcode_id": "1", "slug": "two-sum",
                   "attempts": [{"status": "Accepted"}]},
     "206-reverse-linked-list": {"leetcode_id": "206", "slug": "reverse-linked-list",
@@ -34,7 +34,7 @@ class TestResolve(unittest.TestCase):
             record_review.resolve_problem(DATA, "999")
 
     def test_problem_without_accepted_submission_is_rejected(self):
-        data = {"schema_version": 1, "problems": {
+        data = {"schema_version": 2, "problems": {
             "2-add-two-numbers": {"leetcode_id": "2", "slug": "add-two-numbers",
                                   "attempts": [{"status": "Wrong Answer"}]}
         }}
@@ -44,12 +44,15 @@ class TestResolve(unittest.TestCase):
 
 class TestBuildEvent(unittest.TestCase):
     def test_event_shape(self):
-        event = record_review.build_event("1-two-sum", "good", NOW, 12.5, 0, "smooth")
+        event = record_review.build_event(
+            "1-two-sum", "good", NOW, 12.5, 0, "smooth", "implementation"
+        )
         self.assertEqual(event["problem"], "1-two-sum")
         self.assertEqual(event["grade"], "Good")
         self.assertEqual(event["reviewed_at"], "2025-06-01T12:00:00+00:00")
         self.assertEqual(event["elapsed_minutes"], 12.5)
         self.assertEqual(event["notes"], "smooth")
+        self.assertEqual(event["failure_stage"], "implementation")
         self.assertTrue(event["solved_without_help"])
 
     def test_hints_disable_solved_without_help(self):

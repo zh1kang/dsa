@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.dsa.sync</string>
+
+  <key>WorkingDirectory</key>
+  <string>/Users/caleb/Desktop/dsa</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/Users/caleb/Desktop/dsa/.venv/bin/python</string>
+    <string>/Users/caleb/Desktop/dsa/scripts/sync_leetcode.py</string>
+  </array>
+
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key>
+    <integer>20</integer>
+    <key>Minute</key>
+    <integer>30</integer>
+  </dict>
+
+  <key>StandardOutPath</key>
+  <string>/Users/caleb/Desktop/dsa/.dsa/logs/sync.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/caleb/Desktop/dsa/.dsa/logs/sync-error.log</string>
+</dict>
+</plist>

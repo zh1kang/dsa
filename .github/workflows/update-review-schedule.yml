@@ -42,14 +42,14 @@ jobs:
       - name: Commit generated changes
         shell: bash
         run: |
-          if git diff --quiet -- tracker.json review-schedule.json google-sheets.csv solutions; then
+          if git diff --quiet -- tracker.json review-schedule.json google-sheets.csv mindsolve-log.csv; then
             echo "Derived files are already current."
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add tracker.json review-schedule.json google-sheets.csv solutions
+          git add tracker.json review-schedule.json google-sheets.csv mindsolve-log.csv
           git commit -m "chore: update review schedule"
           git pull --rebase origin "$GITHUB_REF_NAME"
           git push origin "HEAD:$GITHUB_REF_NAME"
