@@ -52,8 +52,6 @@ query submissionDetails($submissionId: Int!) {
     statusDisplay
     lang { name }
     code
-    runtime
-    memory
     notes
   }
 }
@@ -188,8 +186,6 @@ def parse_submission_details(data: dict[str, Any]) -> dict[str, Any]:
         "status": _text(details, "statusDisplay", "submissionDetails"),
         "language": _text(lang, "name", "submissionDetails.lang"),
         "code": code,
-        "runtime": _optional_text(details, "runtime", "submissionDetails"),
-        "memory": _optional_text(details, "memory", "submissionDetails"),
         "leetcode_notes": notes if notes else None,
     }
 

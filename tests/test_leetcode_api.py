@@ -55,15 +55,16 @@ class TestShapes(unittest.TestCase):
         data = {"submissionDetails": {
             "id": 22, "timestamp": 1714557600, "statusDisplay": "Accepted",
             "lang": {"name": "python3", "verboseName": "Python3"},
-            "code": "print(1)", "runtime": "50 ms",
-            "memory": "17 MB", "notes": "remember dict",
+            "code": "print(1)", "runtime": 1,
+            "memory": 42028000, "notes": "remember dict",
         }}
         details = leetcode_api.parse_submission_details(data)
         self.assertEqual(details["submission_id"], "22")
         self.assertEqual(details["language"], "python3")
         self.assertEqual(details["submitted_at"], "2024-05-01T10:00:00+00:00")
-        self.assertEqual(details["runtime"], "50 ms")
         self.assertEqual(details["leetcode_notes"], "remember dict")
+        self.assertNotIn("runtime", details)
+        self.assertNotIn("memory", details)
 
     def test_null_details_fails_closed(self):
         with self.assertRaises(LeetCodeAPIError):

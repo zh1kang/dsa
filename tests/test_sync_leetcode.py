@@ -137,12 +137,16 @@ class TestDetailFetch(unittest.TestCase):
     def test_details_are_oldest_first_and_question_metadata_is_cached(self):
         session = DetailSession()
         stubs = [
-            {"submission_id": "31", "title_slug": "two-sum"},
-            {"submission_id": "30", "title_slug": "two-sum"},
+            {"submission_id": "31", "title_slug": "two-sum",
+             "runtime": "31 ms", "memory": "31 MB"},
+            {"submission_id": "30", "title_slug": "two-sum",
+             "runtime": "30 ms", "memory": "30 MB"},
         ]
         results = sync_leetcode.fetch_submissions(session, stubs)
         self.assertEqual([item["submission_id"] for item in results], ["30", "31"])
         self.assertEqual(session.question_calls, 1)
+        self.assertEqual(results[0]["runtime"], "30 ms")
+        self.assertEqual(results[0]["memory"], "30 MB")
         self.assertEqual(results[0]["raw_comments"], ["core insight: use a map"])
         self.assertEqual(results[0]["notes"]["core_insight"], "use a map")
         self.assertEqual(results[0]["leetcode_notes"], "keep it simple")
