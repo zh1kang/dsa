@@ -263,15 +263,16 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     config = load_config()
-    headed = args.show_browser or not config.browser_profile.exists()
-    if headed and not args.show_browser and not args.reauth:
-        print("first run: opening a browser so you can log in to LeetCode")
     if args.reauth:
         delete_browser_profile(config.browser_profile)
-        headed = True
-        print("reauth requested: the browser opens headed for a manual login")
+        print("reauth requested: Chrome opens for a manual login")
     try:
-        return run_sync(config, headless=not headed, no_push=args.no_push)
+        from leetcode_browser import has_leetcode_session, login_interactively
+
+        if not has_leetcode_session(config.browser_profile):
+            print("opening normal Chrome so you can log in to LeetCode")
+            login_interactively(config)
+        return run_sync(config, headless=not args.show_browser, no_push=args.no_push)
     except (LeetCodeAPIError, tracker.DataError, git_utils.GitError) as exc:
         print(f"error: {exc}", file=sys.stderr)
         return 1

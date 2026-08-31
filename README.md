@@ -34,7 +34,6 @@ git clone git@github.com:zh1kang/dsa.git
 cd dsa
 python3 -m venv .venv
 .venv/bin/pip install -r requirements.txt
-.venv/bin/playwright install chromium
 git add .
 git commit -m "chore: initialize LeetCode tracker"
 git push -u origin main
@@ -70,10 +69,12 @@ or share it: it contains bearer-equivalent LeetCode authentication state.
 .venv/bin/python scripts/sync_leetcode.py
 ```
 
-When no profile exists, Chromium opens automatically. Log into LeetCode using
-the normal page (including 2FA or Cloudflare if shown). The script waits for a
-valid signed-in session and then imports the full available history slowly.
-Future runs reuse that profile headlessly.
+Google Chrome must be installed. When no authenticated profile exists, normal
+Chrome opens automatically. Log into LeetCode using the normal page (including
+2FA or Cloudflare if shown). The script waits for the session cookie, closes
+that browser, and then imports the full available history slowly. Future runs
+start the same Chrome binary headlessly and connect to it over a loopback-only
+debugging endpoint, preserving Chrome's encrypted session ownership.
 
 If a profile exists but you need to see the browser:
 
