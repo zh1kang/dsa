@@ -1,4 +1,5 @@
 """Tests for Chrome-owned LeetCode browser sessions."""
+import json
 import sqlite3
 import sys
 import tempfile
@@ -92,6 +93,38 @@ class TestInteractiveLogin(unittest.TestCase):
 
         stop_chrome.assert_called_once_with(process)
 
+
+class TestBrowserFetch(unittest.TestCase):
+    def test_retries_one_read_after_page_navigation(self):
+        config = SimpleNamespace(request_delay_seconds=1)
+        session = leetcode_browser.LeetCodeSession(config)
+        session.page = Mock()
+        session.page.evaluate.side_effect = [
+            leetcode_browser.PlaywrightError("Execution context was destroyed"),
+            {"status": 200, "body": json.dumps({"data": {"ok": True}})},
+        ]
+
+        with patch("leetcode_browser.time.sleep"):
+            data = session.graphql("query test { ok }", {})
+
+        self.assertEqual(data, {"ok": True})
+        session.page.goto.assert_called_once_with(
+            leetcode_browser.BASE_URL, wait_until="domcontentloaded"
+        )
+
+    def test_does_not_retry_other_browser_errors(self):
+        config = SimpleNamespace(request_delay_seconds=1)
+        session = leetcode_browser.LeetCodeSession(config)
+        session.page = Mock()
+        session.page.evaluate.side_effect = leetcode_browser.PlaywrightError("Target closed")
+
+        with (
+            patch("leetcode_browser.time.sleep"),
+            self.assertRaises(leetcode_browser.LeetCodeAPIError),
+        ):
+            session.graphql("query test { ok }", {})
+
+        self.assertEqual(session.page.evaluate.call_count, 1)
 
 if __name__ == "__main__":
     unittest.main()

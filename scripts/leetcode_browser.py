@@ -238,13 +238,19 @@ class LeetCodeSession:
 
     def graphql(self, query: str, variables: dict[str, Any]) -> dict[str, Any]:
         """Run one throttled same-origin GraphQL request and parse it strictly."""
-        time.sleep(self.config.request_delay_seconds)
-        try:
-            result = self.page.evaluate(
-                _GRAPHQL_FETCH_JS, {"query": query, "variables": variables}
-            )
-        except PlaywrightError as exc:
-            raise LeetCodeAPIError(f"browser fetch failed: {exc}") from exc
+        result = None
+        for attempt in range(2):
+            time.sleep(self.config.request_delay_seconds)
+            try:
+                result = self.page.evaluate(
+                    _GRAPHQL_FETCH_JS, {"query": query, "variables": variables}
+                )
+                break
+            except PlaywrightError as exc:
+                navigated = "Execution context was destroyed" in str(exc)
+                if not navigated or attempt == 1:
+                    raise LeetCodeAPIError(f"browser fetch failed: {exc}") from exc
+                self.page.goto(BASE_URL, wait_until="domcontentloaded")
         if not isinstance(result, dict) or "status" not in result or "body" not in result:
             raise LeetCodeAPIError("browser fetch returned an unexpected shape")
         return leetcode_api.parse_graphql_payload(int(result["status"]), str(result["body"]))
