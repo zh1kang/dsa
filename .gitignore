@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+*.log
+.pytest_cache/
+# Authentication must stay outside this repository. These patterns are defense in depth.
+browser/
+playwright-profile/
+account.json
+client_secret*.json
+credentials*.json
+token*.json

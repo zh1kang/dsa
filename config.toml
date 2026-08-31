@@ -1,0 +1,19 @@
+[leetcode]
+browser_profile = "~/.leetcode-tracker/browser"
+account_file = "~/.leetcode-tracker/account.json"
+request_delay_seconds = 1.0
+
+[tracker]
+timezone = "America/New_York"
+
+[fsrs]
+desired_retention = 0.90
+
+[git]
+auto_push = true
+
+[google_sheets]
+spreadsheet_id = ""
+worksheet = "LeetCode"
+credentials_file = "~/.leetcode-tracker/google/client_secret.json"
+token_file = "~/.leetcode-tracker/google/token.json"

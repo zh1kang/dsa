@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-31T13:33:30.710800-04:00",
+  "timezone": "America/New_York",
+  "fsrs": {
+    "algorithm": "FSRS-6",
+    "package": "fsrs",
+    "package_version": "6.3.2",
+    "desired_retention": 0.9,
+    "learning_steps": [],
+    "relearning_steps": [],
+    "fuzzing": false
+  },
+  "problems": []
+}
