@@ -21,8 +21,9 @@ Run this after solving problems:
 .venv/bin/python scripts/sync_leetcode.py
 ```
 
-The sync imports new attempts, updates review data and Google Sheets, then commits and pushes when `git.auto_push = true`.
+The submission sync imports new attempts, updates review data and Google Sheets, then commits and pushes when `git.auto_push = true`.
 Use `--no-push` to keep the update local.
+Review grades entered in Google Sheets are imported by the daily Codex automation.
 
 ## solution notes
 
@@ -30,6 +31,7 @@ Write your thoughts as comments at the top, before the solution code.
 Add `divergences:` after the code, then write what changed, what failed, or what you learned.
 
 ```python
+# thoughts:
 # use multi-source BFS from every zero
 # each level increases the distance by one
 class Solution:
@@ -38,6 +40,9 @@ class Solution:
 # divergences:
 # forgot to mark each zero as visited before BFS
 # queue initialization defines what distance is measured from
+
+# tc: O(m * n)
+# sc: O(m * n)
 ```
 
 The sheet stores comments before the first marker as `thought_process`.
@@ -51,12 +56,26 @@ These optional labels also get their own columns:
 - `pattern:`
 - `mistakes:`
 - `edge cases:`
-- `time complexity:`
-- `space complexity:`
+- `tc:`
+- `sc:`
 
 ## reviews
 
-Redo the problem before opening your old solution, then record the result:
+Redo the problem directly on LeetCode before opening your old solution.
+After the attempt, add a row to the `Review Input` sheet.
+Enter the problem number or ID and choose `Again`, `Hard`, `Good`, or `Easy`.
+Minutes, hints, notes, failure stage, and reviewed time are optional.
+Leave `Review ID`, `Status`, and `Message` unchanged because the sync manages them.
+Add a new row for every review and do not edit rows marked `Processed`.
+
+The daily automation imports new rows automatically.
+To import them immediately, run:
+
+```bash
+.venv/bin/python scripts/sync_reviews.py
+```
+
+The command-line review remains available as a fallback:
 
 ```bash
 .venv/bin/python scripts/record_review.py 542 good \
@@ -82,6 +101,7 @@ Each sync updates the configured [Google Sheet](https://docs.google.com/spreadsh
 
 - `Problems` contains the current solution notes and review state.
 - `Submissions` contains the complete attempt history.
+- `Review Input` accepts new review grades.
 - `Reviews` contains explicit review events.
 - `Due Today` shows the problems ready to review.
 
@@ -93,12 +113,6 @@ Google OAuth files stay under `.dsa/google/` and are never committed.
 - `tracker.json` contains the complete attempt history.
 - `review-log.json` contains explicit review events.
 - `review-schedule.json` contains the generated FSRS schedule.
+- `scripts/sync_reviews.py` imports grades from `Review Input`.
 - `google-sheets.csv` is the compact accepted-submission export.
 - `mindsolve-log.csv` matches the r-chong/dsa review-log format.
-
-## checks
-
-```bash
-.venv/bin/python -m unittest discover -s tests -v
-.venv/bin/python -m compileall -q scripts tests
-```

@@ -1,9 +1,0 @@
-[project]
-name = "dsa"
-version = "0.1.0"
-requires-python = ">=3.11"
-dependencies = [
-  "fsrs==6.3.2",
-  "gspread==6.2.1",
-  "playwright==1.62.0",
-]

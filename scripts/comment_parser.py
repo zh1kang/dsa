@@ -47,10 +47,8 @@ _LABEL_ALIASES = {
     "pitfalls": "mistakes",
     "edge case": "edge_cases",
     "edge cases": "edge_cases",
-    "time complexity": "time_complexity",
-    "time": "time_complexity",
-    "space complexity": "space_complexity",
-    "space": "space_complexity",
+    "tc": "time_complexity",
+    "sc": "space_complexity",
 }
 _LABEL_RE = re.compile(r"^\s*(?:[-*•]+\s*)?([A-Za-z][A-Za-z ]{0,30}?)\s*:\s*(.*)$")
 _DIVERGENCES_RE = re.compile(

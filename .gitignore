@@ -3,7 +3,6 @@ __pycache__/
 *.py[cod]
 .DS_Store
 *.log
-.pytest_cache/
 .dsa/
 # Runtime authentication must stay in the ignored .dsa directory.
 # These extra patterns are defense in depth.

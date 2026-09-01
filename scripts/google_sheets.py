@@ -10,9 +10,10 @@ from __future__ import annotations
 import csv
 import os
 import tempfile
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
+from uuid import uuid4
 
 import fsrs_scheduler
 from comment_parser import NOTE_FIELDS
@@ -58,6 +59,11 @@ REVIEWS_HEADER = [
     "Retrievability Before", "Stability After", "Difficulty After",
     "Retrievability After", "Next Review", "Logged At",
 ]
+REVIEW_INPUT_WORKSHEET = "Review Input"
+REVIEW_INPUT_HEADER = [
+    "Review ID", "Problem", "Grade", "Minutes", "Hints", "Notes",
+    "Failure Stage", "Reviewed At", "Status", "Message",
+]
 
 README_VALUES = [
     {"range": "A1", "values": [["dsa"]]},
@@ -81,20 +87,22 @@ README_VALUES = [
         '=COUNTIFS(Problems!AC2:AC1000,"<="&TODAY(),Problems!AC2:AC1000,"<>")'
     ]]},
     {"range": "A7", "values": [["how it works"]]},
-    {"range": "A8:B11", "values": [
-        ["sync", ".venv/bin/python scripts/sync_leetcode.py"],
+    {"range": "A8:B12", "values": [
+        ["sync submissions", ".venv/bin/python scripts/sync_leetcode.py"],
+        ["sync grades", ".venv/bin/python scripts/sync_reviews.py"],
         ["thoughts", "top comments before the solution code"],
         ["notes", "comments after divergences:"],
-        ["reviews", "record explicit Again, Hard, Good, or Easy grades"],
+        ["reviews", "enter a problem and grade in Review Input"],
     ]},
     {"range": "A13:B13", "values": [[
         "repository", "https://github.com/zh1kang/dsa"
     ]]},
     {"range": "A16", "values": [["tabs"]]},
-    {"range": "A17:B20", "values": [
+    {"range": "A17:B21", "values": [
         ["Problems", "current solution and review state"],
         ["Submissions", "complete attempt history"],
         ["Reviews", "explicit review history"],
+        ["Review Input", "enter new review grades here"],
         ["Due Today", "problems ready to review"],
     ]},
 ]
@@ -399,6 +407,123 @@ def validate_sheet_rows(rows: list[list[str]], header: list[str] = HEADER) -> No
                 )
 
 
+def _open_spreadsheet(config: Config) -> Any:
+    if not config.spreadsheet_id:
+        raise ValueError("google_sheets.spreadsheet_id is not configured")
+    if not config.google_credentials_file.exists():
+        raise FileNotFoundError(
+            f"google oauth client secret not found: {config.google_credentials_file}"
+        )
+    import gspread
+
+    config.google_token_file.parent.mkdir(parents=True, exist_ok=True)
+    client = gspread.oauth(
+        scopes=SHEETS_SCOPES,
+        credentials_filename=str(config.google_credentials_file),
+        authorized_user_filename=str(config.google_token_file),
+    )
+    return client.open_by_key(config.spreadsheet_id)
+
+
+def ensure_review_input_worksheet(spreadsheet: Any) -> Any:
+    """Create and validate the user-owned review input queue."""
+    import gspread
+    from gspread.utils import ValidationConditionType
+
+    try:
+        worksheet = spreadsheet.worksheet(REVIEW_INPUT_WORKSHEET)
+    except gspread.WorksheetNotFound:
+        worksheet = spreadsheet.add_worksheet(
+            title=REVIEW_INPUT_WORKSHEET,
+            rows=1000,
+            cols=len(REVIEW_INPUT_HEADER),
+        )
+    if worksheet.col_count < len(REVIEW_INPUT_HEADER):
+        worksheet.resize(cols=len(REVIEW_INPUT_HEADER))
+    current_header = worksheet.row_values(1)
+    if current_header and current_header[:len(REVIEW_INPUT_HEADER)] != REVIEW_INPUT_HEADER:
+        raise ValueError(
+            f"{REVIEW_INPUT_WORKSHEET} header does not match the expected schema"
+        )
+    worksheet.update(
+        range_name="A1:J1",
+        values=[REVIEW_INPUT_HEADER],
+        value_input_option="RAW",
+    )
+    worksheet.freeze(rows=1)
+    worksheet.format("A1:J1", {"textFormat": {"bold": True}})
+    worksheet.format("A2:J1000", {
+        "verticalAlignment": "TOP",
+        "wrapStrategy": "WRAP",
+    })
+    worksheet.add_validation(
+        "C2:C1000",
+        ValidationConditionType.one_of_list,
+        ["Again", "Hard", "Good", "Easy"],
+        inputMessage="How well did you recall the solution?",
+        strict=True,
+        showCustomUi=True,
+    )
+    return worksheet
+
+
+def claim_review_inputs(config: Config, now: datetime) -> list[dict[str, str | int]]:
+    """Assign stable IDs and timestamps to unprocessed review input rows."""
+    if now.tzinfo is None:
+        raise ValueError("review input claim time must be timezone-aware")
+    spreadsheet = _open_spreadsheet(config)
+    worksheet = ensure_review_input_worksheet(spreadsheet)
+    rows = worksheet.get_all_values()
+    inputs: list[dict[str, str | int]] = []
+    updates: list[dict[str, Any]] = []
+    for row_number, row in enumerate(rows[1:], start=2):
+        cells = (row + [""] * len(REVIEW_INPUT_HEADER))[:len(REVIEW_INPUT_HEADER)]
+        if cells[8].strip().casefold() == "processed":
+            continue
+        if not any(cell.strip() for cell in cells[1:7]):
+            continue
+        review_id = cells[0].strip() or f"RI-{uuid4().hex[:12]}"
+        reviewed_at = cells[7].strip() or (
+            now.astimezone(timezone.utc)
+            - timedelta(microseconds=max(1, len(rows) - row_number + 1))
+        ).isoformat()
+        if not cells[0].strip():
+            updates.append({"range": f"A{row_number}", "values": [[review_id]]})
+        if not cells[7].strip():
+            updates.append({"range": f"H{row_number}", "values": [[reviewed_at]]})
+        inputs.append({
+            "row_number": row_number,
+            "review_id": review_id,
+            "problem": cells[1].strip(),
+            "grade": cells[2].strip(),
+            "minutes": cells[3].strip(),
+            "hints": cells[4].strip(),
+            "notes": cells[5],
+            "failure_stage": cells[6].strip(),
+            "reviewed_at": reviewed_at,
+        })
+    if updates:
+        worksheet.batch_update(updates, value_input_option="RAW")
+    return inputs
+
+
+def mark_review_inputs(
+    config: Config, outcomes: list[tuple[int, str, str]]
+) -> None:
+    """Write processing status without changing user-entered review fields."""
+    if not outcomes:
+        return
+    spreadsheet = _open_spreadsheet(config)
+    worksheet = ensure_review_input_worksheet(spreadsheet)
+    worksheet.batch_update([
+        {
+            "range": f"I{row_number}:J{row_number}",
+            "values": [[status, message]],
+        }
+        for row_number, status, message in outcomes
+    ], value_input_option="RAW")
+
+
 def _update_worksheet(spreadsheet: Any, title: str, rows: list[list[str]]) -> None:
     """Replace one existing template table without touching other worksheets."""
     header = rows[0]
@@ -517,7 +642,7 @@ def _update_dashboard(spreadsheet: Any, config: Config) -> None:
         "wrapStrategy": "WRAP",
     })
     readme.format("A8:A13", {"textFormat": {"bold": True}})
-    readme.format("A17:A20", {"textFormat": {"bold": True}})
+    readme.format("A17:A21", {"textFormat": {"bold": True}})
 
     due = spreadsheet.worksheet("Due Today")
     due_header = [
@@ -534,8 +659,10 @@ def _update_dashboard(spreadsheet: Any, config: Config) -> None:
         'Problems!M2:M1000},(Problems!AC2:AC1000<>"")*'
         '(Problems!AC2:AC1000<=TODAY())),"No reviews due")'
     )
-    due.batch_clear(["A1:L1000"])
-    due.update(range_name="A1:L2", values=[due_header, [due_formula]],
+    due.update(range_name="A1:L1", values=[due_header],
+               value_input_option="USER_ENTERED")
+    due.batch_clear(["A2:L1000"])
+    due.update(range_name="A2", values=[[due_formula]],
                value_input_option="USER_ENTERED")
     due.freeze(rows=1)
     due.format("A2:L1000", {
@@ -575,21 +702,8 @@ def push_tracker(
     validate_sheet_rows(problem_rows, PROBLEMS_HEADER)
     validate_sheet_rows(submission_rows, SUBMISSIONS_HEADER)
     validate_sheet_rows(review_rows, REVIEWS_HEADER)
-    if not config.spreadsheet_id:
-        raise ValueError("google_sheets.spreadsheet_id is not configured")
-    if not config.google_credentials_file.exists():
-        raise FileNotFoundError(
-            f"google oauth client secret not found: {config.google_credentials_file}"
-        )
-    import gspread
-
-    config.google_token_file.parent.mkdir(parents=True, exist_ok=True)
-    client = gspread.oauth(
-        scopes=SHEETS_SCOPES,
-        credentials_filename=str(config.google_credentials_file),
-        authorized_user_filename=str(config.google_token_file),
-    )
-    spreadsheet = client.open_by_key(config.spreadsheet_id)
+    spreadsheet = _open_spreadsheet(config)
+    ensure_review_input_worksheet(spreadsheet)
     tables = [
         (config.problems_worksheet, problem_rows, [
             (0, 1, 190), (1, 2, 70), (2, 4, 210), (4, 5, 90),
