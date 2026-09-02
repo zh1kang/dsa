@@ -2,7 +2,7 @@
 
 Order of operations: clean-worktree check, optional fast-forward pull, scrape,
 strict validation of every detail, atomic tracker replacement, schedule and
-sheet regeneration, one commit, optional push. Grades are never inferred from
+sheet regeneration, one commit per question, optional push. Grades are never inferred from
 accepted submissions. If nothing new exists, nothing is written or committed.
 """
 from __future__ import annotations
@@ -233,31 +233,34 @@ def run_sync(config: Config, headless: bool, no_push: bool) -> int:
 
     failed = False
     if (imported or changed) and in_repo:
-        solution_paths = sorted({
-            tracker.solution_path(
-                submission["frontend_id"], submission["slug"], submission["language"]
-            ).as_posix()
-            for submission in submissions
-        })
-        git_utils.stage(root, SYNC_PATHS + solution_paths)
-        if git_utils.has_staged_changes(root):
-            if changed:
-                message = f"leetcode: sync {imported} new, {changed} changed submissions"
+        question_groups: dict[tuple[str, str], list[dict[str, Any]]] = {}
+        for submission in submissions:
+            key = (submission["frontend_id"], submission["slug"])
+            question_groups.setdefault(key, []).append(submission)
+        for group in question_groups.values():
+            solution_paths = sorted({
+                tracker.solution_path(
+                    submission["frontend_id"], submission["slug"], submission["language"]
+                ).as_posix()
+                for submission in group
+            })
+            git_utils.stage(root, SYNC_PATHS + solution_paths)
+            if not git_utils.has_staged_changes(root):
+                continue
+            title = group[0]["title"]
+            git_utils.commit(root, f"leetcode: {title}")
+        if config.auto_push and not no_push:
+            if not git_utils.has_upstream(root):
+                print("error: auto-push is enabled but this branch has no upstream; local commits kept",
+                      file=sys.stderr)
+                failed = True
             else:
-                message = f"leetcode: sync {imported} new submissions"
-            git_utils.commit(root, message)
-            if config.auto_push and not no_push:
-                if not git_utils.has_upstream(root):
-                    print("error: auto-push is enabled but this branch has no upstream; local commit kept",
+                try:
+                    git_utils.push(root)
+                except git_utils.GitError as exc:
+                    print(f"error: push failed; local commits are kept: {exc}",
                           file=sys.stderr)
                     failed = True
-                else:
-                    try:
-                        git_utils.push(root)
-                    except git_utils.GitError as exc:
-                        print(f"error: push failed; local data and commit are kept: {exc}",
-                              file=sys.stderr)
-                        failed = True
     if config.spreadsheet_id:
         try:
             push_google_sheet(
