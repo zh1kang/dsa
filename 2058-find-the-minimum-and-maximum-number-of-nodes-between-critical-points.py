@@ -144,3 +144,129 @@ class Solution:
             
 
         
+
+# submission 2128874845 - 2026-09-02T18:51:09+00:00
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def nodesBetweenCriticalPoints(self, head: Optional[ListNode]) -> List[int]:
+        
+        # has to be atleast 3 nodes
+        if not head and not head.next and not head.next.next:
+            return [-1, -1]
+       
+       # keep track of the most recent local idx of the critical point and the first one
+        first_idx = -1
+        last_idx = -1
+ 
+        prev = head
+        curr = head.next
+        curr_idx = 1 # keep track of the current index, we start at one because the head is at 0 
+
+        min_dist = float('inf')
+
+        while curr.next:
+            nxt = curr.next
+
+            # check whether it is a local min or max
+            local_max = curr.val > prev.val and curr.val > nxt.val 
+            local_min = curr.val < prev.val and curr.val < nxt.val
+
+
+            # if point is a critical point, we save the index
+            if local_max or local_min:
+                if first_idx == -1:
+                    first_idx = pos
+                else:
+                    # else we already have an index and we can find the min dist
+                    min_dist = min(min_dist, curr_idx - last_idx)
+                
+                last_idx = curr_idx
+            
+            # increment the pointers
+            prev = curr
+            curr = nxt
+            curr_idx += 1
+
+        # check if there is fewer than two distinct cirtical points:
+        if min_dist == float('inf'):
+            return [-1, -1]
+
+        # max dist is always the latest crit point and the first crit point
+        max_dist = last_idx - first_idx
+
+        return [min_dist, max_dist]
+
+
+
+
+
+
+
+       
+
+# submission 2128875517 - 2026-09-02T18:51:50+00:00
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def nodesBetweenCriticalPoints(self, head: Optional[ListNode]) -> List[int]:
+        
+        # has to be atleast 3 nodes
+        if not head and not head.next and not head.next.next:
+            return [-1, -1]
+       
+       # keep track of the most recent local idx of the critical point and the first one
+        first_idx = -1
+        last_idx = -1
+ 
+        prev = head
+        curr = head.next
+        curr_idx = 1 # keep track of the current index, we start at one because the head is at 0 
+
+        min_dist = float('inf')
+
+        while curr.next:
+            nxt = curr.next
+
+            # check whether it is a local min or max
+            local_max = curr.val > prev.val and curr.val > nxt.val 
+            local_min = curr.val < prev.val and curr.val < nxt.val
+
+
+            # if point is a critical point, we save the index
+            if local_max or local_min:
+                if first_idx == -1:
+                    first_idx = curr_idx
+                else:
+                    # else we already have an index and we can find the min dist
+                    min_dist = min(min_dist, curr_idx - last_idx)
+                
+                last_idx = curr_idx
+            
+            # increment the pointers
+            prev = curr
+            curr = nxt
+            curr_idx += 1
+
+        # check if there is fewer than two distinct cirtical points:
+        if min_dist == float('inf'):
+            return [-1, -1]
+
+        # max dist is always the latest crit point and the first crit point
+        max_dist = last_idx - first_idx
+
+        return [min_dist, max_dist]
+
+
+
+
+
+
+
+       

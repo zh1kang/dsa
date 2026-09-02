@@ -372,6 +372,33 @@ param_2 = obj.search(word)",,,,,,,,,new,,,,,,0,0
 obj = WordDictionary()
 obj.addWord(word)
 param_2 = obj.search(word)",,,,,,,,,new,,,,,,0,0
+215,Kth Largest Element in an Array,kth-largest-element-in-an-array,https://leetcode.com/problems/kth-largest-element-in-an-array/,Medium,"Array, Divide and Conquer, Sorting, Heap (Priority Queue), Quickselect",2126511257,2026-08-31T18:50:47+00:00,python3,51 ms,31 MB,215-kth-largest-element-in-an-array.py,[ Time taken: 17m 8s ],"we can solve this using a min heap of size k
+since we want the kth largest element, we push values that are larger than the current value
+and then by the end the kth largest value should just be the value sitting on top of the heap 
+initialize the heap of size k
+go thorugh the rest of the elements
+if the current num is greater than the value at the top of the heap",,,,,,,,,new,2026-08-31T18:54:03+00:00,,,,,0,0
+215,Kth Largest Element in an Array,kth-largest-element-in-an-array,https://leetcode.com/problems/kth-largest-element-in-an-array/,Medium,"Array, Divide and Conquer, Sorting, Heap (Priority Queue), Quickselect",2126514213,2026-08-31T18:54:03+00:00,python3,44 ms,31.1 MB,215-kth-largest-element-in-an-array.py,,"we can solve this using a min heap of size k
+since we want the kth largest element, we push values that are larger than the current value
+and then by the end the kth largest value should just be the value sitting on top of the heap 
+initialize the heap of size k
+go thorugh the rest of the elements
+if the current num is greater than the value at the top of the heap
+divergences:
+none really, just had to remember the heap syntax
+TC:
+building heap takes O(k) time
+traversing the heap and using the operations heappushpop is O(logk) (traversing the tree)
+O(nlogk) and space is just O(k)","we can solve this using a min heap of size k
+since we want the kth largest element, we push values that are larger than the current value
+and then by the end the kth largest value should just be the value sitting on top of the heap 
+initialize the heap of size k
+go thorugh the rest of the elements
+if the current num is greater than the value at the top of the heap","none really, just had to remember the heap syntax
+TC:
+building heap takes O(k) time
+traversing the heap and using the operations heappushpop is O(logk) (traversing the tree)
+O(nlogk) and space is just O(k)",,,,,,,new,2026-08-31T18:54:03+00:00,,,,,0,0
 217,Contains Duplicate,contains-duplicate,https://leetcode.com/problems/contains-duplicate/,Easy,"Array, Hash Table, Sorting",2094084419,2026-08-04T14:07:08+00:00,python3,15 ms,32.3 MB,217-contains-duplicate.py,,,,,,,,,,,new,,,,,,0,0
 226,Invert Binary Tree,invert-binary-tree,https://leetcode.com/problems/invert-binary-tree/,Easy,"Tree, Depth-First Search, Breadth-First Search, Binary Tree",1902417081,2026-01-30T21:24:57+00:00,python3,0 ms,19.5 MB,226-invert-binary-tree.py,[ Time taken: -1 d -1 hr -18 m -58 s ],"Definition for a binary tree node.
 class TreeNode:
@@ -403,6 +430,28 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right",,,,,,,,,new,,,,,,0,0
+232,Implement Queue using Stacks,implement-queue-using-stacks,https://leetcode.com/problems/implement-queue-using-stacks/,Easy,"Stack, Design, Queue",2128503287,2026-09-02T13:57:04+00:00,python3,0 ms,19.4 MB,232-implement-queue-using-stacks.py,[ Time taken: 2hrs 8m 11s ],"Your MyQueue object will be instantiated and called as such:
+obj = MyQueue()
+obj.push(x)
+param_2 = obj.pop()
+param_3 = obj.peek()
+param_4 = obj.empty()",,,,,,,,,new,2026-09-02T14:02:38+00:00,,,,,0,0
+232,Implement Queue using Stacks,implement-queue-using-stacks,https://leetcode.com/problems/implement-queue-using-stacks/,Easy,"Stack, Design, Queue",2128509852,2026-09-02T14:02:38+00:00,python3,0 ms,19.5 MB,232-implement-queue-using-stacks.py,,"divergences:
+none
+stacks are LIFO and queues are FIFO so appending all items in one stack to another reverses this and gives us the proper behavior we want for a queue 
+Your MyQueue object will be instantiated and called as such:
+obj = MyQueue()
+obj.push(x)
+param_2 = obj.pop()
+param_3 = obj.peek()
+param_4 = obj.empty()",,"none
+stacks are LIFO and queues are FIFO so appending all items in one stack to another reverses this and gives us the proper behavior we want for a queue 
+Your MyQueue object will be instantiated and called as such:
+obj = MyQueue()
+obj.push(x)
+param_2 = obj.pop()
+param_3 = obj.peek()
+param_4 = obj.empty()",,,,,,,new,2026-09-02T14:02:38+00:00,,,,,0,0
 235,Lowest Common Ancestor of a Binary Search Tree,lowest-common-ancestor-of-a-binary-search-tree,https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/,Medium,"Tree, Depth-First Search, Binary Search Tree, Binary Tree, Binary Lifting, Lowest Common Ancestor",2073458050,2026-07-19T12:39:06+00:00,python3,60 ms,22.9 MB,235-lowest-common-ancestor-of-a-binary-search-tree.py,[ Time taken: 18hrs 26m 10s ],"Definition for a binary tree node.
 class TreeNode:
     def __init__(self, x):
@@ -493,6 +542,17 @@ O(1) if n <= 2",,,,,,,,,new,,,,,,0,0
 322,Coin Change,coin-change,https://leetcode.com/problems/coin-change/,Medium,"Array, Dynamic Programming, Breadth-First Search, Knapsack Problem, Complete Knapsack",2099210563,2026-08-08T14:34:14+00:00,python3,988 ms,68.3 MB,322-coin-change.py,,"this is a classic DP problem
 we can just use top-down DP and cache our existing choices that we've made
 the state is the remaining amount we need to get to the target",,,,,,,,,new,,,,,,0,0
+347,Top K Frequent Elements,top-k-frequent-elements,https://leetcode.com/problems/top-k-frequent-elements/,Medium,"Array, Hash Table, Divide and Conquer, Sorting, Heap (Priority Queue), Bucket Sort, Counting, Quickselect",2127414583,2026-09-01T15:52:05+00:00,python3,2 ms,22.8 MB,347-top-k-frequent-elements.py,,"keep track of the frequencies in nums and push it onto the heap
+if size of heap is > k pop the least frequent number
+push these values onto the heap
+divergences: 
+none
+TC: O(nlogk)
+SC: O(n)","keep track of the frequencies in nums and push it onto the heap
+if size of heap is > k pop the least frequent number
+push these values onto the heap","none
+TC: O(nlogk)
+SC: O(n)",,,,,O(nlogk),O(n),new,2026-09-01T15:52:05+00:00,,,,,0,0
 383,Ransom Note,ransom-note,https://leetcode.com/problems/ransom-note/,Easy,"Hash Table, String, Counting",1873655784,2026-01-04T00:35:07+00:00,python3,25 ms,17.7 MB,383-ransom-note.py,,,,,,,,,,,new,,,,,,0,0
 409,Longest Palindrome,longest-palindrome,https://leetcode.com/problems/longest-palindrome/,Easy,"Hash Table, String, Greedy",1876003480,2026-01-06T04:43:17+00:00,python3,3 ms,17.3 MB,409-longest-palindrome.py,,,,,,,,,,,new,,,,,,0,0
 416,Partition Equal Subset Sum,partition-equal-subset-sum,https://leetcode.com/problems/partition-equal-subset-sum/,Medium,"Array, Dynamic Programming, Knapsack Problem, 0-1 Knapsack",1870593866,2025-12-31T23:01:12+00:00,python3,319 ms,78.2 MB,416-partition-equal-subset-sum.py,,,,,,,,,,,new,,,,,,0,0
@@ -537,6 +597,7 @@ class TreeNode:
         self.right = right
 base case",,,,,,,,,new,,,,,,0,0
 621,Task Scheduler,task-scheduler,https://leetcode.com/problems/task-scheduler/,Medium,"Array, Hash Table, Greedy, Sorting, Heap (Priority Queue), Counting",1873942524,2026-01-04T07:32:39+00:00,python3,120 ms,19.6 MB,621-task-scheduler.py,,,,,,,,,,,new,,,,,,0,0
+695,Max Area of Island,max-area-of-island,https://leetcode.com/problems/max-area-of-island/,Medium,"Array, Depth-First Search, Breadth-First Search, Union-Find, Matrix",2126567712,2026-08-31T20:08:05+00:00,python3,15 ms,20.7 MB,695-max-area-of-island.py,,sink the current to mark as visited,,,,,,,,,new,2026-08-31T20:08:05+00:00,,,,,0,0
 698,Partition to K Equal Sum Subsets,partition-to-k-equal-sum-subsets,https://leetcode.com/problems/partition-to-k-equal-sum-subsets/,Medium,"Array, Dynamic Programming, Backtracking, Bit Manipulation, Memoization, Bitmask",2088949550,2026-07-31T15:10:31+00:00,python3,27 ms,19.4 MB,698-partition-to-k-equal-sum-subsets.py,,"If the total sum is not divisible cleanly by k, it is impossible
 If the largest number exceeds the target subset size, it cannot fit
 Base Case: All items successfully placed into a bucket
@@ -554,6 +615,26 @@ we connect the first email to the rest of the emails the account has
 DFS portion",,,,,,,,,new,,,,,,0,0
 733,Flood Fill,flood-fill,https://leetcode.com/problems/flood-fill/,Easy,"Array, Depth-First Search, Breadth-First Search, Matrix",2105501276,2026-08-13T14:00:36+00:00,python3,0 ms,19.6 MB,733-flood-fill.py,[ Time taken: 10hrs 37m 46s ],"we can just use dfs for this, first we change the starting pixel's color to color
 then we run dfs only on the pixels that are the same color as the old color",,,,,,,,,new,,,,,,0,0
+739,Daily Temperatures,daily-temperatures,https://leetcode.com/problems/daily-temperatures/,Medium,"Array, Stack, Monotonic Stack",2127440892,2026-09-01T16:12:51+00:00,python3,103 ms,28.2 MB,739-daily-temperatures.py,,"we can use a stack for this question storing the temperature
+and then we compare it to the next in the list until we get a hotter temperature
+then we just subtract the idx of the hotter temperature and at the end we return the stack",,,,,,,,,new,2026-09-01T16:23:43+00:00,,,,,0,0
+739,Daily Temperatures,daily-temperatures,https://leetcode.com/problems/daily-temperatures/,Medium,"Array, Stack, Monotonic Stack",2127455280,2026-09-01T16:23:43+00:00,python3,99 ms,28.3 MB,739-daily-temperatures.py,,"we can use a stack for this question storing the index of the temperature
+we store the days that have not resolved when there is a warmer temp
+then we go through the temperatures and compare; if the temperature is hotter than the one on the stack, we pop the index and append the difference between the current temp and the temp on the stack to resolve it
+if the current temperature is hotter than the temperature on the top of the stack
+pop it and then append the result to the idx of the temperature on the stack because we found a hotter day
+divergences:
+just misrepresented the stack
+stack should represent the index of unresolved temps and not the temps themselves
+TC: O(n) b/c push pop are O(1) but we traverse through the whole list 
+SC: O(n) b/c we store all the idx at most once ","we can use a stack for this question storing the index of the temperature
+we store the days that have not resolved when there is a warmer temp
+then we go through the temperatures and compare; if the temperature is hotter than the one on the stack, we pop the index and append the difference between the current temp and the temp on the stack to resolve it
+if the current temperature is hotter than the temperature on the top of the stack
+pop it and then append the result to the idx of the temperature on the stack because we found a hotter day","just misrepresented the stack
+stack should represent the index of unresolved temps and not the temps themselves
+TC: O(n) b/c push pop are O(1) but we traverse through the whole list 
+SC: O(n) b/c we store all the idx at most once ",,,,,O(n) b/c push pop are O(1) but we traverse through the whole list,O(n) b/c we store all the idx at most once,new,2026-09-01T16:23:43+00:00,,,,,0,0
 743,Network Delay Time,network-delay-time,https://leetcode.com/problems/network-delay-time/,Medium,"Depth-First Search, Breadth-First Search, Graph Theory, Heap (Priority Queue), Shortest Path, Dijkstra's Algorithm",2091458359,2026-08-02T14:15:04+00:00,python3,330 ms,21.9 MB,743-network-delay-time.py,,"do we just use dijkstras for this, find the shortest path from the source node 
 build the adjacency list
 initialize min heap w/ (distance, node)
@@ -603,6 +684,22 @@ search a level (in this case the adjacent oranges) of the rotten roanges
 rot the fresh oranges next to the current rotten oraange
 append the coordiates of the new rotten oranges ",,,,,,,,,new,,,,,,0,0
 1004,Max Consecutive Ones III,max-consecutive-ones-iii,https://leetcode.com/problems/max-consecutive-ones-iii/,Medium,"Array, Binary Search, Sliding Window, Prefix Sum",2084425263,2026-07-28T07:58:06+00:00,python3,59 ms,22.3 MB,1004-max-consecutive-ones-iii.py,,,,,,,,,,,new,,,,,,0,0
+1046,Last Stone Weight,last-stone-weight,https://leetcode.com/problems/last-stone-weight/,Easy,"Array, Heap (Priority Queue)",2127344601,2026-09-01T14:51:22+00:00,python3,0 ms,19.4 MB,1046-last-stone-weight.py,,"we can use a max heap and store the two heaviest stones and then compare them in the heap
+heaviest stone
+second heaviest stone",,,,,,,,,new,2026-09-01T14:54:04+00:00,,,,,0,0
+1046,Last Stone Weight,last-stone-weight,https://leetcode.com/problems/last-stone-weight/,Easy,"Array, Heap (Priority Queue)",2127347730,2026-09-01T14:54:04+00:00,python3,0 ms,19.5 MB,1046-last-stone-weight.py,,"we can use a max heap and store the two heaviest stones and then compare them in the heap
+heaviest stone
+second heaviest stone
+divergences:
+forgot everything about heaps; should revisit
+python only has min_heap so we use negatives to make it a max heap
+TC: O(nlogn) because creating the heap is O(n) but insert/delete is O(logn)
+SC: O(n) we store all the values in stone at most once","we can use a max heap and store the two heaviest stones and then compare them in the heap
+heaviest stone
+second heaviest stone","forgot everything about heaps; should revisit
+python only has min_heap so we use negatives to make it a max heap
+TC: O(nlogn) because creating the heap is O(n) but insert/delete is O(logn)
+SC: O(n) we store all the values in stone at most once",,,,,O(nlogn) because creating the heap is O(n) but insert/delete is O(logn),O(n) we store all the values in stone at most once,new,2026-09-01T14:54:04+00:00,,,,,0,0
 1071,Greatest Common Divisor of Strings,greatest-common-divisor-of-strings,https://leetcode.com/problems/greatest-common-divisor-of-strings/,Easy,"Math, String, Euclidean Algorithm, Greatest Common Divisor",1516247692,2025-01-21T22:20:19+00:00,java,0 ms,42.4 MB,1071-greatest-common-divisor-of-strings.java,,,,,,,,,,,new,,,,,,0,0
 1235,Maximum Profit in Job Scheduling,maximum-profit-in-job-scheduling,https://leetcode.com/problems/maximum-profit-in-job-scheduling/,Hard,"Array, Binary Search, Dynamic Programming, Sorting",1877077758,2026-01-07T02:48:09+00:00,python3,84 ms,33.3 MB,1235-maximum-profit-in-job-scheduling.py,,"sort the job by end time
 find the rightmost index with end_time[prev] <= start
@@ -662,7 +759,7 @@ move pointers
 if < 2 points were found, return [-1, -1]
 max dist is the distance from the last crit index and first","initially thought I had to store in a hashmap but we can just do find local min/max on the fly
 max dist is always the distance between the last and first crit index we find 
-TC: O(n) and O(1) space ",,,,,O(n) and O(1) space,,new,2026-08-31T17:12:32+00:00,,,,,0,0
+TC: O(n) and O(1) space ",,,,,O(n) and O(1) space,,new,2026-09-02T18:51:50+00:00,,,,,0,0
 2058,Find the Minimum and Maximum Number of Nodes Between Critical Points,find-the-minimum-and-maximum-number-of-nodes-between-critical-points,https://leetcode.com/problems/find-the-minimum-and-maximum-number-of-nodes-between-critical-points/,Medium,Linked List,2126389151,2026-08-31T17:12:32+00:00,python3,89 ms,63.2 MB,2058-find-the-minimum-and-maximum-number-of-nodes-between-critical-points.py,,"Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -705,7 +802,21 @@ move pointers
 if < 2 points were found, return [-1, -1]
 max dist is the distance from the last crit index and first","initially thought I had to store in a hashmap but we can just do find local min/max on the fly
 max dist is always the distance between the last and first crit index we find 
-TC: O(n) and O(1) space ",,,,,O(n) and O(1) space,,new,2026-08-31T17:12:32+00:00,,,,,0,0
+TC: O(n) and O(1) space ",,,,,O(n) and O(1) space,,new,2026-09-02T18:51:50+00:00,,,,,0,0
+2058,Find the Minimum and Maximum Number of Nodes Between Critical Points,find-the-minimum-and-maximum-number-of-nodes-between-critical-points,https://leetcode.com/problems/find-the-minimum-and-maximum-number-of-nodes-between-critical-points/,Medium,Linked List,2128875517,2026-09-02T18:51:50+00:00,python3,86 ms,62.9 MB,2058-find-the-minimum-and-maximum-number-of-nodes-between-critical-points.py,,"Definition for singly-linked list.
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+has to be atleast 3 nodes
+keep track of the most recent local idx of the critical point and the first one
+keep track of the current index, we start at one because the head is at 0 
+check whether it is a local min or max
+if point is a critical point, we save the index
+else we already have an index and we can find the min dist
+increment the pointers
+check if there is fewer than two distinct cirtical points:
+max dist is always the latest crit point and the first crit point",,,,,,,,,new,2026-09-02T18:51:50+00:00,,,,,0,0
 2091,Removing Minimum and Maximum From Array,removing-minimum-and-maximum-from-array,https://leetcode.com/problems/removing-minimum-and-maximum-from-array/,Medium,"Array, Greedy",2124621450,2026-08-30T04:34:09+00:00,python3,21 ms,33.7 MB,2091-removing-minimum-and-maximum-from-array.py,,"first we can do one pass to find the max and min
 after that, there are essentially three ways to find the number of deletions
 deleting one way from either left or right
@@ -786,3 +897,5 @@ if it exits loop, that means that the infected are not invoked by a normal node 
 O(n)",,,,,,,,,new,,,,,,0,0
 3345,Smallest Divisible Digit Product I,smallest-divisible-digit-product-i,https://leetcode.com/problems/smallest-divisible-digit-product-i/,Easy,"Math, Enumeration",2096577626,2026-08-06T11:13:29+00:00,python3,0 ms,19.4 MB,3345-smallest-divisible-digit-product-i.py,[ Time taken: 1d 18hrs 38m 15s ],,,,,,,,,,new,,,,,,0,0
 3731,Find Missing Elements,find-missing-elements,https://leetcode.com/problems/find-missing-elements/,Easy,"Array, Hash Table, Sorting",2093734853,2026-08-04T09:02:37+00:00,python3,0 ms,19.4 MB,3731-find-missing-elements.py,,,,,,,,,,,new,,,,,,0,0
+3875,Construct Uniform Parity Array I,construct-uniform-parity-array-i,https://leetcode.com/problems/construct-uniform-parity-array-i/,Easy,"Array, Math",2127857876,2026-09-02T02:12:26+00:00,python3,3 ms,19.2 MB,3875-construct-uniform-parity-array-i.py,,,,,,,,,,,new,2026-09-02T02:13:28+00:00,,,,,0,0
+3875,Construct Uniform Parity Array I,construct-uniform-parity-array-i,https://leetcode.com/problems/construct-uniform-parity-array-i/,Easy,"Array, Math",2127858377,2026-09-02T02:13:28+00:00,python3,0 ms,19.3 MB,3875-construct-uniform-parity-array-i.py,,,,,,,,,,,new,2026-09-02T02:13:28+00:00,,,,,0,0

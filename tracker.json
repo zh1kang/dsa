@@ -8896,7 +8896,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/find-the-minimum-and-maximum-number-of-nodes-between-critical-points/",
       "first_solved_at": "2026-08-31T17:11:11+00:00",
-      "last_solved_at": "2026-08-31T17:12:32+00:00",
+      "last_solved_at": "2026-09-02T18:51:50+00:00",
       "attempts": [
         {
           "submission_id": "2126387343",
@@ -8989,6 +8989,80 @@
             "space_complexity": ""
           },
           "code_sha256": "ac37c4279ce26950c759756e1ddbd5e7cd683f54258b30dd88ca9fae95421570"
+        },
+        {
+          "submission_id": "2128874845",
+          "submitted_at": "2026-09-02T18:51:09+00:00",
+          "status": "Runtime Error",
+          "language": "python3",
+          "code_path": "2058-find-the-minimum-and-maximum-number-of-nodes-between-critical-points.py",
+          "code_sha256": "eebad1426b06737e453a09808fea873339975ad551bef00fb1ba49ff26927885",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "Definition for singly-linked list.",
+            "class ListNode:",
+            "    def __init__(self, val=0, next=None):",
+            "        self.val = val",
+            "        self.next = next",
+            "has to be atleast 3 nodes",
+            "keep track of the most recent local idx of the critical point and the first one",
+            "keep track of the current index, we start at one because the head is at 0 ",
+            "check whether it is a local min or max",
+            "if point is a critical point, we save the index",
+            "else we already have an index and we can find the min dist",
+            "increment the pointers",
+            "check if there is fewer than two distinct cirtical points:",
+            "max dist is always the latest crit point and the first crit point"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2128875517",
+          "submitted_at": "2026-09-02T18:51:50+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "2058-find-the-minimum-and-maximum-number-of-nodes-between-critical-points.py",
+          "code_sha256": "3efb2ab8da397c1394fd1d7fa7df767e9465c575d555916e243c8e53846858ff",
+          "runtime": "86 ms",
+          "memory": "62.9 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "Definition for singly-linked list.",
+            "class ListNode:",
+            "    def __init__(self, val=0, next=None):",
+            "        self.val = val",
+            "        self.next = next",
+            "has to be atleast 3 nodes",
+            "keep track of the most recent local idx of the critical point and the first one",
+            "keep track of the current index, we start at one because the head is at 0 ",
+            "check whether it is a local min or max",
+            "if point is a critical point, we save the index",
+            "else we already have an index and we can find the min dist",
+            "increment the pointers",
+            "check if there is fewer than two distinct cirtical points:",
+            "max dist is always the latest crit point and the first crit point"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -8997,7 +9071,535 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": "2026-08-31T17:12:32+00:00",
+        "next_review": "2026-09-02T18:51:50+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "215-kth-largest-element-in-an-array": {
+      "leetcode_id": "215",
+      "slug": "kth-largest-element-in-an-array",
+      "title": "Kth Largest Element in an Array",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Divide and Conquer",
+        "Sorting",
+        "Heap (Priority Queue)",
+        "Quickselect"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
+      "first_solved_at": "2026-08-31T18:50:47+00:00",
+      "last_solved_at": "2026-08-31T18:54:03+00:00",
+      "attempts": [
+        {
+          "submission_id": "2126511257",
+          "submitted_at": "2026-08-31T18:50:47+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "215-kth-largest-element-in-an-array.py",
+          "code_sha256": "c41acab4b73d99e5866b1e3135f8bb4bb4e329f40288d9f3ada1d6d56cbf40ab",
+          "runtime": "51 ms",
+          "memory": "31 MB",
+          "leetcode_notes": "[ Time taken: 17m 8s ]",
+          "raw_comments": [
+            "we can solve this using a min heap of size k",
+            "since we want the kth largest element, we push values that are larger than the current value",
+            "and then by the end the kth largest value should just be the value sitting on top of the heap ",
+            "initialize the heap of size k",
+            "go thorugh the rest of the elements",
+            "if the current num is greater than the value at the top of the heap"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2126514213",
+          "submitted_at": "2026-08-31T18:54:03+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "215-kth-largest-element-in-an-array.py",
+          "code_sha256": "2c7fe563a46856ac2b2a5bc9376920676b8e68c317576b3e836e0d3e1059226e",
+          "runtime": "44 ms",
+          "memory": "31.1 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we can solve this using a min heap of size k",
+            "since we want the kth largest element, we push values that are larger than the current value",
+            "and then by the end the kth largest value should just be the value sitting on top of the heap ",
+            "initialize the heap of size k",
+            "go thorugh the rest of the elements",
+            "if the current num is greater than the value at the top of the heap",
+            "divergences:",
+            "none really, just had to remember the heap syntax",
+            "TC:",
+            "building heap takes O(k) time",
+            "traversing the heap and using the operations heappushpop is O(logk) (traversing the tree)",
+            "O(nlogk) and space is just O(k)"
+          ],
+          "notes": {
+            "thought_process": "we can solve this using a min heap of size k\nsince we want the kth largest element, we push values that are larger than the current value\nand then by the end the kth largest value should just be the value sitting on top of the heap \ninitialize the heap of size k\ngo thorugh the rest of the elements\nif the current num is greater than the value at the top of the heap",
+            "notes": "none really, just had to remember the heap syntax\nTC:\nbuilding heap takes O(k) time\ntraversing the heap and using the operations heappushpop is O(logk) (traversing the tree)\nO(nlogk) and space is just O(k)",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-08-31T18:54:03+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "695-max-area-of-island": {
+      "leetcode_id": "695",
+      "slug": "max-area-of-island",
+      "title": "Max Area of Island",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Depth-First Search",
+        "Breadth-First Search",
+        "Union-Find",
+        "Matrix"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/max-area-of-island/",
+      "first_solved_at": "2026-08-31T20:08:05+00:00",
+      "last_solved_at": "2026-08-31T20:08:05+00:00",
+      "attempts": [
+        {
+          "submission_id": "2126567712",
+          "submitted_at": "2026-08-31T20:08:05+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "695-max-area-of-island.py",
+          "code_sha256": "b214e9339ecb5ea9f9b4c7ba830dfe4210a188eec3f108d7d1ab1ff0fc5bb32a",
+          "runtime": "15 ms",
+          "memory": "20.7 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "sink the current to mark as visited"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-08-31T20:08:05+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "1046-last-stone-weight": {
+      "leetcode_id": "1046",
+      "slug": "last-stone-weight",
+      "title": "Last Stone Weight",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Heap (Priority Queue)"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/last-stone-weight/",
+      "first_solved_at": "2026-09-01T14:51:22+00:00",
+      "last_solved_at": "2026-09-01T14:54:04+00:00",
+      "attempts": [
+        {
+          "submission_id": "2127344601",
+          "submitted_at": "2026-09-01T14:51:22+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "1046-last-stone-weight.py",
+          "code_sha256": "482a0a026abfbd11c1f5abda1a13a1fab36aef14beee2727f09b08cc2c988016",
+          "runtime": "0 ms",
+          "memory": "19.4 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we can use a max heap and store the two heaviest stones and then compare them in the heap",
+            "heaviest stone",
+            "second heaviest stone"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2127347730",
+          "submitted_at": "2026-09-01T14:54:04+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "1046-last-stone-weight.py",
+          "code_sha256": "119ce97834de391ccce7dfce3a0941ee403edbd4509e37743cddab4a949b43ab",
+          "runtime": "0 ms",
+          "memory": "19.5 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we can use a max heap and store the two heaviest stones and then compare them in the heap",
+            "heaviest stone",
+            "second heaviest stone",
+            "divergences:",
+            "forgot everything about heaps; should revisit",
+            "python only has min_heap so we use negatives to make it a max heap",
+            "TC: O(nlogn) because creating the heap is O(n) but insert/delete is O(logn)",
+            "SC: O(n) we store all the values in stone at most once"
+          ],
+          "notes": {
+            "thought_process": "we can use a max heap and store the two heaviest stones and then compare them in the heap\nheaviest stone\nsecond heaviest stone",
+            "notes": "forgot everything about heaps; should revisit\npython only has min_heap so we use negatives to make it a max heap\nTC: O(nlogn) because creating the heap is O(n) but insert/delete is O(logn)\nSC: O(n) we store all the values in stone at most once",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "O(nlogn) because creating the heap is O(n) but insert/delete is O(logn)",
+            "space_complexity": "O(n) we store all the values in stone at most once"
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-01T14:54:04+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "347-top-k-frequent-elements": {
+      "leetcode_id": "347",
+      "slug": "top-k-frequent-elements",
+      "title": "Top K Frequent Elements",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Divide and Conquer",
+        "Sorting",
+        "Heap (Priority Queue)",
+        "Bucket Sort",
+        "Counting",
+        "Quickselect"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/top-k-frequent-elements/",
+      "first_solved_at": "2026-09-01T15:52:05+00:00",
+      "last_solved_at": "2026-09-01T15:52:05+00:00",
+      "attempts": [
+        {
+          "submission_id": "2127414583",
+          "submitted_at": "2026-09-01T15:52:05+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "347-top-k-frequent-elements.py",
+          "code_sha256": "15557812a9c6fafb03f7f912b5f95d6c37f265895f1345980fa77a7f4757ce52",
+          "runtime": "2 ms",
+          "memory": "22.8 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "keep track of the frequencies in nums and push it onto the heap",
+            "if size of heap is > k pop the least frequent number",
+            "push these values onto the heap",
+            "divergences: ",
+            "none",
+            "TC: O(nlogk)",
+            "SC: O(n)"
+          ],
+          "notes": {
+            "thought_process": "keep track of the frequencies in nums and push it onto the heap\nif size of heap is > k pop the least frequent number\npush these values onto the heap",
+            "notes": "none\nTC: O(nlogk)\nSC: O(n)",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "O(nlogk)",
+            "space_complexity": "O(n)"
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-01T15:52:05+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "739-daily-temperatures": {
+      "leetcode_id": "739",
+      "slug": "daily-temperatures",
+      "title": "Daily Temperatures",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Stack",
+        "Monotonic Stack"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/daily-temperatures/",
+      "first_solved_at": "2026-09-01T16:12:51+00:00",
+      "last_solved_at": "2026-09-01T16:23:43+00:00",
+      "attempts": [
+        {
+          "submission_id": "2127440892",
+          "submitted_at": "2026-09-01T16:12:51+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "739-daily-temperatures.py",
+          "code_sha256": "4f841675781cbf16fc10545e06460c44190ef91b9d45f59648e61c64a2869ea3",
+          "runtime": "103 ms",
+          "memory": "28.2 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we can use a stack for this question storing the temperature",
+            "and then we compare it to the next in the list until we get a hotter temperature",
+            "then we just subtract the idx of the hotter temperature and at the end we return the stack"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2127455280",
+          "submitted_at": "2026-09-01T16:23:43+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "739-daily-temperatures.py",
+          "code_sha256": "7aae56b0a9bbb87e050dcdca99d6b828d6303e2cb99e06a6a65dddf5521393b6",
+          "runtime": "99 ms",
+          "memory": "28.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we can use a stack for this question storing the index of the temperature",
+            "we store the days that have not resolved when there is a warmer temp",
+            "then we go through the temperatures and compare; if the temperature is hotter than the one on the stack, we pop the index and append the difference between the current temp and the temp on the stack to resolve it",
+            "if the current temperature is hotter than the temperature on the top of the stack",
+            "pop it and then append the result to the idx of the temperature on the stack because we found a hotter day",
+            "divergences:",
+            "just misrepresented the stack",
+            "stack should represent the index of unresolved temps and not the temps themselves",
+            "TC: O(n) b/c push pop are O(1) but we traverse through the whole list ",
+            "SC: O(n) b/c we store all the idx at most once "
+          ],
+          "notes": {
+            "thought_process": "we can use a stack for this question storing the index of the temperature\nwe store the days that have not resolved when there is a warmer temp\nthen we go through the temperatures and compare; if the temperature is hotter than the one on the stack, we pop the index and append the difference between the current temp and the temp on the stack to resolve it\nif the current temperature is hotter than the temperature on the top of the stack\npop it and then append the result to the idx of the temperature on the stack because we found a hotter day",
+            "notes": "just misrepresented the stack\nstack should represent the index of unresolved temps and not the temps themselves\nTC: O(n) b/c push pop are O(1) but we traverse through the whole list \nSC: O(n) b/c we store all the idx at most once ",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "O(n) b/c push pop are O(1) but we traverse through the whole list",
+            "space_complexity": "O(n) b/c we store all the idx at most once"
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-01T16:23:43+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "3875-construct-uniform-parity-array-i": {
+      "leetcode_id": "3875",
+      "slug": "construct-uniform-parity-array-i",
+      "title": "Construct Uniform Parity Array I",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Math"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/construct-uniform-parity-array-i/",
+      "first_solved_at": "2026-09-02T02:12:26+00:00",
+      "last_solved_at": "2026-09-02T02:13:28+00:00",
+      "attempts": [
+        {
+          "submission_id": "2127857876",
+          "submitted_at": "2026-09-02T02:12:26+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "3875-construct-uniform-parity-array-i.py",
+          "code_sha256": "8cf20849032c6dd6b703277a8c980e23bdc6a6d7b87e5aee67986e435283fcf7",
+          "runtime": "3 ms",
+          "memory": "19.2 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2127858377",
+          "submitted_at": "2026-09-02T02:13:28+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "3875-construct-uniform-parity-array-i.py",
+          "code_sha256": "8cf20849032c6dd6b703277a8c980e23bdc6a6d7b87e5aee67986e435283fcf7",
+          "runtime": "0 ms",
+          "memory": "19.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-02T02:13:28+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "232-implement-queue-using-stacks": {
+      "leetcode_id": "232",
+      "slug": "implement-queue-using-stacks",
+      "title": "Implement Queue using Stacks",
+      "difficulty": "Easy",
+      "tags": [
+        "Stack",
+        "Design",
+        "Queue"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/implement-queue-using-stacks/",
+      "first_solved_at": "2026-09-02T13:57:04+00:00",
+      "last_solved_at": "2026-09-02T14:02:38+00:00",
+      "attempts": [
+        {
+          "submission_id": "2128503287",
+          "submitted_at": "2026-09-02T13:57:04+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "232-implement-queue-using-stacks.py",
+          "code_sha256": "5aa2f0f900658334d221e43cd9b0d3bc3767bf02f5e334060d241705ba82c3d1",
+          "runtime": "0 ms",
+          "memory": "19.4 MB",
+          "leetcode_notes": "[ Time taken: 2hrs 8m 11s ]",
+          "raw_comments": [
+            "Your MyQueue object will be instantiated and called as such:",
+            "obj = MyQueue()",
+            "obj.push(x)",
+            "param_2 = obj.pop()",
+            "param_3 = obj.peek()",
+            "param_4 = obj.empty()"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2128509852",
+          "submitted_at": "2026-09-02T14:02:38+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "232-implement-queue-using-stacks.py",
+          "code_sha256": "488c8503c72b4b6ab7b03cc4ae13dae262303656b4d005b33354227f41facd81",
+          "runtime": "0 ms",
+          "memory": "19.5 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "divergences:",
+            "none",
+            "stacks are LIFO and queues are FIFO so appending all items in one stack to another reverses this and gives us the proper behavior we want for a queue ",
+            "Your MyQueue object will be instantiated and called as such:",
+            "obj = MyQueue()",
+            "obj.push(x)",
+            "param_2 = obj.pop()",
+            "param_3 = obj.peek()",
+            "param_4 = obj.empty()"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "none\nstacks are LIFO and queues are FIFO so appending all items in one stack to another reverses this and gives us the proper behavior we want for a queue \nYour MyQueue object will be instantiated and called as such:\nobj = MyQueue()\nobj.push(x)\nparam_2 = obj.pop()\nparam_3 = obj.peek()\nparam_4 = obj.empty()",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-02T14:02:38+00:00",
         "reps": 0,
         "lapses": 0
       }
