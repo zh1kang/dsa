@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "problem": "2058-find-the-minimum-and-maximum-number-of-nodes-between-critical-points",
+    "grade": "Hard",
+    "reviewed_at": "2026-09-02T18:59:57.341203+00:00",
+    "elapsed_minutes": null,
+    "hints_used": null,
+    "notes": "forgot how I should be storing the positions, also we aren't actually storing local_min and local_max values, since those don't actually matter, what we care about is whether or not the current point is a critical point and not necessarily what value it is",
+    "failure_stage": null,
+    "solved_without_help": true,
+    "source": "google_sheets",
+    "source_id": "RI-901194341546"
+  }
+]

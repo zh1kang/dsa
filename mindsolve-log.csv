@@ -1,1 +1,2 @@
 reviewed_at,problem,result,failure_stage,elapsed_minutes,hints,notes
+2026-09-02T18:59:57.341203+00:00,Find the Minimum and Maximum Number of Nodes Between Critical Points,partial,,,,"forgot how I should be storing the positions, also we aren't actually storing local_min and local_max values, since those don't actually matter, what we care about is whether or not the current point is a critical point and not necessarily what value it is"

@@ -9066,13 +9066,13 @@
         }
       ],
       "review": {
-        "state": "new",
-        "stability": null,
-        "difficulty": null,
-        "retrievability": null,
-        "last_review": null,
-        "next_review": "2026-09-02T18:51:50+00:00",
-        "reps": 0,
+        "state": "review",
+        "stability": 1.2931,
+        "difficulty": 5.112170705601056,
+        "retrievability": 1.0,
+        "last_review": "2026-09-02T18:59:57.341203+00:00",
+        "next_review": "2026-09-03T18:59:57.341203+00:00",
+        "reps": 1,
         "lapses": 0
       }
     },
