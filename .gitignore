@@ -3,8 +3,9 @@ __pycache__/
 *.py[cod]
 .DS_Store
 *.log
-.pytest_cache/
-# Authentication must stay outside this repository. These patterns are defense in depth.
+.dsa/
+# Runtime authentication must stay in the ignored .dsa directory.
+# These extra patterns are defense in depth.
 browser/
 playwright-profile/
 account.json

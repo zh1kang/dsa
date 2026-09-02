@@ -9,6 +9,9 @@ class GitError(RuntimeError):
     pass
 
 
+DEFAULT_BRANCH = "main"
+
+
 def run_git(root: Path, *args: str) -> str:
     result = subprocess.run(
         ["git", "-C", str(root), *args],
@@ -37,6 +40,15 @@ def ensure_clean(root: Path) -> None:
         raise GitError(
             "worktree has uncommitted tracked changes; commit or restore them first:\n"
             + "\n".join(dirty)
+        )
+
+
+def ensure_default_branch(root: Path) -> None:
+    branch = run_git(root, "branch", "--show-current").strip()
+    if branch != DEFAULT_BRANCH:
+        raise GitError(
+            f"auto-push requires branch {DEFAULT_BRANCH!r}; current branch is "
+            f"{branch or 'detached HEAD'!r}"
         )
 
 
@@ -73,4 +85,5 @@ def commit(root: Path, message: str) -> None:
 
 
 def push(root: Path) -> None:
-    run_git(root, "push")
+    ensure_default_branch(root)
+    run_git(root, "push", "origin", DEFAULT_BRANCH)

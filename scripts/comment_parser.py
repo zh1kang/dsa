@@ -12,6 +12,7 @@ import re
 
 NOTE_FIELDS = (
     "thought_process",
+    "notes",
     "core_insight",
     "pattern",
     "mistakes",
@@ -46,12 +47,14 @@ _LABEL_ALIASES = {
     "pitfalls": "mistakes",
     "edge case": "edge_cases",
     "edge cases": "edge_cases",
-    "time complexity": "time_complexity",
-    "time": "time_complexity",
-    "space complexity": "space_complexity",
-    "space": "space_complexity",
+    "tc": "time_complexity",
+    "sc": "space_complexity",
 }
 _LABEL_RE = re.compile(r"^\s*(?:[-*•]+\s*)?([A-Za-z][A-Za-z ]{0,30}?)\s*:\s*(.*)$")
+_DIVERGENCES_RE = re.compile(
+    r"^\s*(?:main\s+)?divergences(?:\s+\d+)?\s*:?\s*(.*)$",
+    re.IGNORECASE,
+)
 
 
 def family_for(language: str) -> str | None:
@@ -223,4 +226,51 @@ def parse_structured_notes(comments: list[str]) -> dict[str, str]:
                 current = None
                 continue
             notes[current] = f"{notes[current]}\n{stripped}" if notes[current] else stripped
+    sections = split_divergence_sections(comments)
+    if sections is not None:
+        notes["thought_process"], notes["notes"] = sections
     return notes
+
+
+def split_divergence_sections(comments: list[str]) -> tuple[str, str] | None:
+    """Split ordered comments at the first ``divergences`` marker.
+
+    Comments before the marker are the author's thought process. The marker's
+    inline text and every later comment become notes. The raw comment list is
+    not changed. Without a marker, no section is inferred.
+    """
+    thoughts: list[str] = []
+    divergence_notes: list[str] = []
+    found = False
+    for comment in comments:
+        if found:
+            divergence_notes.append(comment)
+            continue
+        lines = comment.splitlines()
+        marker_index: int | None = None
+        marker_text = ""
+        for index, line in enumerate(lines):
+            match = _DIVERGENCES_RE.fullmatch(line)
+            if match is not None:
+                marker_index = index
+                marker_text = match.group(1)
+                break
+        if marker_index is None:
+            thoughts.append(comment)
+            continue
+        found = True
+        before = "\n".join(lines[:marker_index])
+        after = "\n".join(lines[marker_index + 1:])
+        if before:
+            thoughts.append(before)
+        if marker_text:
+            divergence_notes.append(marker_text)
+        if after:
+            divergence_notes.append(after)
+    if not found:
+        return None
+    return (_join_comment_bodies(thoughts), _join_comment_bodies(divergence_notes))
+
+
+def _join_comment_bodies(comments: list[str]) -> str:
+    return "\n".join(comments).strip("\n")

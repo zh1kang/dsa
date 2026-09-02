@@ -1,10 +1,11 @@
 [leetcode]
-browser_profile = "~/.leetcode-tracker/browser"
-account_file = "~/.leetcode-tracker/account.json"
+browser_profile = ".dsa/browser"
+account_file = ".dsa/account.json"
 request_delay_seconds = 1.0
 
 [tracker]
 timezone = "America/New_York"
+tracking_start_date = "2026-08-31"
 
 [fsrs]
 desired_retention = 0.90
@@ -13,7 +14,10 @@ desired_retention = 0.90
 auto_push = true
 
 [google_sheets]
-spreadsheet_id = ""
-worksheet = "LeetCode"
-credentials_file = "~/.leetcode-tracker/google/client_secret.json"
-token_file = "~/.leetcode-tracker/google/token.json"
+spreadsheet_id = "1tLwBlpgG0ehXyuksx1ktQJ1vnO6Pkg4NCgZYA8TGye0"
+problems_worksheet = "Problems"
+submissions_worksheet = "Submissions"
+reviews_worksheet = "Reviews"
+github_repository = "zh1kang/dsa"
+credentials_file = ".dsa/google/client_secret.json"
+token_file = ".dsa/google/token.json"

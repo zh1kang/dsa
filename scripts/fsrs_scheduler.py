@@ -1,13 +1,13 @@
 """Deterministic FSRS-6 replay of explicit review events.
 
 ``review-log.json`` is the only source of truth for FSRS state. Accepted
-submissions never produce implicit ratings. An accepted problem without an
-explicit grade is app-level ``new`` and is due on its latest accepted date.
+submissions never produce implicit ratings. The optional tracking start date
+excludes older submissions and review events without deleting their history.
 """
 from __future__ import annotations
 
 import hashlib
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from importlib import metadata
 from pathlib import Path
 from typing import Any
@@ -76,6 +76,10 @@ def validate_review_log(events: Any, known_problems: set[str]) -> list[dict[str,
             raise DataError(f"{context} has invalid hints_used {hints!r}")
         if event.get("notes") is not None and not isinstance(event["notes"], str):
             raise DataError(f"{context} has invalid notes")
+        if event.get("failure_stage") is not None and not isinstance(
+            event["failure_stage"], str
+        ):
+            raise DataError(f"{context} has invalid failure_stage")
         if event.get("solved_without_help") is not None and not isinstance(
             event["solved_without_help"], bool
         ):
@@ -87,29 +91,65 @@ def _accepted_attempts(problem: dict[str, Any]) -> list[dict[str, Any]]:
     return [attempt for attempt in problem["attempts"] if attempt["status"].casefold() == "accepted"]
 
 
+def events_on_or_after(
+    events: list[dict[str, Any]],
+    start_date: date | None,
+    local_timezone: ZoneInfo,
+) -> list[dict[str, Any]]:
+    """Return review events inside the configured local-date tracking window."""
+    if start_date is None:
+        return list(events)
+    return [
+        event for event in events
+        if _utc(event["reviewed_at"], "reviewed_at")
+        .astimezone(local_timezone).date() >= start_date
+    ]
+
+
+def _accepted_on_or_after(
+    problem: dict[str, Any],
+    start_date: date | None,
+    local_timezone: ZoneInfo,
+) -> list[dict[str, Any]]:
+    accepted = _accepted_attempts(problem)
+    if start_date is None:
+        return accepted
+    return [
+        attempt for attempt in accepted
+        if _utc(attempt["submitted_at"], "submitted_at")
+        .astimezone(local_timezone).date() >= start_date
+    ]
+
+
 def compute_reviews(
     tracker_data: dict[str, Any],
     events: list[dict[str, Any]],
     desired_retention: float,
     now: datetime,
+    *,
+    tracking_start_date: date | None = None,
+    local_timezone: ZoneInfo = ZoneInfo("UTC"),
 ) -> dict[str, dict[str, Any]]:
     """Replay explicit events per problem and return derived review snapshots."""
     if now.tzinfo is None:
         raise DataError("now must be timezone-aware")
     now = now.astimezone(timezone.utc)
     scheduler = build_scheduler(desired_retention)
+    active_events = events_on_or_after(events, tracking_start_date, local_timezone)
     grouped: dict[str, list[dict[str, Any]]] = {}
-    for event in events:
+    for event in active_events:
         grouped.setdefault(event["problem"], []).append(event)
 
     reviews: dict[str, dict[str, Any]] = {}
     for key, problem in tracker_data["problems"].items():
         problem_events = grouped.get(key, [])
         if not problem_events:
-            accepted = _accepted_attempts(problem)
+            accepted = _accepted_on_or_after(
+                problem, tracking_start_date, local_timezone
+            )
             if not accepted:
                 continue
-            due = _utc(problem["last_solved_at"], "last_solved_at")
+            due = _utc(accepted[-1]["submitted_at"], "submitted_at")
             reviews[key] = {
                 "state": "new",
                 "stability": None,
