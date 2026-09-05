@@ -759,7 +759,7 @@ move pointers
 if < 2 points were found, return [-1, -1]
 max dist is the distance from the last crit index and first","initially thought I had to store in a hashmap but we can just do find local min/max on the fly
 max dist is always the distance between the last and first crit index we find 
-TC: O(n) and O(1) space ",,,,,O(n) and O(1) space,,review,2026-09-03T18:59:57.341203+00:00,2026-09-02T18:59:57.341203+00:00,1.2931,5.112170705601056,0.9166697187203525,1,0
+TC: O(n) and O(1) space ",,,,,O(n) and O(1) space,,review,2026-09-03T18:59:57.341203+00:00,2026-09-02T18:59:57.341203+00:00,1.2931,5.112170705601056,0.8673675017566826,1,0
 2058,Find the Minimum and Maximum Number of Nodes Between Critical Points,find-the-minimum-and-maximum-number-of-nodes-between-critical-points,https://leetcode.com/problems/find-the-minimum-and-maximum-number-of-nodes-between-critical-points/,Medium,Linked List,2126389151,2026-08-31T17:12:32+00:00,python3,89 ms,63.2 MB,2058-find-the-minimum-and-maximum-number-of-nodes-between-critical-points.py,,"Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -802,7 +802,7 @@ move pointers
 if < 2 points were found, return [-1, -1]
 max dist is the distance from the last crit index and first","initially thought I had to store in a hashmap but we can just do find local min/max on the fly
 max dist is always the distance between the last and first crit index we find 
-TC: O(n) and O(1) space ",,,,,O(n) and O(1) space,,review,2026-09-03T18:59:57.341203+00:00,2026-09-02T18:59:57.341203+00:00,1.2931,5.112170705601056,0.9166697187203525,1,0
+TC: O(n) and O(1) space ",,,,,O(n) and O(1) space,,review,2026-09-03T18:59:57.341203+00:00,2026-09-02T18:59:57.341203+00:00,1.2931,5.112170705601056,0.8673675017566826,1,0
 2058,Find the Minimum and Maximum Number of Nodes Between Critical Points,find-the-minimum-and-maximum-number-of-nodes-between-critical-points,https://leetcode.com/problems/find-the-minimum-and-maximum-number-of-nodes-between-critical-points/,Medium,Linked List,2128875517,2026-09-02T18:51:50+00:00,python3,86 ms,62.9 MB,2058-find-the-minimum-and-maximum-number-of-nodes-between-critical-points.py,,"Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -816,7 +816,7 @@ if point is a critical point, we save the index
 else we already have an index and we can find the min dist
 increment the pointers
 check if there is fewer than two distinct cirtical points:
-max dist is always the latest crit point and the first crit point",,,,,,,,,review,2026-09-03T18:59:57.341203+00:00,2026-09-02T18:59:57.341203+00:00,1.2931,5.112170705601056,0.9166697187203525,1,0
+max dist is always the latest crit point and the first crit point",,,,,,,,,review,2026-09-03T18:59:57.341203+00:00,2026-09-02T18:59:57.341203+00:00,1.2931,5.112170705601056,0.8673675017566826,1,0
 2091,Removing Minimum and Maximum From Array,removing-minimum-and-maximum-from-array,https://leetcode.com/problems/removing-minimum-and-maximum-from-array/,Medium,"Array, Greedy",2124621450,2026-08-30T04:34:09+00:00,python3,21 ms,33.7 MB,2091-removing-minimum-and-maximum-from-array.py,,"first we can do one pass to find the max and min
 after that, there are essentially three ways to find the number of deletions
 deleting one way from either left or right
