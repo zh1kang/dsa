@@ -5,10 +5,34 @@ number,title,slug,url,difficulty,tags,submission_id,submitted_at,language,runtim
 3,Longest Substring Without Repeating Characters,longest-substring-without-repeating-characters,https://leetcode.com/problems/longest-substring-without-repeating-characters/,Medium,"Hash Table, String, Sliding Window",2080887473,2026-07-25T15:11:26+00:00,python3,11 ms,19.2 MB,3-longest-substring-without-repeating-characters.py,,"variable window, we keep track of the longest 
 substring without a repeating character as a window
 and when we get to a repeating character, expand right and shrink the left until its valid again ",,,,,,,,,new,,,,,,0,0
+4,Median of Two Sorted Arrays,median-of-two-sorted-arrays,https://leetcode.com/problems/median-of-two-sorted-arrays/,Hard,"Array, Binary Search, Divide and Conquer",2131243360,2026-09-05T03:07:56+00:00,python3,0 ms,19.6 MB,4-median-of-two-sorted-arrays.py,[ Time taken: 3hrs 57m 18s ],"thoughts:
+
+Instead of searching for the median value directly, we can search for the partition of the two arrays
+
+We want the combined left partition to contain half of all elements e.g. if we choose i elements from nums1, then nums2 must contribute j = half - i elements
+
+A valid partition requries every element on the left to be <= every element on the right and since boht arrays are sroted ,we only need to check the values dirctly around each partition
+
+nums1: ... Aleft | Aright ... 
+nums2: ... Bleft | Bright ...
+
+The partition is only valid when Aleft <= Bright and 
+Bleft <= Aright
+
+if ALeft > BRight, then we took too many elements from nums1 and move left
+if Bleft > Aright, we took too few elemetns and we have to move right 
+we always want nums1 to be the shorter array; makes it easier
+if partition is at the beginning of an array, nothing is on its left so use -inf
+if partition is at the end of the array there is nothing else on its right so we use inf
+our validity comparision, all of the left values must be smaller than all of the right values
+if our total is odd:
+if our total is even:
+Aleft is too big so we move A partition's left",,,,,,,,,new,2026-09-05T03:07:56+00:00,,,,,0,0
 5,Longest Palindromic Substring,longest-palindromic-substring,https://leetcode.com/problems/longest-palindromic-substring/,Medium,"Two Pointers, String, Dynamic Programming, Manacher",1833873930,2025-11-19T05:04:01+00:00,python3,257 ms,18.1 MB,5-longest-palindromic-substring.py,,,,,,,,,,,new,,,,,,0,0
 8,String to Integer (atoi),string-to-integer-atoi,https://leetcode.com/problems/string-to-integer-atoi/,Medium,String,1871773775,2026-01-02T07:38:30+00:00,python3,3 ms,17.2 MB,8-string-to-integer-atoi.py,,,,,,,,,,,new,,,,,,0,0
 8,String to Integer (atoi),string-to-integer-atoi,https://leetcode.com/problems/string-to-integer-atoi/,Medium,String,1871773941,2026-01-02T07:38:41+00:00,python3,4 ms,17.2 MB,8-string-to-integer-atoi.py,,,,,,,,,,,new,,,,,,0,0
 8,String to Integer (atoi),string-to-integer-atoi,https://leetcode.com/problems/string-to-integer-atoi/,Medium,String,1871774364,2026-01-02T07:39:11+00:00,python3,0 ms,17.2 MB,8-string-to-integer-atoi.py,,,,,,,,,,,new,,,,,,0,0
+9,Palindrome Number,palindrome-number,https://leetcode.com/problems/palindrome-number/,Easy,Math,2133444092,2026-09-07T04:08:23+00:00,python3,7 ms,19.4 MB,9-palindrome-number.py,,,,,,,,,,,new,2026-09-07T04:08:23+00:00,,,,,0,0
 11,Container With Most Water,container-with-most-water,https://leetcode.com/problems/container-with-most-water/,Medium,"Array, Two Pointers, Greedy",1835659706,2025-11-21T03:31:04+00:00,python3,103 ms,28.5 MB,11-container-with-most-water.py,,,,,,,,,,,new,,,,,,0,0
 11,Container With Most Water,container-with-most-water,https://leetcode.com/problems/container-with-most-water/,Medium,"Array, Two Pointers, Greedy",1835659834,2025-11-21T03:31:17+00:00,python3,104 ms,28.5 MB,11-container-with-most-water.py,,,,,,,,,,,new,,,,,,0,0
 15,3Sum,3sum,https://leetcode.com/problems/3sum/,Medium,"Array, Two Pointers, Sorting",1874633682,2026-01-04T20:27:33+00:00,python3,570 ms,20.3 MB,15-3sum.py,,,,,,,,,,,new,,,,,,0,0
@@ -30,6 +54,20 @@ class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next",,,,,,,,,new,,,,,,0,0
+22,Generate Parentheses,generate-parentheses,https://leetcode.com/problems/generate-parentheses/,Medium,"String, Dynamic Programming, Backtracking, Bracket Sequences",2130825809,2026-09-04T15:04:46+00:00,python3,0 ms,19.4 MB,22-generate-parentheses.py,,"thoughts:
+since its all possible combinations, we can just use backtracking to get all possible combinations of well-formed parentheses, which is really just valid parentheses
+there are two options for creating a valid parentheses:
+1. we have to start with a '(', and from there we can either close_p it right away with ')'
+2. or we can add another '(', but we'd have to close_p it twice.
+we basically find any combinartion of this, including mixing and matching these combinations but these are the two 
+
+to do this, our base cases are n = 0 and n = 1 where we return an empty ouput and () respectively,
+for the rest, we can backtrack and pick all other decisions and append it to our res
+ how do we know when we need to close_p a parenthesis or when we have a valid set of well-formd parentheses?
+
+we can add ( as we have less than n 
+we add ) if close_p is < open_p
+base case:",,,,,,,,,new,2026-09-04T15:04:46+00:00,,,,,0,0
 23,Merge k Sorted Lists,merge-k-sorted-lists,https://leetcode.com/problems/merge-k-sorted-lists/,Hard,"Linked List, Divide and Conquer, Heap (Priority Queue), Merge Sort, Tournament Sort",1904855367,2026-02-01T22:47:56+00:00,python3,7 ms,23.2 MB,23-merge-k-sorted-lists.py,,"Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -45,6 +83,10 @@ check if target sits within the sorted half, if so then we just search this half
 add the next number
 skip",,,,,,,,,new,,,,,,0,0
 39,Combination Sum,combination-sum,https://leetcode.com/problems/combination-sum/,Medium,"Array, Backtracking",2087595257,2026-07-30T14:11:19+00:00,python3,7 ms,19.7 MB,39-combination-sum.py,,,,,,,,,,,new,,,,,,0,0
+40,Combination Sum II,combination-sum-ii,https://leetcode.com/problems/combination-sum-ii/,Medium,"Array, Backtracking",2133518709,2026-09-07T05:37:54+00:00,python3,3 ms,19.3 MB,40-combination-sum-ii.py,,"skip duplicates since we sorted, we can just check if the idx is different and if the candidates are the same",,,,,,,,,new,2026-09-07T05:39:00+00:00,,,,,0,0
+40,Combination Sum II,combination-sum-ii,https://leetcode.com/problems/combination-sum-ii/,Medium,"Array, Backtracking",2133519745,2026-09-07T05:39:00+00:00,python3,2 ms,19.8 MB,40-combination-sum-ii.py,,"skip duplicates since we sorted, we can just check if the idx is different and if the candidates are the same
+TC: O(2^n) because of backtracking
+SC: O(n)",,,,,,,O(2^n) because of backtracking,O(n),new,2026-09-07T05:39:00+00:00,,,,,0,0
 42,Trapping Rain Water,trapping-rain-water,https://leetcode.com/problems/trapping-rain-water/,Hard,"Array, Two Pointers, Dynamic Programming, Stack, Monotonic Stack",1835651592,2025-11-21T03:15:37+00:00,python3,11 ms,19.2 MB,42-trapping-rain-water.py,[ Time taken: 16 hrs 20 m 4 s ],,,,,,,,,,new,,,,,,0,0
 42,Trapping Rain Water,trapping-rain-water,https://leetcode.com/problems/trapping-rain-water/,Hard,"Array, Two Pointers, Dynamic Programming, Stack, Monotonic Stack",1835653726,2025-11-21T03:19:43+00:00,python3,7 ms,19.3 MB,42-trapping-rain-water.py,,,,,,,,,,,new,,,,,,0,0
 45,Jump Game II,jump-game-ii,https://leetcode.com/problems/jump-game-ii/,Medium,"Array, Dynamic Programming, Greedy",1805633352,2025-10-19T05:32:43+00:00,python3,11 ms,18.8 MB,45-jump-game-ii.py,,"end has to be less than the end index  
@@ -266,6 +308,37 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right",,,,,,,,,new,,,,,,0,0
+115,Distinct Subsequences,distinct-subsequences,https://leetcode.com/problems/distinct-subsequences/,Hard,"String, Dynamic Programming",2133430855,2026-09-07T03:47:52+00:00,python3,975 ms,254.5 MB,115-distinct-subsequences.py,,"thoughts:
+dp? we can use top down memoziation to cache our choices and reuse them
+initially I thought backtracking but I think that would be too inefficient
+base case:
+if we find matched all the letters of t, we found 1 valid subsequence
+if we run out of s but we still haven't matched t then we just return 0
+check our cache
+we can skip the character of s for one of our decisions
+if characterrs match we increment both
+cache our answer
+divergences: 
+we can think about this as like a pointer problem essentially
+for every letter that matches you increment both 'pointers'
+and if you reach the end for the 't' pointer, we have a possible subsequence but if we reach the end of the 's' pointer and we havent found a subsequence we return 0 
+and then we can just store every possible answer in our cache to reuse
+TC: O(M*N) where m is length of s and n is length of t
+SC: O(M*N) since we cache all the possible states? ","thoughts:
+dp? we can use top down memoziation to cache our choices and reuse them
+initially I thought backtracking but I think that would be too inefficient
+base case:
+if we find matched all the letters of t, we found 1 valid subsequence
+if we run out of s but we still haven't matched t then we just return 0
+check our cache
+we can skip the character of s for one of our decisions
+if characterrs match we increment both
+cache our answer","we can think about this as like a pointer problem essentially
+for every letter that matches you increment both 'pointers'
+and if you reach the end for the 't' pointer, we have a possible subsequence but if we reach the end of the 's' pointer and we havent found a subsequence we return 0 
+and then we can just store every possible answer in our cache to reuse
+TC: O(M*N) where m is length of s and n is length of t
+SC: O(M*N) since we cache all the possible states? ",,,,,O(M*N) where m is length of s and n is length of t,O(M*N) since we cache all the possible states?,new,2026-09-07T03:47:52+00:00,,,,,0,0
 121,Best Time to Buy and Sell Stock,best-time-to-buy-and-sell-stock,https://leetcode.com/problems/best-time-to-buy-and-sell-stock/,Easy,"Array, Dynamic Programming",1685630009,2025-07-04T02:34:40+00:00,python3,108 ms,27 MB,121-best-time-to-buy-and-sell-stock.py,,use sliding window ,,,,,,,,,new,,,,,,0,0
 121,Best Time to Buy and Sell Stock,best-time-to-buy-and-sell-stock,https://leetcode.com/problems/best-time-to-buy-and-sell-stock/,Easy,"Array, Dynamic Programming",1803169287,2025-10-16T08:01:36+00:00,python3,59 ms,26.9 MB,121-best-time-to-buy-and-sell-stock.py,,,,,,,,,,,new,,,,,,0,0
 121,Best Time to Buy and Sell Stock,best-time-to-buy-and-sell-stock,https://leetcode.com/problems/best-time-to-buy-and-sell-stock/,Easy,"Array, Dynamic Programming",1833454857,2025-11-18T17:39:26+00:00,python3,105 ms,27 MB,121-best-time-to-buy-and-sell-stock.py,,,,,,,,,,,new,,,,,,0,0
@@ -289,6 +362,9 @@ class Node:
         self.val = val
         self.neighbors = neighbors if neighbors is not None else []
 ",,,,,,,,,new,,,,,,0,0
+134,Gas Station,gas-station,https://leetcode.com/problems/gas-station/,Medium,"Array, Greedy",2133502146,2026-09-07T05:19:49+00:00,python3,15 ms,26 MB,134-gas-station.py,[ Time taken: 28m 59s ],"if tank is negative we cannot make it to the next station so we try a new starting index
+TC: O(n) because we just loop
+SC: O(1) since we are just returning start_idx ",,,,,,,O(n) because we just loop,O(1) since we are just returning start_idx,new,2026-09-07T05:19:49+00:00,,,,,0,0
 138,Copy List with Random Pointer,copy-list-with-random-pointer,https://leetcode.com/problems/copy-list-with-random-pointer/,Medium,"Hash Table, Linked List",1839178566,2025-11-25T06:57:42+00:00,python3,40 ms,18.4 MB,138-copy-list-with-random-pointer.py,[ Time taken: 8 hrs 52 m 28 s ],"
 # Definition for a Node.
 class Node:
@@ -331,6 +407,7 @@ obj.push(val)
 obj.pop()
 param_3 = obj.top()
 param_4 = obj.getMin()",,,,,,,,,new,,,,,,0,0
+167,Two Sum II - Input Array Is Sorted,two-sum-ii-input-array-is-sorted,https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/,Medium,"Array, Two Pointers, Binary Search",2131146564,2026-09-04T21:25:47+00:00,python3,3 ms,20.6 MB,167-two-sum-ii-input-array-is-sorted.py,,,,,,,,,,,new,2026-09-04T21:25:47+00:00,,,,,0,0
 169,Majority Element,majority-element,https://leetcode.com/problems/majority-element/,Easy,"Array, Hash Table, Divide and Conquer, Sorting, Counting, Boyer–Moore Majority Vote Algorithm",1802186661,2025-10-15T07:25:50+00:00,python3,6 ms,19.4 MB,169-majority-element.py,,,,,,,,,,,new,,,,,,0,0
 169,Majority Element,majority-element,https://leetcode.com/problems/majority-element/,Easy,"Array, Hash Table, Divide and Conquer, Sorting, Counting, Boyer–Moore Majority Vote Algorithm",1802188242,2025-10-15T07:28:18+00:00,python3,7 ms,19.4 MB,169-majority-element.py,,,,,,,,,,,new,,,,,,0,0
 189,Rotate Array,rotate-array,https://leetcode.com/problems/rotate-array/,Medium,"Array, Math, Two Pointers",1803165533,2025-10-16T07:55:06+00:00,python3,0 ms,25.7 MB,189-rotate-array.py,,"
@@ -377,7 +454,7 @@ since we want the kth largest element, we push values that are larger than the c
 and then by the end the kth largest value should just be the value sitting on top of the heap 
 initialize the heap of size k
 go thorugh the rest of the elements
-if the current num is greater than the value at the top of the heap",,,,,,,,,new,2026-08-31T18:54:03+00:00,,,,,0,0
+if the current num is greater than the value at the top of the heap",,,,,,,,,new,2026-09-07T15:19:57+00:00,,,,,0,0
 215,Kth Largest Element in an Array,kth-largest-element-in-an-array,https://leetcode.com/problems/kth-largest-element-in-an-array/,Medium,"Array, Divide and Conquer, Sorting, Heap (Priority Queue), Quickselect",2126514213,2026-08-31T18:54:03+00:00,python3,44 ms,31.1 MB,215-kth-largest-element-in-an-array.py,,"we can solve this using a min heap of size k
 since we want the kth largest element, we push values that are larger than the current value
 and then by the end the kth largest value should just be the value sitting on top of the heap 
@@ -398,7 +475,8 @@ if the current num is greater than the value at the top of the heap","none reall
 TC:
 building heap takes O(k) time
 traversing the heap and using the operations heappushpop is O(logk) (traversing the tree)
-O(nlogk) and space is just O(k)",,,,,,,new,2026-08-31T18:54:03+00:00,,,,,0,0
+O(nlogk) and space is just O(k)",,,,,,,new,2026-09-07T15:19:57+00:00,,,,,0,0
+215,Kth Largest Element in an Array,kth-largest-element-in-an-array,https://leetcode.com/problems/kth-largest-element-in-an-array/,Medium,"Array, Divide and Conquer, Sorting, Heap (Priority Queue), Quickselect",2134045732,2026-09-07T15:19:57+00:00,python3,46 ms,31.1 MB,215-kth-largest-element-in-an-array.py,[ Time taken: 5hrs 39m 25s ],,,,,,,,,,new,2026-09-07T15:19:57+00:00,,,,,0,0
 217,Contains Duplicate,contains-duplicate,https://leetcode.com/problems/contains-duplicate/,Easy,"Array, Hash Table, Sorting",2094084419,2026-08-04T14:07:08+00:00,python3,15 ms,32.3 MB,217-contains-duplicate.py,,,,,,,,,,,new,,,,,,0,0
 226,Invert Binary Tree,invert-binary-tree,https://leetcode.com/problems/invert-binary-tree/,Easy,"Tree, Depth-First Search, Breadth-First Search, Binary Tree",1902417081,2026-01-30T21:24:57+00:00,python3,0 ms,19.5 MB,226-invert-binary-tree.py,[ Time taken: -1 d -1 hr -18 m -58 s ],"Definition for a binary tree node.
 class TreeNode:
@@ -435,7 +513,7 @@ obj = MyQueue()
 obj.push(x)
 param_2 = obj.pop()
 param_3 = obj.peek()
-param_4 = obj.empty()",,,,,,,,,new,2026-09-02T14:02:38+00:00,,,,,0,0
+param_4 = obj.empty()",,,,,,,,,new,2026-09-07T15:25:12+00:00,,,,,0,0
 232,Implement Queue using Stacks,implement-queue-using-stacks,https://leetcode.com/problems/implement-queue-using-stacks/,Easy,"Stack, Design, Queue",2128509852,2026-09-02T14:02:38+00:00,python3,0 ms,19.5 MB,232-implement-queue-using-stacks.py,,"divergences:
 none
 stacks are LIFO and queues are FIFO so appending all items in one stack to another reverses this and gives us the proper behavior we want for a queue 
@@ -451,7 +529,26 @@ obj = MyQueue()
 obj.push(x)
 param_2 = obj.pop()
 param_3 = obj.peek()
-param_4 = obj.empty()",,,,,,,new,2026-09-02T14:02:38+00:00,,,,,0,0
+param_4 = obj.empty()",,,,,,,new,2026-09-07T15:25:12+00:00,,,,,0,0
+232,Implement Queue using Stacks,implement-queue-using-stacks,https://leetcode.com/problems/implement-queue-using-stacks/,Easy,"Stack, Design, Queue",2134051479,2026-09-07T15:25:12+00:00,python3,0 ms,19.3 MB,232-implement-queue-using-stacks.py,,"we want to pop the top, but since stacks are LIFO, we reverse it by appending everything in input to ouput 
+peek checks the element in the front of the queue; so we do the same thing and return self.output[-1]
+divergences:
+none
+stacks are LIFO and queues are FIFO so appending all items in one stack to another reverses this and gives us the proper behavior we want for a queue 
+Your MyQueue object will be instantiated and called as such:
+obj = MyQueue()
+obj.push(x)
+param_2 = obj.pop()
+param_3 = obj.peek()
+param_4 = obj.empty()","we want to pop the top, but since stacks are LIFO, we reverse it by appending everything in input to ouput 
+peek checks the element in the front of the queue; so we do the same thing and return self.output[-1]","none
+stacks are LIFO and queues are FIFO so appending all items in one stack to another reverses this and gives us the proper behavior we want for a queue 
+Your MyQueue object will be instantiated and called as such:
+obj = MyQueue()
+obj.push(x)
+param_2 = obj.pop()
+param_3 = obj.peek()
+param_4 = obj.empty()",,,,,,,new,2026-09-07T15:25:12+00:00,,,,,0,0
 235,Lowest Common Ancestor of a Binary Search Tree,lowest-common-ancestor-of-a-binary-search-tree,https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/,Medium,"Tree, Depth-First Search, Binary Search Tree, Binary Tree, Binary Lifting, Lowest Common Ancestor",2073458050,2026-07-19T12:39:06+00:00,python3,60 ms,22.9 MB,235-lowest-common-ancestor-of-a-binary-search-tree.py,[ Time taken: 18hrs 26m 10s ],"Definition for a binary tree node.
 class TreeNode:
     def __init__(self, x):
@@ -552,7 +649,15 @@ SC: O(n)","keep track of the frequencies in nums and push it onto the heap
 if size of heap is > k pop the least frequent number
 push these values onto the heap","none
 TC: O(nlogk)
-SC: O(n)",,,,,O(nlogk),O(n),new,2026-09-01T15:52:05+00:00,,,,,0,0
+SC: O(n)",,,,,O(nlogk),O(n),new,2026-09-07T15:35:01+00:00,,,,,0,0
+347,Top K Frequent Elements,top-k-frequent-elements,https://leetcode.com/problems/top-k-frequent-elements/,Medium,"Array, Hash Table, Divide and Conquer, Sorting, Heap (Priority Queue), Bucket Sort, Counting, Quickselect",2134062696,2026-09-07T15:35:01+00:00,python3,0 ms,22.8 MB,347-top-k-frequent-elements.py,,"create a counter / freq array for the numbers in num
+initialize a heap
+push if a number has a greater freq
+only keep k amount in heap
+return res
+initialize heap
+if we have more than k elemtns in the heap pop the top since it will be the least frequent number
+go through the heap and append it to res    ",,,,,,,,,new,2026-09-07T15:35:01+00:00,,,,,0,0
 383,Ransom Note,ransom-note,https://leetcode.com/problems/ransom-note/,Easy,"Hash Table, String, Counting",1873655784,2026-01-04T00:35:07+00:00,python3,25 ms,17.7 MB,383-ransom-note.py,,,,,,,,,,,new,,,,,,0,0
 409,Longest Palindrome,longest-palindrome,https://leetcode.com/problems/longest-palindrome/,Easy,"Hash Table, String, Greedy",1876003480,2026-01-06T04:43:17+00:00,python3,3 ms,17.3 MB,409-longest-palindrome.py,,,,,,,,,,,new,,,,,,0,0
 416,Partition Equal Subset Sum,partition-equal-subset-sum,https://leetcode.com/problems/partition-equal-subset-sum/,Medium,"Array, Dynamic Programming, Knapsack Problem, 0-1 Knapsack",1870593866,2025-12-31T23:01:12+00:00,python3,319 ms,78.2 MB,416-partition-equal-subset-sum.py,,,,,,,,,,,new,,,,,,0,0
@@ -597,7 +702,8 @@ class TreeNode:
         self.right = right
 base case",,,,,,,,,new,,,,,,0,0
 621,Task Scheduler,task-scheduler,https://leetcode.com/problems/task-scheduler/,Medium,"Array, Hash Table, Greedy, Sorting, Heap (Priority Queue), Counting",1873942524,2026-01-04T07:32:39+00:00,python3,120 ms,19.6 MB,621-task-scheduler.py,,,,,,,,,,,new,,,,,,0,0
-695,Max Area of Island,max-area-of-island,https://leetcode.com/problems/max-area-of-island/,Medium,"Array, Depth-First Search, Breadth-First Search, Union-Find, Matrix",2126567712,2026-08-31T20:08:05+00:00,python3,15 ms,20.7 MB,695-max-area-of-island.py,,sink the current to mark as visited,,,,,,,,,new,2026-08-31T20:08:05+00:00,,,,,0,0
+695,Max Area of Island,max-area-of-island,https://leetcode.com/problems/max-area-of-island/,Medium,"Array, Depth-First Search, Breadth-First Search, Union-Find, Matrix",2126567712,2026-08-31T20:08:05+00:00,python3,15 ms,20.7 MB,695-max-area-of-island.py,,sink the current to mark as visited,,,,,,,,,new,2026-09-07T15:42:06+00:00,,,,,0,0
+695,Max Area of Island,max-area-of-island,https://leetcode.com/problems/max-area-of-island/,Medium,"Array, Depth-First Search, Breadth-First Search, Union-Find, Matrix",2134070753,2026-09-07T15:42:06+00:00,python3,12 ms,20.6 MB,695-max-area-of-island.py,,sink the current value to mark as visited,,,,,,,,,new,2026-09-07T15:42:06+00:00,,,,,0,0
 698,Partition to K Equal Sum Subsets,partition-to-k-equal-sum-subsets,https://leetcode.com/problems/partition-to-k-equal-sum-subsets/,Medium,"Array, Dynamic Programming, Backtracking, Bit Manipulation, Memoization, Bitmask",2088949550,2026-07-31T15:10:31+00:00,python3,27 ms,19.4 MB,698-partition-to-k-equal-sum-subsets.py,,"If the total sum is not divisible cleanly by k, it is impossible
 If the largest number exceeds the target subset size, it cannot fit
 Base Case: All items successfully placed into a bucket
@@ -657,6 +763,40 @@ the other way is basically the same idea but we check for no odd length cycles, 
 of its greedy approach, which can sometimes ignore the true 'cheapest' path
 initialize distance and predecessor
 relax the edges |V| - 1 times",,,,,,,,,new,,,,,,0,0
+853,Car Fleet,car-fleet,https://leetcode.com/problems/car-fleet/,Medium,"Array, Stack, Sorting, Monotonic Stack",2131138477,2026-09-04T21:04:52+00:00,python3,139 ms,41.2 MB,853-car-fleet.py,[ Time taken: 1hr 44m 24s ],"thoughts: 
+Process cars from closest to target to farthest.
+For each car, calculate when it would reach the target alone.
+
+If its arrival time <= the fleet ahead's arrival time,
+it will catch that fleet before (or at) the target.
+
+If its arrival time > the fleet ahead's time,
+it cannot catch that fleet, so it forms a new fleet.",,,,,,,,,new,2026-09-04T21:07:14+00:00,,,,,0,0
+853,Car Fleet,car-fleet,https://leetcode.com/problems/car-fleet/,Medium,"Array, Stack, Sorting, Monotonic Stack",2131139426,2026-09-04T21:07:14+00:00,python3,143 ms,41.3 MB,853-car-fleet.py,,"thoughts: 
+Process cars from closest to target to farthest.
+For each car, calculate when it would reach the target alone.
+
+If its arrival time <= the fleet ahead's arrival time,
+it will catch that fleet before (or at) the target.
+
+If its arrival time > the fleet ahead's time,
+it cannot catch that fleet, so it forms a new fleet.
+divergences: 
+if the current car we are looking at has a faster time than the fleet ahead, it will catch up and merge, so we don't actually do anything 
+we only append to the stack when the current car is slower because then it cannot catch up and will create a new fleet
+TC: O(nlogn) because of sorting
+SC: O(n) because we store the sorted pairs","thoughts: 
+Process cars from closest to target to farthest.
+For each car, calculate when it would reach the target alone.
+
+If its arrival time <= the fleet ahead's arrival time,
+it will catch that fleet before (or at) the target.
+
+If its arrival time > the fleet ahead's time,
+it cannot catch that fleet, so it forms a new fleet.","if the current car we are looking at has a faster time than the fleet ahead, it will catch up and merge, so we don't actually do anything 
+we only append to the stack when the current car is slower because then it cannot catch up and will create a new fleet
+TC: O(nlogn) because of sorting
+SC: O(n) because we store the sorted pairs",,,,,O(nlogn) because of sorting,O(n) because we store the sorted pairs,new,2026-09-04T21:07:14+00:00,,,,,0,0
 876,Middle of the Linked List,middle-of-the-linked-list,https://leetcode.com/problems/middle-of-the-linked-list/,Easy,"Linked List, Two Pointers",1874622894,2026-01-04T20:08:27+00:00,python3,0 ms,17.1 MB,876-middle-of-the-linked-list.py,,"Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -759,7 +899,7 @@ move pointers
 if < 2 points were found, return [-1, -1]
 max dist is the distance from the last crit index and first","initially thought I had to store in a hashmap but we can just do find local min/max on the fly
 max dist is always the distance between the last and first crit index we find 
-TC: O(n) and O(1) space ",,,,,O(n) and O(1) space,,review,2026-09-03T18:59:57.341203+00:00,2026-09-02T18:59:57.341203+00:00,1.2931,5.112170705601056,0.7853851990363399,1,0
+TC: O(n) and O(1) space ",,,,,O(n) and O(1) space,,review,2026-09-03T18:59:57.341203+00:00,2026-09-02T18:59:57.341203+00:00,1.2931,5.112170705601056,0.7677932035241684,1,0
 2058,Find the Minimum and Maximum Number of Nodes Between Critical Points,find-the-minimum-and-maximum-number-of-nodes-between-critical-points,https://leetcode.com/problems/find-the-minimum-and-maximum-number-of-nodes-between-critical-points/,Medium,Linked List,2126389151,2026-08-31T17:12:32+00:00,python3,89 ms,63.2 MB,2058-find-the-minimum-and-maximum-number-of-nodes-between-critical-points.py,,"Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -802,7 +942,7 @@ move pointers
 if < 2 points were found, return [-1, -1]
 max dist is the distance from the last crit index and first","initially thought I had to store in a hashmap but we can just do find local min/max on the fly
 max dist is always the distance between the last and first crit index we find 
-TC: O(n) and O(1) space ",,,,,O(n) and O(1) space,,review,2026-09-03T18:59:57.341203+00:00,2026-09-02T18:59:57.341203+00:00,1.2931,5.112170705601056,0.7853851990363399,1,0
+TC: O(n) and O(1) space ",,,,,O(n) and O(1) space,,review,2026-09-03T18:59:57.341203+00:00,2026-09-02T18:59:57.341203+00:00,1.2931,5.112170705601056,0.7677932035241684,1,0
 2058,Find the Minimum and Maximum Number of Nodes Between Critical Points,find-the-minimum-and-maximum-number-of-nodes-between-critical-points,https://leetcode.com/problems/find-the-minimum-and-maximum-number-of-nodes-between-critical-points/,Medium,Linked List,2128875517,2026-09-02T18:51:50+00:00,python3,86 ms,62.9 MB,2058-find-the-minimum-and-maximum-number-of-nodes-between-critical-points.py,,"Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -816,7 +956,7 @@ if point is a critical point, we save the index
 else we already have an index and we can find the min dist
 increment the pointers
 check if there is fewer than two distinct cirtical points:
-max dist is always the latest crit point and the first crit point",,,,,,,,,review,2026-09-03T18:59:57.341203+00:00,2026-09-02T18:59:57.341203+00:00,1.2931,5.112170705601056,0.7853851990363399,1,0
+max dist is always the latest crit point and the first crit point",,,,,,,,,review,2026-09-03T18:59:57.341203+00:00,2026-09-02T18:59:57.341203+00:00,1.2931,5.112170705601056,0.7677932035241684,1,0
 2091,Removing Minimum and Maximum From Array,removing-minimum-and-maximum-from-array,https://leetcode.com/problems/removing-minimum-and-maximum-from-array/,Medium,"Array, Greedy",2124621450,2026-08-30T04:34:09+00:00,python3,21 ms,33.7 MB,2091-removing-minimum-and-maximum-from-array.py,,"first we can do one pass to find the max and min
 after that, there are essentially three ways to find the number of deletions
 deleting one way from either left or right
@@ -897,5 +1037,42 @@ if it exits loop, that means that the infected are not invoked by a normal node 
 O(n)",,,,,,,,,new,,,,,,0,0
 3345,Smallest Divisible Digit Product I,smallest-divisible-digit-product-i,https://leetcode.com/problems/smallest-divisible-digit-product-i/,Easy,"Math, Enumeration",2096577626,2026-08-06T11:13:29+00:00,python3,0 ms,19.4 MB,3345-smallest-divisible-digit-product-i.py,[ Time taken: 1d 18hrs 38m 15s ],,,,,,,,,,new,,,,,,0,0
 3731,Find Missing Elements,find-missing-elements,https://leetcode.com/problems/find-missing-elements/,Easy,"Array, Hash Table, Sorting",2093734853,2026-08-04T09:02:37+00:00,python3,0 ms,19.4 MB,3731-find-missing-elements.py,,,,,,,,,,,new,,,,,,0,0
+3870,Count Commas in Range,count-commas-in-range,https://leetcode.com/problems/count-commas-in-range/,Easy,Math,2135191325,2026-09-08T14:09:32+00:00,python3,0 ms,19.1 MB,3870-count-commas-in-range.py,,,,,,,,,,,new,2026-09-08T14:09:32+00:00,,,,,0,0
 3875,Construct Uniform Parity Array I,construct-uniform-parity-array-i,https://leetcode.com/problems/construct-uniform-parity-array-i/,Easy,"Array, Math",2127857876,2026-09-02T02:12:26+00:00,python3,3 ms,19.2 MB,3875-construct-uniform-parity-array-i.py,,,,,,,,,,,new,2026-09-02T02:13:28+00:00,,,,,0,0
 3875,Construct Uniform Parity Array I,construct-uniform-parity-array-i,https://leetcode.com/problems/construct-uniform-parity-array-i/,Easy,"Array, Math",2127858377,2026-09-02T02:13:28+00:00,python3,0 ms,19.3 MB,3875-construct-uniform-parity-array-i.py,,,,,,,,,,,new,2026-09-02T02:13:28+00:00,,,,,0,0
+3876,Construct Uniform Parity Array II,construct-uniform-parity-array-ii,https://leetcode.com/problems/construct-uniform-parity-array-ii/,Medium,"Array, Math",2129781374,2026-09-03T15:42:57+00:00,python3,15 ms,35.3 MB,3876-construct-uniform-parity-array-ii.py,[ Time taken: 16hrs 37m 33s ],"thoughts:
+if the entire array is even / odd we can just return that array 
+
+parity:
+even - even = even
+odd - odd = even
+
+odd - even = odd 
+even - odd = odd
+
+the smallest odd cannot be turned even because we would need a smaller odd value 
+if the minimum is even, we can't change the parity of an array with mixed values because even - odd = odd
+this is for if the entire nums1 array have all the same parity; O(n)
+TC: O(n), we linear scan through the array 
+SC: O(1), we store at most one constant value",,,,,,,"O(n), we linear scan through the array","O(1), we store at most one constant value",new,2026-09-03T15:42:57+00:00,,,,,0,0
+3903,Smallest Stable Index I,smallest-stable-index-i,https://leetcode.com/problems/smallest-stable-index-i/,Easy,"Array, Prefix Sum",2130792590,2026-09-04T14:28:50+00:00,python3,4 ms,19.1 MB,3903-smallest-stable-index-i.py,,"thoughts:
+we can just do prefix and suffix sum here, and we constantly find the max in our prefix and then the min in our suffix,
+we start with the max of the prefix being the very first value, and looping throuhg and keeping track of the currentm ax at each index
+do the reverse for suffix
+then we do one last loop to find the first instability index, if not we return -1
+divergences:
+haven't done prefix/suffix sums in a while, so didn't see it 
+but once you see it its pretty easy
+
+TC: O(n) looping throuhg the arrays at most once 
+SC: O(n) since you store at most n numbers in both prefix and suffix ","thoughts:
+we can just do prefix and suffix sum here, and we constantly find the max in our prefix and then the min in our suffix,
+we start with the max of the prefix being the very first value, and looping throuhg and keeping track of the currentm ax at each index
+do the reverse for suffix
+then we do one last loop to find the first instability index, if not we return -1","haven't done prefix/suffix sums in a while, so didn't see it 
+but once you see it its pretty easy
+
+TC: O(n) looping throuhg the arrays at most once 
+SC: O(n) since you store at most n numbers in both prefix and suffix ",,,,,O(n) looping throuhg the arrays at most once,O(n) since you store at most n numbers in both prefix and suffix,new,2026-09-04T14:28:50+00:00,,,,,0,0
+3904,Smallest Stable Index II,smallest-stable-index-ii,https://leetcode.com/problems/smallest-stable-index-ii/,Medium,"Array, Prefix Sum",2132045925,2026-09-05T18:17:30+00:00,python3,239 ms,33.3 MB,3904-smallest-stable-index-ii.py,,"this shit the same thing as stable index i
+create a prefix and suffix and loop through both to find the max and min and then compare",,,,,,,,,new,2026-09-05T18:17:30+00:00,,,,,0,0

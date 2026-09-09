@@ -9069,7 +9069,7 @@
         "state": "review",
         "stability": 1.2931,
         "difficulty": 5.112170705601056,
-        "retrievability": 0.7853851990363399,
+        "retrievability": 0.7677932035241684,
         "last_review": "2026-09-02T18:59:57.341203+00:00",
         "next_review": "2026-09-03T18:59:57.341203+00:00",
         "reps": 1,
@@ -9090,7 +9090,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
       "first_solved_at": "2026-08-31T18:50:47+00:00",
-      "last_solved_at": "2026-08-31T18:54:03+00:00",
+      "last_solved_at": "2026-09-07T15:19:57+00:00",
       "attempts": [
         {
           "submission_id": "2126511257",
@@ -9155,6 +9155,28 @@
             "time_complexity": "",
             "space_complexity": ""
           }
+        },
+        {
+          "submission_id": "2134045732",
+          "submitted_at": "2026-09-07T15:19:57+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "215-kth-largest-element-in-an-array.py",
+          "code_sha256": "dcc25e2266612b4123cbae3e6886028d2bc3754c3c61437de753ca6ba96abf70",
+          "runtime": "46 ms",
+          "memory": "31.1 MB",
+          "leetcode_notes": "[ Time taken: 5hrs 39m 25s ]",
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -9163,7 +9185,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": "2026-08-31T18:54:03+00:00",
+        "next_review": "2026-09-07T15:19:57+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -9182,7 +9204,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/max-area-of-island/",
       "first_solved_at": "2026-08-31T20:08:05+00:00",
-      "last_solved_at": "2026-08-31T20:08:05+00:00",
+      "last_solved_at": "2026-09-07T15:42:06+00:00",
       "attempts": [
         {
           "submission_id": "2126567712",
@@ -9207,6 +9229,30 @@
             "time_complexity": "",
             "space_complexity": ""
           }
+        },
+        {
+          "submission_id": "2134070753",
+          "submitted_at": "2026-09-07T15:42:06+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "695-max-area-of-island.py",
+          "code_sha256": "26a2ca3a2b7e884631549bd9d7baf6145ae4b86b2caf2d32a2ba439b16619d6b",
+          "runtime": "12 ms",
+          "memory": "20.6 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "sink the current value to mark as visited"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -9215,7 +9261,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": "2026-08-31T20:08:05+00:00",
+        "next_review": "2026-09-07T15:42:06+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -9319,7 +9365,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/top-k-frequent-elements/",
       "first_solved_at": "2026-09-01T15:52:05+00:00",
-      "last_solved_at": "2026-09-01T15:52:05+00:00",
+      "last_solved_at": "2026-09-07T15:35:01+00:00",
       "attempts": [
         {
           "submission_id": "2127414583",
@@ -9350,6 +9396,37 @@
             "time_complexity": "O(nlogk)",
             "space_complexity": "O(n)"
           }
+        },
+        {
+          "submission_id": "2134062696",
+          "submitted_at": "2026-09-07T15:35:01+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "347-top-k-frequent-elements.py",
+          "code_sha256": "4166a22e0d3c0905019606f2329853223d2d864d5c314231d27b4416be9f602f",
+          "runtime": "0 ms",
+          "memory": "22.8 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "create a counter / freq array for the numbers in num",
+            "initialize a heap",
+            "push if a number has a greater freq",
+            "only keep k amount in heap",
+            "return res",
+            "initialize heap",
+            "if we have more than k elemtns in the heap pop the top since it will be the least frequent number",
+            "go through the heap and append it to res    "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -9358,7 +9435,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": "2026-09-01T15:52:05+00:00",
+        "next_review": "2026-09-07T15:35:01+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -9529,7 +9606,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/implement-queue-using-stacks/",
       "first_solved_at": "2026-09-02T13:57:04+00:00",
-      "last_solved_at": "2026-09-02T14:02:38+00:00",
+      "last_solved_at": "2026-09-07T15:25:12+00:00",
       "attempts": [
         {
           "submission_id": "2128503287",
@@ -9591,6 +9668,40 @@
             "time_complexity": "",
             "space_complexity": ""
           }
+        },
+        {
+          "submission_id": "2134051479",
+          "submitted_at": "2026-09-07T15:25:12+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "232-implement-queue-using-stacks.py",
+          "code_sha256": "4c0f7833ba76ecffdca4c6410ac697856e4f0f3199f3c787547ac6ec3f43fe70",
+          "runtime": "0 ms",
+          "memory": "19.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we want to pop the top, but since stacks are LIFO, we reverse it by appending everything in input to ouput ",
+            "peek checks the element in the front of the queue; so we do the same thing and return self.output[-1]",
+            "divergences:",
+            "none",
+            "stacks are LIFO and queues are FIFO so appending all items in one stack to another reverses this and gives us the proper behavior we want for a queue ",
+            "Your MyQueue object will be instantiated and called as such:",
+            "obj = MyQueue()",
+            "obj.push(x)",
+            "param_2 = obj.pop()",
+            "param_3 = obj.peek()",
+            "param_4 = obj.empty()"
+          ],
+          "notes": {
+            "thought_process": "we want to pop the top, but since stacks are LIFO, we reverse it by appending everything in input to ouput \npeek checks the element in the front of the queue; so we do the same thing and return self.output[-1]",
+            "notes": "none\nstacks are LIFO and queues are FIFO so appending all items in one stack to another reverses this and gives us the proper behavior we want for a queue \nYour MyQueue object will be instantiated and called as such:\nobj = MyQueue()\nobj.push(x)\nparam_2 = obj.pop()\nparam_3 = obj.peek()\nparam_4 = obj.empty()",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -9599,7 +9710,958 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": "2026-09-02T14:02:38+00:00",
+        "next_review": "2026-09-07T15:25:12+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "3876-construct-uniform-parity-array-ii": {
+      "leetcode_id": "3876",
+      "slug": "construct-uniform-parity-array-ii",
+      "title": "Construct Uniform Parity Array II",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Math"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/construct-uniform-parity-array-ii/",
+      "first_solved_at": "2026-09-03T15:42:57+00:00",
+      "last_solved_at": "2026-09-03T15:42:57+00:00",
+      "attempts": [
+        {
+          "submission_id": "2129781374",
+          "submitted_at": "2026-09-03T15:42:57+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "3876-construct-uniform-parity-array-ii.py",
+          "code_sha256": "ae5807056e77650d505633326da46aa32a12616a330ef00f56fb8e88877ac988",
+          "runtime": "15 ms",
+          "memory": "35.3 MB",
+          "leetcode_notes": "[ Time taken: 16hrs 37m 33s ]",
+          "raw_comments": [
+            "thoughts:",
+            "if the entire array is even / odd we can just return that array ",
+            "",
+            "parity:",
+            "even - even = even",
+            "odd - odd = even",
+            "",
+            "odd - even = odd ",
+            "even - odd = odd",
+            "",
+            "the smallest odd cannot be turned even because we would need a smaller odd value ",
+            "if the minimum is even, we can't change the parity of an array with mixed values because even - odd = odd",
+            "this is for if the entire nums1 array have all the same parity; O(n)",
+            "TC: O(n), we linear scan through the array ",
+            "SC: O(1), we store at most one constant value"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "O(n), we linear scan through the array",
+            "space_complexity": "O(1), we store at most one constant value"
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-03T15:42:57+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "3903-smallest-stable-index-i": {
+      "leetcode_id": "3903",
+      "slug": "smallest-stable-index-i",
+      "title": "Smallest Stable Index I",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Prefix Sum"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/smallest-stable-index-i/",
+      "first_solved_at": "2026-09-04T14:28:50+00:00",
+      "last_solved_at": "2026-09-04T14:28:50+00:00",
+      "attempts": [
+        {
+          "submission_id": "2130791202",
+          "submitted_at": "2026-09-04T14:27:21+00:00",
+          "status": "Runtime Error",
+          "language": "python3",
+          "code_path": "3903-smallest-stable-index-i.py",
+          "code_sha256": "0a413268b3ef54b499a0cce12ba63f391fbf6b174880b887dcff48b327648fc9",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thoughts:",
+            "we can just do prefix and suffix sum here, and we constantly find the max in our prefix and then the min in our suffix,",
+            "we start with the max of the prefix being the very first value, and looping throuhg and keeping track of the currentm ax at each index",
+            "do the reverse for suffix",
+            "then we do one last loop to find the first instability index, if not we return -1",
+            "divergences:",
+            "haven't done prefix/suffix sums in a while, so didn't see it ",
+            "but once you see it its pretty easy",
+            "",
+            "TC: O(n) looping throuhg the arrays at most once ",
+            "SC: O(n) since you store at most n numbers in both prefix and suffix "
+          ],
+          "notes": {
+            "thought_process": "thoughts:\nwe can just do prefix and suffix sum here, and we constantly find the max in our prefix and then the min in our suffix,\nwe start with the max of the prefix being the very first value, and looping throuhg and keeping track of the currentm ax at each index\ndo the reverse for suffix\nthen we do one last loop to find the first instability index, if not we return -1",
+            "notes": "haven't done prefix/suffix sums in a while, so didn't see it \nbut once you see it its pretty easy\n\nTC: O(n) looping throuhg the arrays at most once \nSC: O(n) since you store at most n numbers in both prefix and suffix ",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "O(n) looping throuhg the arrays at most once",
+            "space_complexity": "O(n) since you store at most n numbers in both prefix and suffix"
+          }
+        },
+        {
+          "submission_id": "2130792590",
+          "submitted_at": "2026-09-04T14:28:50+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "3903-smallest-stable-index-i.py",
+          "code_sha256": "0f0fb3cc0e6506289d4672745c61282e2d4eafddf3952c87d8f1da62b13ecefb",
+          "runtime": "4 ms",
+          "memory": "19.1 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thoughts:",
+            "we can just do prefix and suffix sum here, and we constantly find the max in our prefix and then the min in our suffix,",
+            "we start with the max of the prefix being the very first value, and looping throuhg and keeping track of the currentm ax at each index",
+            "do the reverse for suffix",
+            "then we do one last loop to find the first instability index, if not we return -1",
+            "divergences:",
+            "haven't done prefix/suffix sums in a while, so didn't see it ",
+            "but once you see it its pretty easy",
+            "",
+            "TC: O(n) looping throuhg the arrays at most once ",
+            "SC: O(n) since you store at most n numbers in both prefix and suffix "
+          ],
+          "notes": {
+            "thought_process": "thoughts:\nwe can just do prefix and suffix sum here, and we constantly find the max in our prefix and then the min in our suffix,\nwe start with the max of the prefix being the very first value, and looping throuhg and keeping track of the currentm ax at each index\ndo the reverse for suffix\nthen we do one last loop to find the first instability index, if not we return -1",
+            "notes": "haven't done prefix/suffix sums in a while, so didn't see it \nbut once you see it its pretty easy\n\nTC: O(n) looping throuhg the arrays at most once \nSC: O(n) since you store at most n numbers in both prefix and suffix ",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "O(n) looping throuhg the arrays at most once",
+            "space_complexity": "O(n) since you store at most n numbers in both prefix and suffix"
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-04T14:28:50+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "22-generate-parentheses": {
+      "leetcode_id": "22",
+      "slug": "generate-parentheses",
+      "title": "Generate Parentheses",
+      "difficulty": "Medium",
+      "tags": [
+        "String",
+        "Dynamic Programming",
+        "Backtracking",
+        "Bracket Sequences"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/generate-parentheses/",
+      "first_solved_at": "2026-09-04T15:04:46+00:00",
+      "last_solved_at": "2026-09-04T15:04:46+00:00",
+      "attempts": [
+        {
+          "submission_id": "2130825809",
+          "submitted_at": "2026-09-04T15:04:46+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "22-generate-parentheses.py",
+          "code_sha256": "774adca6096783227bcc75066810b71e30803469a7f55707eeb2edc22a6286f3",
+          "runtime": "0 ms",
+          "memory": "19.4 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thoughts:",
+            "since its all possible combinations, we can just use backtracking to get all possible combinations of well-formed parentheses, which is really just valid parentheses",
+            "there are two options for creating a valid parentheses:",
+            "1. we have to start with a '(', and from there we can either close_p it right away with ')'",
+            "2. or we can add another '(', but we'd have to close_p it twice.",
+            "we basically find any combinartion of this, including mixing and matching these combinations but these are the two ",
+            "",
+            "to do this, our base cases are n = 0 and n = 1 where we return an empty ouput and () respectively,",
+            "for the rest, we can backtrack and pick all other decisions and append it to our res",
+            " how do we know when we need to close_p a parenthesis or when we have a valid set of well-formd parentheses?",
+            "",
+            "we can add ( as we have less than n ",
+            "we add ) if close_p is < open_p",
+            "base case:"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-04T15:04:46+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "853-car-fleet": {
+      "leetcode_id": "853",
+      "slug": "car-fleet",
+      "title": "Car Fleet",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Stack",
+        "Sorting",
+        "Monotonic Stack"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/car-fleet/",
+      "first_solved_at": "2026-09-04T21:04:52+00:00",
+      "last_solved_at": "2026-09-04T21:07:14+00:00",
+      "attempts": [
+        {
+          "submission_id": "2131138477",
+          "submitted_at": "2026-09-04T21:04:52+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "853-car-fleet.py",
+          "code_sha256": "5c4ec552f3e0e275bad6ed5877d717adc6b6aeb2f929dc94562dbfdba49a5deb",
+          "runtime": "139 ms",
+          "memory": "41.2 MB",
+          "leetcode_notes": "[ Time taken: 1hr 44m 24s ]",
+          "raw_comments": [
+            "thoughts: ",
+            "Process cars from closest to target to farthest.",
+            "For each car, calculate when it would reach the target alone.",
+            "",
+            "If its arrival time <= the fleet ahead's arrival time,",
+            "it will catch that fleet before (or at) the target.",
+            "",
+            "If its arrival time > the fleet ahead's time,",
+            "it cannot catch that fleet, so it forms a new fleet."
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2131139426",
+          "submitted_at": "2026-09-04T21:07:14+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "853-car-fleet.py",
+          "code_sha256": "b3d0a64ff8caf77cadfe03e3a9df1ee83e58644cb39ee4d09c7a81ebfe476f7f",
+          "runtime": "143 ms",
+          "memory": "41.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thoughts: ",
+            "Process cars from closest to target to farthest.",
+            "For each car, calculate when it would reach the target alone.",
+            "",
+            "If its arrival time <= the fleet ahead's arrival time,",
+            "it will catch that fleet before (or at) the target.",
+            "",
+            "If its arrival time > the fleet ahead's time,",
+            "it cannot catch that fleet, so it forms a new fleet.",
+            "divergences: ",
+            "if the current car we are looking at has a faster time than the fleet ahead, it will catch up and merge, so we don't actually do anything ",
+            "we only append to the stack when the current car is slower because then it cannot catch up and will create a new fleet",
+            "TC: O(nlogn) because of sorting",
+            "SC: O(n) because we store the sorted pairs"
+          ],
+          "notes": {
+            "thought_process": "thoughts: \nProcess cars from closest to target to farthest.\nFor each car, calculate when it would reach the target alone.\n\nIf its arrival time <= the fleet ahead's arrival time,\nit will catch that fleet before (or at) the target.\n\nIf its arrival time > the fleet ahead's time,\nit cannot catch that fleet, so it forms a new fleet.",
+            "notes": "if the current car we are looking at has a faster time than the fleet ahead, it will catch up and merge, so we don't actually do anything \nwe only append to the stack when the current car is slower because then it cannot catch up and will create a new fleet\nTC: O(nlogn) because of sorting\nSC: O(n) because we store the sorted pairs",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "O(nlogn) because of sorting",
+            "space_complexity": "O(n) because we store the sorted pairs"
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-04T21:07:14+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "167-two-sum-ii-input-array-is-sorted": {
+      "leetcode_id": "167",
+      "slug": "two-sum-ii-input-array-is-sorted",
+      "title": "Two Sum II - Input Array Is Sorted",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Two Pointers",
+        "Binary Search"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/",
+      "first_solved_at": "2026-09-04T21:25:47+00:00",
+      "last_solved_at": "2026-09-04T21:25:47+00:00",
+      "attempts": [
+        {
+          "submission_id": "2131146564",
+          "submitted_at": "2026-09-04T21:25:47+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "167-two-sum-ii-input-array-is-sorted.py",
+          "code_sha256": "e25f5bd877772ee6f904ecfbdbb04a81d3bc62b10670f1c06a473e100ffa2f66",
+          "runtime": "3 ms",
+          "memory": "20.6 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-04T21:25:47+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "4-median-of-two-sorted-arrays": {
+      "leetcode_id": "4",
+      "slug": "median-of-two-sorted-arrays",
+      "title": "Median of Two Sorted Arrays",
+      "difficulty": "Hard",
+      "tags": [
+        "Array",
+        "Binary Search",
+        "Divide and Conquer"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/median-of-two-sorted-arrays/",
+      "first_solved_at": "2026-09-05T03:07:56+00:00",
+      "last_solved_at": "2026-09-05T03:07:56+00:00",
+      "attempts": [
+        {
+          "submission_id": "2131242199",
+          "submitted_at": "2026-09-05T03:05:06+00:00",
+          "status": "Runtime Error",
+          "language": "python3",
+          "code_path": "4-median-of-two-sorted-arrays.py",
+          "code_sha256": "db4888f0de7b71332216c72d1dcc28ef759c31751e605feeb743678b08398585",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thoughts:",
+            "",
+            "Instead of searching for the median value directly, we can search for the partition of the two arrays",
+            "",
+            "We want the combined left partition to contain half of all elements e.g. if we choose i elements from nums1, then nums2 must contribute j = half - i elements",
+            "",
+            "A valid partition requries every element on the left to be <= every element on the right and since boht arrays are sroted ,we only need to check the values dirctly around each partition",
+            "",
+            "nums1: ... Aleft | Aright ... ",
+            "nums2: ... Bleft | Bright ...",
+            "",
+            "The partition is only valid when Aleft <= Bright and ",
+            "Bleft <= Aright",
+            "",
+            "if ALeft > BRight, then we took too many elements from nums1 and move left",
+            "if Bleft > Aright, we took too few elemetns and we have to move right ",
+            "we always want nums1 to be the shorter array; makes it easier",
+            "if partition is at the beginning of an array, nothing is on its left so use -inf",
+            "if partition is at the end of the array there is nothing else on its right so we use inf",
+            "our validity comparision, all of the left values must be smaller than all of the right values",
+            "if our total is odd:",
+            "if our total is even:",
+            "Aleft is too big so we move A partition's left"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2131242264",
+          "submitted_at": "2026-09-05T03:05:14+00:00",
+          "status": "Runtime Error",
+          "language": "python3",
+          "code_path": "4-median-of-two-sorted-arrays.py",
+          "code_sha256": "e71110f2062b1deb0ee37e89e4f90d560480692937629e40b9b104f17c3a70fb",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thoughts:",
+            "",
+            "Instead of searching for the median value directly, we can search for the partition of the two arrays",
+            "",
+            "We want the combined left partition to contain half of all elements e.g. if we choose i elements from nums1, then nums2 must contribute j = half - i elements",
+            "",
+            "A valid partition requries every element on the left to be <= every element on the right and since boht arrays are sroted ,we only need to check the values dirctly around each partition",
+            "",
+            "nums1: ... Aleft | Aright ... ",
+            "nums2: ... Bleft | Bright ...",
+            "",
+            "The partition is only valid when Aleft <= Bright and ",
+            "Bleft <= Aright",
+            "",
+            "if ALeft > BRight, then we took too many elements from nums1 and move left",
+            "if Bleft > Aright, we took too few elemetns and we have to move right ",
+            "we always want nums1 to be the shorter array; makes it easier",
+            "if partition is at the beginning of an array, nothing is on its left so use -inf",
+            "if partition is at the end of the array there is nothing else on its right so we use inf",
+            "our validity comparision, all of the left values must be smaller than all of the right values",
+            "if our total is odd:",
+            "if our total is even:",
+            "Aleft is too big so we move A partition's left"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2131243360",
+          "submitted_at": "2026-09-05T03:07:56+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "4-median-of-two-sorted-arrays.py",
+          "code_sha256": "d8c9123f6db1c56ea64c71638c277ea0aa6d80efcd4c22f0cc138660c5d43fcd",
+          "runtime": "0 ms",
+          "memory": "19.6 MB",
+          "leetcode_notes": "[ Time taken: 3hrs 57m 18s ]",
+          "raw_comments": [
+            "thoughts:",
+            "",
+            "Instead of searching for the median value directly, we can search for the partition of the two arrays",
+            "",
+            "We want the combined left partition to contain half of all elements e.g. if we choose i elements from nums1, then nums2 must contribute j = half - i elements",
+            "",
+            "A valid partition requries every element on the left to be <= every element on the right and since boht arrays are sroted ,we only need to check the values dirctly around each partition",
+            "",
+            "nums1: ... Aleft | Aright ... ",
+            "nums2: ... Bleft | Bright ...",
+            "",
+            "The partition is only valid when Aleft <= Bright and ",
+            "Bleft <= Aright",
+            "",
+            "if ALeft > BRight, then we took too many elements from nums1 and move left",
+            "if Bleft > Aright, we took too few elemetns and we have to move right ",
+            "we always want nums1 to be the shorter array; makes it easier",
+            "if partition is at the beginning of an array, nothing is on its left so use -inf",
+            "if partition is at the end of the array there is nothing else on its right so we use inf",
+            "our validity comparision, all of the left values must be smaller than all of the right values",
+            "if our total is odd:",
+            "if our total is even:",
+            "Aleft is too big so we move A partition's left"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-05T03:07:56+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "3904-smallest-stable-index-ii": {
+      "leetcode_id": "3904",
+      "slug": "smallest-stable-index-ii",
+      "title": "Smallest Stable Index II",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Prefix Sum"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/smallest-stable-index-ii/",
+      "first_solved_at": "2026-09-05T18:17:30+00:00",
+      "last_solved_at": "2026-09-05T18:17:30+00:00",
+      "attempts": [
+        {
+          "submission_id": "2132045335",
+          "submitted_at": "2026-09-05T18:16:59+00:00",
+          "status": "Runtime Error",
+          "language": "python3",
+          "code_path": "3904-smallest-stable-index-ii.py",
+          "code_sha256": "930eb3e2ae502dbe4874bf07c75c1fff53e93243f866fc59837b493aa16ead31",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "this shit the same thing as stable index i",
+            "create a prefix and suffix and loop through both to find the max and min and then compare"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2132045714",
+          "submitted_at": "2026-09-05T18:17:18+00:00",
+          "status": "Runtime Error",
+          "language": "python3",
+          "code_path": "3904-smallest-stable-index-ii.py",
+          "code_sha256": "0b8d72c993fc4d039a497229255606642e59abc0bbc24b058ffb2bff9b88aa05",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "this shit the same thing as stable index i",
+            "create a prefix and suffix and loop through both to find the max and min and then compare"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2132045925",
+          "submitted_at": "2026-09-05T18:17:30+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "3904-smallest-stable-index-ii.py",
+          "code_sha256": "476e72776af944107efd9c75cd60332461efa134b869c30de1061996e52b30ee",
+          "runtime": "239 ms",
+          "memory": "33.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "this shit the same thing as stable index i",
+            "create a prefix and suffix and loop through both to find the max and min and then compare"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-05T18:17:30+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "115-distinct-subsequences": {
+      "leetcode_id": "115",
+      "slug": "distinct-subsequences",
+      "title": "Distinct Subsequences",
+      "difficulty": "Hard",
+      "tags": [
+        "String",
+        "Dynamic Programming"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/distinct-subsequences/",
+      "first_solved_at": "2026-09-07T03:47:52+00:00",
+      "last_solved_at": "2026-09-07T03:47:52+00:00",
+      "attempts": [
+        {
+          "submission_id": "2133430079",
+          "submitted_at": "2026-09-07T03:46:36+00:00",
+          "status": "Runtime Error",
+          "language": "python3",
+          "code_path": "115-distinct-subsequences.py",
+          "code_sha256": "3c05614a9cebe39a9ab1b1e2f9a7dc117dfb2b3788f820e095367b8ebc1ffee4",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thoughts:",
+            "dp? we can use top down memoziation to cache our choices and reuse them",
+            "initially I thought backtracking but I think that would be too inefficient",
+            "base case:",
+            "if we find matched all the letters of t, we found 1 valid subsequence",
+            "if we run out of s but we still haven't matched t then we just return 0",
+            "check our cache",
+            "we can skip the character of s for one of our decisions",
+            "if characterrs match we increment both",
+            "cache our answer",
+            "divergences: ",
+            "we can think about this as like a pointer problem essentially",
+            "for every letter that matches you increment both 'pointers'",
+            "and if you reach the end for the 't' pointer, we have a possible subsequence but if we reach the end of the 's' pointer and we havent found a subsequence we return 0 ",
+            "and then we can just store every possible answer in our cache to reuse",
+            "TC: O(M*N) where m is length of s and n is length of t",
+            "SC: O(M*N) since we cache all the possible states? "
+          ],
+          "notes": {
+            "thought_process": "thoughts:\ndp? we can use top down memoziation to cache our choices and reuse them\ninitially I thought backtracking but I think that would be too inefficient\nbase case:\nif we find matched all the letters of t, we found 1 valid subsequence\nif we run out of s but we still haven't matched t then we just return 0\ncheck our cache\nwe can skip the character of s for one of our decisions\nif characterrs match we increment both\ncache our answer",
+            "notes": "we can think about this as like a pointer problem essentially\nfor every letter that matches you increment both 'pointers'\nand if you reach the end for the 't' pointer, we have a possible subsequence but if we reach the end of the 's' pointer and we havent found a subsequence we return 0 \nand then we can just store every possible answer in our cache to reuse\nTC: O(M*N) where m is length of s and n is length of t\nSC: O(M*N) since we cache all the possible states? ",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "O(M*N) where m is length of s and n is length of t",
+            "space_complexity": "O(M*N) since we cache all the possible states?"
+          }
+        },
+        {
+          "submission_id": "2133430855",
+          "submitted_at": "2026-09-07T03:47:52+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "115-distinct-subsequences.py",
+          "code_sha256": "4055c11bd4882d9a2252aebe4096b35edf2f9242f9c4d0e24e1373091c4eba4c",
+          "runtime": "975 ms",
+          "memory": "254.5 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thoughts:",
+            "dp? we can use top down memoziation to cache our choices and reuse them",
+            "initially I thought backtracking but I think that would be too inefficient",
+            "base case:",
+            "if we find matched all the letters of t, we found 1 valid subsequence",
+            "if we run out of s but we still haven't matched t then we just return 0",
+            "check our cache",
+            "we can skip the character of s for one of our decisions",
+            "if characterrs match we increment both",
+            "cache our answer",
+            "divergences: ",
+            "we can think about this as like a pointer problem essentially",
+            "for every letter that matches you increment both 'pointers'",
+            "and if you reach the end for the 't' pointer, we have a possible subsequence but if we reach the end of the 's' pointer and we havent found a subsequence we return 0 ",
+            "and then we can just store every possible answer in our cache to reuse",
+            "TC: O(M*N) where m is length of s and n is length of t",
+            "SC: O(M*N) since we cache all the possible states? "
+          ],
+          "notes": {
+            "thought_process": "thoughts:\ndp? we can use top down memoziation to cache our choices and reuse them\ninitially I thought backtracking but I think that would be too inefficient\nbase case:\nif we find matched all the letters of t, we found 1 valid subsequence\nif we run out of s but we still haven't matched t then we just return 0\ncheck our cache\nwe can skip the character of s for one of our decisions\nif characterrs match we increment both\ncache our answer",
+            "notes": "we can think about this as like a pointer problem essentially\nfor every letter that matches you increment both 'pointers'\nand if you reach the end for the 't' pointer, we have a possible subsequence but if we reach the end of the 's' pointer and we havent found a subsequence we return 0 \nand then we can just store every possible answer in our cache to reuse\nTC: O(M*N) where m is length of s and n is length of t\nSC: O(M*N) since we cache all the possible states? ",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "O(M*N) where m is length of s and n is length of t",
+            "space_complexity": "O(M*N) since we cache all the possible states?"
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-07T03:47:52+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "9-palindrome-number": {
+      "leetcode_id": "9",
+      "slug": "palindrome-number",
+      "title": "Palindrome Number",
+      "difficulty": "Easy",
+      "tags": [
+        "Math"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/palindrome-number/",
+      "first_solved_at": "2026-09-07T04:08:23+00:00",
+      "last_solved_at": "2026-09-07T04:08:23+00:00",
+      "attempts": [
+        {
+          "submission_id": "2133444092",
+          "submitted_at": "2026-09-07T04:08:23+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "9-palindrome-number.py",
+          "code_sha256": "280d3fe56bc779e91a0ad5d1b89a5112cf79c56cb1f351a21ed6bd80e286a9c4",
+          "runtime": "7 ms",
+          "memory": "19.4 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-07T04:08:23+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "134-gas-station": {
+      "leetcode_id": "134",
+      "slug": "gas-station",
+      "title": "Gas Station",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Greedy"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/gas-station/",
+      "first_solved_at": "2026-09-07T05:19:49+00:00",
+      "last_solved_at": "2026-09-07T05:19:49+00:00",
+      "attempts": [
+        {
+          "submission_id": "2133502146",
+          "submitted_at": "2026-09-07T05:19:49+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "134-gas-station.py",
+          "code_sha256": "cb366148d6b5f7ee1163a9199e06180362032ca284964fbc3f33aeaa7727b69b",
+          "runtime": "15 ms",
+          "memory": "26 MB",
+          "leetcode_notes": "[ Time taken: 28m 59s ]",
+          "raw_comments": [
+            "if tank is negative we cannot make it to the next station so we try a new starting index",
+            "TC: O(n) because we just loop",
+            "SC: O(1) since we are just returning start_idx "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "O(n) because we just loop",
+            "space_complexity": "O(1) since we are just returning start_idx"
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-07T05:19:49+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "40-combination-sum-ii": {
+      "leetcode_id": "40",
+      "slug": "combination-sum-ii",
+      "title": "Combination Sum II",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Backtracking"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/combination-sum-ii/",
+      "first_solved_at": "2026-09-07T05:37:54+00:00",
+      "last_solved_at": "2026-09-07T05:39:00+00:00",
+      "attempts": [
+        {
+          "submission_id": "2133518709",
+          "submitted_at": "2026-09-07T05:37:54+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "40-combination-sum-ii.py",
+          "code_sha256": "e2afcfeb3017409b081ff9ac505561c2c4d9985d591e9346153f1151ac3ae390",
+          "runtime": "3 ms",
+          "memory": "19.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "skip duplicates since we sorted, we can just check if the idx is different and if the candidates are the same"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2133519745",
+          "submitted_at": "2026-09-07T05:39:00+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "40-combination-sum-ii.py",
+          "code_sha256": "6a1e3aca9f56fbc7068943dddec1e3827b6022abb8b20c4253b344e544b0a1fd",
+          "runtime": "2 ms",
+          "memory": "19.8 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "skip duplicates since we sorted, we can just check if the idx is different and if the candidates are the same",
+            "TC: O(2^n) because of backtracking",
+            "SC: O(n)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "O(2^n) because of backtracking",
+            "space_complexity": "O(n)"
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-07T05:39:00+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "3870-count-commas-in-range": {
+      "leetcode_id": "3870",
+      "slug": "count-commas-in-range",
+      "title": "Count Commas in Range",
+      "difficulty": "Easy",
+      "tags": [
+        "Math"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/count-commas-in-range/",
+      "first_solved_at": "2026-09-08T14:09:32+00:00",
+      "last_solved_at": "2026-09-08T14:09:32+00:00",
+      "attempts": [
+        {
+          "submission_id": "2135191325",
+          "submitted_at": "2026-09-08T14:09:32+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "3870-count-commas-in-range.py",
+          "code_sha256": "89ef9e36f2c576e61d9b8e5993903f427883631f311dbbbe22986dc4aa0fa4f2",
+          "runtime": "0 ms",
+          "memory": "19.1 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-08T14:09:32+00:00",
         "reps": 0,
         "lapses": 0
       }
