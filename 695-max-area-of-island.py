@@ -27,3 +27,32 @@ class Solution:
         return max_area    
 
         
+
+# submission 2134070753 - 2026-09-07T15:42:06+00:00
+class Solution:
+    def maxAreaOfIsland(self, grid: List[List[int]]) -> int:
+        if not grid:
+            return 0 
+        rows, cols = len(grid), len(grid[0])
+        max_area = 0 
+
+
+        def dfs(r, c):
+            if r < 0 or r >= rows or c < 0 or c >= cols or grid[r][c] == 0:
+                return 0
+
+            # sink the current value to mark as visited
+            grid[r][c] = 0
+
+            return (1 + dfs(r + 1, c) +
+                        dfs(r - 1, c) +
+                        dfs(r, c + 1) +
+                        dfs(r, c - 1))
+
+        for row in range(rows):
+            for col in range(cols):
+                if grid[row][col] == 1:
+                    max_area = max(max_area, dfs(row, col))
+        
+        
+        return max_area 
