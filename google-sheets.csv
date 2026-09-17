@@ -78,6 +78,12 @@ class ListNode:
 33,Search in Rotated Sorted Array,search-in-rotated-sorted-array,https://leetcode.com/problems/search-in-rotated-sorted-array/,Medium,"Array, Binary Search",2078584102,2026-07-23T15:38:58+00:00,python3,0 ms,19.4 MB,33-search-in-rotated-sorted-array.py,,"initial thoughts this is binary search
 check whether left half is normally sorted
 check if target sits within the sorted half, if so then we just search this half ",,,,,,,,,new,,,,,,0,0
+34,Find First and Last Position of Element in Sorted Array,find-first-and-last-position-of-element-in-sorted-array,https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/,Medium,"Array, Binary Search",2139099331,2026-09-12T04:10:13+00:00,python3,0 ms,20.7 MB,34-find-first-and-last-position-of-element-in-sorted-array.py,,"binary search !
+check if theres one more left 
+check if theres one more right ",,,,,,,,,new,2026-09-12T04:10:38+00:00,,,,,0,0
+34,Find First and Last Position of Element in Sorted Array,find-first-and-last-position-of-element-in-sorted-array,https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/,Medium,"Array, Binary Search",2139099571,2026-09-12T04:10:38+00:00,python3,0 ms,20.5 MB,34-find-first-and-last-position-of-element-in-sorted-array.py,,"binary search !
+check if theres one more left 
+check if theres one more right ",,,,,,,,,new,2026-09-12T04:10:38+00:00,,,,,0,0
 36,Valid Sudoku,valid-sudoku,https://leetcode.com/problems/valid-sudoku/,Medium,"Array, Hash Table, Matrix",1809110203,2025-10-23T04:50:17+00:00,python3,7 ms,17.7 MB,36-valid-sudoku.py,,,,,,,,,,,new,,,,,,0,0
 39,Combination Sum,combination-sum,https://leetcode.com/problems/combination-sum/,Medium,"Array, Backtracking",1868151342,2025-12-29T06:32:25+00:00,python3,14 ms,17.1 MB,39-combination-sum.py,,"base case
 add the next number
@@ -87,8 +93,11 @@ skip",,,,,,,,,new,,,,,,0,0
 40,Combination Sum II,combination-sum-ii,https://leetcode.com/problems/combination-sum-ii/,Medium,"Array, Backtracking",2133519745,2026-09-07T05:39:00+00:00,python3,2 ms,19.8 MB,40-combination-sum-ii.py,,"skip duplicates since we sorted, we can just check if the idx is different and if the candidates are the same
 TC: O(2^n) because of backtracking
 SC: O(n)",,,,,,,O(2^n) because of backtracking,O(n),new,2026-09-07T05:39:00+00:00,,,,,0,0
-42,Trapping Rain Water,trapping-rain-water,https://leetcode.com/problems/trapping-rain-water/,Hard,"Array, Two Pointers, Dynamic Programming, Stack, Monotonic Stack",1835651592,2025-11-21T03:15:37+00:00,python3,11 ms,19.2 MB,42-trapping-rain-water.py,[ Time taken: 16 hrs 20 m 4 s ],,,,,,,,,,new,,,,,,0,0
-42,Trapping Rain Water,trapping-rain-water,https://leetcode.com/problems/trapping-rain-water/,Hard,"Array, Two Pointers, Dynamic Programming, Stack, Monotonic Stack",1835653726,2025-11-21T03:19:43+00:00,python3,7 ms,19.3 MB,42-trapping-rain-water.py,,,,,,,,,,,new,,,,,,0,0
+42,Trapping Rain Water,trapping-rain-water,https://leetcode.com/problems/trapping-rain-water/,Hard,"Array, Two Pointers, Dynamic Programming, Stack, Monotonic Stack",1835651592,2025-11-21T03:15:37+00:00,python3,11 ms,19.2 MB,42-trapping-rain-water.py,[ Time taken: 16 hrs 20 m 4 s ],,,,,,,,,,new,2026-09-11T03:16:55+00:00,,,,,0,0
+42,Trapping Rain Water,trapping-rain-water,https://leetcode.com/problems/trapping-rain-water/,Hard,"Array, Two Pointers, Dynamic Programming, Stack, Monotonic Stack",1835653726,2025-11-21T03:19:43+00:00,python3,7 ms,19.3 MB,42-trapping-rain-water.py,,,,,,,,,,,new,2026-09-11T03:16:55+00:00,,,,,0,0
+42,Trapping Rain Water,trapping-rain-water,https://leetcode.com/problems/trapping-rain-water/,Hard,"Array, Two Pointers, Dynamic Programming, Stack, Monotonic Stack",2138084445,2026-09-11T03:16:55+00:00,python3,11 ms,21.3 MB,42-trapping-rain-water.py,,"if the current height is taller than the height on top of the stack, we have found a ""right"" side wall
+that can hold the water
+if stack is empty after we pop the top, that means there is no left wall to hold the water",,,,,,,,,new,2026-09-11T03:16:55+00:00,,,,,0,0
 45,Jump Game II,jump-game-ii,https://leetcode.com/problems/jump-game-ii/,Medium,"Array, Dynamic Programming, Greedy",1805633352,2025-10-19T05:32:43+00:00,python3,11 ms,18.8 MB,45-jump-game-ii.py,,"end has to be less than the end index  
 keep track of farthest jump ",,,,,,,,,new,,,,,,0,0
 45,Jump Game II,jump-game-ii,https://leetcode.com/problems/jump-game-ii/,Medium,"Array, Dynamic Programming, Greedy",1805638518,2025-10-19T05:40:57+00:00,python3,11 ms,18.5 MB,45-jump-game-ii.py,,,,,,,,,,,new,,,,,,0,0
@@ -98,6 +107,7 @@ loop through
 if this value is already used, return
 if not used, set value to used, append, backtrack, and then undo
 undo, and set value back to false ",,,,,,,,,new,,,,,,0,0
+47,Permutations II,permutations-ii,https://leetcode.com/problems/permutations-ii/,Medium,"Array, Backtracking, Sorting",2138703404,2026-09-11T15:46:48+00:00,python3,158 ms,19.9 MB,47-permutations-ii.py,,,,,,,,,,,new,2026-09-11T15:46:48+00:00,,,,,0,0
 49,Group Anagrams,group-anagrams,https://leetcode.com/problems/group-anagrams/,Medium,"Array, Hash Table, String, Sorting",1836439777,2025-11-22T04:23:15+00:00,python3,10 ms,20.6 MB,49-group-anagrams.py,,,,,,,,,,,new,,,,,,0,0
 51,N-Queens,n-queens,https://leetcode.com/problems/n-queens/,Hard,"Array, Backtracking, Algorithm X",2088823624,2026-07-31T13:11:20+00:00,python3,10 ms,19.8 MB,51-n-queens.py,,"For N queens, the solution lies in the fact that the only way the queens do not attack each other is that if they are in seperate rows or seperate columns, 
 there cannot be a queen in the same row or column as another
@@ -135,6 +145,7 @@ else the current interval is within the window and we have to take the largest e
 57,Insert Interval,insert-interval,https://leetcode.com/problems/insert-interval/,Medium,Array,1748288818,2025-08-25T22:02:00+00:00,python3,3 ms,19.9 MB,57-insert-interval.py,,"Case 1, there are no overlapping intervals
 Case 2, overlapping
 Case 3, no overlapping after merging newInterval",,,,,,,,,new,,,,,,0,0
+58,Length of Last Word,length-of-last-word,https://leetcode.com/problems/length-of-last-word/,Easy,String,2141808974,2026-09-14T17:06:58+00:00,python3,0 ms,19.3 MB,58-length-of-last-word.py,,,,,,,,,,,new,2026-09-14T17:06:58+00:00,,,,,0,0
 61,Rotate List,rotate-list,https://leetcode.com/problems/rotate-list/,Medium,"Linked List, Two Pointers",1809125391,2025-10-23T05:11:28+00:00,python3,0 ms,17.7 MB,61-rotate-list.py,,"Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -209,6 +220,16 @@ O(n)",,,,,,,,,new,,,,,,0,0
 88,Merge Sorted Array,merge-sorted-array,https://leetcode.com/problems/merge-sorted-array/,Easy,"Array, Two Pointers, Sorting",1802175645,2025-10-15T07:09:13+00:00,python3,0 ms,17.9 MB,88-merge-sorted-array.py,,"
         Do not return anything, modify nums1 in-place instead.
         ",,,,,,,,,new,,,,,,0,0
+90,Subsets II,subsets-ii,https://leetcode.com/problems/subsets-ii/,Medium,"Array, Backtracking, Bit Manipulation",2142026779,2026-09-14T22:08:38+00:00,python3,0 ms,19.5 MB,90-subsets-ii.py,,,,,,,,,,,new,2026-09-14T22:08:38+00:00,,,,,0,0
+94,Binary Tree Inorder Traversal,binary-tree-inorder-traversal,https://leetcode.com/problems/binary-tree-inorder-traversal/,Easy,"Stack, Tree, Depth-First Search, Binary Tree",2144167749,2026-09-16T23:55:09+00:00,python3,0 ms,19.2 MB,94-binary-tree-inorder-traversal.py,,"Definition for a binary tree node.
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+left
+append
+right ",,,,,,,,,new,2026-09-16T23:55:09+00:00,,,,,0,0
 98,Validate Binary Search Tree,validate-binary-search-tree,https://leetcode.com/problems/validate-binary-search-tree/,Medium,"Tree, Depth-First Search, Binary Search Tree, Binary Tree",1870091084,2025-12-31T08:12:41+00:00,python3,3 ms,18.8 MB,98-validate-binary-search-tree.py,,"Definition for a binary tree node.
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
@@ -221,6 +242,18 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right",,,,,,,,,new,,,,,,0,0
+100,Same Tree,same-tree,https://leetcode.com/problems/same-tree/,Easy,"Tree, Depth-First Search, Breadth-First Search, Binary Tree",2143189234,2026-09-16T03:04:42+00:00,python3,0 ms,19.4 MB,100-same-tree.py,,"Definition for a binary tree node.
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right",,,,,,,,,new,2026-09-16T03:04:42+00:00,,,,,0,0
+101,Symmetric Tree,symmetric-tree,https://leetcode.com/problems/symmetric-tree/,Easy,"Tree, Depth-First Search, Breadth-First Search, Binary Tree",2143193045,2026-09-16T03:11:52+00:00,python3,0 ms,19.3 MB,101-symmetric-tree.py,,"Definition for a binary tree node.
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right",,,,,,,,,new,2026-09-16T03:11:52+00:00,,,,,0,0
 102,Binary Tree Level Order Traversal,binary-tree-level-order-traversal,https://leetcode.com/problems/binary-tree-level-order-traversal/,Medium,"Tree, Breadth-First Search, Binary Tree",2073478071,2026-07-19T13:01:32+00:00,python3,3 ms,19.9 MB,102-binary-tree-level-order-traversal.py,,"Definition for a binary tree node.
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
@@ -308,6 +341,20 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right",,,,,,,,,new,,,,,,0,0
+111,Minimum Depth of Binary Tree,minimum-depth-of-binary-tree,https://leetcode.com/problems/minimum-depth-of-binary-tree/,Easy,"Tree, Depth-First Search, Breadth-First Search, Binary Tree",2144169816,2026-09-17T00:02:26+00:00,python3,33 ms,45 MB,111-minimum-depth-of-binary-tree.py,,"Definition for a binary tree node.
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right",,,,,,,,,new,2026-09-17T00:08:22+00:00,,,,,0,0
+111,Minimum Depth of Binary Tree,minimum-depth-of-binary-tree,https://leetcode.com/problems/minimum-depth-of-binary-tree/,Easy,"Tree, Depth-First Search, Breadth-First Search, Binary Tree",2144171398,2026-09-17T00:08:22+00:00,python3,3 ms,44.5 MB,111-minimum-depth-of-binary-tree.py,,"Definition for a binary tree node.
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+bfs
+initilize queue",,,,,,,,,new,2026-09-17T00:08:22+00:00,,,,,0,0
 115,Distinct Subsequences,distinct-subsequences,https://leetcode.com/problems/distinct-subsequences/,Hard,"String, Dynamic Programming",2133430855,2026-09-07T03:47:52+00:00,python3,975 ms,254.5 MB,115-distinct-subsequences.py,,"thoughts:
 dp? we can use top down memoziation to cache our choices and reuse them
 initially I thought backtracking but I think that would be too inefficient
@@ -387,6 +434,14 @@ class ListNode:
     def __init__(self, x):
         self.val = x
         self.next = None",,,,,,,,,new,,,,,,0,0
+144,Binary Tree Preorder Traversal,binary-tree-preorder-traversal,https://leetcode.com/problems/binary-tree-preorder-traversal/,Easy,"Stack, Tree, Depth-First Search, Binary Tree",2144168379,2026-09-16T23:57:12+00:00,python3,0 ms,19.2 MB,144-binary-tree-preorder-traversal.py,,"Definition for a binary tree node.
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+preorder traversal is root, left, right
+visit the root first",,,,,,,,,new,2026-09-16T23:57:12+00:00,,,,,0,0
 146,LRU Cache,lru-cache,https://leetcode.com/problems/lru-cache/,Medium,"Hash Table, Linked List, Design, Doubly-Linked List",1873955434,2026-01-04T07:47:41+00:00,python3,109 ms,77.3 MB,146-lru-cache.py,,"Your LRUCache object will be instantiated and called as such:
 obj = LRUCache(capacity)
 param_1 = obj.get(key)
@@ -483,31 +538,43 @@ class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
         self.left = left
-        self.right = right",,,,,,,,,new,,,,,,0,0
+        self.right = right",,,,,,,,,new,2026-09-16T22:01:24+00:00,,,,,0,0
 226,Invert Binary Tree,invert-binary-tree,https://leetcode.com/problems/invert-binary-tree/,Easy,"Tree, Depth-First Search, Breadth-First Search, Binary Tree",2070917745,2026-07-17T09:17:45+00:00,python3,0 ms,19.4 MB,226-invert-binary-tree.py,[ Time taken: 10hrs 41m 52s ],"Definition for a binary tree node.
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
         self.left = left
-        self.right = right",,,,,,,,,new,,,,,,0,0
+        self.right = right",,,,,,,,,new,2026-09-16T22:01:24+00:00,,,,,0,0
+226,Invert Binary Tree,invert-binary-tree,https://leetcode.com/problems/invert-binary-tree/,Easy,"Tree, Depth-First Search, Breadth-First Search, Binary Tree",2144137641,2026-09-16T22:01:24+00:00,python3,0 ms,19.3 MB,226-invert-binary-tree.py,,"Definition for a binary tree node.
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right",,,,,,,,,new,2026-09-16T22:01:24+00:00,,,,,0,0
 230,Kth Smallest Element in a BST,kth-smallest-element-in-a-bst,https://leetcode.com/problems/kth-smallest-element-in-a-bst/,Medium,"Tree, Depth-First Search, Binary Search Tree, Binary Tree",1874949598,2026-01-05T06:08:02+00:00,python3,4 ms,20.8 MB,230-kth-smallest-element-in-a-bst.py,[ Time taken: 9 hrs 6 m 5 s ],"Definition for a binary tree node.
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
         self.left = left
-        self.right = right",,,,,,,,,new,,,,,,0,0
+        self.right = right",,,,,,,,,new,2026-09-17T00:16:40+00:00,,,,,0,0
 230,Kth Smallest Element in a BST,kth-smallest-element-in-a-bst,https://leetcode.com/problems/kth-smallest-element-in-a-bst/,Medium,"Tree, Depth-First Search, Binary Search Tree, Binary Tree",1874950373,2026-01-05T06:08:52+00:00,python3,8 ms,20.6 MB,230-kth-smallest-element-in-a-bst.py,,"Definition for a binary tree node.
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
         self.left = left
-        self.right = right",,,,,,,,,new,,,,,,0,0
+        self.right = right",,,,,,,,,new,2026-09-17T00:16:40+00:00,,,,,0,0
 230,Kth Smallest Element in a BST,kth-smallest-element-in-a-bst,https://leetcode.com/problems/kth-smallest-element-in-a-bst/,Medium,"Tree, Depth-First Search, Binary Search Tree, Binary Tree",1874950792,2026-01-05T06:09:17+00:00,python3,0 ms,20.5 MB,230-kth-smallest-element-in-a-bst.py,,"Definition for a binary tree node.
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
         self.left = left
-        self.right = right",,,,,,,,,new,,,,,,0,0
+        self.right = right",,,,,,,,,new,2026-09-17T00:16:40+00:00,,,,,0,0
+230,Kth Smallest Element in a BST,kth-smallest-element-in-a-bst,https://leetcode.com/problems/kth-smallest-element-in-a-bst/,Medium,"Tree, Depth-First Search, Binary Search Tree, Binary Tree",2144173610,2026-09-17T00:16:40+00:00,python3,3 ms,22.5 MB,230-kth-smallest-element-in-a-bst.py,,"Definition for a binary tree node.
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right",,,,,,,,,new,2026-09-17T00:16:40+00:00,,,,,0,0
 232,Implement Queue using Stacks,implement-queue-using-stacks,https://leetcode.com/problems/implement-queue-using-stacks/,Easy,"Stack, Design, Queue",2128503287,2026-09-02T13:57:04+00:00,python3,0 ms,19.4 MB,232-implement-queue-using-stacks.py,[ Time taken: 2hrs 8m 11s ],"Your MyQueue object will be instantiated and called as such:
 obj = MyQueue()
 obj.push(x)
@@ -702,6 +769,12 @@ class TreeNode:
         self.right = right
 base case",,,,,,,,,new,,,,,,0,0
 621,Task Scheduler,task-scheduler,https://leetcode.com/problems/task-scheduler/,Medium,"Array, Hash Table, Greedy, Sorting, Heap (Priority Queue), Counting",1873942524,2026-01-04T07:32:39+00:00,python3,120 ms,19.6 MB,621-task-scheduler.py,,,,,,,,,,,new,,,,,,0,0
+654,Maximum Binary Tree,maximum-binary-tree,https://leetcode.com/problems/maximum-binary-tree/,Medium,"Array, Divide and Conquer, Stack, Tree, Monotonic Stack, Binary Tree, Cartesian Tree",2143277643,2026-09-16T05:01:18+00:00,python3,23 ms,19.6 MB,654-maximum-binary-tree.py,,"Definition for a binary tree node.
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right",,,,,,,,,new,2026-09-16T05:01:18+00:00,,,,,0,0
 695,Max Area of Island,max-area-of-island,https://leetcode.com/problems/max-area-of-island/,Medium,"Array, Depth-First Search, Breadth-First Search, Union-Find, Matrix",2126567712,2026-08-31T20:08:05+00:00,python3,15 ms,20.7 MB,695-max-area-of-island.py,,sink the current to mark as visited,,,,,,,,,new,2026-09-07T15:42:06+00:00,,,,,0,0
 695,Max Area of Island,max-area-of-island,https://leetcode.com/problems/max-area-of-island/,Medium,"Array, Depth-First Search, Breadth-First Search, Union-Find, Matrix",2134070753,2026-09-07T15:42:06+00:00,python3,12 ms,20.6 MB,695-max-area-of-island.py,,sink the current value to mark as visited,,,,,,,,,new,2026-09-07T15:42:06+00:00,,,,,0,0
 698,Partition to K Equal Sum Subsets,partition-to-k-equal-sum-subsets,https://leetcode.com/problems/partition-to-k-equal-sum-subsets/,Medium,"Array, Dynamic Programming, Backtracking, Bit Manipulation, Memoization, Bitmask",2088949550,2026-07-31T15:10:31+00:00,python3,27 ms,19.4 MB,698-partition-to-k-equal-sum-subsets.py,,"If the total sum is not divisible cleanly by k, it is impossible
@@ -723,7 +796,7 @@ DFS portion",,,,,,,,,new,,,,,,0,0
 then we run dfs only on the pixels that are the same color as the old color",,,,,,,,,new,,,,,,0,0
 739,Daily Temperatures,daily-temperatures,https://leetcode.com/problems/daily-temperatures/,Medium,"Array, Stack, Monotonic Stack",2127440892,2026-09-01T16:12:51+00:00,python3,103 ms,28.2 MB,739-daily-temperatures.py,,"we can use a stack for this question storing the temperature
 and then we compare it to the next in the list until we get a hotter temperature
-then we just subtract the idx of the hotter temperature and at the end we return the stack",,,,,,,,,new,2026-09-01T16:23:43+00:00,,,,,0,0
+then we just subtract the idx of the hotter temperature and at the end we return the stack",,,,,,,,,new,2026-09-13T21:42:47+00:00,,,,,0,0
 739,Daily Temperatures,daily-temperatures,https://leetcode.com/problems/daily-temperatures/,Medium,"Array, Stack, Monotonic Stack",2127455280,2026-09-01T16:23:43+00:00,python3,99 ms,28.3 MB,739-daily-temperatures.py,,"we can use a stack for this question storing the index of the temperature
 we store the days that have not resolved when there is a warmer temp
 then we go through the temperatures and compare; if the temperature is hotter than the one on the stack, we pop the index and append the difference between the current temp and the temp on the stack to resolve it
@@ -740,7 +813,8 @@ if the current temperature is hotter than the temperature on the top of the stac
 pop it and then append the result to the idx of the temperature on the stack because we found a hotter day","just misrepresented the stack
 stack should represent the index of unresolved temps and not the temps themselves
 TC: O(n) b/c push pop are O(1) but we traverse through the whole list 
-SC: O(n) b/c we store all the idx at most once ",,,,,O(n) b/c push pop are O(1) but we traverse through the whole list,O(n) b/c we store all the idx at most once,new,2026-09-01T16:23:43+00:00,,,,,0,0
+SC: O(n) b/c we store all the idx at most once ",,,,,O(n) b/c push pop are O(1) but we traverse through the whole list,O(n) b/c we store all the idx at most once,new,2026-09-13T21:42:47+00:00,,,,,0,0
+739,Daily Temperatures,daily-temperatures,https://leetcode.com/problems/daily-temperatures/,Medium,"Array, Stack, Monotonic Stack",2141032424,2026-09-13T21:42:47+00:00,python3,87 ms,28.8 MB,739-daily-temperatures.py,,,,,,,,,,,new,2026-09-13T21:42:47+00:00,,,,,0,0
 743,Network Delay Time,network-delay-time,https://leetcode.com/problems/network-delay-time/,Medium,"Depth-First Search, Breadth-First Search, Graph Theory, Heap (Priority Queue), Shortest Path, Dijkstra's Algorithm",2091458359,2026-08-02T14:15:04+00:00,python3,330 ms,21.9 MB,743-network-delay-time.py,,"do we just use dijkstras for this, find the shortest path from the source node 
 build the adjacency list
 initialize min heap w/ (distance, node)
@@ -763,6 +837,8 @@ the other way is basically the same idea but we check for no odd length cycles, 
 of its greedy approach, which can sometimes ignore the true 'cheapest' path
 initialize distance and predecessor
 relax the edges |V| - 1 times",,,,,,,,,new,,,,,,0,0
+835,Image Overlap,image-overlap,https://leetcode.com/problems/image-overlap/,Medium,"Array, Matrix",2140075790,2026-09-13T00:54:08+00:00,python3,247 ms,20 MB,835-image-overlap.py,,,,,,,,,,,new,2026-09-13T00:54:08+00:00,,,,,0,0
+836,Rectangle Overlap,rectangle-overlap,https://leetcode.com/problems/rectangle-overlap/,Easy,"Math, Geometry",2141120265,2026-09-14T02:34:33+00:00,python3,0 ms,19.2 MB,836-rectangle-overlap.py,[ Time taken: 1d 9hrs 31m 32s ],,,,,,,,,,new,2026-09-14T02:34:33+00:00,,,,,0,0
 853,Car Fleet,car-fleet,https://leetcode.com/problems/car-fleet/,Medium,"Array, Stack, Sorting, Monotonic Stack",2131138477,2026-09-04T21:04:52+00:00,python3,139 ms,41.2 MB,853-car-fleet.py,[ Time taken: 1hr 44m 24s ],"thoughts: 
 Process cars from closest to target to farthest.
 For each car, calculate when it would reach the target alone.
@@ -806,6 +882,13 @@ class ListNode:
 Choice 2: take the rightmost number
 maximize current player's score 
 this means that the current player (e.g. player 1) has the higher score b/c the score diff is positive",,,,,,,,,new,,,,,,0,0
+907,Sum of Subarray Minimums,sum-of-subarray-minimums,https://leetcode.com/problems/sum-of-subarray-minimums/,Medium,"Array, Dynamic Programming, Stack, Monotonic Stack",2138125962,2026-09-11T04:18:31+00:00,python3,301 ms,24.7 MB,907-sum-of-subarray-minimums.py,,"thoughts:
+since its a contiguous subarray you can't have something like [3,2]
+we can use a monotonic stack to keep track of the current min number, and as we 
+increase the size of the contiguous subarray we pop if we find a smaller min
+and we store all these values within the intervals and keep track of it and then at the end
+just sum the res array 
+if the current value we are at is smaller than the one on top the stack ",,,,,,,,,new,2026-09-11T04:18:31+00:00,,,,,0,0
 973,K Closest Points to Origin,k-closest-points-to-origin,https://leetcode.com/problems/k-closest-points-to-origin/,Medium,"Array, Math, Divide and Conquer, Geometry, Sorting, Heap (Priority Queue), Quickselect, K-D Tree",1870577779,2025-12-31T22:03:52+00:00,python3,43 ms,22.7 MB,973-k-closest-points-to-origin.py,,,,,,,,,,,new,,,,,,0,0
 981,Time Based Key-Value Store,time-based-key-value-store,https://leetcode.com/problems/time-based-key-value-store/,Medium,"Hash Table, String, Binary Search, Design",2077155377,2026-07-22T13:29:49+00:00,python3,143 ms,69.9 MB,981-time-based-key-value-store.py,,"if the timestamp_prev is <= current timestamp
 Your TimeMap object will be instantiated and called as such:
@@ -823,6 +906,17 @@ param_2 = obj.get(key,timestamp)",,,,,,,,,new,,,,,,0,0
 search a level (in this case the adjacent oranges) of the rotten roanges 
 rot the fresh oranges next to the current rotten oraange
 append the coordiates of the new rotten oranges ",,,,,,,,,new,,,,,,0,0
+998,Maximum Binary Tree II,maximum-binary-tree-ii,https://leetcode.com/problems/maximum-binary-tree-ii/,Medium,"Tree, Binary Tree",2144166832,2026-09-16T23:51:34+00:00,python3,0 ms,19.3 MB,998-maximum-binary-tree-ii.py,[ Time taken: 23m 29s ],"Definition for a binary tree node.
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+if val > root.val 
+the old tree will always be to the left of the new val since we found a new max
+if val < root.val, it will be to the right because it was appended to the right
+we can do this recusively
+if val is smaller then it has to be in some place right of the root ",,,,,,,,,new,2026-09-16T23:51:34+00:00,,,,,0,0
 1004,Max Consecutive Ones III,max-consecutive-ones-iii,https://leetcode.com/problems/max-consecutive-ones-iii/,Medium,"Array, Binary Search, Sliding Window, Prefix Sum",2084425263,2026-07-28T07:58:06+00:00,python3,59 ms,22.3 MB,1004-max-consecutive-ones-iii.py,,,,,,,,,,,new,,,,,,0,0
 1046,Last Stone Weight,last-stone-weight,https://leetcode.com/problems/last-stone-weight/,Easy,"Array, Heap (Priority Queue)",2127344601,2026-09-01T14:51:22+00:00,python3,0 ms,19.4 MB,1046-last-stone-weight.py,,"we can use a max heap and store the two heaviest stones and then compare them in the heap
 heaviest stone
@@ -848,6 +942,7 @@ bisect_right gives us the first value of ends[i] > start so we -1
 profit if we take:
 profit if we skip:
 best up to i",,,,,,,,,new,,,,,,0,0
+1475,Final Prices With a Special Discount in a Shop,final-prices-with-a-special-discount-in-a-shop,https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/,Easy,"Array, Stack, Monotonic Stack",2141037072,2026-09-13T21:55:52+00:00,python3,3 ms,19.3 MB,1475-final-prices-with-a-special-discount-in-a-shop.py,,,,,,,,,,,new,2026-09-13T21:55:52+00:00,,,,,0,0
 1510,Stone Game IV,stone-game-iv,https://leetcode.com/problems/stone-game-iv/,Hard,"Math, Dynamic Programming, Minimax, Game Theory, Nim Game, Sprague–Grundy Theorem, Zero-Sum Game",2101501764,2026-08-10T12:11:38+00:00,python3,1776 ms,50.2 MB,1510-stone-game-iv.py,,"so if n is a perfect root, Alice will win always because she can win in one move 
 we try all the possible non-zero square number less than or equal to the remaining stones ",,,,,,,,,new,,,,,,0,0
 1510,Stone Game IV,stone-game-iv,https://leetcode.com/problems/stone-game-iv/,Hard,"Math, Dynamic Programming, Minimax, Game Theory, Nim Game, Sprague–Grundy Theorem, Zero-Sum Game",2101507647,2026-08-10T12:18:01+00:00,python3,602 ms,20.1 MB,1510-stone-game-iv.py,,"so if n is a perfect root, Alice will win always because she can win in one move ",,,,,,,,,new,,,,,,0,0
@@ -899,7 +994,7 @@ move pointers
 if < 2 points were found, return [-1, -1]
 max dist is the distance from the last crit index and first","initially thought I had to store in a hashmap but we can just do find local min/max on the fly
 max dist is always the distance between the last and first crit index we find 
-TC: O(n) and O(1) space ",,,,,O(n) and O(1) space,,review,2026-09-03T18:59:57.341203+00:00,2026-09-02T18:59:57.341203+00:00,1.2931,5.112170705601056,0.6923107751162763,1,0
+TC: O(n) and O(1) space ",,,,,O(n) and O(1) space,,review,2026-09-03T18:59:57.341203+00:00,2026-09-02T18:59:57.341203+00:00,1.2931,5.112170705601056,0.6851415481211068,1,0
 2058,Find the Minimum and Maximum Number of Nodes Between Critical Points,find-the-minimum-and-maximum-number-of-nodes-between-critical-points,https://leetcode.com/problems/find-the-minimum-and-maximum-number-of-nodes-between-critical-points/,Medium,Linked List,2126389151,2026-08-31T17:12:32+00:00,python3,89 ms,63.2 MB,2058-find-the-minimum-and-maximum-number-of-nodes-between-critical-points.py,,"Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -942,7 +1037,7 @@ move pointers
 if < 2 points were found, return [-1, -1]
 max dist is the distance from the last crit index and first","initially thought I had to store in a hashmap but we can just do find local min/max on the fly
 max dist is always the distance between the last and first crit index we find 
-TC: O(n) and O(1) space ",,,,,O(n) and O(1) space,,review,2026-09-03T18:59:57.341203+00:00,2026-09-02T18:59:57.341203+00:00,1.2931,5.112170705601056,0.6923107751162763,1,0
+TC: O(n) and O(1) space ",,,,,O(n) and O(1) space,,review,2026-09-03T18:59:57.341203+00:00,2026-09-02T18:59:57.341203+00:00,1.2931,5.112170705601056,0.6851415481211068,1,0
 2058,Find the Minimum and Maximum Number of Nodes Between Critical Points,find-the-minimum-and-maximum-number-of-nodes-between-critical-points,https://leetcode.com/problems/find-the-minimum-and-maximum-number-of-nodes-between-critical-points/,Medium,Linked List,2128875517,2026-09-02T18:51:50+00:00,python3,86 ms,62.9 MB,2058-find-the-minimum-and-maximum-number-of-nodes-between-critical-points.py,,"Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -956,7 +1051,7 @@ if point is a critical point, we save the index
 else we already have an index and we can find the min dist
 increment the pointers
 check if there is fewer than two distinct cirtical points:
-max dist is always the latest crit point and the first crit point",,,,,,,,,review,2026-09-03T18:59:57.341203+00:00,2026-09-02T18:59:57.341203+00:00,1.2931,5.112170705601056,0.6923107751162763,1,0
+max dist is always the latest crit point and the first crit point",,,,,,,,,review,2026-09-03T18:59:57.341203+00:00,2026-09-02T18:59:57.341203+00:00,1.2931,5.112170705601056,0.6851415481211068,1,0
 2091,Removing Minimum and Maximum From Array,removing-minimum-and-maximum-from-array,https://leetcode.com/problems/removing-minimum-and-maximum-from-array/,Medium,"Array, Greedy",2124621450,2026-08-30T04:34:09+00:00,python3,21 ms,33.7 MB,2091-removing-minimum-and-maximum-from-array.py,,"first we can do one pass to find the max and min
 after that, there are essentially three ways to find the number of deletions
 deleting one way from either left or right
@@ -1002,6 +1097,20 @@ figure out which half contains the index
 build from original string
 perform each update
 root represents the entire string, index 4 of our tuple is the ""best""",,,,,,,,,new,,,,,,0,0
+2265,Count Nodes Equal to Average of Subtree,count-nodes-equal-to-average-of-subtree,https://leetcode.com/problems/count-nodes-equal-to-average-of-subtree/,Medium,"Tree, Depth-First Search, Binary Tree",2136999022,2026-09-10T03:42:36+00:00,python3,40 ms,19.5 MB,2265-count-nodes-equal-to-average-of-subtree.py,[ Time taken: 1d 9hrs 10m 9s ],"Definition for a binary tree node.
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+thoughts:
+we can use recursion and recurse through the tree, summing the values and dividing by number of values",,,,,,,,,new,2026-09-17T00:27:30+00:00,,,,,0,0
+2265,Count Nodes Equal to Average of Subtree,count-nodes-equal-to-average-of-subtree,https://leetcode.com/problems/count-nodes-equal-to-average-of-subtree/,Medium,"Tree, Depth-First Search, Binary Tree",2144176733,2026-09-17T00:27:30+00:00,python3,47 ms,19.8 MB,2265-count-nodes-equal-to-average-of-subtree.py,,"Definition for a binary tree node.
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right",,,,,,,,,new,2026-09-17T00:27:30+00:00,,,,,0,0
 2958,Length of Longest Subarray With at Most K Frequency,length-of-longest-subarray-with-at-most-k-frequency,https://leetcode.com/problems/length-of-longest-subarray-with-at-most-k-frequency/,Medium,"Array, Hash Table, Sliding Window",2104147210,2026-08-12T12:17:49+00:00,python3,247 ms,35.3 MB,2958-length-of-longest-subarray-with-at-most-k-frequency.py,[ Time taken: 2d 23hrs 5m 47s ],"first thoughts, we populate a frequency map with the number of
 elements we have in our nums array
 then, we can use a sliding window and expand our window as long as each value that we have is within k, if not we remove the first element and expand right ",,,,,,,,,new,,,,,,0,0
@@ -1036,6 +1145,13 @@ after they are infected, we check if the infected nodes are not invoked by a nor
 if it exits loop, that means that the infected are not invoked by a normal node and we return all the nodes not in infected
 O(n)",,,,,,,,,new,,,,,,0,0
 3345,Smallest Divisible Digit Product I,smallest-divisible-digit-product-i,https://leetcode.com/problems/smallest-divisible-digit-product-i/,Easy,"Math, Enumeration",2096577626,2026-08-06T11:13:29+00:00,python3,0 ms,19.4 MB,3345-smallest-divisible-digit-product-i.py,[ Time taken: 1d 18hrs 38m 15s ],,,,,,,,,,new,,,,,,0,0
+3483,Unique 3-Digit Even Numbers,unique-3-digit-even-numbers,https://leetcode.com/problems/unique-3-digit-even-numbers/,Easy,"Array, Hash Table, Recursion, Enumeration",2138076338,2026-09-11T03:00:53+00:00,python3,27 ms,21.8 MB,3483-unique-3-digit-even-numbers.py,[ Time taken: 1d 9hrs 24m 27s ],"we can backtrack and basically find all permutations of 3-digit even numbers
+base case, we built a 3 digit number
+make sure cur num is even
+make sure that there is no leading 0 for the leading digit
+select this digit
+recurse 
+undo ",,,,,,,,,new,2026-09-11T03:00:53+00:00,,,,,0,0
 3731,Find Missing Elements,find-missing-elements,https://leetcode.com/problems/find-missing-elements/,Easy,"Array, Hash Table, Sorting",2093734853,2026-08-04T09:02:37+00:00,python3,0 ms,19.4 MB,3731-find-missing-elements.py,,,,,,,,,,,new,,,,,,0,0
 3870,Count Commas in Range,count-commas-in-range,https://leetcode.com/problems/count-commas-in-range/,Easy,Math,2135191325,2026-09-08T14:09:32+00:00,python3,0 ms,19.1 MB,3870-count-commas-in-range.py,,,,,,,,,,,new,2026-09-08T14:09:32+00:00,,,,,0,0
 3875,Construct Uniform Parity Array I,construct-uniform-parity-array-i,https://leetcode.com/problems/construct-uniform-parity-array-i/,Easy,"Array, Math",2127857876,2026-09-02T02:12:26+00:00,python3,3 ms,19.2 MB,3875-construct-uniform-parity-array-i.py,,,,,,,,,,,new,2026-09-02T02:13:28+00:00,,,,,0,0

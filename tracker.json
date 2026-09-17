@@ -1488,7 +1488,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/trapping-rain-water/",
       "first_solved_at": "2025-11-21T03:15:37+00:00",
-      "last_solved_at": "2025-11-21T03:19:43+00:00",
+      "last_solved_at": "2026-09-11T03:16:55+00:00",
       "attempts": [
         {
           "submission_id": "1835651592",
@@ -1533,6 +1533,32 @@
             "space_complexity": ""
           },
           "code_sha256": "d5bceecc3a9ba953970826b08f254ae9244912762f30b29823470b8fc6bbb115"
+        },
+        {
+          "submission_id": "2138084445",
+          "submitted_at": "2026-09-11T03:16:55+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "42-trapping-rain-water.py",
+          "code_sha256": "4ced8cdeee057d1dac83524c831564af0566100a5ee563de199dbf9adf028b6d",
+          "runtime": "11 ms",
+          "memory": "21.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "if the current height is taller than the height on top of the stack, we have found a \"right\" side wall",
+            "that can hold the water",
+            "if stack is empty after we pop the top, that means there is no left wall to hold the water"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -1541,7 +1567,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": null,
+        "next_review": "2026-09-11T03:16:55+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -3582,7 +3608,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/",
       "first_solved_at": "2026-01-05T06:08:02+00:00",
-      "last_solved_at": "2026-01-05T06:09:17+00:00",
+      "last_solved_at": "2026-09-17T00:16:40+00:00",
       "attempts": [
         {
           "submission_id": "1874949598",
@@ -3670,6 +3696,35 @@
             "space_complexity": ""
           },
           "code_sha256": "54ec7cd1d1f2223ac742b6c3e0a3e70c977a677b500a9d2c49b9c4230bc14b17"
+        },
+        {
+          "submission_id": "2144173610",
+          "submitted_at": "2026-09-17T00:16:40+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "230-kth-smallest-element-in-a-bst.py",
+          "code_sha256": "13ff400ffdf28e16d4d094dee67d9117638d15d5b66b505fb031eaee9375b936",
+          "runtime": "3 ms",
+          "memory": "22.5 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "Definition for a binary tree node.",
+            "class TreeNode:",
+            "    def __init__(self, val=0, left=None, right=None):",
+            "        self.val = val",
+            "        self.left = left",
+            "        self.right = right"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -3678,7 +3733,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": null,
+        "next_review": "2026-09-17T00:16:40+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -4564,7 +4619,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/invert-binary-tree/",
       "first_solved_at": "2026-01-30T21:24:57+00:00",
-      "last_solved_at": "2026-07-17T09:17:45+00:00",
+      "last_solved_at": "2026-09-16T22:01:24+00:00",
       "attempts": [
         {
           "submission_id": "1902417081",
@@ -4623,6 +4678,35 @@
             "space_complexity": ""
           },
           "code_sha256": "496762f69b787e5082ffa6a6b37e8b82708f21ce320510b7d3d92b5336e715ab"
+        },
+        {
+          "submission_id": "2144137641",
+          "submitted_at": "2026-09-16T22:01:24+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "226-invert-binary-tree.py",
+          "code_sha256": "9d45354b037a0b5706b1c2cad437070c8cdbd207e66315c39f0d295e66766f23",
+          "runtime": "0 ms",
+          "memory": "19.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "Definition for a binary tree node.",
+            "class TreeNode:",
+            "    def __init__(self, val=0, left=None, right=None):",
+            "        self.val = val",
+            "        self.left = left",
+            "        self.right = right"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -4631,7 +4715,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": null,
+        "next_review": "2026-09-16T22:01:24+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -9069,7 +9153,7 @@
         "state": "review",
         "stability": 1.2931,
         "difficulty": 5.112170705601056,
-        "retrievability": 0.6923107751162763,
+        "retrievability": 0.6851415481211068,
         "last_review": "2026-09-02T18:59:57.341203+00:00",
         "next_review": "2026-09-03T18:59:57.341203+00:00",
         "reps": 1,
@@ -9452,7 +9536,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/daily-temperatures/",
       "first_solved_at": "2026-09-01T16:12:51+00:00",
-      "last_solved_at": "2026-09-01T16:23:43+00:00",
+      "last_solved_at": "2026-09-13T21:42:47+00:00",
       "attempts": [
         {
           "submission_id": "2127440892",
@@ -9512,6 +9596,28 @@
             "time_complexity": "O(n) b/c push pop are O(1) but we traverse through the whole list",
             "space_complexity": "O(n) b/c we store all the idx at most once"
           }
+        },
+        {
+          "submission_id": "2141032424",
+          "submitted_at": "2026-09-13T21:42:47+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "739-daily-temperatures.py",
+          "code_sha256": "3c9d7eb310f858d7812c5b5ca48ad49c47bf2eb08b45eaee7059b9db8d0c04d1",
+          "runtime": "87 ms",
+          "memory": "28.8 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -9520,7 +9626,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": "2026-09-01T16:23:43+00:00",
+        "next_review": "2026-09-13T21:42:47+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -10662,6 +10768,1193 @@
         "retrievability": null,
         "last_review": null,
         "next_review": "2026-09-08T14:09:32+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "2265-count-nodes-equal-to-average-of-subtree": {
+      "leetcode_id": "2265",
+      "slug": "count-nodes-equal-to-average-of-subtree",
+      "title": "Count Nodes Equal to Average of Subtree",
+      "difficulty": "Medium",
+      "tags": [
+        "Tree",
+        "Depth-First Search",
+        "Binary Tree"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/count-nodes-equal-to-average-of-subtree/",
+      "first_solved_at": "2026-09-10T03:42:36+00:00",
+      "last_solved_at": "2026-09-17T00:27:30+00:00",
+      "attempts": [
+        {
+          "submission_id": "2136999022",
+          "submitted_at": "2026-09-10T03:42:36+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "2265-count-nodes-equal-to-average-of-subtree.py",
+          "code_sha256": "8d0dd8f24045d6de9a08b09686bc5f0d816e2dd91f7bb997904c7f842b337939",
+          "runtime": "40 ms",
+          "memory": "19.5 MB",
+          "leetcode_notes": "[ Time taken: 1d 9hrs 10m 9s ]",
+          "raw_comments": [
+            "Definition for a binary tree node.",
+            "class TreeNode:",
+            "    def __init__(self, val=0, left=None, right=None):",
+            "        self.val = val",
+            "        self.left = left",
+            "        self.right = right",
+            "thoughts:",
+            "we can use recursion and recurse through the tree, summing the values and dividing by number of values"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2144176733",
+          "submitted_at": "2026-09-17T00:27:30+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "2265-count-nodes-equal-to-average-of-subtree.py",
+          "code_sha256": "e1f7b9f2c086138f284fc8caf963f8c7c85773934b9fb982a6b0340d097f4596",
+          "runtime": "47 ms",
+          "memory": "19.8 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "Definition for a binary tree node.",
+            "class TreeNode:",
+            "    def __init__(self, val=0, left=None, right=None):",
+            "        self.val = val",
+            "        self.left = left",
+            "        self.right = right"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-17T00:27:30+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "3483-unique-3-digit-even-numbers": {
+      "leetcode_id": "3483",
+      "slug": "unique-3-digit-even-numbers",
+      "title": "Unique 3-Digit Even Numbers",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Recursion",
+        "Enumeration"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/unique-3-digit-even-numbers/",
+      "first_solved_at": "2026-09-11T03:00:53+00:00",
+      "last_solved_at": "2026-09-11T03:00:53+00:00",
+      "attempts": [
+        {
+          "submission_id": "2138076338",
+          "submitted_at": "2026-09-11T03:00:53+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "3483-unique-3-digit-even-numbers.py",
+          "code_sha256": "e4c962758119eea39d3c33b1801813634052b2dc75b4fd20640f0d583de6a4dc",
+          "runtime": "27 ms",
+          "memory": "21.8 MB",
+          "leetcode_notes": "[ Time taken: 1d 9hrs 24m 27s ]",
+          "raw_comments": [
+            "we can backtrack and basically find all permutations of 3-digit even numbers",
+            "base case, we built a 3 digit number",
+            "make sure cur num is even",
+            "make sure that there is no leading 0 for the leading digit",
+            "select this digit",
+            "recurse ",
+            "undo "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-11T03:00:53+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "907-sum-of-subarray-minimums": {
+      "leetcode_id": "907",
+      "slug": "sum-of-subarray-minimums",
+      "title": "Sum of Subarray Minimums",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Dynamic Programming",
+        "Stack",
+        "Monotonic Stack"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/sum-of-subarray-minimums/",
+      "first_solved_at": "2026-09-11T04:18:31+00:00",
+      "last_solved_at": "2026-09-11T04:18:31+00:00",
+      "attempts": [
+        {
+          "submission_id": "2138125962",
+          "submitted_at": "2026-09-11T04:18:31+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "907-sum-of-subarray-minimums.py",
+          "code_sha256": "a05ff22c003f1eeffce7a1cb3d19aaf9f46c1ca77c549862cb326205a2890a34",
+          "runtime": "301 ms",
+          "memory": "24.7 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thoughts:",
+            "since its a contiguous subarray you can't have something like [3,2]",
+            "we can use a monotonic stack to keep track of the current min number, and as we ",
+            "increase the size of the contiguous subarray we pop if we find a smaller min",
+            "and we store all these values within the intervals and keep track of it and then at the end",
+            "just sum the res array ",
+            "if the current value we are at is smaller than the one on top the stack "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-11T04:18:31+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "47-permutations-ii": {
+      "leetcode_id": "47",
+      "slug": "permutations-ii",
+      "title": "Permutations II",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Backtracking",
+        "Sorting"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/permutations-ii/",
+      "first_solved_at": "2026-09-11T15:46:48+00:00",
+      "last_solved_at": "2026-09-11T15:46:48+00:00",
+      "attempts": [
+        {
+          "submission_id": "2138703404",
+          "submitted_at": "2026-09-11T15:46:48+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "47-permutations-ii.py",
+          "code_sha256": "d18ae86fe8a08436fe0a9ef7b06d47b3fc8dae72c217b9ea198ae4078b0ecb55",
+          "runtime": "158 ms",
+          "memory": "19.9 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-11T15:46:48+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "34-find-first-and-last-position-of-element-in-sorted-array": {
+      "leetcode_id": "34",
+      "slug": "find-first-and-last-position-of-element-in-sorted-array",
+      "title": "Find First and Last Position of Element in Sorted Array",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Binary Search"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/",
+      "first_solved_at": "2026-09-12T04:10:13+00:00",
+      "last_solved_at": "2026-09-12T04:10:38+00:00",
+      "attempts": [
+        {
+          "submission_id": "2139095607",
+          "submitted_at": "2026-09-12T04:03:21+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "34-find-first-and-last-position-of-element-in-sorted-array.py",
+          "code_sha256": "a2c11311ad1cce06dcb7d1970d5902e91672b39222587ea213806997b747f5ed",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "binary search !",
+            "if we found the target, we now want to search and find the boounds of ts "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2139099331",
+          "submitted_at": "2026-09-12T04:10:13+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "34-find-first-and-last-position-of-element-in-sorted-array.py",
+          "code_sha256": "a3ff2ae7b1d2e8906c87fc86e7b975ebe428a59109d74a81bd0f5adeed95a055",
+          "runtime": "0 ms",
+          "memory": "20.7 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "binary search !",
+            "check if theres one more left ",
+            "check if theres one more right "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2139099571",
+          "submitted_at": "2026-09-12T04:10:38+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "34-find-first-and-last-position-of-element-in-sorted-array.py",
+          "code_sha256": "e7fbe52fccc52ed0c8dbadb0bf4e8e89fdb90130b2ec2424eb5d56f8cb7ed7fb",
+          "runtime": "0 ms",
+          "memory": "20.5 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "binary search !",
+            "check if theres one more left ",
+            "check if theres one more right "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-12T04:10:38+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "835-image-overlap": {
+      "leetcode_id": "835",
+      "slug": "image-overlap",
+      "title": "Image Overlap",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Matrix"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/image-overlap/",
+      "first_solved_at": "2026-09-13T00:54:08+00:00",
+      "last_solved_at": "2026-09-13T00:54:08+00:00",
+      "attempts": [
+        {
+          "submission_id": "2140075790",
+          "submitted_at": "2026-09-13T00:54:08+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "835-image-overlap.py",
+          "code_sha256": "4be492e2a783043d7a2b8f2826b046d1d515875c1233d2769c51806088e0e000",
+          "runtime": "247 ms",
+          "memory": "20 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-13T00:54:08+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "1475-final-prices-with-a-special-discount-in-a-shop": {
+      "leetcode_id": "1475",
+      "slug": "final-prices-with-a-special-discount-in-a-shop",
+      "title": "Final Prices With a Special Discount in a Shop",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Stack",
+        "Monotonic Stack"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/",
+      "first_solved_at": "2026-09-13T21:55:52+00:00",
+      "last_solved_at": "2026-09-13T21:55:52+00:00",
+      "attempts": [
+        {
+          "submission_id": "2141037072",
+          "submitted_at": "2026-09-13T21:55:52+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "1475-final-prices-with-a-special-discount-in-a-shop.py",
+          "code_sha256": "3bb3fe079ba518e96548108db99eb479ac3e3cb421b394043f9915c38f0e0ab8",
+          "runtime": "3 ms",
+          "memory": "19.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-13T21:55:52+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "836-rectangle-overlap": {
+      "leetcode_id": "836",
+      "slug": "rectangle-overlap",
+      "title": "Rectangle Overlap",
+      "difficulty": "Easy",
+      "tags": [
+        "Math",
+        "Geometry"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/rectangle-overlap/",
+      "first_solved_at": "2026-09-14T02:34:33+00:00",
+      "last_solved_at": "2026-09-14T02:34:33+00:00",
+      "attempts": [
+        {
+          "submission_id": "2141120265",
+          "submitted_at": "2026-09-14T02:34:33+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "836-rectangle-overlap.py",
+          "code_sha256": "77e5fc23e1e39ce3124c3ceabd0895744fa2f9dc6a31113acdae8f6400a33db1",
+          "runtime": "0 ms",
+          "memory": "19.2 MB",
+          "leetcode_notes": "[ Time taken: 1d 9hrs 31m 32s ]",
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-14T02:34:33+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "58-length-of-last-word": {
+      "leetcode_id": "58",
+      "slug": "length-of-last-word",
+      "title": "Length of Last Word",
+      "difficulty": "Easy",
+      "tags": [
+        "String"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/length-of-last-word/",
+      "first_solved_at": "2026-09-14T17:06:58+00:00",
+      "last_solved_at": "2026-09-14T17:06:58+00:00",
+      "attempts": [
+        {
+          "submission_id": "2141808879",
+          "submitted_at": "2026-09-14T17:06:54+00:00",
+          "status": "Runtime Error",
+          "language": "python3",
+          "code_path": "58-length-of-last-word.py",
+          "code_sha256": "58665a0f4ca3e824fc4d4da19db49e15f45b0d57eb2fa66b8fbd91e40244a731",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2141808974",
+          "submitted_at": "2026-09-14T17:06:58+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "58-length-of-last-word.py",
+          "code_sha256": "6a3536d27dcdb781301a2a3e7711be1dc57a34a49fd647e8612128fcb51da75c",
+          "runtime": "0 ms",
+          "memory": "19.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-14T17:06:58+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "90-subsets-ii": {
+      "leetcode_id": "90",
+      "slug": "subsets-ii",
+      "title": "Subsets II",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Backtracking",
+        "Bit Manipulation"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/subsets-ii/",
+      "first_solved_at": "2026-09-14T22:08:38+00:00",
+      "last_solved_at": "2026-09-14T22:08:38+00:00",
+      "attempts": [
+        {
+          "submission_id": "2142026338",
+          "submitted_at": "2026-09-14T22:07:15+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "90-subsets-ii.py",
+          "code_sha256": "f088aec763c5c3a283b1913faebaae32e4be15c135df9fc2cffbfdfa70bb6890",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2142026779",
+          "submitted_at": "2026-09-14T22:08:38+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "90-subsets-ii.py",
+          "code_sha256": "a174abd743f4ef8ce10a1ea0f952d353e7dc5117f252d0b4ffa329acf6584e87",
+          "runtime": "0 ms",
+          "memory": "19.5 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-14T22:08:38+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "1621-number-of-sets-of-k-non-overlapping-line-segments": {
+      "leetcode_id": "1621",
+      "slug": "number-of-sets-of-k-non-overlapping-line-segments",
+      "title": "Number of Sets of K Non-Overlapping Line Segments",
+      "difficulty": "Medium",
+      "tags": [
+        "Math",
+        "Dynamic Programming",
+        "Combinatorics",
+        "Prefix Sum"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/number-of-sets-of-k-non-overlapping-line-segments/",
+      "first_solved_at": null,
+      "last_solved_at": null,
+      "attempts": [
+        {
+          "submission_id": "2143176003",
+          "submitted_at": "2026-09-16T02:37:08+00:00",
+          "status": "Time Limit Exceeded",
+          "language": "python3",
+          "code_path": "1621-number-of-sets-of-k-non-overlapping-line-segments.py",
+          "code_sha256": "ec73b7ad27464409fe7812e64503b9e69095591d0c6e4d1dbce2d774630ed770",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "so having the same end points is allowed ",
+            "we cannot have it within the interval though",
+            "so we have to have some sort of condition where if say R1 > L2? ",
+            "num of ways so this is some sort of dp problem",
+            "base case, we made a successful segment",
+            "if we ran out of points but still need segments",
+            "cache",
+            "choice 1: dont start at idx ",
+            "choice 2: start at the idx",
+            "TC: idx * remaining = O(nk), ",
+            "looping over end = O(n)",
+            "total = O(n^2k)",
+            "SC: at worst case we are just storing all idx and remaining so O(nk)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "idx * remaining = O(nk),",
+            "space_complexity": "at worst case we are just storing all idx and remaining so O(nk)"
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": null,
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "100-same-tree": {
+      "leetcode_id": "100",
+      "slug": "same-tree",
+      "title": "Same Tree",
+      "difficulty": "Easy",
+      "tags": [
+        "Tree",
+        "Depth-First Search",
+        "Breadth-First Search",
+        "Binary Tree"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/same-tree/",
+      "first_solved_at": "2026-09-16T03:04:42+00:00",
+      "last_solved_at": "2026-09-16T03:04:42+00:00",
+      "attempts": [
+        {
+          "submission_id": "2143188664",
+          "submitted_at": "2026-09-16T03:03:34+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "100-same-tree.py",
+          "code_sha256": "f3f2912a54d0cf6f15c23a9eebab2662917b49a3076ddc3fc53a41383d1e1c26",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "Definition for a binary tree node.",
+            "class TreeNode:",
+            "    def __init__(self, val=0, left=None, right=None):",
+            "        self.val = val",
+            "        self.left = left",
+            "        self.right = right"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2143189234",
+          "submitted_at": "2026-09-16T03:04:42+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "100-same-tree.py",
+          "code_sha256": "d416f635dc940f82bfb03e5701dce02733576a09778b6d2ab36f31ec8e2db43f",
+          "runtime": "0 ms",
+          "memory": "19.4 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "Definition for a binary tree node.",
+            "class TreeNode:",
+            "    def __init__(self, val=0, left=None, right=None):",
+            "        self.val = val",
+            "        self.left = left",
+            "        self.right = right"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-16T03:04:42+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "101-symmetric-tree": {
+      "leetcode_id": "101",
+      "slug": "symmetric-tree",
+      "title": "Symmetric Tree",
+      "difficulty": "Easy",
+      "tags": [
+        "Tree",
+        "Depth-First Search",
+        "Breadth-First Search",
+        "Binary Tree"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/symmetric-tree/",
+      "first_solved_at": "2026-09-16T03:11:52+00:00",
+      "last_solved_at": "2026-09-16T03:11:52+00:00",
+      "attempts": [
+        {
+          "submission_id": "2143193045",
+          "submitted_at": "2026-09-16T03:11:52+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "101-symmetric-tree.py",
+          "code_sha256": "94097b41ca99cb0418e49e5347a8bf114b19da4563f28d708da440ff1230d10f",
+          "runtime": "0 ms",
+          "memory": "19.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "Definition for a binary tree node.",
+            "class TreeNode:",
+            "    def __init__(self, val=0, left=None, right=None):",
+            "        self.val = val",
+            "        self.left = left",
+            "        self.right = right"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-16T03:11:52+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "654-maximum-binary-tree": {
+      "leetcode_id": "654",
+      "slug": "maximum-binary-tree",
+      "title": "Maximum Binary Tree",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Divide and Conquer",
+        "Stack",
+        "Tree",
+        "Monotonic Stack",
+        "Binary Tree",
+        "Cartesian Tree"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/maximum-binary-tree/",
+      "first_solved_at": "2026-09-16T05:01:18+00:00",
+      "last_solved_at": "2026-09-16T05:01:18+00:00",
+      "attempts": [
+        {
+          "submission_id": "2143277643",
+          "submitted_at": "2026-09-16T05:01:18+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "654-maximum-binary-tree.py",
+          "code_sha256": "95b27f82186bbb26bf41829f57147da170b8cfb1f16013c412cc146b172db1b4",
+          "runtime": "23 ms",
+          "memory": "19.6 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "Definition for a binary tree node.",
+            "class TreeNode:",
+            "    def __init__(self, val=0, left=None, right=None):",
+            "        self.val = val",
+            "        self.left = left",
+            "        self.right = right"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-16T05:01:18+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "998-maximum-binary-tree-ii": {
+      "leetcode_id": "998",
+      "slug": "maximum-binary-tree-ii",
+      "title": "Maximum Binary Tree II",
+      "difficulty": "Medium",
+      "tags": [
+        "Tree",
+        "Binary Tree"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/maximum-binary-tree-ii/",
+      "first_solved_at": "2026-09-16T23:51:34+00:00",
+      "last_solved_at": "2026-09-16T23:51:34+00:00",
+      "attempts": [
+        {
+          "submission_id": "2144166832",
+          "submitted_at": "2026-09-16T23:51:34+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "998-maximum-binary-tree-ii.py",
+          "code_sha256": "354884317a19cf4b0d3b53d0ad08762c7e10ca0afed794df504e80d55f84d36e",
+          "runtime": "0 ms",
+          "memory": "19.3 MB",
+          "leetcode_notes": "[ Time taken: 23m 29s ]",
+          "raw_comments": [
+            "Definition for a binary tree node.",
+            "class TreeNode:",
+            "    def __init__(self, val=0, left=None, right=None):",
+            "        self.val = val",
+            "        self.left = left",
+            "        self.right = right",
+            "if val > root.val ",
+            "the old tree will always be to the left of the new val since we found a new max",
+            "if val < root.val, it will be to the right because it was appended to the right",
+            "we can do this recusively",
+            "if val is smaller then it has to be in some place right of the root "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-16T23:51:34+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "94-binary-tree-inorder-traversal": {
+      "leetcode_id": "94",
+      "slug": "binary-tree-inorder-traversal",
+      "title": "Binary Tree Inorder Traversal",
+      "difficulty": "Easy",
+      "tags": [
+        "Stack",
+        "Tree",
+        "Depth-First Search",
+        "Binary Tree"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/binary-tree-inorder-traversal/",
+      "first_solved_at": "2026-09-16T23:55:09+00:00",
+      "last_solved_at": "2026-09-16T23:55:09+00:00",
+      "attempts": [
+        {
+          "submission_id": "2144167749",
+          "submitted_at": "2026-09-16T23:55:09+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "94-binary-tree-inorder-traversal.py",
+          "code_sha256": "3d5ebfa47201cdfac4bebefb0aa520a63b1844100a49270295d4a64ceb84f74a",
+          "runtime": "0 ms",
+          "memory": "19.2 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "Definition for a binary tree node.",
+            "class TreeNode:",
+            "    def __init__(self, val=0, left=None, right=None):",
+            "        self.val = val",
+            "        self.left = left",
+            "        self.right = right",
+            "left",
+            "append",
+            "right "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-16T23:55:09+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "144-binary-tree-preorder-traversal": {
+      "leetcode_id": "144",
+      "slug": "binary-tree-preorder-traversal",
+      "title": "Binary Tree Preorder Traversal",
+      "difficulty": "Easy",
+      "tags": [
+        "Stack",
+        "Tree",
+        "Depth-First Search",
+        "Binary Tree"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/binary-tree-preorder-traversal/",
+      "first_solved_at": "2026-09-16T23:57:12+00:00",
+      "last_solved_at": "2026-09-16T23:57:12+00:00",
+      "attempts": [
+        {
+          "submission_id": "2144168379",
+          "submitted_at": "2026-09-16T23:57:12+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "144-binary-tree-preorder-traversal.py",
+          "code_sha256": "562a9c2e257558c75005e807138427f921a604f07a4f6496af590187c917d263",
+          "runtime": "0 ms",
+          "memory": "19.2 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "Definition for a binary tree node.",
+            "class TreeNode:",
+            "    def __init__(self, val=0, left=None, right=None):",
+            "        self.val = val",
+            "        self.left = left",
+            "        self.right = right",
+            "preorder traversal is root, left, right",
+            "visit the root first"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-16T23:57:12+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "111-minimum-depth-of-binary-tree": {
+      "leetcode_id": "111",
+      "slug": "minimum-depth-of-binary-tree",
+      "title": "Minimum Depth of Binary Tree",
+      "difficulty": "Easy",
+      "tags": [
+        "Tree",
+        "Depth-First Search",
+        "Breadth-First Search",
+        "Binary Tree"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/minimum-depth-of-binary-tree/",
+      "first_solved_at": "2026-09-17T00:02:26+00:00",
+      "last_solved_at": "2026-09-17T00:08:22+00:00",
+      "attempts": [
+        {
+          "submission_id": "2144169816",
+          "submitted_at": "2026-09-17T00:02:26+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "111-minimum-depth-of-binary-tree.py",
+          "code_sha256": "0b00b4b2b167c6980fcfae3f1a08a7e7b4382b4652f9160b8e1a775c9857d0fe",
+          "runtime": "33 ms",
+          "memory": "45 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "Definition for a binary tree node.",
+            "class TreeNode:",
+            "    def __init__(self, val=0, left=None, right=None):",
+            "        self.val = val",
+            "        self.left = left",
+            "        self.right = right"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2144171200",
+          "submitted_at": "2026-09-17T00:07:36+00:00",
+          "status": "Runtime Error",
+          "language": "python3",
+          "code_path": "111-minimum-depth-of-binary-tree.py",
+          "code_sha256": "addc16ac440c4139c3074632177dcaf5fe6ca700d6e35a4648c10d9798aeb1ba",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "Definition for a binary tree node.",
+            "class TreeNode:",
+            "    def __init__(self, val=0, left=None, right=None):",
+            "        self.val = val",
+            "        self.left = left",
+            "        self.right = right",
+            "bfs",
+            "initilize queue"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2144171398",
+          "submitted_at": "2026-09-17T00:08:22+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "111-minimum-depth-of-binary-tree.py",
+          "code_sha256": "6a49216b789345661c6698c3d3602d3c722105e1a4abeb1e19bc8a85aef6c914",
+          "runtime": "3 ms",
+          "memory": "44.5 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "Definition for a binary tree node.",
+            "class TreeNode:",
+            "    def __init__(self, val=0, left=None, right=None):",
+            "        self.val = val",
+            "        self.left = left",
+            "        self.right = right",
+            "bfs",
+            "initilize queue"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-17T00:08:22+00:00",
         "reps": 0,
         "lapses": 0
       }
