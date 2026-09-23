@@ -108,7 +108,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
       "first_solved_at": "2025-07-04T02:34:40+00:00",
-      "last_solved_at": "2025-11-18T17:39:26+00:00",
+      "last_solved_at": "2026-09-19T00:56:31+00:00",
       "attempts": [
         {
           "submission_id": "1685630009",
@@ -177,6 +177,77 @@
             "space_complexity": ""
           },
           "code_sha256": "3476b064f9c23f9ff3ed6185366603971445041208fd13a4ba3aca59d396a8f2"
+        },
+        {
+          "submission_id": "2146196080",
+          "submitted_at": "2026-09-19T00:51:02+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "121-best-time-to-buy-and-sell-stock.py",
+          "code_sha256": "d9fa598cf40be2b478c7bbb6d2366d727a63f64ddc8e5e8c2371571e0d4bc9ef",
+          "runtime": "59 ms",
+          "memory": "28.6 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2146196867",
+          "submitted_at": "2026-09-19T00:54:27+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "121-best-time-to-buy-and-sell-stock.py",
+          "code_sha256": "b29bf2241a3309950269d6a31a11fda7b837244b5ad4a3517ff9b715bb2d56d0",
+          "runtime": "23 ms",
+          "memory": "28.7 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we can greedy and always sell when the price is smaller than min price"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2146197294",
+          "submitted_at": "2026-09-19T00:56:31+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "121-best-time-to-buy-and-sell-stock.py",
+          "code_sha256": "b7ff103234f5678d5416592e8dfb53626024940b811c920a3f80713458d23275",
+          "runtime": "23 ms",
+          "memory": "28.9 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we can greedy by keeping track of the min price every day",
+            "assuming that today could be the best day to sell "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -185,7 +256,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": null,
+        "next_review": "2026-09-19T00:56:31+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -1776,7 +1847,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/valid-parentheses/",
       "first_solved_at": "2025-11-25T07:11:46+00:00",
-      "last_solved_at": "2025-11-25T07:11:46+00:00",
+      "last_solved_at": "2026-09-19T01:04:06+00:00",
       "attempts": [
         {
           "submission_id": "1839188382",
@@ -1802,6 +1873,31 @@
             "space_complexity": ""
           },
           "code_sha256": "c154d604f5c5144672d1033cc1955a93b21923803bbdef8f4c92c71ea237ec44"
+        },
+        {
+          "submission_id": "2146198835",
+          "submitted_at": "2026-09-19T01:04:06+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "20-valid-parentheses.py",
+          "code_sha256": "656cc6aaa8bcbb3144028e3fb71eb401601479fa1ddfe82e99db49d3a6835522",
+          "runtime": "0 ms",
+          "memory": "19.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "append the opening parenthesis ",
+            "if the char is a closing parenthesis we check if the top of the stack has the matching parenthesis"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -1810,7 +1906,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": null,
+        "next_review": "2026-09-19T01:04:06+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -3298,7 +3394,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/lru-cache/",
       "first_solved_at": "2026-01-04T07:47:41+00:00",
-      "last_solved_at": "2026-01-04T08:16:07+00:00",
+      "last_solved_at": "2026-09-22T00:20:51+00:00",
       "attempts": [
         {
           "submission_id": "1873955434",
@@ -3380,6 +3476,41 @@
             "space_complexity": ""
           },
           "code_sha256": "ed1ccad5e8db8578e94db65bc56091019aee0b1891148aa40b1eda154e87bfc3"
+        },
+        {
+          "submission_id": "2149171762",
+          "submitted_at": "2026-09-22T00:20:51+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "146-lru-cache.py",
+          "code_sha256": "50bfbda14ed5aa3bf8da57ff54e2f35cf7c6cf0573276e786d677967bc1c6061",
+          "runtime": "19 ms",
+          "memory": "29.5 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thoughts:",
+            "we have to use a doubly linked list here because insertion/deletion is O(1)",
+            "and we only really need to be looking at the heads, since we are evicting the least recently used, which will always be at the end ",
+            "just accessed, so we remove and reinsert so that it is MRU",
+            "remove the value from recency list",
+            "create a node with the new key and value",
+            "add to cache",
+            "insert into the list",
+            "Your LRUCache object will be instantiated and called as such:",
+            "obj = LRUCache(capacity)",
+            "param_1 = obj.get(key)",
+            "obj.put(key,value)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -3388,7 +3519,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": null,
+        "next_review": "2026-09-22T00:20:51+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -5207,7 +5338,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/",
       "first_solved_at": "2026-07-19T12:39:06+00:00",
-      "last_solved_at": "2026-07-19T12:55:19+00:00",
+      "last_solved_at": "2026-09-17T03:24:35+00:00",
       "attempts": [
         {
           "submission_id": "2073458050",
@@ -5272,6 +5403,36 @@
             "space_complexity": ""
           },
           "code_sha256": "916cb4ad27c8d1dc1a6c5e6082edf814f5b94555682a1d50038e7231d799793e"
+        },
+        {
+          "submission_id": "2144245585",
+          "submitted_at": "2026-09-17T03:24:35+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "235-lowest-common-ancestor-of-a-binary-search-tree.py",
+          "code_sha256": "754fa9d64a9de9d25f083d4868ae52791ab80e0bdbdc638424536f673baa4d44",
+          "runtime": "68 ms",
+          "memory": "22.8 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "Definition for a binary tree node.",
+            "class TreeNode:",
+            "    def __init__(self, x):",
+            "        self.val = x",
+            "        self.left = None",
+            "        self.right = None",
+            "the node that we meet at will have both since it returns"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -5280,7 +5441,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": null,
+        "next_review": "2026-09-17T03:24:35+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -5610,7 +5771,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/time-based-key-value-store/",
       "first_solved_at": "2026-07-22T13:29:49+00:00",
-      "last_solved_at": "2026-07-22T13:33:20+00:00",
+      "last_solved_at": "2026-09-19T01:49:32+00:00",
       "attempts": [
         {
           "submission_id": "2077155377",
@@ -5695,6 +5856,35 @@
             "space_complexity": ""
           },
           "code_sha256": "fb77b7f9f91ecb47eff5d3cc65c47bd301ae5fe3c6193d50528dc37716b03eed"
+        },
+        {
+          "submission_id": "2146209738",
+          "submitted_at": "2026-09-19T01:49:32+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "981-time-based-key-value-store.py",
+          "code_sha256": "590848ffe9af7d85c2fbb931adc15a5683363165fb368a6f783557b52139f7eb",
+          "runtime": "182 ms",
+          "memory": "69.8 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "timestamp is strictly increasing so we can use binary search and find the key",
+            "if the timestamp_prev is smaller than curr timestamp we can return the value ",
+            "Your TimeMap object will be instantiated and called as such:",
+            "obj = TimeMap()",
+            "obj.set(key,value,timestamp)",
+            "param_2 = obj.get(key,timestamp)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -5703,7 +5893,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": null,
+        "next_review": "2026-09-19T01:49:32+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -7484,7 +7674,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/contains-duplicate/",
       "first_solved_at": "2026-08-04T14:07:08+00:00",
-      "last_solved_at": "2026-08-04T14:07:08+00:00",
+      "last_solved_at": "2026-09-22T00:24:44+00:00",
       "attempts": [
         {
           "submission_id": "2094084419",
@@ -7507,6 +7697,28 @@
             "space_complexity": ""
           },
           "code_sha256": "4f0216ae66e8995c155151afe8561e9eab0c4cfba996c7ec6e4cca2ecded42de"
+        },
+        {
+          "submission_id": "2149172935",
+          "submitted_at": "2026-09-22T00:24:44+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "217-contains-duplicate.py",
+          "code_sha256": "e75bc3fb6d702a56d1c2b1a96113b5c3b67d9c31abd384f583ca251c3bedb61b",
+          "runtime": "19 ms",
+          "memory": "32.1 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -7515,7 +7727,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": null,
+        "next_review": "2026-09-22T00:24:44+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -9153,7 +9365,7 @@
         "state": "review",
         "stability": 1.2931,
         "difficulty": 5.112170705601056,
-        "retrievability": 0.6559403099250828,
+        "retrievability": 0.651098985320894,
         "last_review": "2026-09-02T18:59:57.341203+00:00",
         "next_review": "2026-09-03T18:59:57.341203+00:00",
         "reps": 1,
@@ -11955,6 +12167,1457 @@
         "retrievability": null,
         "last_review": null,
         "next_review": "2026-09-17T00:08:22+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "647-palindromic-substrings": {
+      "leetcode_id": "647",
+      "slug": "palindromic-substrings",
+      "title": "Palindromic Substrings",
+      "difficulty": "Medium",
+      "tags": [
+        "Two Pointers",
+        "String",
+        "Dynamic Programming"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/palindromic-substrings/",
+      "first_solved_at": "2026-09-17T04:03:09+00:00",
+      "last_solved_at": "2026-09-17T04:10:50+00:00",
+      "attempts": [
+        {
+          "submission_id": "2144272002",
+          "submitted_at": "2026-09-17T04:03:09+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "647-palindromic-substrings.py",
+          "code_sha256": "83e1b85aaea1d064afeeaf9953cacb0d2d4e8af2554f87e293c0eb09ff8dbabc",
+          "runtime": "1281 ms",
+          "memory": "285.8 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thoughts:",
+            "we are asked to give a total number of palindromic substrings",
+            "so this is most likely a dp question",
+            "we can have two pointers one at the front and back and keep track ",
+            "of valid palindromes, and then store them in our memo",
+            "if i >= j, we have foudn a valid palindrome and can return",
+            "case 1: valid palindrome still",
+            "now we have to find the total count in our dp"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2144272898",
+          "submitted_at": "2026-09-17T04:04:23+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "647-palindromic-substrings.py",
+          "code_sha256": "b614084f95a250618eb7be96fa6ce0686a26bb03f4ea4fc68d9ab745ee14aab4",
+          "runtime": "1143 ms",
+          "memory": "285.4 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thoughts:",
+            "we are asked to give a total number of palindromic substrings",
+            "so this is most likely a dp question",
+            "we can have two pointers one at the front and back and keep track ",
+            "of valid palindromes, and then store them in our memo",
+            "if i >= j, we have foudn a valid palindrome and can return",
+            "case 1: valid palindrome still",
+            "now we have to find the total count in our dp",
+            "TC: O(n^2) since this is 2D dp ",
+            "SC: O(n^2) since we store pairs (i,j)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "O(n^2) since this is 2D dp",
+            "space_complexity": "O(n^2) since we store pairs (i,j)"
+          }
+        },
+        {
+          "submission_id": "2144277868",
+          "submitted_at": "2026-09-17T04:10:50+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "647-palindromic-substrings.py",
+          "code_sha256": "764ad85598ea956e7b42b15ffca2379840a429744254765428caf8fab5e2d44a",
+          "runtime": "124 ms",
+          "memory": "19.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "odd length",
+            "even length"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-17T04:10:50+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "1477-find-two-non-overlapping-sub-arrays-each-with-target-sum": {
+      "leetcode_id": "1477",
+      "slug": "find-two-non-overlapping-sub-arrays-each-with-target-sum",
+      "title": "Find Two Non-overlapping Sub-arrays Each With Target Sum",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Binary Search",
+        "Dynamic Programming",
+        "Sliding Window"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/find-two-non-overlapping-sub-arrays-each-with-target-sum/",
+      "first_solved_at": "2026-09-17T17:22:47+00:00",
+      "last_solved_at": "2026-09-17T17:22:47+00:00",
+      "attempts": [
+        {
+          "submission_id": "2144991380",
+          "submitted_at": "2026-09-17T17:22:47+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "1477-find-two-non-overlapping-sub-arrays-each-with-target-sum.py",
+          "code_sha256": "65fbd47d0a61e4dc4b922c37165ed7d432bb6848bcd5d8f1c67d207937f19492",
+          "runtime": "203 ms",
+          "memory": "31.3 MB",
+          "leetcode_notes": "[ Time taken: 10hrs 36m 13s ]",
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-17T17:22:47+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "3006-find-beautiful-indices-in-the-given-array-i": {
+      "leetcode_id": "3006",
+      "slug": "find-beautiful-indices-in-the-given-array-i",
+      "title": "Find Beautiful Indices in the Given Array I",
+      "difficulty": "Medium",
+      "tags": [
+        "Two Pointers",
+        "String",
+        "Binary Search",
+        "Rolling Hash",
+        "String Matching",
+        "Hash Function",
+        "Z Algorithm",
+        "Knuth–Morris–Pratt Algorithm",
+        "Boyer–Moore String-Search Algorithm"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/find-beautiful-indices-in-the-given-array-i/",
+      "first_solved_at": "2026-09-19T15:19:00+00:00",
+      "last_solved_at": "2026-09-21T23:41:52+00:00",
+      "attempts": [
+        {
+          "submission_id": "2146770196",
+          "submitted_at": "2026-09-19T15:19:00+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "3006-find-beautiful-indices-in-the-given-array-i.py",
+          "code_sha256": "a6b9111157189d5940eb92f540f815c59a9f8bc0c73a927f0088fe80fca8b8b7",
+          "runtime": "28 ms",
+          "memory": "23.4 MB",
+          "leetcode_notes": "[ Time taken: 10hrs 39m 58s ]",
+          "raw_comments": [
+            "beauty requirements: ",
+            "i <= n - m ",
+            "s[i + m - 1] == a ",
+            "j <= n - o ",
+            "both must have the substring of a nad b in s ",
+            "we find the starting idx of both strings a and b in s that match",
+            "if ptr_b is too far beind 'i' we increment it "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2149160354",
+          "submitted_at": "2026-09-21T23:40:32+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "3006-find-beautiful-indices-in-the-given-array-i.py",
+          "code_sha256": "2d75b43122a439b19568cc065f6576028e621c93d372d4e6c9a3450dbf411221",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thoughts: ",
+            "we have to find for both a and b the indicies that match within the string s",
+            "then we can like sorta binary search and find the 'beautiful index'",
+            "note that our bound for b is as long as i - k <= j <= i + k ",
+            "if it is too far off, then we shift our search area up",
+            "",
+            "for index a",
+            "for index b"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2149160447",
+          "submitted_at": "2026-09-21T23:40:53+00:00",
+          "status": "Runtime Error",
+          "language": "python3",
+          "code_path": "3006-find-beautiful-indices-in-the-given-array-i.py",
+          "code_sha256": "c09194e54036722e3c8d4a21551f174f38213695a69d5f4245f542a134be92a5",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thoughts: ",
+            "we have to find for both a and b the indicies that match within the string s",
+            "then we can like sorta binary search and find the 'beautiful index'",
+            "note that our bound for b is as long as i - k <= j <= i + k ",
+            "if it is too far off, then we shift our search area up",
+            "",
+            "for index a",
+            "for index b"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2149160516",
+          "submitted_at": "2026-09-21T23:41:08+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "3006-find-beautiful-indices-in-the-given-array-i.py",
+          "code_sha256": "1c3dd7263b4b9eff839056782f92fe703a7e142f894c4002903f270f4dabba56",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thoughts: ",
+            "we have to find for both a and b the indicies that match within the string s",
+            "then we can like sorta binary search and find the 'beautiful index'",
+            "note that our bound for b is as long as i - k <= j <= i + k ",
+            "if it is too far off, then we shift our search area up",
+            "",
+            "for index a",
+            "for index b"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2149160733",
+          "submitted_at": "2026-09-21T23:41:52+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "3006-find-beautiful-indices-in-the-given-array-i.py",
+          "code_sha256": "95b4f2942b6c68c68e013cb3c2ab3d9c65a7f9d651dc8338d25d229f941af106",
+          "runtime": "27 ms",
+          "memory": "23.5 MB",
+          "leetcode_notes": "[ Time taken: 10hrs 5m 6s ]",
+          "raw_comments": [
+            "thoughts: ",
+            "we have to find for both a and b the indicies that match within the string s",
+            "then we can like sorta binary search and find the 'beautiful index'",
+            "note that our bound for b is as long as i - k <= j <= i + k ",
+            "if it is too far off, then we shift our search area up",
+            "",
+            "for index a",
+            "for index b"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-21T23:41:52+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "3008-find-beautiful-indices-in-the-given-array-ii": {
+      "leetcode_id": "3008",
+      "slug": "find-beautiful-indices-in-the-given-array-ii",
+      "title": "Find Beautiful Indices in the Given Array II",
+      "difficulty": "Hard",
+      "tags": [
+        "Two Pointers",
+        "String",
+        "Binary Search",
+        "Rolling Hash",
+        "String Matching",
+        "Hash Function",
+        "Z Algorithm",
+        "Knuth–Morris–Pratt Algorithm",
+        "Boyer–Moore String-Search Algorithm"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/find-beautiful-indices-in-the-given-array-ii/",
+      "first_solved_at": "2026-09-19T19:32:48+00:00",
+      "last_solved_at": "2026-09-19T19:40:49+00:00",
+      "attempts": [
+        {
+          "submission_id": "2146982258",
+          "submitted_at": "2026-09-19T19:07:48+00:00",
+          "status": "Time Limit Exceeded",
+          "language": "python3",
+          "code_path": "3008-find-beautiful-indices-in-the-given-array-ii.py",
+          "code_sha256": "345782e11d1b98a1fbb124dab17c909b0bdde489b1f2d1429c0a80ef5a848e88",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "beauty requirements: ",
+            "i <= n - m ",
+            "s[i + m - 1] == a ",
+            "j <= n - o ",
+            "both must have the substring of a nad b in s ",
+            "we find the starting idx of both strings a and b in s that match",
+            "if ptr_b is too far beind 'i' we increment it ",
+            "TC: O(n)",
+            "SC: O(n)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "O(n)",
+            "space_complexity": "O(n)"
+          }
+        },
+        {
+          "submission_id": "2146997806",
+          "submitted_at": "2026-09-19T19:32:48+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "3008-find-beautiful-indices-in-the-given-array-ii.py",
+          "code_sha256": "9436d8aad39a364afb2ec3c9999f6d01c734e586d682f777df8663d9f22b3b9a",
+          "runtime": "689 ms",
+          "memory": "55.7 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "KMP allows us to store the length fo the longest proper prefix that is also a suffix in a LPS array",
+            "Using this, we can reuse any potential failed substring instead of discarding our computation",
+            "normally KMP will return whether a string exist, but we will modify it to return every starting index",
+            "text pointer ",
+            "pattern pointer",
+            "matched entire pattern",
+            "don't reset j to 0 because matches can overlap",
+            "out of range so we increment"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2147002626",
+          "submitted_at": "2026-09-19T19:40:49+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "3008-find-beautiful-indices-in-the-given-array-ii.py",
+          "code_sha256": "40daa2e744815ad40fe960eb0204db3dceb6f607c08f78a437a238a42320fbbf",
+          "runtime": "655 ms",
+          "memory": "56.9 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "KMP allows us to store the length fo the longest proper prefix that is also a suffix in a LPS array",
+            "Using this, we can reuse any potential failed substring instead of discarding our computation",
+            "normally KMP will return whether a string exist, but we will modify it to return every starting index",
+            "text pointer ",
+            "pattern pointer",
+            "matched entire pattern",
+            "don't reset j to 0 because matches can overlap",
+            "out of range so we increment",
+            "TC: O(n + m) text pointer never moves backward and we never reuse prior work",
+            "SC: O (n + m)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "O(n + m) text pointer never moves backward and we never reuse prior work",
+            "space_complexity": "O (n + m)"
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-19T19:40:49+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "539-minimum-time-difference": {
+      "leetcode_id": "539",
+      "slug": "minimum-time-difference",
+      "title": "Minimum Time Difference",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Math",
+        "String",
+        "Sorting"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/minimum-time-difference/",
+      "first_solved_at": "2026-09-19T20:07:35+00:00",
+      "last_solved_at": "2026-09-21T23:52:11+00:00",
+      "attempts": [
+        {
+          "submission_id": "2147016868",
+          "submitted_at": "2026-09-19T20:06:01+00:00",
+          "status": "Runtime Error",
+          "language": "python3",
+          "code_path": "539-minimum-time-difference.py",
+          "code_sha256": "99dad542c9ba2873d87909577a19e51877e89e358cd09567e9afaa85d86cf870",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "60 * 24 = 1440 minutes",
+            "we can convert the timestamps to minutes, e.g. ",
+            "23 * 60, + 59 would be 1439 minutes",
+            "and then we subtract and find the difference or sum shi",
+            "this should give us something like [1439, 1440, ...]",
+            "we have to handle the wrap around e.g 23:59 to 00:00"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2147017683",
+          "submitted_at": "2026-09-19T20:07:35+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "539-minimum-time-difference.py",
+          "code_sha256": "36dde5abc53dafca7375b2740ffa931685196e3190f5bbf629356f1991d38b16",
+          "runtime": "11 ms",
+          "memory": "21.2 MB",
+          "leetcode_notes": "[ Time taken: 10hrs 45m 14s ]",
+          "raw_comments": [
+            "1. Convert all time points into minutes",
+            "2. Sort the times chronologically",
+            "3. Find the minimum difference between adjacent times",
+            "4. Handle the wrap-around case (e.g., 23:59 to 00:00)",
+            "TC: O(nlogn) for sorting chronologically",
+            "SC: O(n) for storing all the points in an array"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "O(nlogn) for sorting chronologically",
+            "space_complexity": "O(n) for storing all the points in an array"
+          }
+        },
+        {
+          "submission_id": "2149163370",
+          "submitted_at": "2026-09-21T23:51:20+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "539-minimum-time-difference.py",
+          "code_sha256": "486d3c9a5c066c663dcc32daae403ae61bfbdcb6be6794aaee5efd850ace1d35",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "get everything into minutes",
+            "sort the minute list",
+            "check for wraparound"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2149163593",
+          "submitted_at": "2026-09-21T23:52:11+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "539-minimum-time-difference.py",
+          "code_sha256": "9be3c69ea4cb0a267c5135b8454e20a8f37d8626437c0158d017647d032fd66c",
+          "runtime": "3 ms",
+          "memory": "21.2 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "get everything into minutes",
+            "sort the minute list",
+            "check for wraparound"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-21T23:52:11+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "219-contains-duplicate-ii": {
+      "leetcode_id": "219",
+      "slug": "contains-duplicate-ii",
+      "title": "Contains Duplicate II",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Sliding Window"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/contains-duplicate-ii/",
+      "first_solved_at": "2026-09-19T20:16:55+00:00",
+      "last_solved_at": "2026-09-21T23:55:58+00:00",
+      "attempts": [
+        {
+          "submission_id": "2147022411",
+          "submitted_at": "2026-09-19T20:16:55+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "219-contains-duplicate-ii.py",
+          "code_sha256": "988557d9f108e326ac4fde5e8119af1153597c6e15744901cf12219a190305e9",
+          "runtime": "47 ms",
+          "memory": "39.4 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "put all the values in a hash map and their indicies ",
+            "and then check the indices of each one and if they are <= return true"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2147022482",
+          "submitted_at": "2026-09-19T20:17:07+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "219-contains-duplicate-ii.py",
+          "code_sha256": "c875856b5cbf273e308110be3c8d90a205cb6bd7f3b31f81506dea604a557224",
+          "runtime": "51 ms",
+          "memory": "39.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2149164590",
+          "submitted_at": "2026-09-21T23:55:58+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "219-contains-duplicate-ii.py",
+          "code_sha256": "adc17a740b835eb48a5a306e911601dda493341748e04c609077b2cb094f24e6",
+          "runtime": "31 ms",
+          "memory": "39.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-21T23:55:58+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "220-contains-duplicate-iii": {
+      "leetcode_id": "220",
+      "slug": "contains-duplicate-iii",
+      "title": "Contains Duplicate III",
+      "difficulty": "Hard",
+      "tags": [
+        "Array",
+        "Sliding Window",
+        "Sorting",
+        "Bucket Sort",
+        "Ordered Set"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/contains-duplicate-iii/",
+      "first_solved_at": "2026-09-19T21:16:42+00:00",
+      "last_solved_at": "2026-09-19T21:16:42+00:00",
+      "attempts": [
+        {
+          "submission_id": "2147048339",
+          "submitted_at": "2026-09-19T21:16:42+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "220-contains-duplicate-iii.py",
+          "code_sha256": "b31288315343a1db122864d98b2b010b50001d362350d190d69bce2efcfa9adc",
+          "runtime": "135 ms",
+          "memory": "37.2 MB",
+          "leetcode_notes": "[ Time taken: 11hrs 6m 37s ]",
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-19T21:16:42+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "136-single-number": {
+      "leetcode_id": "136",
+      "slug": "single-number",
+      "title": "Single Number",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Bit Manipulation"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/single-number/",
+      "first_solved_at": "2026-09-19T21:28:24+00:00",
+      "last_solved_at": "2026-09-19T21:28:24+00:00",
+      "attempts": [
+        {
+          "submission_id": "2147052427",
+          "submitted_at": "2026-09-19T21:28:24+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "136-single-number.py",
+          "code_sha256": "4287e5e96701e2e48c5d0bd8bb9a4904a54adf92cdbea85fd69e270d6efe4003",
+          "runtime": "0 ms",
+          "memory": "21.2 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-19T21:28:24+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "3498-reverse-degree-of-a-string": {
+      "leetcode_id": "3498",
+      "slug": "reverse-degree-of-a-string",
+      "title": "Reverse Degree of a String",
+      "difficulty": "Easy",
+      "tags": [
+        "String",
+        "Simulation"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/reverse-degree-of-a-string/",
+      "first_solved_at": "2026-09-20T17:00:46+00:00",
+      "last_solved_at": "2026-09-20T17:00:46+00:00",
+      "attempts": [
+        {
+          "submission_id": "2147909946",
+          "submitted_at": "2026-09-20T17:00:46+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "3498-reverse-degree-of-a-string.py",
+          "code_sha256": "d54c151e29a8ad7db6b13e7c517c95c439b06498640eb1f41824e6c385101662",
+          "runtime": "7 ms",
+          "memory": "19.3 MB",
+          "leetcode_notes": "[ Time taken: 11hrs 20m 29s ]",
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-20T17:00:46+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "443-string-compression": {
+      "leetcode_id": "443",
+      "slug": "string-compression",
+      "title": "String Compression",
+      "difficulty": "Medium",
+      "tags": [
+        "Two Pointers",
+        "String"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/string-compression/",
+      "first_solved_at": "2026-09-20T21:20:06+00:00",
+      "last_solved_at": "2026-09-20T21:20:06+00:00",
+      "attempts": [
+        {
+          "submission_id": "2148095880",
+          "submitted_at": "2026-09-20T21:20:06+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "443-string-compression.py",
+          "code_sha256": "ab3659a3f4e3d60ddd021d3613597b1462f360f18edd1bde58988193dbf10dad",
+          "runtime": "3 ms",
+          "memory": "19.4 MB",
+          "leetcode_notes": "[ Time taken: 11hrs 46m 44s ]",
+          "raw_comments": [
+            "if we are in the same group just keep incrementing i",
+            "since we found a diff letter the length of our group is the ",
+            "start of next group - prev group ",
+            "override the chars in place",
+            "increment so we can write our count",
+            "if length > 1 we append the digits after the char",
+            "move pointer up to next group",
+            "process last group"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-20T21:20:06+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "410-split-array-largest-sum": {
+      "leetcode_id": "410",
+      "slug": "split-array-largest-sum",
+      "title": "Split Array Largest Sum",
+      "difficulty": "Hard",
+      "tags": [
+        "Array",
+        "Binary Search",
+        "Dynamic Programming",
+        "Greedy",
+        "Prefix Sum"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/split-array-largest-sum/",
+      "first_solved_at": "2026-09-20T23:22:47+00:00",
+      "last_solved_at": "2026-09-20T23:22:47+00:00",
+      "attempts": [
+        {
+          "submission_id": "2148132082",
+          "submitted_at": "2026-09-20T23:22:47+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "410-split-array-largest-sum.py",
+          "code_sha256": "ffb0295c17fb361e0335f4cf4cb13f4f17144ce0d9a96593c3eb98e0f13dff1f",
+          "runtime": "3 ms",
+          "memory": "19.2 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-20T23:22:47+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "3524-find-x-value-of-array-i": {
+      "leetcode_id": "3524",
+      "slug": "find-x-value-of-array-i",
+      "title": "Find X Value of Array I",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Math",
+        "Dynamic Programming"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/find-x-value-of-array-i/",
+      "first_solved_at": "2026-09-21T23:26:05+00:00",
+      "last_solved_at": "2026-09-21T23:26:05+00:00",
+      "attempts": [
+        {
+          "submission_id": "2149153880",
+          "submitted_at": "2026-09-21T23:16:19+00:00",
+          "status": "Time Limit Exceeded",
+          "language": "python3",
+          "code_path": "3524-find-x-value-of-array-i.py",
+          "code_sha256": "abeb0dcfbbe83b6d87acddab4ee43800ab3d340d2b8ab4edef109d853b40dc5d",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2149156440",
+          "submitted_at": "2026-09-21T23:26:05+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "3524-find-x-value-of-array-i.py",
+          "code_sha256": "6a2d559f5030f0f711c2fc4b22bb9a0fdefbb7e9a295a71e4164d0370e08e4a4",
+          "runtime": "310 ms",
+          "memory": "34.4 MB",
+          "leetcode_notes": "[ Time taken: 9hrs 54m 48s ]",
+          "raw_comments": [
+            "thoughts:",
+            "removing a prefix and suffix is the same as choosing any nonempty contiguous subarray",
+            "so fore every contiguous subarray we compute its product % k and count how many subarrays give each remainder 0 ... k - 1",
+            "dp[r] = number of subarrays ending at the previous index which has product % k == r",
+            "case 1: start new subarray",
+            "case 2: extend every subarray ending at prev index",
+            "every subarray representid in new dp is valid reaminder"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-21T23:26:05+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "303-range-sum-query-immutable": {
+      "leetcode_id": "303",
+      "slug": "range-sum-query-immutable",
+      "title": "Range Sum Query - Immutable",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Design",
+        "Prefix Sum"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/range-sum-query-immutable/",
+      "first_solved_at": "2026-09-22T00:39:55+00:00",
+      "last_solved_at": "2026-09-22T00:39:55+00:00",
+      "attempts": [
+        {
+          "submission_id": "2149177482",
+          "submitted_at": "2026-09-22T00:39:55+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "303-range-sum-query-immutable.py",
+          "code_sha256": "200e6f2485205d6c971c83a657bc37750b3eeeeaf1a7f05d470f58333ddde17b",
+          "runtime": "669 ms",
+          "memory": "22.5 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "Your NumArray object will be instantiated and called as such:",
+            "obj = NumArray(nums)",
+            "param_1 = obj.sumRange(left,right)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-22T00:39:55+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "1232-check-if-it-is-a-straight-line": {
+      "leetcode_id": "1232",
+      "slug": "check-if-it-is-a-straight-line",
+      "title": "Check If It Is a Straight Line",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Math",
+        "Geometry"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/check-if-it-is-a-straight-line/",
+      "first_solved_at": "2026-09-22T01:37:11+00:00",
+      "last_solved_at": "2026-09-22T01:37:11+00:00",
+      "attempts": [
+        {
+          "submission_id": "2149197416",
+          "submitted_at": "2026-09-22T01:37:11+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "1232-check-if-it-is-a-straight-line.py",
+          "code_sha256": "70b287221a4a7126ee1932649c9bdf70f6e016a4cc077a93171d70b91f0bc552",
+          "runtime": "0 ms",
+          "memory": "19.5 MB",
+          "leetcode_notes": "[ Time taken: 10hrs 12m 24s ]",
+          "raw_comments": [
+            "get the first two points"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-22T01:37:11+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "2312-selling-pieces-of-wood": {
+      "leetcode_id": "2312",
+      "slug": "selling-pieces-of-wood",
+      "title": "Selling Pieces of Wood",
+      "difficulty": "Hard",
+      "tags": [
+        "Array",
+        "Dynamic Programming",
+        "Memoization"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/selling-pieces-of-wood/",
+      "first_solved_at": "2026-09-22T01:58:33+00:00",
+      "last_solved_at": "2026-09-22T01:59:10+00:00",
+      "attempts": [
+        {
+          "submission_id": "2149206291",
+          "submitted_at": "2026-09-22T01:58:33+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "2312-selling-pieces-of-wood.py",
+          "code_sha256": "436417bc66d6a05ba93b626b8f6cdeda4ea510065e4764b77d4c7f56e38b7da4",
+          "runtime": "9871 ms",
+          "memory": "37.5 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thoughts:",
+            "cutting the rectangle gives us another rectangle and thus another optimization to solve",
+            "so ig we can store like best[u][v] which stores the est price for a rectangle",
+            "",
+            "we have two options, whether to sell off the size of the piece if its valid",
+            "or cut it and see if we can maximize it ",
+            "how much we get if we sell (h,w) directly",
+            "choice 1: we don't cut it and just sell it directly",
+            "choice 2: we cut it horizontally",
+            "choice 3: we cut it vertically"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2149206539",
+          "submitted_at": "2026-09-22T01:59:10+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "2312-selling-pieces-of-wood.py",
+          "code_sha256": "436417bc66d6a05ba93b626b8f6cdeda4ea510065e4764b77d4c7f56e38b7da4",
+          "runtime": "9817 ms",
+          "memory": "37.5 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thoughts:",
+            "cutting the rectangle gives us another rectangle and thus another optimization to solve",
+            "so ig we can store like best[u][v] which stores the est price for a rectangle",
+            "",
+            "we have two options, whether to sell off the size of the piece if its valid",
+            "or cut it and see if we can maximize it ",
+            "how much we get if we sell (h,w) directly",
+            "choice 1: we don't cut it and just sell it directly",
+            "choice 2: we cut it horizontally",
+            "choice 3: we cut it vertically"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-22T01:59:10+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "3650-minimum-cost-path-with-edge-reversals": {
+      "leetcode_id": "3650",
+      "slug": "minimum-cost-path-with-edge-reversals",
+      "title": "Minimum Cost Path with Edge Reversals",
+      "difficulty": "Medium",
+      "tags": [
+        "Graph Theory",
+        "Heap (Priority Queue)",
+        "Shortest Path"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/minimum-cost-path-with-edge-reversals/",
+      "first_solved_at": "2026-09-22T02:19:33+00:00",
+      "last_solved_at": "2026-09-22T02:19:33+00:00",
+      "attempts": [
+        {
+          "submission_id": "2149214369",
+          "submitted_at": "2026-09-22T02:18:01+00:00",
+          "status": "Runtime Error",
+          "language": "python3",
+          "code_path": "3650-minimum-cost-path-with-edge-reversals.py",
+          "code_sha256": "47b4194cb15434c1ba5428312fcf2dd5d6d4fe5339035fdb778319a67c9508f1",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "the edges are non-negative so we can use dijkstras ",
+            "intialize distances to inf, and the intial distance to 0 ",
+            "priority queue stores (curr_dist, node)",
+            "skip if shorter path to u was already processed",
+            "relax edges",
+            "if shorter path v is found"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2149214721",
+          "submitted_at": "2026-09-22T02:18:54+00:00",
+          "status": "Runtime Error",
+          "language": "python3",
+          "code_path": "3650-minimum-cost-path-with-edge-reversals.py",
+          "code_sha256": "47b4194cb15434c1ba5428312fcf2dd5d6d4fe5339035fdb778319a67c9508f1",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "the edges are non-negative so we can use dijkstras ",
+            "intialize distances to inf, and the intial distance to 0 ",
+            "priority queue stores (curr_dist, node)",
+            "skip if shorter path to u was already processed",
+            "relax edges",
+            "if shorter path v is found"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2149215027",
+          "submitted_at": "2026-09-22T02:19:33+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "3650-minimum-cost-path-with-edge-reversals.py",
+          "code_sha256": "9323c25003aa9668e658a5962318c33708a770f8d64cb94a90126fffd520d414",
+          "runtime": "820 ms",
+          "memory": "75.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "the edges are non-negative so we can use dijkstras ",
+            "intialize distances to inf, and the intial distance to 0 ",
+            "priority queue stores (curr_dist, node)",
+            "skip if shorter path to u was already processed",
+            "relax edges",
+            "if shorter path v is found"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-22T02:19:33+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "1658-minimum-operations-to-reduce-x-to-zero": {
+      "leetcode_id": "1658",
+      "slug": "minimum-operations-to-reduce-x-to-zero",
+      "title": "Minimum Operations to Reduce X to Zero",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Binary Search",
+        "Sliding Window",
+        "Prefix Sum"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/",
+      "first_solved_at": "2026-09-23T01:08:46+00:00",
+      "last_solved_at": "2026-09-23T01:08:46+00:00",
+      "attempts": [
+        {
+          "submission_id": "2150300665",
+          "submitted_at": "2026-09-23T01:08:46+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "1658-minimum-operations-to-reduce-x-to-zero.py",
+          "code_sha256": "19208aaecd03714437406cb684886acf1e2a0d92426cf6cac528e94bcd6b8356",
+          "runtime": "67 ms",
+          "memory": "31.4 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "the target is how many values we can keep"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-23T01:08:46+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "833-find-and-replace-in-string": {
+      "leetcode_id": "833",
+      "slug": "find-and-replace-in-string",
+      "title": "Find And Replace in String",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String",
+        "Sorting"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/find-and-replace-in-string/",
+      "first_solved_at": "2026-09-23T02:39:28+00:00",
+      "last_solved_at": "2026-09-23T02:39:28+00:00",
+      "attempts": [
+        {
+          "submission_id": "2150340418",
+          "submitted_at": "2026-09-23T02:39:28+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "833-find-and-replace-in-string.py",
+          "code_sha256": "bef016354c470899013f9edf081a6be1da28b783106fea6fd4eacedca63ac186",
+          "runtime": "0 ms",
+          "memory": "19.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "check for all valid replacements, eg if the string matches the source given",
+            "if this idx is a valid replacement, we just append the 'replacement' to our res and then skip the length of source",
+            "if it is not a valid replacement area, we just append the original string and increment by one "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-23T02:39:28+00:00",
         "reps": 0,
         "lapses": 0
       }
