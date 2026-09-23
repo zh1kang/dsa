@@ -95,3 +95,45 @@ class TimeMap:
 # obj = TimeMap()
 # obj.set(key,value,timestamp)
 # param_2 = obj.get(key,timestamp)
+
+# submission 2146209738 - 2026-09-19T01:49:32+00:00
+class TimeMap:
+
+    def __init__(self):
+        self.dict = defaultdict(list)
+        
+
+    def set(self, key: str, value: str, timestamp: int) -> None:
+        self.dict[key].append([value, timestamp])
+        
+
+    def get(self, key: str, timestamp: int) -> str:
+        # timestamp is strictly increasing so we can use binary search and find the key
+        res = ""
+        values = self.dict[key]
+        lo, hi = 0, len(values) - 1
+
+        while lo <= hi:
+            mid = lo + ((hi - lo) // 2)
+
+            # if the timestamp_prev is smaller than curr timestamp we can return the value 
+            if values[mid][1] <= timestamp:
+                res = values[mid][0]
+                lo = mid + 1
+            else:
+                hi = mid - 1
+        
+        return res 
+
+
+
+
+        
+
+        
+
+
+# Your TimeMap object will be instantiated and called as such:
+# obj = TimeMap()
+# obj.set(key,value,timestamp)
+# param_2 = obj.get(key,timestamp)
