@@ -101,3 +101,31 @@ class Solution:
       
 
         
+
+# submission 2151289493 - 2026-09-23T18:54:53+00:00
+class Solution:
+    def merge(self, intervals: List[List[int]]) -> List[List[int]]:
+        # thoughts:
+        # we can sort by the start time, and then compare the end time of one interval we are currently at with the start time of the next interval,
+        # if it is larger, we merge the two intervals
+
+        # sort by start time
+        intervals.sort(key=lambda x: x[0])
+        merged = []
+
+        for start, end in intervals:
+            # if the merged is empty and the start time larger so there is no overlap
+            if not merged or merged[-1][1] < start:
+                merged.append([start,end])
+            else:
+                # if there is an overlap we take the largest end value
+                merged[-1][1] = max(merged[-1][1], end)
+
+        return merged 
+
+
+
+         
+
+
+       
