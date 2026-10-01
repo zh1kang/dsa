@@ -1847,7 +1847,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/valid-parentheses/",
       "first_solved_at": "2025-11-25T07:11:46+00:00",
-      "last_solved_at": "2026-09-19T01:04:06+00:00",
+      "last_solved_at": "2026-10-01T01:11:59+00:00",
       "attempts": [
         {
           "submission_id": "1839188382",
@@ -1898,6 +1898,56 @@
             "time_complexity": "",
             "space_complexity": ""
           }
+        },
+        {
+          "submission_id": "2158673462",
+          "submitted_at": "2026-10-01T01:11:07+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "20-valid-parentheses.py",
+          "code_sha256": "f2538255c07f0ea22b8c2f42acbff3209c593c8a5d0b3d9a78008571eed43844",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "check if it is an opening bracker and append it to stack",
+            "otherwise it is a closing parenthesis and we have ot check if it is not equal, if not we reutrn false"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2158673796",
+          "submitted_at": "2026-10-01T01:11:59+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "20-valid-parentheses.py",
+          "code_sha256": "5cd374c0d8306a94da01ce591cdbd797f1f42d94e5cab99b0e63ebe9d36af2aa",
+          "runtime": "3 ms",
+          "memory": "19.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "check if it is an opening bracker and append it to stack",
+            "otherwise it is a closing parenthesis and we have to check if the top of the stack has a matching parenthesis, if not we return false"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -1906,7 +1956,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": "2026-09-19T01:04:06+00:00",
+        "next_review": "2026-10-01T01:11:59+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -2342,7 +2392,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/merge-intervals/",
       "first_solved_at": "2025-12-31T07:53:01+00:00",
-      "last_solved_at": "2026-08-04T08:24:28+00:00",
+      "last_solved_at": "2026-09-23T18:54:53+00:00",
       "attempts": [
         {
           "submission_id": "1870078700",
@@ -2448,6 +2498,35 @@
             "space_complexity": ""
           },
           "code_sha256": "bc5bc7a424977d9c6793cafa030e5dfe34c494ce9dfd875e37cf59ab5eaa3d42"
+        },
+        {
+          "submission_id": "2151289493",
+          "submitted_at": "2026-09-23T18:54:53+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "56-merge-intervals.py",
+          "code_sha256": "bd589bba9032798a43783e4c5990c0d59f4750045017714dd1c28a9cb4aaf573",
+          "runtime": "7 ms",
+          "memory": "23.2 MB",
+          "leetcode_notes": "[ Time taken: 6hrs 54m 35s ]",
+          "raw_comments": [
+            "thoughts:",
+            "we can sort by the start time, and then compare the end time of one interval we are currently at with the start time of the next interval,",
+            "if it is larger, we merge the two intervals",
+            "sort by start time",
+            "if the merged is empty and the start time larger so there is no overlap",
+            "if there is an overlap we take the largest end value"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -2456,7 +2535,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": null,
+        "next_review": "2026-09-23T18:54:53+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -2476,7 +2555,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/missing-number/",
       "first_solved_at": "2025-12-31T08:00:29+00:00",
-      "last_solved_at": "2025-12-31T08:00:29+00:00",
+      "last_solved_at": "2026-10-01T01:05:12+00:00",
       "attempts": [
         {
           "submission_id": "1870083547",
@@ -2499,6 +2578,31 @@
             "space_complexity": ""
           },
           "code_sha256": "30e61a26358d369b3e4de70bcf3d61dc1aaa84294c0ce5d6aa08d73676ba88fc"
+        },
+        {
+          "submission_id": "2158671385",
+          "submitted_at": "2026-10-01T01:05:12+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "268-missing-number.py",
+          "code_sha256": "f79be2c00606035dfa0a705a2efbb1243c815ae5e3799539bcd2f3d32ef84cee",
+          "runtime": "4 ms",
+          "memory": "21 MB",
+          "leetcode_notes": "[ Time taken: 1d 15hrs 46m 58s ]",
+          "raw_comments": [
+            "add to set",
+            "iterate through"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -2507,7 +2611,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": null,
+        "next_review": "2026-10-01T01:05:12+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -3589,7 +3693,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/3sum/",
       "first_solved_at": "2026-01-04T20:27:33+00:00",
-      "last_solved_at": "2026-01-04T20:27:33+00:00",
+      "last_solved_at": "2026-09-29T04:33:55+00:00",
       "attempts": [
         {
           "submission_id": "1874633682",
@@ -3612,6 +3716,55 @@
             "space_complexity": ""
           },
           "code_sha256": "7c6c888f7ba90ea28c4c6ce2f22bb19239b105447f132b09ed26a30807757da0"
+        },
+        {
+          "submission_id": "2156646576",
+          "submitted_at": "2026-09-29T04:32:46+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "15-3sum.py",
+          "code_sha256": "1b72b4166a27ee5598ded5cd9159059d41e06413bdf19d3b175e9c759ecf74ad",
+          "runtime": "615 ms",
+          "memory": "22.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "if we have a duplicate continue incrementing until we dont have a duplicate "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2156647521",
+          "submitted_at": "2026-09-29T04:33:55+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "15-3sum.py",
+          "code_sha256": "233b30ebafb65fb085c7ac306129d1386d512a7f7bb8dc5fdfbac83e5d3e722f",
+          "runtime": "609 ms",
+          "memory": "22.2 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "increment/decrement i and j to decrease the search space after finding one valid solution ",
+            "if we have a duplicate continue incrementing until we dont have a duplicate "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -3620,7 +3773,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": null,
+        "next_review": "2026-09-29T04:33:55+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -9365,7 +9518,7 @@
         "state": "review",
         "stability": 1.2931,
         "difficulty": 5.112170705601056,
-        "retrievability": 0.6198812273784408,
+        "retrievability": 0.6166836753733946,
         "last_review": "2026-09-02T18:59:57.341203+00:00",
         "next_review": "2026-09-03T18:59:57.341203+00:00",
         "reps": 1,
@@ -13618,6 +13771,2569 @@
         "retrievability": null,
         "last_review": null,
         "next_review": "2026-09-23T02:39:28+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "96-unique-binary-search-trees": {
+      "leetcode_id": "96",
+      "slug": "unique-binary-search-trees",
+      "title": "Unique Binary Search Trees",
+      "difficulty": "Medium",
+      "tags": [
+        "Math",
+        "Dynamic Programming",
+        "Tree",
+        "Binary Search Tree",
+        "Binary Tree"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/unique-binary-search-trees/",
+      "first_solved_at": "2026-09-23T04:20:11+00:00",
+      "last_solved_at": "2026-09-23T04:22:26+00:00",
+      "attempts": [
+        {
+          "submission_id": "2150415433",
+          "submitted_at": "2026-09-23T04:20:11+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "96-unique-binary-search-trees.py",
+          "code_sha256": "7fb53b6fa63866a9ba44dc207460564c4ef2bc28a3d6e93fe5f7903cf1660fff",
+          "runtime": "0 ms",
+          "memory": "19.1 MB",
+          "leetcode_notes": "[ Time taken: 18m 44s ]",
+          "raw_comments": [
+            "consider each node as the root of the tree"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2150417781",
+          "submitted_at": "2026-09-23T04:22:26+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "96-unique-binary-search-trees.py",
+          "code_sha256": "97228c03cfcc458832a8ff2ea631698ea146d689ba2c2fbf85ade04a3602e8f8",
+          "runtime": "0 ms",
+          "memory": "19.4 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "consider each node as the root of the tree",
+            "BSTs require left trees to be less than node",
+            "(node - 1) - (root - 1) = node - root "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-23T04:22:26+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "64-minimum-path-sum": {
+      "leetcode_id": "64",
+      "slug": "minimum-path-sum",
+      "title": "Minimum Path Sum",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Dynamic Programming",
+        "Matrix"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/minimum-path-sum/",
+      "first_solved_at": "2026-09-23T19:32:53+00:00",
+      "last_solved_at": "2026-09-23T19:51:47+00:00",
+      "attempts": [
+        {
+          "submission_id": "2151318112",
+          "submitted_at": "2026-09-23T19:32:53+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "64-minimum-path-sum.py",
+          "code_sha256": "ea498eb72ad2a6e15c6fb88ca6aa54da3855675ca4e210c2180557ccdc9dd56f",
+          "runtime": "42 ms",
+          "memory": "32 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we can use dp and store our choices in memo ",
+            "base case we reached the end ",
+            "if out of bounds "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2151329083",
+          "submitted_at": "2026-09-23T19:49:47+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "64-minimum-path-sum.py",
+          "code_sha256": "da4ab14313a79a5add84e7f11afc6f819d4bb9dfea5cd3381652d5b03f8530d3",
+          "runtime": "11 ms",
+          "memory": "21.9 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "bottom-up dp ",
+            "reached the end",
+            "we can't move more right so can only move down",
+            "can't move more down so we have to move right",
+            "if it is none of these cases we just take the min of the next move"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2151330365",
+          "submitted_at": "2026-09-23T19:51:47+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "64-minimum-path-sum.py",
+          "code_sha256": "b09a3a18ba6cbf03bcf80e2379d23a784ca3d3d98829548a5891d58653b184e2",
+          "runtime": "11 ms",
+          "memory": "21.7 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "bottom-up dp ",
+            "reached the end",
+            "we can't move more right so can only move down",
+            "can't move more down so we have to move right",
+            "if it is none of these cases we just take the min of the next move",
+            "TC: O(mn) because we iterate through rows and cols",
+            "SC: O(mn) we store a value for every cell  "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "O(mn) because we iterate through rows and cols",
+            "space_complexity": "O(mn) we store a value for every cell"
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-23T19:51:47+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "1807-evaluate-the-bracket-pairs-of-a-string": {
+      "leetcode_id": "1807",
+      "slug": "evaluate-the-bracket-pairs-of-a-string",
+      "title": "Evaluate the Bracket Pairs of a String",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/evaluate-the-bracket-pairs-of-a-string/",
+      "first_solved_at": "2026-09-26T01:58:24+00:00",
+      "last_solved_at": "2026-09-26T01:58:24+00:00",
+      "attempts": [
+        {
+          "submission_id": "2153442142",
+          "submitted_at": "2026-09-26T01:58:24+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "1807-evaluate-the-bracket-pairs-of-a-string.py",
+          "code_sha256": "5b651ae7b3c75052d2525f963d58c99e9caf02ccab3b2cceedfb4de7db5b2be3",
+          "runtime": "50 ms",
+          "memory": "51.9 MB",
+          "leetcode_notes": "[ Time taken: 1d 4hrs 37m 2s ]",
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-26T01:58:24+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "244-shortest-word-distance-ii": {
+      "leetcode_id": "244",
+      "slug": "shortest-word-distance-ii",
+      "title": "Shortest Word Distance II",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Two Pointers",
+        "String",
+        "Design"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/shortest-word-distance-ii/",
+      "first_solved_at": "2026-09-26T02:25:24+00:00",
+      "last_solved_at": "2026-09-26T02:25:24+00:00",
+      "attempts": [
+        {
+          "submission_id": "2153449984",
+          "submitted_at": "2026-09-26T02:25:24+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "244-shortest-word-distance-ii.py",
+          "code_sha256": "810e1af4841dd136c62c63768aeb053d50562faf8768e9cd7628a741fe870c96",
+          "runtime": "7 ms",
+          "memory": "26 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "Your WordDistance object will be instantiated and called as such:",
+            "obj = WordDistance(wordsDict)",
+            "param_1 = obj.shortest(word1,word2)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-26T02:25:24+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "875-koko-eating-bananas": {
+      "leetcode_id": "875",
+      "slug": "koko-eating-bananas",
+      "title": "Koko Eating Bananas",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Binary Search"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/koko-eating-bananas/",
+      "first_solved_at": "2026-09-26T02:35:58+00:00",
+      "last_solved_at": "2026-09-26T02:35:58+00:00",
+      "attempts": [
+        {
+          "submission_id": "2153453138",
+          "submitted_at": "2026-09-26T02:35:58+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "875-koko-eating-bananas.py",
+          "code_sha256": "bcfca654260c2c636c314a00f4c9aa4836519db33c24b5919c4a7a61a178b54d",
+          "runtime": "187 ms",
+          "memory": "20.5 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-26T02:35:58+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "427-construct-quad-tree": {
+      "leetcode_id": "427",
+      "slug": "construct-quad-tree",
+      "title": "Construct Quad Tree",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Divide and Conquer",
+        "Tree",
+        "Matrix"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/construct-quad-tree/",
+      "first_solved_at": "2026-09-26T03:52:01+00:00",
+      "last_solved_at": "2026-09-26T03:52:01+00:00",
+      "attempts": [
+        {
+          "submission_id": "2153479143",
+          "submitted_at": "2026-09-26T03:45:27+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "427-construct-quad-tree.py",
+          "code_sha256": "dc009078dd246e17d8670251aee31ddb4057bc88373a0a3d58b26b0cc681749b",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "\n# Definition for a QuadTree node.\nclass Node:\n    def __init__(self, val, isLeaf, topLeft, topRight, bottomLeft, bottomRight):\n        self.val = val\n        self.isLeaf = isLeaf\n        self.topLeft = topLeft\n        self.topRight = topRight\n        self.bottomLeft = bottomLeft\n        self.bottomRight = bottomRight\n",
+            "thought:",
+            "if we just visualize this as simply a tree with a root node and four children",
+            "we can just use dfs and traverse through each node and look for 1's and zeros if we find atelast one zero we just return False for isLeaf "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2153482348",
+          "submitted_at": "2026-09-26T03:52:01+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "427-construct-quad-tree.py",
+          "code_sha256": "a3345c3b364e1e30e269bcc724b4939f5157e74c664c8b79af1ac81675d9291d",
+          "runtime": "91 ms",
+          "memory": "20.2 MB",
+          "leetcode_notes": "[ Time taken: 1d 5hrs 17m 19s ]",
+          "raw_comments": [
+            "\n# Definition for a QuadTree node.\nclass Node:\n    def __init__(self, val, isLeaf, topLeft, topRight, bottomLeft, bottomRight):\n        self.val = val\n        self.isLeaf = isLeaf\n        self.topLeft = topLeft\n        self.topRight = topRight\n        self.bottomLeft = bottomLeft\n        self.bottomRight = bottomRight\n",
+            "thought:",
+            "each node represents a square region of the grid",
+            "for a region, split it into 4 equal quadrants and recursively build each one",
+            "if all 4 children are leaves and all have the same value, then the whole region",
+            "is uniform, so we can merge them into a single leaf",
+            "otherwise, the current node is not a leaf and keeps the 4 children",
+            "",
+            "dfs(r, c, n) = build the quadtree for the n x n region starting at (r, c)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-26T03:52:01+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "245-shortest-word-distance-iii": {
+      "leetcode_id": "245",
+      "slug": "shortest-word-distance-iii",
+      "title": "Shortest Word Distance III",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "String"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/shortest-word-distance-iii/",
+      "first_solved_at": "2026-09-26T04:08:45+00:00",
+      "last_solved_at": "2026-09-26T04:10:00+00:00",
+      "attempts": [
+        {
+          "submission_id": "2153491936",
+          "submitted_at": "2026-09-26T04:08:45+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "245-shortest-word-distance-iii.py",
+          "code_sha256": "5e2696e19a3025386b1b5a94ad5388aea0e6c9687dba63e304d19894b6514dee",
+          "runtime": "80 ms",
+          "memory": "38.2 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2153492153",
+          "submitted_at": "2026-09-26T04:09:07+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "245-shortest-word-distance-iii.py",
+          "code_sha256": "5e2696e19a3025386b1b5a94ad5388aea0e6c9687dba63e304d19894b6514dee",
+          "runtime": "85 ms",
+          "memory": "38 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2153492651",
+          "submitted_at": "2026-09-26T04:10:00+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "245-shortest-word-distance-iii.py",
+          "code_sha256": "5e2696e19a3025386b1b5a94ad5388aea0e6c9687dba63e304d19894b6514dee",
+          "runtime": "83 ms",
+          "memory": "38.1 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-26T04:10:00+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "210-course-schedule-ii": {
+      "leetcode_id": "210",
+      "slug": "course-schedule-ii",
+      "title": "Course Schedule II",
+      "difficulty": "Medium",
+      "tags": [
+        "Depth-First Search",
+        "Breadth-First Search",
+        "Graph Theory",
+        "Topological Sort"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/course-schedule-ii/",
+      "first_solved_at": "2026-09-26T05:26:30+00:00",
+      "last_solved_at": "2026-09-26T05:26:30+00:00",
+      "attempts": [
+        {
+          "submission_id": "2153543895",
+          "submitted_at": "2026-09-26T05:26:30+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "210-course-schedule-ii.py",
+          "code_sha256": "996065ae57ef6ea01028e87e7f57af7a130bfe91df5eda27d24a3a23b198ca31",
+          "runtime": "3 ms",
+          "memory": "21.3 MB",
+          "leetcode_notes": "[ Time taken: 1d 5hrs 48m 57s ]",
+          "raw_comments": [
+            "thoughts:",
+            "this is similar to the first problem where we still cycle detect but instead of returning true or false we go a step further and return the proper ordering",
+            "create an adj list",
+            "this is a DAG so it goes one way ",
+            "this is for the cycle detecting; we check if we're visiting the node ",
+            "and if we come back we have reached a cycle "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-26T05:26:30+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "2-add-two-numbers": {
+      "leetcode_id": "2",
+      "slug": "add-two-numbers",
+      "title": "Add Two Numbers",
+      "difficulty": "Medium",
+      "tags": [
+        "Linked List",
+        "Math",
+        "Recursion"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/add-two-numbers/",
+      "first_solved_at": "2026-09-26T21:34:44+00:00",
+      "last_solved_at": "2026-09-26T21:34:44+00:00",
+      "attempts": [
+        {
+          "submission_id": "2154378331",
+          "submitted_at": "2026-09-26T21:34:44+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "2-add-two-numbers.py",
+          "code_sha256": "9fce88a2e8f384635becac4c5964243967201096f32155b5582eaf11a0b2cb3e",
+          "runtime": "3 ms",
+          "memory": "19.2 MB",
+          "leetcode_notes": "[ Time taken: 1d 17hrs 34m 44s ]",
+          "raw_comments": [
+            "Definition for singly-linked list.",
+            "class ListNode:",
+            "    def __init__(self, val=0, next=None):",
+            "        self.val = val",
+            "        self.next = next",
+            "thought: since the digits are stored in reverse order we can",
+            "simply just go through both arrays and add l1 and l2 values and ",
+            "we just hve to keep track of an overflow digit",
+            "we then keep a dummy node and return that with the final values",
+            "if a list is longer, we appendthe rest of the values to the end of the list? ",
+            "insert the node in ",
+            "go to next node "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-26T21:34:44+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "1190-reverse-substrings-between-each-pair-of-parentheses": {
+      "leetcode_id": "1190",
+      "slug": "reverse-substrings-between-each-pair-of-parentheses",
+      "title": "Reverse Substrings Between Each Pair of Parentheses",
+      "difficulty": "Medium",
+      "tags": [
+        "String",
+        "Stack",
+        "Bracket Sequences"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/reverse-substrings-between-each-pair-of-parentheses/",
+      "first_solved_at": "2026-09-27T03:55:07+00:00",
+      "last_solved_at": "2026-09-27T03:55:07+00:00",
+      "attempts": [
+        {
+          "submission_id": "2154572446",
+          "submitted_at": "2026-09-27T03:55:07+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "1190-reverse-substrings-between-each-pair-of-parentheses.py",
+          "code_sha256": "b9dd1e34238db323e3612fbfffa09453881b4d0c4277edb9f01556b2e9738917",
+          "runtime": "0 ms",
+          "memory": "19.5 MB",
+          "leetcode_notes": "[ Time taken: 35m 23s ]",
+          "raw_comments": [
+            "thought:",
+            "we can store the parenthesis in a stack and like valid parentehsis ",
+            "we can pop when we find an end, however, one thing we have to consider is when there are multiple parenthesis?",
+            "say like we have two opening parnethesis on the stack, ",
+            "I think its fine because we whenever we see a closing parenthesis we just reverse the words from the parenthesis on top of the stack and the closing parenthesis",
+            "our string should be normal up until the opening of the parenthesis and then we reverse whatever is inside"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-27T03:55:07+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "1202-smallest-string-with-swaps": {
+      "leetcode_id": "1202",
+      "slug": "smallest-string-with-swaps",
+      "title": "Smallest String With Swaps",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String",
+        "Depth-First Search",
+        "Breadth-First Search",
+        "Union-Find",
+        "Sorting"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/smallest-string-with-swaps/",
+      "first_solved_at": "2026-09-27T05:27:25+00:00",
+      "last_solved_at": "2026-09-27T05:27:25+00:00",
+      "attempts": [
+        {
+          "submission_id": "2154636190",
+          "submitted_at": "2026-09-27T05:27:25+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "1202-smallest-string-with-swaps.py",
+          "code_sha256": "26248bc3f7c5cabca8bdaa8ca43e987b0b7680a45aa291464e33cb563d068aa6",
+          "runtime": "109 ms",
+          "memory": "61.5 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thoughts:",
+            "we can create an adjacency list to see what letters are linked ",
+            "using this adjacency list we can traverse it and see if its possible for a string to convert to another",
+            "",
+            "undirected",
+            "strings are immutable so convert to list",
+            "find the whole connected component"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-27T05:27:25+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "6-zigzag-conversion": {
+      "leetcode_id": "6",
+      "slug": "zigzag-conversion",
+      "title": "Zigzag Conversion",
+      "difficulty": "Medium",
+      "tags": [
+        "String"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/zigzag-conversion/",
+      "first_solved_at": "2026-09-27T19:11:32+00:00",
+      "last_solved_at": "2026-09-27T19:11:32+00:00",
+      "attempts": [
+        {
+          "submission_id": "2155310336",
+          "submitted_at": "2026-09-27T19:11:32+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "6-zigzag-conversion.py",
+          "code_sha256": "f239c1373f45573aeeaa786a6f9fa48eb90e01ce429e12186e1ce4c516932c92",
+          "runtime": "11 ms",
+          "memory": "19.3 MB",
+          "leetcode_notes": "[ Time taken: 43m 59s ]",
+          "raw_comments": [
+            "create 2d array ",
+            "1 for down, -1 for up",
+            "change directions if we hit the top or bottom row"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-27T19:11:32+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "32-longest-valid-parentheses": {
+      "leetcode_id": "32",
+      "slug": "longest-valid-parentheses",
+      "title": "Longest Valid Parentheses",
+      "difficulty": "Hard",
+      "tags": [
+        "String",
+        "Dynamic Programming",
+        "Stack",
+        "Bracket Sequences"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/longest-valid-parentheses/",
+      "first_solved_at": "2026-09-27T23:09:39+00:00",
+      "last_solved_at": "2026-09-27T23:09:39+00:00",
+      "attempts": [
+        {
+          "submission_id": "2155409028",
+          "submitted_at": "2026-09-27T23:09:39+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "32-longest-valid-parentheses.py",
+          "code_sha256": "f24f9c66abe1a5c52c849f01870ecd7d4f3083ea965fbb8e2426de2f4fb582cb",
+          "runtime": "7 ms",
+          "memory": "20.6 MB",
+          "leetcode_notes": "[ Time taken: 2hrs 28m 14s ]",
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-27T23:09:39+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "28-find-the-index-of-the-first-occurrence-in-a-string": {
+      "leetcode_id": "28",
+      "slug": "find-the-index-of-the-first-occurrence-in-a-string",
+      "title": "Find the Index of the First Occurrence in a String",
+      "difficulty": "Easy",
+      "tags": [
+        "Two Pointers",
+        "String",
+        "String Matching",
+        "Z Algorithm",
+        "Knuth–Morris–Pratt Algorithm",
+        "Boyer–Moore String-Search Algorithm"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/",
+      "first_solved_at": "2026-09-27T23:14:37+00:00",
+      "last_solved_at": "2026-09-27T23:23:03+00:00",
+      "attempts": [
+        {
+          "submission_id": "2155410243",
+          "submitted_at": "2026-09-27T23:14:37+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "28-find-the-index-of-the-first-occurrence-in-a-string.py",
+          "code_sha256": "6efa7ff06333af8518e4b1c9f8d83ebe551adfb55f3fc17a2cd8f40e792c1912",
+          "runtime": "0 ms",
+          "memory": "19.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2155412384",
+          "submitted_at": "2026-09-27T23:23:03+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "28-find-the-index-of-the-first-occurrence-in-a-string.py",
+          "code_sha256": "b60c65189e5d299392e60da7c6b07f262d68d8e3afbb626ce97280c249a270f2",
+          "runtime": "0 ms",
+          "memory": "19.2 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-27T23:23:03+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "252-meeting-rooms": {
+      "leetcode_id": "252",
+      "slug": "meeting-rooms",
+      "title": "Meeting Rooms",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Sorting",
+        "Quicksort"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/meeting-rooms/",
+      "first_solved_at": "2026-09-27T23:26:31+00:00",
+      "last_solved_at": "2026-09-27T23:26:31+00:00",
+      "attempts": [
+        {
+          "submission_id": "2155413262",
+          "submitted_at": "2026-09-27T23:26:31+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "252-meeting-rooms.py",
+          "code_sha256": "9a97a07434951c0b4304032fd62c7581ae41fbcee1bdb79b27c9190e802671b7",
+          "runtime": "0 ms",
+          "memory": "21.4 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "sort by start time",
+            "then check if the next start time is smaller than the end time of the current interval"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-27T23:26:31+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "253-meeting-rooms-ii": {
+      "leetcode_id": "253",
+      "slug": "meeting-rooms-ii",
+      "title": "Meeting Rooms II",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Two Pointers",
+        "Greedy",
+        "Sorting",
+        "Heap (Priority Queue)",
+        "Prefix Sum"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/meeting-rooms-ii/",
+      "first_solved_at": "2026-09-27T23:42:51+00:00",
+      "last_solved_at": "2026-09-27T23:42:51+00:00",
+      "attempts": [
+        {
+          "submission_id": "2155414055",
+          "submitted_at": "2026-09-27T23:29:43+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "253-meeting-rooms-ii.py",
+          "code_sha256": "5d67aa02facf8de19e04ef79ed72bae068ab25bf365ea3ea85a2acbbeb506a80",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we need rooms only when we have meeting time intervals that don't overlap",
+            "if they do it just counts as one room "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2155414462",
+          "submitted_at": "2026-09-27T23:31:33+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "253-meeting-rooms-ii.py",
+          "code_sha256": "6849094f09ba9912ebac2f7aa20bb4f83143f713b29d75b745ec93e1583361f6",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we need rooms only when we have meeting time intervals that don't overlap",
+            "if they do it just counts as one room "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2155414731",
+          "submitted_at": "2026-09-27T23:32:41+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "253-meeting-rooms-ii.py",
+          "code_sha256": "97498eb2e50d8ac350edab4cac37c76db65108144cdf8dc902acdec33e3b8e54",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we need rooms only when we have meeting time intervals that don't overlap",
+            "if they do it just counts as one room "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2155414768",
+          "submitted_at": "2026-09-27T23:32:52+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "253-meeting-rooms-ii.py",
+          "code_sha256": "7ac1947b717fbb2350a91946e3ddc858e3961ef610825a4463391b60c44a26f3",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we need rooms only when we have meeting time intervals that don't overlap",
+            "if they do it just counts as one room "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2155417283",
+          "submitted_at": "2026-09-27T23:42:51+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "253-meeting-rooms-ii.py",
+          "code_sha256": "877172a815359c4e034cf96b236c69524c220d051343cb3f2084bc914ac48253",
+          "runtime": "4 ms",
+          "memory": "21.4 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thoughts:",
+            "we can use a min_heap to keep track of the amouint of rooms we are occupying",
+            "if there is a time where the start is ",
+            "if the start of the current meeting time is larger than the smallest end time, we can just reuse that room "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-27T23:42:51+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "1614-maximum-nesting-depth-of-the-parentheses": {
+      "leetcode_id": "1614",
+      "slug": "maximum-nesting-depth-of-the-parentheses",
+      "title": "Maximum Nesting Depth of the Parentheses",
+      "difficulty": "Easy",
+      "tags": [
+        "String",
+        "Stack",
+        "Bracket Sequences"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/",
+      "first_solved_at": "2026-09-28T01:31:22+00:00",
+      "last_solved_at": "2026-09-28T01:31:22+00:00",
+      "attempts": [
+        {
+          "submission_id": "2155450746",
+          "submitted_at": "2026-09-28T01:31:22+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "1614-maximum-nesting-depth-of-the-parentheses.py",
+          "code_sha256": "0aeb2d13522c06d61d8d490a2cd929e4e052dc4c372c95ec2fdb09714bcf2fce",
+          "runtime": "0 ms",
+          "memory": "19.5 MB",
+          "leetcode_notes": "[ Time taken: 2hrs 35m 21s ]",
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-28T01:31:22+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "48-rotate-image": {
+      "leetcode_id": "48",
+      "slug": "rotate-image",
+      "title": "Rotate Image",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Math",
+        "Matrix"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/rotate-image/",
+      "first_solved_at": "2026-09-28T01:58:25+00:00",
+      "last_solved_at": "2026-09-28T01:58:25+00:00",
+      "attempts": [
+        {
+          "submission_id": "2155460684",
+          "submitted_at": "2026-09-28T01:58:25+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "48-rotate-image.py",
+          "code_sha256": "e36374b4aac4b72920207bcf5f05deb1389363aa6b840c313d722f5c8826a8f5",
+          "runtime": "0 ms",
+          "memory": "19.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "\n        Do not return anything, modify matrix in-place instead.\n        ",
+            "we transpose and then reverse the rows",
+            "Only iterate over the upper triangle to avoid swapping elements back"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-28T01:58:25+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "987-vertical-order-traversal-of-a-binary-tree": {
+      "leetcode_id": "987",
+      "slug": "vertical-order-traversal-of-a-binary-tree",
+      "title": "Vertical Order Traversal of a Binary Tree",
+      "difficulty": "Hard",
+      "tags": [
+        "Hash Table",
+        "Tree",
+        "Depth-First Search",
+        "Breadth-First Search",
+        "Sorting",
+        "Binary Tree"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/",
+      "first_solved_at": "2026-09-28T02:28:03+00:00",
+      "last_solved_at": "2026-09-28T02:28:15+00:00",
+      "attempts": [
+        {
+          "submission_id": "2155472281",
+          "submitted_at": "2026-09-28T02:28:03+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "987-vertical-order-traversal-of-a-binary-tree.py",
+          "code_sha256": "e8705e89889479229c8820786ab432ea57b4943f1dfb1b75b8e8430ff05aeae9",
+          "runtime": "1 ms",
+          "memory": "19.4 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "Definition for a binary tree node.",
+            "class TreeNode:",
+            "    def __init__(self, val=0, left=None, right=None):",
+            "        self.val = val",
+            "        self.left = left",
+            "        self.right = right",
+            "Sort by col, then by row, then by value",
+            "Group the sorted results by column"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2155472365",
+          "submitted_at": "2026-09-28T02:28:15+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "987-vertical-order-traversal-of-a-binary-tree.py",
+          "code_sha256": "e8705e89889479229c8820786ab432ea57b4943f1dfb1b75b8e8430ff05aeae9",
+          "runtime": "0 ms",
+          "memory": "19.4 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "Definition for a binary tree node.",
+            "class TreeNode:",
+            "    def __init__(self, val=0, left=None, right=None):",
+            "        self.val = val",
+            "        self.left = left",
+            "        self.right = right",
+            "Sort by col, then by row, then by value",
+            "Group the sorted results by column"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-28T02:28:15+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "159-longest-substring-with-at-most-two-distinct-characters": {
+      "leetcode_id": "159",
+      "slug": "longest-substring-with-at-most-two-distinct-characters",
+      "title": "Longest Substring with At Most Two Distinct Characters",
+      "difficulty": "Medium",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Sliding Window"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/",
+      "first_solved_at": "2026-09-28T03:24:42+00:00",
+      "last_solved_at": "2026-09-28T03:24:42+00:00",
+      "attempts": [
+        {
+          "submission_id": "2155499519",
+          "submitted_at": "2026-09-28T03:24:42+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "159-longest-substring-with-at-most-two-distinct-characters.py",
+          "code_sha256": "1757254732e6987531f1393e5f1f01d89aedec8fedbba6048ed92eff4dee3ca6",
+          "runtime": "176 ms",
+          "memory": "19.6 MB",
+          "leetcode_notes": "[ Time taken: 4hrs 28m 29s ]",
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-28T03:24:42+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "123-best-time-to-buy-and-sell-stock-iii": {
+      "leetcode_id": "123",
+      "slug": "best-time-to-buy-and-sell-stock-iii",
+      "title": "Best Time to Buy and Sell Stock III",
+      "difficulty": "Hard",
+      "tags": [
+        "Array",
+        "Dynamic Programming"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/",
+      "first_solved_at": "2026-09-28T04:36:02+00:00",
+      "last_solved_at": "2026-09-28T04:36:08+00:00",
+      "attempts": [
+        {
+          "submission_id": "2155551542",
+          "submitted_at": "2026-09-28T04:36:02+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "123-best-time-to-buy-and-sell-stock-iii.py",
+          "code_sha256": "8d9515381a2fa5fc07ee9c11cbe038526a103e286593fa1c9274adf69f76c756",
+          "runtime": "1779 ms",
+          "memory": "492.3 MB",
+          "leetcode_notes": "[ Time taken: 5hrs 17m 15s ]",
+          "raw_comments": [
+            "We own the stock, so we can sell it",
+            "we don't own the stock so we have to buy "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2155551641",
+          "submitted_at": "2026-09-28T04:36:08+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "123-best-time-to-buy-and-sell-stock-iii.py",
+          "code_sha256": "8d9515381a2fa5fc07ee9c11cbe038526a103e286593fa1c9274adf69f76c756",
+          "runtime": "1710 ms",
+          "memory": "491.5 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "We own the stock, so we can sell it",
+            "we don't own the stock so we have to buy "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-28T04:36:08+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "81-search-in-rotated-sorted-array-ii": {
+      "leetcode_id": "81",
+      "slug": "search-in-rotated-sorted-array-ii",
+      "title": "Search in Rotated Sorted Array II",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Binary Search"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/search-in-rotated-sorted-array-ii/",
+      "first_solved_at": "2026-09-28T20:37:39+00:00",
+      "last_solved_at": "2026-09-28T20:37:39+00:00",
+      "attempts": [
+        {
+          "submission_id": "2156441253",
+          "submitted_at": "2026-09-28T20:31:23+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "81-search-in-rotated-sorted-array-ii.py",
+          "code_sha256": "b1df28e75a4bb4ab394e351bfb851f8392cf761685130246c11b65a3e37c78fe",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "initial thoughts:",
+            "can we not store nums in a hashset to remove all the duplicates, since we only need to know whether or not the target is in the nums and not like how many or wtv",
+            "check if target is in the sorted half of the array"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2156442694",
+          "submitted_at": "2026-09-28T20:34:21+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "81-search-in-rotated-sorted-array-ii.py",
+          "code_sha256": "22423ee8b49c1ff84e53275c56aa2bda3571e7a7565aa92cdf68c157d7ae896c",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "initial thoughts:",
+            "can we not store nums in a hashset to remove all the duplicates, since we only need to know whether or not the target is in the nums and not like how many or wtv",
+            "check if target is in the sorted half of the array"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2156443459",
+          "submitted_at": "2026-09-28T20:35:57+00:00",
+          "status": "Runtime Error",
+          "language": "python3",
+          "code_path": "81-search-in-rotated-sorted-array-ii.py",
+          "code_sha256": "d93d877053c29b192581dba0babdd164e9ebef7757e40aa4f70567b4c4a7f596",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "initial thoughts:",
+            "can we not store nums in a hashset to remove all the duplicates, since we only need to know whether or not the target is in the nums and not like how many or wtv",
+            "check if target is in the sorted half of the array"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2156444238",
+          "submitted_at": "2026-09-28T20:37:39+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "81-search-in-rotated-sorted-array-ii.py",
+          "code_sha256": "132b732d11242fa2e0612bac1c888a4c51c995ac492ff23de1dceadccf374648",
+          "runtime": "0 ms",
+          "memory": "19.4 MB",
+          "leetcode_notes": "[ Time taken: 18hrs 30m 22s ]",
+          "raw_comments": [
+            "initial thoughts:",
+            "can we not store nums in a hashset to remove all the duplicates, since we only need to know whether or not the target is in the nums and not like how many or wtv",
+            "check if target is in the sorted half of the array"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-28T20:37:39+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "198-house-robber": {
+      "leetcode_id": "198",
+      "slug": "house-robber",
+      "title": "House Robber",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Dynamic Programming"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/house-robber/",
+      "first_solved_at": "2026-09-28T21:04:43+00:00",
+      "last_solved_at": "2026-09-28T21:05:16+00:00",
+      "attempts": [
+        {
+          "submission_id": "2156456140",
+          "submitted_at": "2026-09-28T21:04:43+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "198-house-robber.py",
+          "code_sha256": "88f76cc1a55a136052baa7701a349ccd77c0fb75c79b6b974f496e9be1f4dabc",
+          "runtime": "0 ms",
+          "memory": "19.2 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "option 1 we skip",
+            "option 2",
+            "TC: O(n)",
+            "SC: O(1)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "O(n)",
+            "space_complexity": "O(1)"
+          }
+        },
+        {
+          "submission_id": "2156456350",
+          "submitted_at": "2026-09-28T21:05:16+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "198-house-robber.py",
+          "code_sha256": "895a1e9a381caca0aaab62854c964c05ed2160b2d4d5092015a086b196f885a6",
+          "runtime": "0 ms",
+          "memory": "19.4 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "option 1 we skip",
+            "option 2",
+            "TC: O(n)",
+            "SC: O(n)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "O(n)",
+            "space_complexity": "O(n)"
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-28T21:05:16+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "2267-check-if-there-is-a-valid-parentheses-string-path": {
+      "leetcode_id": "2267",
+      "slug": "check-if-there-is-a-valid-parentheses-string-path",
+      "title": " Check if There Is a Valid Parentheses String Path",
+      "difficulty": "Hard",
+      "tags": [
+        "Array",
+        "Dynamic Programming",
+        "Matrix",
+        "Bracket Sequences"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/check-if-there-is-a-valid-parentheses-string-path/",
+      "first_solved_at": "2026-09-29T03:32:59+00:00",
+      "last_solved_at": "2026-09-29T03:32:59+00:00",
+      "attempts": [
+        {
+          "submission_id": "2156593265",
+          "submitted_at": "2026-09-29T03:27:06+00:00",
+          "status": "Runtime Error",
+          "language": "python3",
+          "code_path": "2267-check-if-there-is-a-valid-parentheses-string-path.py",
+          "code_sha256": "33064627456de6eee27409564bf5dedad66a9040cfa7757013c879f6e3293695",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thoughts:",
+            "we can create a valid parenthesis method that satisfies the conditions of the valid parenthesis",
+            "and then we can just go down or right with dp?",
+            "odd length can never be valid",
+            "the top cannot have a closing parenthesis and bottom cannot have a opening parenthesis",
+            "process the current cell",
+            "choice 1: if valid is less than 0 then we are invalid",
+            "to find the path we explore down adn right "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2156597362",
+          "submitted_at": "2026-09-29T03:32:59+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "2267-check-if-there-is-a-valid-parentheses-string-path.py",
+          "code_sha256": "e4a2844dd3754b823652c88b5a10ecbf351617aa95070be95928855c2d666673",
+          "runtime": "11 ms",
+          "memory": "30 MB",
+          "leetcode_notes": "[ Time taken: 22hrs 29m 11s ]",
+          "raw_comments": [
+            "thoughts:",
+            "we can create a valid parenthesis method that satisfies the conditions of the valid parenthesis",
+            "and then we can just go down or right with dp?",
+            "odd length can never be valid",
+            "the top cannot have a closing parenthesis and bottom cannot have a opening parenthesis",
+            "process the current cell",
+            "choice 1: if valid is less than 0 then we are invalid",
+            "to find the path we explore down adn right "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-29T03:32:59+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "97-interleaving-string": {
+      "leetcode_id": "97",
+      "slug": "interleaving-string",
+      "title": "Interleaving String",
+      "difficulty": "Medium",
+      "tags": [
+        "String",
+        "Dynamic Programming"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/interleaving-string/",
+      "first_solved_at": "2026-09-29T04:02:30+00:00",
+      "last_solved_at": "2026-09-29T04:02:30+00:00",
+      "attempts": [
+        {
+          "submission_id": "2156619876",
+          "submitted_at": "2026-09-29T04:02:30+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "97-interleaving-string.py",
+          "code_sha256": "b8fc56815e140b800afe17affd6ddcb2800a4c9cb099e601dacd4e0864ccd875",
+          "runtime": "11 ms",
+          "memory": "21.1 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thought: ",
+            "we could use dp, and then try all combinations, but since we're interleaving ",
+            "if we reached the length of s3, we have completed it ",
+            "we have two choices and we jsut need one two be valid"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-29T04:02:30+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "16-3sum-closest": {
+      "leetcode_id": "16",
+      "slug": "3sum-closest",
+      "title": "3Sum Closest",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Two Pointers",
+        "Sorting"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/3sum-closest/",
+      "first_solved_at": "2026-09-29T04:27:22+00:00",
+      "last_solved_at": "2026-09-29T04:27:22+00:00",
+      "attempts": [
+        {
+          "submission_id": "2156640237",
+          "submitted_at": "2026-09-29T04:25:50+00:00",
+          "status": "Runtime Error",
+          "language": "python3",
+          "code_path": "16-3sum-closest.py",
+          "code_sha256": "70b64fb281ab126c4ff932641ba97dfb7db3192c7873d417f81e89948e9de54a",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we can keep track of the min diff "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2156641673",
+          "submitted_at": "2026-09-29T04:27:22+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "16-3sum-closest.py",
+          "code_sha256": "8128754ee325ca61999b784943d2431cf725a4191f96aa3a9c7038ca370a5a0a",
+          "runtime": "372 ms",
+          "memory": "19.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we can keep track of the min diff "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-29T04:27:22+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "170-two-sum-iii-data-structure-design": {
+      "leetcode_id": "170",
+      "slug": "two-sum-iii-data-structure-design",
+      "title": "Two Sum III - Data structure design",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Two Pointers",
+        "Design",
+        "Data Stream"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/two-sum-iii-data-structure-design/",
+      "first_solved_at": "2026-09-29T21:34:18+00:00",
+      "last_solved_at": "2026-09-29T21:34:18+00:00",
+      "attempts": [
+        {
+          "submission_id": "2157589014",
+          "submitted_at": "2026-09-29T21:28:19+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "170-two-sum-iii-data-structure-design.py",
+          "code_sha256": "c1d53fdee4093b3b5992821d11e412b2d4adcd753ef7593142cb86da691fc236",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "Your TwoSum object will be instantiated and called as such:",
+            "obj = TwoSum()",
+            "obj.add(number)",
+            "param_2 = obj.find(value)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2157589354",
+          "submitted_at": "2026-09-29T21:29:13+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "170-two-sum-iii-data-structure-design.py",
+          "code_sha256": "4142f26a1c1fb915866b19c776db6eca8298cf5d0d39cea34c58598ff051c285",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "Your TwoSum object will be instantiated and called as such:",
+            "obj = TwoSum()",
+            "obj.add(number)",
+            "param_2 = obj.find(value)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2157589937",
+          "submitted_at": "2026-09-29T21:30:44+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "170-two-sum-iii-data-structure-design.py",
+          "code_sha256": "eee8fc709944bb7942f5c6e1fb44a5467f52b01e1df413ba560146813f9faed6",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "Your TwoSum object will be instantiated and called as such:",
+            "obj = TwoSum()",
+            "obj.add(number)",
+            "param_2 = obj.find(value)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2157591000",
+          "submitted_at": "2026-09-29T21:33:28+00:00",
+          "status": "Runtime Error",
+          "language": "python3",
+          "code_path": "170-two-sum-iii-data-structure-design.py",
+          "code_sha256": "4d125f75ca8447b849530c3238942918d61b878faa6187db26b06a60f74c622b",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "Your TwoSum object will be instantiated and called as such:",
+            "obj = TwoSum()",
+            "obj.add(number)",
+            "param_2 = obj.find(value)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2157591275",
+          "submitted_at": "2026-09-29T21:34:09+00:00",
+          "status": "Runtime Error",
+          "language": "python3",
+          "code_path": "170-two-sum-iii-data-structure-design.py",
+          "code_sha256": "bc2ddcf5159346c9b2df1e055755cd071a7be376cc9fd2ed9d2691b7bd3c2a24",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "Your TwoSum object will be instantiated and called as such:",
+            "obj = TwoSum()",
+            "obj.add(number)",
+            "param_2 = obj.find(value)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2157591332",
+          "submitted_at": "2026-09-29T21:34:18+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "170-two-sum-iii-data-structure-design.py",
+          "code_sha256": "297ce74f887c946a63405a46c0c9eb467179f5f91e548069da5c254682b7ea84",
+          "runtime": "195 ms",
+          "memory": "23.8 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "Your TwoSum object will be instantiated and called as such:",
+            "obj = TwoSum()",
+            "obj.add(number)",
+            "param_2 = obj.find(value)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-29T21:34:18+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "38-count-and-say": {
+      "leetcode_id": "38",
+      "slug": "count-and-say",
+      "title": "Count and Say",
+      "difficulty": "Medium",
+      "tags": [
+        "String"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/count-and-say/",
+      "first_solved_at": "2026-09-30T02:44:11+00:00",
+      "last_solved_at": "2026-09-30T02:44:58+00:00",
+      "attempts": [
+        {
+          "submission_id": "2157690922",
+          "submitted_at": "2026-09-30T02:44:11+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "38-count-and-say.py",
+          "code_sha256": "b10012305196312f3ba6602a44c736a4788fac42c7bc7e252ad9fb2ea18569d7",
+          "runtime": "8 ms",
+          "memory": "19.4 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thoughts:",
+            "we should just loop through up until the nunmber we are given",
+            "and then basically keep track of the length of the n-1 string ",
+            "and then continuously append it to the start ",
+            "we have a base case of 1 so we will always start at 1",
+            "our counter ",
+            "the first word ",
+            "make sure that while incrementing we are still less than the length and also the numbers are the same ",
+            "we append the count and also the actual number",
+            "TC: O(n)",
+            "SC: O(n) we store at most all the characters in the arr"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "O(n)",
+            "space_complexity": "O(n) we store at most all the characters in the arr"
+          }
+        },
+        {
+          "submission_id": "2157691201",
+          "submitted_at": "2026-09-30T02:44:52+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "38-count-and-say.py",
+          "code_sha256": "2a103a4b6645af3f40cc21540687667f7f43d8353d1aac383c30e51f4f58a1f3",
+          "runtime": "11 ms",
+          "memory": "19.5 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thoughts:",
+            "we should just loop through up until the nunmber we are given",
+            "and then basically keep track of the length of the n-1 string ",
+            "and then continuously append it to the start ",
+            "we have a base case of 1 so we will always start at 1",
+            "our counter ",
+            "the first word ",
+            "make sure that while incrementing we are still less than the length and also the numbers are the same ",
+            "we append the count and also the actual number",
+            "TC: O(2^N)",
+            "SC: O(2^N) we store at most all the characters in the arr"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "O(2^N)",
+            "space_complexity": "O(2^N) we store at most all the characters in the arr"
+          }
+        },
+        {
+          "submission_id": "2157691253",
+          "submitted_at": "2026-09-30T02:44:58+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "38-count-and-say.py",
+          "code_sha256": "6b9ae1132f5e325bc5c97f64e9fc0158461c61f35ed9b73761f0c04a92c33c05",
+          "runtime": "7 ms",
+          "memory": "19.4 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thoughts:",
+            "we should just loop through up until the nunmber we are given",
+            "and then basically keep track of the length of the n-1 string ",
+            "and then continuously append it to the start ",
+            "we have a base case of 1 so we will always start at 1",
+            "our counter ",
+            "the first word ",
+            "make sure that while incrementing we are still less than the length and also the numbers are the same ",
+            "we append the count and also the actual number",
+            "TC: O(2^N)",
+            "SC: O(2^N) "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "O(2^N)",
+            "space_complexity": "O(2^N)"
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-30T02:44:58+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "792-number-of-matching-subsequences": {
+      "leetcode_id": "792",
+      "slug": "number-of-matching-subsequences",
+      "title": "Number of Matching Subsequences",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String",
+        "Binary Search",
+        "Dynamic Programming",
+        "Trie",
+        "Sorting"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/number-of-matching-subsequences/",
+      "first_solved_at": "2026-09-30T03:24:54+00:00",
+      "last_solved_at": "2026-09-30T03:33:15+00:00",
+      "attempts": [
+        {
+          "submission_id": "2157711689",
+          "submitted_at": "2026-09-30T03:24:54+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "792-number-of-matching-subsequences.py",
+          "code_sha256": "88dda94e59246211dc21fc6d8ac77b8f4db61160c5268b4f1ee96883cbc9c39b",
+          "runtime": "111 ms",
+          "memory": "20.9 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thoughts: ",
+            "since order matters we need to somehow keep track of the relative order of the words, I don't think we necessarily have to like delete something e.g. for ace as long as we know that pos[a] < pos[c] < pos[e], we are guaranteed to have \"ace\" as a subsequence because we can just delete whatever is inbetween them to get it",
+            ""
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2157712499",
+          "submitted_at": "2026-09-30T03:26:19+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "792-number-of-matching-subsequences.py",
+          "code_sha256": "88dda94e59246211dc21fc6d8ac77b8f4db61160c5268b4f1ee96883cbc9c39b",
+          "runtime": "99 ms",
+          "memory": "20.9 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thoughts: ",
+            "since order matters we need to somehow keep track of the relative order of the words, I don't think we necessarily have to like delete something e.g. for ace as long as we know that pos[a] < pos[c] < pos[e], we are guaranteed to have \"ace\" as a subsequence because we can just delete whatever is inbetween them to get it",
+            ""
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2157716531",
+          "submitted_at": "2026-09-30T03:33:15+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "792-number-of-matching-subsequences.py",
+          "code_sha256": "4e6de269b126c1848f4badd5c454e275278caa3f5542b089890713ff0b3bd3ca",
+          "runtime": "224 ms",
+          "memory": "21.9 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thoughts: ",
+            "since order matters we need to somehow keep track of the relative order of the words, I don't think we necessarily have to like delete something e.g. for ace as long as we know that pos[a] < pos[c] < pos[e], we are guaranteed to have \"ace\" as a subsequence because we can just delete whatever is inbetween them to get it",
+            "",
+            "take out all words currently waiting for this char",
+            "remove the matched character",
+            "now this word waits for its next character"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-09-30T03:33:15+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "271-encode-and-decode-strings": {
+      "leetcode_id": "271",
+      "slug": "encode-and-decode-strings",
+      "title": "Encode and Decode Strings",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "String",
+        "Design"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/encode-and-decode-strings/",
+      "first_solved_at": "2026-10-01T01:41:51+00:00",
+      "last_solved_at": "2026-10-01T01:41:51+00:00",
+      "attempts": [
+        {
+          "submission_id": "2158684661",
+          "submitted_at": "2026-10-01T01:41:51+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "271-encode-and-decode-strings.py",
+          "code_sha256": "e5e5c96a14d33eabaaf4e8b86ce94ea1b53d104e8f692fda8e64893a4983c685",
+          "runtime": "73 ms",
+          "memory": "19.6 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "Encodes a list of strings to a single string.\n        ",
+            "Decodes a single string to a list of strings.\n        ",
+            "to decode, we can use a pointer and go through and when we get to the length and delimiter we can just add it to our list",
+            "we keep another pointer to find the delimiter",
+            "extract the length",
+            "move our initial pointer past the delimiter",
+            "Your Codec object will be instantiated and called as such:",
+            "codec = Codec()",
+            "codec.decode(codec.encode(strs))"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-01T01:41:51+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "359-logger-rate-limiter": {
+      "leetcode_id": "359",
+      "slug": "logger-rate-limiter",
+      "title": "Logger Rate Limiter",
+      "difficulty": "Easy",
+      "tags": [
+        "Hash Table",
+        "Design",
+        "Data Stream"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/logger-rate-limiter/",
+      "first_solved_at": "2026-10-01T01:49:40+00:00",
+      "last_solved_at": "2026-10-01T01:49:40+00:00",
+      "attempts": [
+        {
+          "submission_id": "2158687746",
+          "submitted_at": "2026-10-01T01:49:40+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "359-logger-rate-limiter.py",
+          "code_sha256": "b700285b9fd8ad7c49623890246bd604e516d9a46044e6dd55620fc76a5de099",
+          "runtime": "8 ms",
+          "memory": "26.1 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "Your Logger object will be instantiated and called as such:",
+            "obj = Logger()",
+            "param_1 = obj.shouldPrintMessage(timestamp,message)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-01T01:49:40+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "362-design-hit-counter": {
+      "leetcode_id": "362",
+      "slug": "design-hit-counter",
+      "title": "Design Hit Counter",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Binary Search",
+        "Design",
+        "Queue",
+        "Data Stream"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/design-hit-counter/",
+      "first_solved_at": "2026-10-01T02:13:07+00:00",
+      "last_solved_at": "2026-10-01T02:18:29+00:00",
+      "attempts": [
+        {
+          "submission_id": "2158697323",
+          "submitted_at": "2026-10-01T02:13:07+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "362-design-hit-counter.py",
+          "code_sha256": "8b554ddba6b0e3dd46da1d6dadfad25b78ff96f74b92eb41b6cb4a14cd4dcaf1",
+          "runtime": "0 ms",
+          "memory": "19.5 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "for get hits, we return the sum of the first 300 seconds, but we have to decrement by one each time it is greater than 300",
+            "only count hits within the last 300 seconds",
+            "Your HitCounter object will be instantiated and called as such:",
+            "obj = HitCounter()",
+            "obj.hit(timestamp)",
+            "param_2 = obj.getHits(timestamp)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2158699637",
+          "submitted_at": "2026-10-01T02:18:29+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "362-design-hit-counter.py",
+          "code_sha256": "7d6911ad78d2cb93d5562d785d5825947f6b1cc72250af7d3a468f2865700ad0",
+          "runtime": "3 ms",
+          "memory": "19.1 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we can use a double ended queue and essentially append the timestamp of when a hit happens, and then when we gethits, we can pop the end first value if it is past 300",
+            "Your HitCounter object will be instantiated and called as such:",
+            "obj = HitCounter()",
+            "obj.hit(timestamp)",
+            "param_2 = obj.getHits(timestamp)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-01T02:18:29+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "216-combination-sum-iii": {
+      "leetcode_id": "216",
+      "slug": "combination-sum-iii",
+      "title": "Combination Sum III",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Backtracking"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/combination-sum-iii/",
+      "first_solved_at": "2026-10-01T04:14:41+00:00",
+      "last_solved_at": "2026-10-01T04:14:41+00:00",
+      "attempts": [
+        {
+          "submission_id": "2158771364",
+          "submitted_at": "2026-10-01T04:14:36+00:00",
+          "status": "Runtime Error",
+          "language": "python3",
+          "code_path": "216-combination-sum-iii.py",
+          "code_sha256": "d766944646ce677df81a40fab3df4d249a500b6a9a9c8e5980dbe75bd69ef251",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "since we are finding all possible valid combinations, and we do not repeat, we can use backtracking for this",
+            "we can keep track of the used by keeping a hashset and if the value is in there we continue",
+            "if the sum is larger or the length of our path is larger than k we return",
+            "go through the decision tree"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2158771439",
+          "submitted_at": "2026-10-01T04:14:41+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "216-combination-sum-iii.py",
+          "code_sha256": "8fa100d8a438e8e06039ba8984bbfee343d2f05584df83de9bcc64e3c324ae4b",
+          "runtime": "0 ms",
+          "memory": "19.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "since we are finding all possible valid combinations, and we do not repeat, we can use backtracking for this",
+            "we can keep track of the used by keeping a hashset and if the value is in there we continue",
+            "if the sum is larger or the length of our path is larger than k we return",
+            "go through the decision tree"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-01T04:14:41+00:00",
         "reps": 0,
         "lapses": 0
       }
