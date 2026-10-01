@@ -247,8 +247,11 @@ def run_sync(config: Config, headless: bool, no_push: bool) -> int:
             git_utils.stage(root, SYNC_PATHS + solution_paths)
             if not git_utils.has_staged_changes(root):
                 continue
-            title = group[0]["title"]
-            git_utils.commit(root, f"leetcode: {title}")
+            problem = group[0]
+            solution_name = tracker.solution_path(
+                problem["frontend_id"], problem["slug"], problem["language"]
+            ).name
+            git_utils.commit(root, f"solved: {solution_name}")
         if config.auto_push and not no_push:
             if not git_utils.has_upstream(root):
                 print("error: auto-push is enabled but this branch has no upstream; local commits kept",
