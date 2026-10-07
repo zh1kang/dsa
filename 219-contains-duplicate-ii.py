@@ -51,3 +51,18 @@ class Solution:
        
 
             
+
+# submission 2163709089 - 2026-10-06T02:28:03+00:00
+class Solution:
+    def containsNearbyDuplicate(self, nums: list[int], k: int) -> bool:
+
+            
+        seen = {}
+        for i, num in enumerate(nums):
+            if num in seen and i - seen[num] <= k:
+                return True
+
+            seen[num] = i
+
+        return False 
+        
