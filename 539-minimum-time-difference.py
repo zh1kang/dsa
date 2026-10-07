@@ -116,3 +116,96 @@ class Solution:
         return min_diff
 
 
+
+# submission 2163650232 - 2026-10-05T23:51:12+00:00
+class Solution:
+    def findMinDifference(self, timePoints: list[str]) -> int:
+
+        hr_to_min = [int(h) * 60 + int(m) for time_str in timePoints for h, m in [time_str.split(':')]]
+
+        hr_to_min.sort()
+
+        min_diff = float('inf')
+
+        for i in range(len(hr_to_min) - 1):
+            diff = hr_to_min[i + 1] - hr_to_min[i]
+
+            if diff < min_diff:
+                min_diff = diff 
+
+        # we have to check for the wrap around 
+        wrap_around = ((1440 - hr_to_min[-1]) - hr_to_min[0])
+
+        if wrap_around < min_diff:
+            min_diff = wrap_around
+
+        return min_diff 
+
+# submission 2163650354 - 2026-10-05T23:51:39+00:00
+class Solution:
+    def findMinDifference(self, timePoints: list[str]) -> int:
+
+        hr_to_min = [int(h) * 60 + int(m) for time_str in timePoints for h, m in [time_str.split(':')]]
+
+        hr_to_min.sort()
+
+        min_diff = float('inf')
+
+        for i in range(len(hr_to_min) - 1):
+            diff = hr_to_min[i + 1] - hr_to_min[i]
+
+            if diff < min_diff:
+                min_diff = diff 
+
+        # we have to check for the wrap around 
+        wrap_around = ((1440 - hr_to_min[-1]) - hr_to_min[0])
+        if wrap_around > 0 and wrap_around < min_diff:
+            min_diff = wrap_around
+
+        return min_diff 
+
+# submission 2163650635 - 2026-10-05T23:52:38+00:00
+class Solution:
+    def findMinDifference(self, timePoints: list[str]) -> int:
+
+        hr_to_min = [int(h) * 60 + int(m) for time_str in timePoints for h, m in [time_str.split(':')]]
+
+        hr_to_min.sort()
+
+        min_diff = float('inf')
+
+        for i in range(len(hr_to_min) - 1):
+            diff = hr_to_min[i + 1] - hr_to_min[i]
+
+            if diff < min_diff:
+                min_diff = diff 
+
+        # we have to check for the wrap around 
+        wrap_around = ((1440 - hr_to_min[-1]) + hr_to_min[0])
+        if wrap_around > 0 and wrap_around < min_diff:
+            min_diff = wrap_around
+
+        return min_diff 
+
+# submission 2163650770 - 2026-10-05T23:53:10+00:00
+class Solution:
+    def findMinDifference(self, timePoints: list[str]) -> int:
+
+        hr_to_min = [int(h) * 60 + int(m) for time_str in timePoints for h, m in [time_str.split(':')]]
+
+        hr_to_min.sort()
+
+        min_diff = float('inf')
+
+        for i in range(len(hr_to_min) - 1):
+            diff = hr_to_min[i + 1] - hr_to_min[i]
+
+            if diff < min_diff:
+                min_diff = diff 
+
+        # we have to check for the wrap around 
+        wrap_around = ((1440 - hr_to_min[-1]) + hr_to_min[0])
+        if wrap_around < min_diff:
+            min_diff = wrap_around
+
+        return min_diff 
