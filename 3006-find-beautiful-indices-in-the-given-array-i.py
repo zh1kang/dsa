@@ -213,3 +213,79 @@ class Solution:
             
 
        
+
+# submission 2163678800 - 2026-10-06T01:16:02+00:00
+class Solution:
+    def beautifulIndices(self, s: str, a: str, b: str, k: int) -> List[int]:
+        # we can use .find() for both strings a and b on s,
+        # and then store all occurances of these substrings in an array
+        # after, we can pseudo binary search for the beautiful indicies given the requirements since we have a sorted index list of a and b occurances in s
+
+
+        # finding all occurances of substring a 
+        idx_a = []
+        i = s.find(a)
+        while i != -1:
+            idx_a.append(i)
+            i = s.find(a, i + 1)
+
+        # finding all occurances of substring b 
+        idx_b = []
+        j = s.find(b)
+        while j != -1:
+            idx_b.append(j)
+            j = s.find(b, j + 1)
+
+
+        # now, we can binary search on the indicies that we found of the substring
+        res = []
+        ptr_b = 0
+        for i in idx_a:
+            # first condition, check if it is in range and satisifes |j - i| <= k
+            while ptr_b < len(idx_b) and idx_b[ptr_b] < i - k:
+                ptr_b += 1
+
+            # second condition:
+            if ptr_b < len(idx_b) and abs(idx_b[ptr_b] - i) <= k:
+                res.append(i)
+
+        return res 
+            
+
+# submission 2163679478 - 2026-10-06T01:17:53+00:00
+class Solution:
+    def beautifulIndices(self, s: str, a: str, b: str, k: int) -> List[int]:
+        # we can use .find() for both strings a and b on s,
+        # and then store all occurances of these substrings in an array
+        # after, we can pseudo binary search for the beautiful indicies given the requirements since we have a sorted index list of a and b occurances in s
+
+
+        # finding all occurances of substring a 
+        idx_a = []
+        i = s.find(a)
+        while i != -1:
+            idx_a.append(i)
+            i = s.find(a, i + 1)
+
+        # finding all occurances of substring b 
+        idx_b = []
+        j = s.find(b)
+        while j != -1:
+            idx_b.append(j)
+            j = s.find(b, j + 1)
+
+
+        # now, we can binary search on the indicies that we found of the substring
+        res = []
+        ptr_b = 0
+        for i in idx_a:
+            # first condition, check if it is in range and satisifes |j - i| <= k
+            while ptr_b < len(idx_b) and idx_b[ptr_b] < i - k:
+                ptr_b += 1
+
+            # second condition:
+            if ptr_b < len(idx_b) and abs(idx_b[ptr_b] - i) <= k:
+                res.append(i)
+
+        return res 
+            
