@@ -43,3 +43,39 @@ class Solution:
 
         
         
+
+# submission 2159722187 - 2026-10-02T02:55:57+00:00
+class Solution:
+    def generateParenthesis(self, n: int) -> list[str]:
+
+        # thoughts: 
+        # we keep track of how many open parenthesis we append, if we append two in a row then we need to appen the same amount of closing parenthesis
+        # we can not start with a close parenthesis
+        #
+
+        res = []
+
+        def backtrack(path, open_p, close_p):
+            # if we reach the number of pairs
+            if open_p == close_p == n:
+                res.append("".join(path))
+                return 
+            
+            # check if open_p is less than the number of pairs:
+            if open_p < n:
+                path.append("(")
+                backtrack(path, open_p + 1, close_p)
+                path.pop()
+            # if the amount of closing parenthesis is less than open parenthesis we append the closing ones 
+            if close_p < open_p:
+                path.append(")")
+                backtrack(path, open_p, close_p + 1)
+                path.pop()
+        
+        
+        backtrack([], 0, 0)
+        return res 
+
+
+
+        
