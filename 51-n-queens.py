@@ -45,3 +45,53 @@ class Solution:
 
 
         
+
+# submission 2160300796 - 2026-10-02T15:48:20+00:00
+class Solution:
+    def solveNQueens(self, n: int) -> list[list[str]]:
+        # for each queen, they msut be in a distinct row and column,
+        # which means we have to keep track of the positive and negative diagonal because they can traverse those as well, including the rows and columns (their current) position themselves.
+        # we can find all solutions by backtracking 
+        
+        res = []
+        board = [['.'] * n for _ in range(n)]
+        pos_diag = set() # (row + col)
+        neg_diag = set() # (row - col)
+        col = set() 
+
+        def backtrack(r):
+            # if we reach the end, we copy the entire board
+            if r == n:
+                copy = ["".join(row) for row in board]
+                res.append(copy)
+                return
+
+            for c in range(n):
+                if c in col or (r + c) in pos_diag or (r-c) in neg_diag:
+                    continue
+
+                # place the queen
+                board[r][c] = 'Q'
+                col.add(c)
+                pos_diag.add(r+c)
+                neg_diag.add(r-c)
+
+                # explore next row
+                backtrack(r + 1)
+
+                # undo
+                board[r][c] = '.'
+                col.remove(c)
+                pos_diag.remove(r+c)
+                neg_diag.remove(r-c)
+
+
+        backtrack(0)
+        return res 
+
+                
+
+        
+
+        
+        
