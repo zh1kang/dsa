@@ -271,7 +271,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/insert-interval/",
       "first_solved_at": "2025-08-25T22:02:00+00:00",
-      "last_solved_at": "2025-08-25T22:02:00+00:00",
+      "last_solved_at": "2026-10-05T22:06:27+00:00",
       "attempts": [
         {
           "submission_id": "1748288818",
@@ -298,6 +298,35 @@
             "space_complexity": ""
           },
           "code_sha256": "97061eefd19a4360f259f979dfdd5776f65873f77ae484123ac20490868da7f4"
+        },
+        {
+          "submission_id": "2163621540",
+          "submitted_at": "2026-10-05T22:06:27+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "57-insert-interval.py",
+          "code_sha256": "efb45c338a69b8e34e24f727d693d9edfaefa2e51311f3e8e7b98a752c6912e1",
+          "runtime": "0 ms",
+          "memory": "21.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thoughts: ",
+            "since the intervals is sorted in ascending order by start,",
+            "we can use bisect to search the interval ",
+            "once we find the place where we can isnert, we take the maximum end of the current interval and new interval",
+            "merge overlapping intervals",
+            "if res is empty or no overlap append"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -306,7 +335,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": null,
+        "next_review": "2026-10-05T22:06:27+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -5377,7 +5406,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/merge-k-sorted-lists/",
       "first_solved_at": "2026-02-01T22:47:56+00:00",
-      "last_solved_at": "2026-02-01T22:47:56+00:00",
+      "last_solved_at": "2026-10-05T23:22:25+00:00",
       "attempts": [
         {
           "submission_id": "1904855367",
@@ -5406,6 +5435,36 @@
             "space_complexity": ""
           },
           "code_sha256": "10b1c0e32248ebcbca9599f9638274a68762a63f049b0ce4c2caa7f8d9550f9b"
+        },
+        {
+          "submission_id": "2163642685",
+          "submitted_at": "2026-10-05T23:22:25+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "23-merge-k-sorted-lists.py",
+          "code_sha256": "2c2532de4a325903138a470684d697282ed67853fe88d44f8e1c07b180199201",
+          "runtime": "11 ms",
+          "memory": "23 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "Definition for singly-linked list.",
+            "class ListNode:",
+            "    def __init__(self, val=0, next=None):",
+            "        self.val = val",
+            "        self.next = next",
+            "you can just use a minheap, append all the nodes and then just pop them top down i think and then just like convert it back to a linked list ",
+            "push everything onto the min heap"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -5414,7 +5473,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": null,
+        "next_review": "2026-10-05T23:22:25+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -6611,7 +6670,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/n-queens/",
       "first_solved_at": "2026-07-31T13:11:20+00:00",
-      "last_solved_at": "2026-07-31T13:11:20+00:00",
+      "last_solved_at": "2026-10-02T15:48:20+00:00",
       "attempts": [
         {
           "submission_id": "2088823624",
@@ -6643,6 +6702,38 @@
             "space_complexity": ""
           },
           "code_sha256": "f76db043c71c5ad2ea8f9561a180c3bf0a26d93c1c5f0a6d0e2634c30a4974ac"
+        },
+        {
+          "submission_id": "2160300796",
+          "submitted_at": "2026-10-02T15:48:20+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "51-n-queens.py",
+          "code_sha256": "611b1e666c145d3fbe7e591999327e54c78878a407afe510404626c78e8a96e1",
+          "runtime": "10 ms",
+          "memory": "19.8 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "for each queen, they msut be in a distinct row and column,",
+            "which means we have to keep track of the positive and negative diagonal because they can traverse those as well, including the rows and columns (their current) position themselves.",
+            "we can find all solutions by backtracking ",
+            "(row + col)",
+            "(row - col)",
+            "if we reach the end, we copy the entire board",
+            "place the queen",
+            "explore next row",
+            "undo"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -6651,7 +6742,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": null,
+        "next_review": "2026-10-02T15:48:20+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -7827,7 +7918,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/contains-duplicate/",
       "first_solved_at": "2026-08-04T14:07:08+00:00",
-      "last_solved_at": "2026-09-22T00:24:44+00:00",
+      "last_solved_at": "2026-10-06T01:18:46+00:00",
       "attempts": [
         {
           "submission_id": "2094084419",
@@ -7872,6 +7963,28 @@
             "time_complexity": "",
             "space_complexity": ""
           }
+        },
+        {
+          "submission_id": "2163679833",
+          "submitted_at": "2026-10-06T01:18:46+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "217-contains-duplicate.py",
+          "code_sha256": "c6fc6759fbc079076a3ef21296b81fa2ed35f4c784c6967a72330fb77c8f2805",
+          "runtime": "23 ms",
+          "memory": "32.2 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -7880,7 +7993,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": "2026-09-22T00:24:44+00:00",
+        "next_review": "2026-10-06T01:18:46+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -8788,7 +8901,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/accounts-merge/",
       "first_solved_at": "2026-08-12T14:26:04+00:00",
-      "last_solved_at": "2026-08-12T14:26:04+00:00",
+      "last_solved_at": "2026-10-06T16:53:33+00:00",
       "attempts": [
         {
           "submission_id": "2104294714",
@@ -8818,6 +8931,113 @@
             "space_complexity": ""
           },
           "code_sha256": "d142904582c3d502ab4067e8efeeb92ad2ff97b49b8d498768098abb8b05bb5c"
+        },
+        {
+          "submission_id": "2164471623",
+          "submitted_at": "2026-10-06T16:40:15+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "721-accounts-merge.py",
+          "code_sha256": "92e99e257766f5bc80e2c5d11f9727a91200d0ea32f6348ed996bcbf4f0cb08a",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "since there can be multiple people of the same names, we can find the common email and then create an adj list that connects this common email with the other emails, if the two users have the same name and they dont share this common email, we know it is a different person and we can return a seperate instance"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2164479134",
+          "submitted_at": "2026-10-06T16:46:15+00:00",
+          "status": "Runtime Error",
+          "language": "python3",
+          "code_path": "721-accounts-merge.py",
+          "code_sha256": "b37121ed46962d0684dbbde9df346a197b225999a2a45028dd3fde867a715fb9",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "since there can be multiple people of the same names, we can find the common email and then create an adj list that connects this common email with the other emails, if the two users have the same name and they dont share this common email, we know it is a different person and we can return a seperate instance",
+            "we can have a hash map that stores all of these common emails that are linked to the name ",
+            "undirected graph",
+            "then, we traverse through this adj list and merge the common accounts"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2164486197",
+          "submitted_at": "2026-10-06T16:51:34+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "721-accounts-merge.py",
+          "code_sha256": "e7510a51b101f5096bd8b129b3a69e4ef060cdbce7b383f925ca9b3d8c29fb5a",
+          "runtime": "31 ms",
+          "memory": "26.7 MB",
+          "leetcode_notes": "[ Time taken: 7hrs 31m 52s ]",
+          "raw_comments": [
+            "since there can be multiple people of the same names, we can find the common email and then create an adj list that connects this common email with the other emails, if the two users have the same name and they dont share this common email, we know it is a different person and we can return a seperate instance",
+            "we can have a hash map that stores all of these common emails that are linked to the name ",
+            "undirected graph",
+            "then, we traverse through this adj list and merge the common accounts"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2164488711",
+          "submitted_at": "2026-10-06T16:53:33+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "721-accounts-merge.py",
+          "code_sha256": "cdcf3d7eb92f195bba578e4f399b32e53addc2f6f87f00211e31ab0d34c70499",
+          "runtime": "28 ms",
+          "memory": "26.8 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "since there can be multiple people of the same names, we can find the common email and then create an adj list that connects this common email with the other emails, if the two users have the same name and they dont share this common email, we know it is a different person and we can return a seperate instance",
+            "we can have a hash map that stores all of these common emails that are linked to the name ",
+            "undirected graph",
+            "then, we traverse through this adj list and merge the common accounts",
+            "TC: O(V + E)",
+            "SC: O(V + E)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "O(V + E)",
+            "space_complexity": "O(V + E)"
+          }
         }
       ],
       "review": {
@@ -8826,7 +9046,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": null,
+        "next_review": "2026-10-06T16:53:33+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -9518,7 +9738,7 @@
         "state": "review",
         "stability": 1.2931,
         "difficulty": 5.112170705601056,
-        "retrievability": 0.6050112529429635,
+        "retrievability": 0.6023376326934118,
         "last_review": "2026-09-02T18:59:57.341203+00:00",
         "next_review": "2026-09-03T18:59:57.341203+00:00",
         "reps": 1,
@@ -10355,7 +10575,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/generate-parentheses/",
       "first_solved_at": "2026-09-04T15:04:46+00:00",
-      "last_solved_at": "2026-09-04T15:04:46+00:00",
+      "last_solved_at": "2026-10-02T02:55:57+00:00",
       "attempts": [
         {
           "submission_id": "2130825809",
@@ -10393,6 +10613,36 @@
             "time_complexity": "",
             "space_complexity": ""
           }
+        },
+        {
+          "submission_id": "2159722187",
+          "submitted_at": "2026-10-02T02:55:57+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "22-generate-parentheses.py",
+          "code_sha256": "83e2f975a5aac8aa575fd97f11440beb38af212bba42b4036bf13519b13e8be8",
+          "runtime": "3 ms",
+          "memory": "19.4 MB",
+          "leetcode_notes": "[ Time taken: 1d 20hrs 26m 0s ]",
+          "raw_comments": [
+            "thoughts: ",
+            "we keep track of how many open parenthesis we append, if we append two in a row then we need to appen the same amount of closing parenthesis",
+            "we can not start with a close parenthesis",
+            "",
+            "if we reach the number of pairs",
+            "check if open_p is less than the number of pairs:",
+            "if the amount of closing parenthesis is less than open parenthesis we append the closing ones "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -10401,7 +10651,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": "2026-09-04T15:04:46+00:00",
+        "next_review": "2026-10-02T02:55:57+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -12507,7 +12757,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/find-beautiful-indices-in-the-given-array-i/",
       "first_solved_at": "2026-09-19T15:19:00+00:00",
-      "last_solved_at": "2026-09-21T23:41:52+00:00",
+      "last_solved_at": "2026-10-06T01:17:53+00:00",
       "attempts": [
         {
           "submission_id": "2146770196",
@@ -12662,6 +12912,68 @@
             "time_complexity": "",
             "space_complexity": ""
           }
+        },
+        {
+          "submission_id": "2163678800",
+          "submitted_at": "2026-10-06T01:16:02+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "3006-find-beautiful-indices-in-the-given-array-i.py",
+          "code_sha256": "83d14bb3a0fc75244c0e351174484862d5e3569d29461300433e2664b119b758",
+          "runtime": "36 ms",
+          "memory": "23.5 MB",
+          "leetcode_notes": "[ Time taken: 17m 3s ]",
+          "raw_comments": [
+            "we can use .find() for both strings a and b on s,",
+            "and then store all occurances of these substrings in an array",
+            "after, we can pseudo binary search for the beautiful indicies given the requirements since we have a sorted index list of a and b occurances in s",
+            "finding all occurances of substring a ",
+            "finding all occurances of substring b ",
+            "now, we can binary search on the indicies that we found of the substring",
+            "first condition, check if it is in range and satisifes |j - i| <= k",
+            "second condition:"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2163679478",
+          "submitted_at": "2026-10-06T01:17:53+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "3006-find-beautiful-indices-in-the-given-array-i.py",
+          "code_sha256": "83d14bb3a0fc75244c0e351174484862d5e3569d29461300433e2664b119b758",
+          "runtime": "35 ms",
+          "memory": "23.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we can use .find() for both strings a and b on s,",
+            "and then store all occurances of these substrings in an array",
+            "after, we can pseudo binary search for the beautiful indicies given the requirements since we have a sorted index list of a and b occurances in s",
+            "finding all occurances of substring a ",
+            "finding all occurances of substring b ",
+            "now, we can binary search on the indicies that we found of the substring",
+            "first condition, check if it is in range and satisifes |j - i| <= k",
+            "second condition:"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -12670,7 +12982,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": "2026-09-21T23:41:52+00:00",
+        "next_review": "2026-10-06T01:17:53+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -12816,7 +13128,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/minimum-time-difference/",
       "first_solved_at": "2026-09-19T20:07:35+00:00",
-      "last_solved_at": "2026-09-21T23:52:11+00:00",
+      "last_solved_at": "2026-10-05T23:53:10+00:00",
       "attempts": [
         {
           "submission_id": "2147016868",
@@ -12927,6 +13239,102 @@
             "time_complexity": "",
             "space_complexity": ""
           }
+        },
+        {
+          "submission_id": "2163650232",
+          "submitted_at": "2026-10-05T23:51:12+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "539-minimum-time-difference.py",
+          "code_sha256": "a690f234ee7a9efffad7db96ab65bb9c2cceffff9528c01b1fcafe9b8b5da77f",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we have to check for the wrap around "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2163650354",
+          "submitted_at": "2026-10-05T23:51:39+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "539-minimum-time-difference.py",
+          "code_sha256": "511bccbbfcc25bbfd90a0ba3f65636a3001da8b0f14940b5088fa7b310b61824",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we have to check for the wrap around "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2163650635",
+          "submitted_at": "2026-10-05T23:52:38+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "539-minimum-time-difference.py",
+          "code_sha256": "719ba7aa163777cdf425764dec074b922e98fa0a72cfdf855dda1d6ed68c07ba",
+          "runtime": "11 ms",
+          "memory": "21.2 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we have to check for the wrap around "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2163650770",
+          "submitted_at": "2026-10-05T23:53:10+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "539-minimum-time-difference.py",
+          "code_sha256": "a087a4b4b9ba63e1e527701571e1f04ad477aae0fafb1df2d952f04dc8f0203e",
+          "runtime": "3 ms",
+          "memory": "21.1 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we have to check for the wrap around "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -12935,7 +13343,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": "2026-09-21T23:52:11+00:00",
+        "next_review": "2026-10-05T23:53:10+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -12952,7 +13360,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/contains-duplicate-ii/",
       "first_solved_at": "2026-09-19T20:16:55+00:00",
-      "last_solved_at": "2026-09-21T23:55:58+00:00",
+      "last_solved_at": "2026-10-06T02:28:03+00:00",
       "attempts": [
         {
           "submission_id": "2147022411",
@@ -13022,6 +13430,28 @@
             "time_complexity": "",
             "space_complexity": ""
           }
+        },
+        {
+          "submission_id": "2163709089",
+          "submitted_at": "2026-10-06T02:28:03+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "219-contains-duplicate-ii.py",
+          "code_sha256": "295b1a9e3ab801c116ed471985820e9087cc4700660c5a82204d9ae0ba339379",
+          "runtime": "48 ms",
+          "memory": "39.2 MB",
+          "leetcode_notes": "[ Time taken: 23m 27s ]",
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -13030,7 +13460,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": "2026-09-21T23:55:58+00:00",
+        "next_review": "2026-10-06T02:28:03+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -14584,7 +15014,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/longest-valid-parentheses/",
       "first_solved_at": "2026-09-27T23:09:39+00:00",
-      "last_solved_at": "2026-09-27T23:09:39+00:00",
+      "last_solved_at": "2026-10-03T03:15:54+00:00",
       "attempts": [
         {
           "submission_id": "2155409028",
@@ -14607,6 +15037,28 @@
             "time_complexity": "",
             "space_complexity": ""
           }
+        },
+        {
+          "submission_id": "2160662303",
+          "submitted_at": "2026-10-03T03:15:54+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "32-longest-valid-parentheses.py",
+          "code_sha256": "f24f9c66abe1a5c52c849f01870ecd7d4f3083ea965fbb8e2426de2f4fb582cb",
+          "runtime": "11 ms",
+          "memory": "20.5 MB",
+          "leetcode_notes": "[ Time taken: 2d 7hrs 0m 30s ]",
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -14615,7 +15067,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": "2026-09-27T23:09:39+00:00",
+        "next_review": "2026-10-03T03:15:54+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -16334,6 +16786,1799 @@
         "retrievability": null,
         "last_review": null,
         "next_review": "2026-10-01T04:14:41+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "50-powx-n": {
+      "leetcode_id": "50",
+      "slug": "powx-n",
+      "title": "Pow(x, n)",
+      "difficulty": "Medium",
+      "tags": [
+        "Math",
+        "Recursion"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/powx-n/",
+      "first_solved_at": "2026-10-02T03:27:35+00:00",
+      "last_solved_at": "2026-10-02T03:29:31+00:00",
+      "attempts": [
+        {
+          "submission_id": "2159730692",
+          "submitted_at": "2026-10-02T03:17:15+00:00",
+          "status": "Runtime Error",
+          "language": "python3",
+          "code_path": "50-powx-n.py",
+          "code_sha256": "5a266078def917e9e51c47d2cb7cc16394991a56110940f353e9e890e3b83af7",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "1. turn n to a binary representation of itself"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2159732989",
+          "submitted_at": "2026-10-02T03:22:45+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "50-powx-n.py",
+          "code_sha256": "8fa78edf9cc733ce59de522666dc71f78732fbc7e321562e6b609535f54440eb",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2159733293",
+          "submitted_at": "2026-10-02T03:23:33+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "50-powx-n.py",
+          "code_sha256": "8fa78edf9cc733ce59de522666dc71f78732fbc7e321562e6b609535f54440eb",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2159735006",
+          "submitted_at": "2026-10-02T03:27:35+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "50-powx-n.py",
+          "code_sha256": "693e81cbc637450cd8547e5ea7a1d12fb804a6c49a6457a589182f94ecc9996b",
+          "runtime": "0 ms",
+          "memory": "19.7 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2159735873",
+          "submitted_at": "2026-10-02T03:29:25+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "50-powx-n.py",
+          "code_sha256": "dd43a96a6353f8c7abfed4e326cd3ff7e8d1ad3b0cc8d217da14077a2301b721",
+          "runtime": "1 ms",
+          "memory": "19.4 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2159735910",
+          "submitted_at": "2026-10-02T03:29:31+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "50-powx-n.py",
+          "code_sha256": "dd43a96a6353f8c7abfed4e326cd3ff7e8d1ad3b0cc8d217da14077a2301b721",
+          "runtime": "0 ms",
+          "memory": "19.4 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-02T03:29:31+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "172-factorial-trailing-zeroes": {
+      "leetcode_id": "172",
+      "slug": "factorial-trailing-zeroes",
+      "title": "Factorial Trailing Zeroes",
+      "difficulty": "Medium",
+      "tags": [
+        "Math"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/factorial-trailing-zeroes/",
+      "first_solved_at": "2026-10-02T03:47:38+00:00",
+      "last_solved_at": "2026-10-02T03:47:38+00:00",
+      "attempts": [
+        {
+          "submission_id": "2159744503",
+          "submitted_at": "2026-10-02T03:47:17+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "172-factorial-trailing-zeroes.py",
+          "code_sha256": "e9e3663179759bf3b1106886b1d81ea65883f87d5cfec519896d81a3bb533e75",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2159744668",
+          "submitted_at": "2026-10-02T03:47:38+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "172-factorial-trailing-zeroes.py",
+          "code_sha256": "b282d973e3ea65f7ed3b08d129d718a96a6aeeefcf0a88a585e25dd0471777eb",
+          "runtime": "0 ms",
+          "memory": "19.1 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-02T03:47:38+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "1143-longest-common-subsequence": {
+      "leetcode_id": "1143",
+      "slug": "longest-common-subsequence",
+      "title": "Longest Common Subsequence",
+      "difficulty": "Medium",
+      "tags": [
+        "String",
+        "Dynamic Programming",
+        "Longest Common Subsequence"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/longest-common-subsequence/",
+      "first_solved_at": "2026-10-02T03:54:55+00:00",
+      "last_solved_at": "2026-10-02T04:00:11+00:00",
+      "attempts": [
+        {
+          "submission_id": "2159748112",
+          "submitted_at": "2026-10-02T03:54:21+00:00",
+          "status": "Time Limit Exceeded",
+          "language": "python3",
+          "code_path": "1143-longest-common-subsequence.py",
+          "code_sha256": "ee071b8157394e88069f9f0cb6c0521325c0634ce76334aa3404e63b457d7102",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thoughts:",
+            "we have t1 and t2 denote the state of the dp where t1 and t2 are the length we have traversed for t1 and t2, ",
+            "we have two choices, if text1[t1] and text2[t2] are equivalent, we continue, if not our other option is to check which one has the maximum between t1 + 1 and t2 + 2",
+            "case 1 if we found a matching letter",
+            "case 2 not equal so we take the maximum of either t1 or t2 recursive call"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2159748436",
+          "submitted_at": "2026-10-02T03:54:55+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "1143-longest-common-subsequence.py",
+          "code_sha256": "ae34277eb22a37843bb14d667930d9761d3474d3932debbc8f865c85a700dc8a",
+          "runtime": "1446 ms",
+          "memory": "316.6 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thoughts:",
+            "we have t1 and t2 denote the state of the dp where t1 and t2 are the length we have traversed for t1 and t2, ",
+            "we have two choices, if text1[t1] and text2[t2] are equivalent, we continue, if not our other option is to check which one has the maximum between t1 + 1 and t2 + 2",
+            "case 1 if we found a matching letter",
+            "case 2 not equal so we take the maximum of either t1 or t2 recursive call"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2159748568",
+          "submitted_at": "2026-10-02T03:55:10+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "1143-longest-common-subsequence.py",
+          "code_sha256": "ae34277eb22a37843bb14d667930d9761d3474d3932debbc8f865c85a700dc8a",
+          "runtime": "1336 ms",
+          "memory": "316.6 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thoughts:",
+            "we have t1 and t2 denote the state of the dp where t1 and t2 are the length we have traversed for t1 and t2, ",
+            "we have two choices, if text1[t1] and text2[t2] are equivalent, we continue, if not our other option is to check which one has the maximum between t1 + 1 and t2 + 2",
+            "case 1 if we found a matching letter",
+            "case 2 not equal so we take the maximum of either t1 or t2 recursive call"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2159751336",
+          "submitted_at": "2026-10-02T04:00:11+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "1143-longest-common-subsequence.py",
+          "code_sha256": "063b5029717367a0a4d626c4baf5d91c0ac2b50b967175451aedd5d1a30f7939",
+          "runtime": "356 ms",
+          "memory": "44.4 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "build the table bottom up"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-02T04:00:11+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "335-self-crossing": {
+      "leetcode_id": "335",
+      "slug": "self-crossing",
+      "title": "Self Crossing",
+      "difficulty": "Hard",
+      "tags": [
+        "Array",
+        "Math",
+        "Geometry"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/self-crossing/",
+      "first_solved_at": null,
+      "last_solved_at": null,
+      "attempts": [
+        {
+          "submission_id": "2160283381",
+          "submitted_at": "2026-10-02T15:28:37+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "335-self-crossing.py",
+          "code_sha256": "ca0a77750933468d03715e7f92236658507f56c76870a9c3742486995916c1c2",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": null,
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "52-n-queens-ii": {
+      "leetcode_id": "52",
+      "slug": "n-queens-ii",
+      "title": "N-Queens II",
+      "difficulty": "Hard",
+      "tags": [
+        "Backtracking",
+        "Algorithm X"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/n-queens-ii/",
+      "first_solved_at": "2026-10-03T16:22:27+00:00",
+      "last_solved_at": "2026-10-03T16:22:27+00:00",
+      "attempts": [
+        {
+          "submission_id": "2161254667",
+          "submitted_at": "2026-10-03T16:22:27+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "52-n-queens-ii.py",
+          "code_sha256": "12e3f1e14d9bfe6169bd2bd56de3a8d78dcc1896df764d86517fa5cc6a47c633",
+          "runtime": "10 ms",
+          "memory": "19.5 MB",
+          "leetcode_notes": "[ Time taken: 2d 7hrs 14m 27s ]",
+          "raw_comments": [
+            "thoughts:",
+            "we don't need to return the entire board",
+            "but it is still backtracking",
+            "if they can attack each other skip",
+            "add them"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-03T16:22:27+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "161-one-edit-distance": {
+      "leetcode_id": "161",
+      "slug": "one-edit-distance",
+      "title": "One Edit Distance",
+      "difficulty": "Medium",
+      "tags": [
+        "Two Pointers",
+        "String"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/one-edit-distance/",
+      "first_solved_at": "2026-10-03T17:19:32+00:00",
+      "last_solved_at": "2026-10-03T17:19:32+00:00",
+      "attempts": [
+        {
+          "submission_id": "2161305097",
+          "submitted_at": "2026-10-03T17:12:38+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "161-one-edit-distance.py",
+          "code_sha256": "b554849b8c2a416a0647d32153d331029ff974b6153c5016310d39df0473608a",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "lets break this up into three sections",
+            "for inserting and deleting a character from s to get t:",
+            "1. we need the length of s and t to be one apart",
+            "",
+            "replacing a character: ",
+            "we need s and t to be the same length",
+            "both empty ",
+            "if len(s) is < len(t) then it we focus on inserting",
+            "we dont have to actually insert, we just have to check that there is place to insert this character and return true "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2161305845",
+          "submitted_at": "2026-10-03T17:13:20+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "161-one-edit-distance.py",
+          "code_sha256": "55c0c8f4c28ca9d0b4ac0140d2901a133c38a3c9e59f60ecbf652ddac97bd335",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "lets break this up into three sections",
+            "for inserting and deleting a character from s to get t:",
+            "1. we need the length of s and t to be one apart",
+            "",
+            "replacing a character: ",
+            "we need s and t to be the same length",
+            "both empty ",
+            "if len(s) is < len(t) then it we focus on inserting",
+            "we dont have to actually insert, we just have to check that there is place to insert this character and return true "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2161306719",
+          "submitted_at": "2026-10-03T17:14:12+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "161-one-edit-distance.py",
+          "code_sha256": "32488e66e81035b58dc833e573dcd0c68c5510578ea696e702456e743bac6d76",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "lets break this up into three sections",
+            "for inserting and deleting a character from s to get t:",
+            "1. we need the length of s and t to be one apart",
+            "",
+            "replacing a character: ",
+            "we need s and t to be the same length",
+            "both empty ",
+            "if len(s) is < len(t) then it we focus on inserting",
+            "we dont have to actually insert, we just have to check that there is place to insert this character and return true "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2161307900",
+          "submitted_at": "2026-10-03T17:15:20+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "161-one-edit-distance.py",
+          "code_sha256": "51a364158aadb39b42b62b9238121f02a75595b35f83f2e72fc8c2844cec71c1",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "lets break this up into three sections",
+            "for inserting and deleting a character from s to get t:",
+            "1. we need the length of s and t to be one apart",
+            "",
+            "replacing a character: ",
+            "we need s and t to be the same length",
+            "both empty ",
+            "if len(s) is < len(t) then it we focus on inserting",
+            "we dont have to actually insert, we just have to check that there is place to insert this character and return true "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2161308141",
+          "submitted_at": "2026-10-03T17:15:33+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "161-one-edit-distance.py",
+          "code_sha256": "c3cf976e1be1a51c87f3525cf18d236c7387c9357adcecee42826f90c5a1424b",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "lets break this up into three sections",
+            "for inserting and deleting a character from s to get t:",
+            "1. we need the length of s and t to be one apart",
+            "",
+            "replacing a character: ",
+            "we need s and t to be the same length",
+            "both empty ",
+            "if len(s) is < len(t) then it we focus on inserting",
+            "we dont have to actually insert, we just have to check that there is place to insert this character and return true "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2161310892",
+          "submitted_at": "2026-10-03T17:18:06+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "161-one-edit-distance.py",
+          "code_sha256": "d235c8a542b58d1113e9bdbab1388145bb2f669e0a95f4838f7f3c95f77bd0bf",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "lets break this up into three sections",
+            "for inserting and deleting a character from s to get t:",
+            "1. we need the length of s and t to be one apart",
+            "",
+            "replacing a character: ",
+            "we need s and t to be the same length",
+            "both empty ",
+            "if len(s) is < len(t) then it we focus on inserting",
+            "we dont have to actually insert, we just have to check that there is place to insert this character and return true "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2161312375",
+          "submitted_at": "2026-10-03T17:19:32+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "161-one-edit-distance.py",
+          "code_sha256": "2c0ab6629981fcd49e56f08cee75485d79034aabc42f63cc0aac5b4bb876fba2",
+          "runtime": "0 ms",
+          "memory": "19.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "lets break this up into three sections",
+            "for inserting and deleting a character from s to get t:",
+            "1. we need the length of s and t to be one apart",
+            "",
+            "replacing a character: ",
+            "we need s and t to be the same length",
+            "both empty ",
+            "if len(s) is < len(t) then it we focus on inserting",
+            "we dont have to actually insert, we just have to check that there is place to insert this character and return true "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-03T17:19:32+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "187-repeated-dna-sequences": {
+      "leetcode_id": "187",
+      "slug": "repeated-dna-sequences",
+      "title": "Repeated DNA Sequences",
+      "difficulty": "Medium",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Bit Manipulation",
+        "Sliding Window",
+        "Rolling Hash",
+        "Hash Function",
+        "Z Algorithm",
+        "Boyer–Moore String-Search Algorithm"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/repeated-dna-sequences/",
+      "first_solved_at": "2026-10-03T17:30:19+00:00",
+      "last_solved_at": "2026-10-03T17:33:35+00:00",
+      "attempts": [
+        {
+          "submission_id": "2161322773",
+          "submitted_at": "2026-10-03T17:29:27+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "187-repeated-dna-sequences.py",
+          "code_sha256": "4088ba05d00590e7adce5ef89883309000c8dce569ae522378a948f8f30d3a06",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we can use a sliding window of size 10 and just go through the entire string with a sliding window approach, store the 10-letter-long sequences in a hash map and then return all substrings "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2161323516",
+          "submitted_at": "2026-10-03T17:30:19+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "187-repeated-dna-sequences.py",
+          "code_sha256": "9d8204c2a602294745d43287270837a536f39f6b1da4a330e1deb3b2eb270371",
+          "runtime": "805 ms",
+          "memory": "33.1 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we can use a sliding window of size 10 and just go through the entire string with a sliding window approach, store the 10-letter-long sequences in a hash map and then return all substrings "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2161327009",
+          "submitted_at": "2026-10-03T17:33:35+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "187-repeated-dna-sequences.py",
+          "code_sha256": "d6afdc8f5face36fba00b7b2623206e41223e41cf6f7b8bc674fd72ce2fd7d03",
+          "runtime": "739 ms",
+          "memory": "33.2 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we can use a sliding window of size 10 and just go through the entire string with a sliding window approach, store the 10-letter-long sequences in a hash map and then return all substrings "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-03T17:33:35+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "162-find-peak-element": {
+      "leetcode_id": "162",
+      "slug": "find-peak-element",
+      "title": "Find Peak Element",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Binary Search"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/find-peak-element/",
+      "first_solved_at": "2026-10-03T19:47:16+00:00",
+      "last_solved_at": "2026-10-03T19:47:16+00:00",
+      "attempts": [
+        {
+          "submission_id": "2161441986",
+          "submitted_at": "2026-10-03T19:47:16+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "162-find-peak-element.py",
+          "code_sha256": "8e5cc9f47c985d15e1fb4f5bf30fcbdf92fed6b0318549d4f018dd0ecc7c6ac5",
+          "runtime": "0 ms",
+          "memory": "19.2 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-03T19:47:16+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "678-valid-parenthesis-string": {
+      "leetcode_id": "678",
+      "slug": "valid-parenthesis-string",
+      "title": "Valid Parenthesis String",
+      "difficulty": "Medium",
+      "tags": [
+        "String",
+        "Dynamic Programming",
+        "Stack",
+        "Greedy",
+        "Bracket Sequences"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/valid-parenthesis-string/",
+      "first_solved_at": "2026-10-04T20:37:47+00:00",
+      "last_solved_at": "2026-10-04T20:37:47+00:00",
+      "attempts": [
+        {
+          "submission_id": "2162516229",
+          "submitted_at": "2026-10-04T20:34:36+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "678-valid-parenthesis-string.py",
+          "code_sha256": "738d57ba292f6f0d0575b3b01b61695390bc30817bc9374214390750f1a0c818",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we can use a stack for this question",
+            "we append any opening parentehsis, and then check if there is either a '*' or a closing parenthesis",
+            "but how do we decide when to use * and when not to use it?",
+            "",
+            "we want the same amount of opening parenthesis and closing parenthesis so if there is an opening/closing parenthesis that has less than their counterpart we can use use * to fill that",
+            "we have a closing parenthesis"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2162516829",
+          "submitted_at": "2026-10-04T20:35:54+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "678-valid-parenthesis-string.py",
+          "code_sha256": "4a9c2a52c83d0d34cc50d98f2f6ae247099d83ba1ae37cc592fb9feced36cbbe",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we can use a stack for this question",
+            "we append any opening parentehsis, and then check if there is either a '*' or a closing parenthesis",
+            "but how do we decide when to use * and when not to use it?",
+            "",
+            "we want the same amount of opening parenthesis and closing parenthesis so if there is an opening/closing parenthesis that has less than their counterpart we can use use * to fill that",
+            "we have a closing parenthesis",
+            "we check for anything left over"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2162517725",
+          "submitted_at": "2026-10-04T20:37:47+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "678-valid-parenthesis-string.py",
+          "code_sha256": "4efab7ea3c994fbd1551a730378385e82882c891ed3dcf784a2080b9bbb1e5e5",
+          "runtime": "4 ms",
+          "memory": "19.2 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we can use a stack for this question",
+            "we append any opening parentehsis, and then check if there is either a '*' or a closing parenthesis",
+            "but how do we decide when to use * and when not to use it?",
+            "",
+            "we want the same amount of opening parenthesis and closing parenthesis so if there is an opening/closing parenthesis that has less than their counterpart we can use use * to fill that",
+            "we have a closing parenthesis",
+            "we check for anything left over",
+            "we need to make sure that the '(' is before '*' otherwise it cant be valid"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-04T20:37:47+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "164-maximum-gap": {
+      "leetcode_id": "164",
+      "slug": "maximum-gap",
+      "title": "Maximum Gap",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Sorting",
+        "Bucket Sort",
+        "Radix Sort",
+        "Pigeonhole Principle"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/maximum-gap/",
+      "first_solved_at": "2026-10-04T21:18:56+00:00",
+      "last_solved_at": "2026-10-04T21:18:56+00:00",
+      "attempts": [
+        {
+          "submission_id": "2162535201",
+          "submitted_at": "2026-10-04T21:18:56+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "164-maximum-gap.py",
+          "code_sha256": "ce2422cc5ad7e3d5c5455137b75e42208199d201ea756f22258688587361f576",
+          "runtime": "160 ms",
+          "memory": "32.1 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "ceil((mx - mn) / (n - 1))",
+            "enough buckets to cover [mn, mx]",
+            "Put each number into its bucket",
+            "Compare consecutive non-empty buckets"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-04T21:18:56+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "856-score-of-parentheses": {
+      "leetcode_id": "856",
+      "slug": "score-of-parentheses",
+      "title": "Score of Parentheses",
+      "difficulty": "Medium",
+      "tags": [
+        "String",
+        "Stack",
+        "Bracket Sequences"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/score-of-parentheses/",
+      "first_solved_at": "2026-10-05T19:17:13+00:00",
+      "last_solved_at": "2026-10-05T19:17:13+00:00",
+      "attempts": [
+        {
+          "submission_id": "2163536368",
+          "submitted_at": "2026-10-05T19:12:15+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "856-score-of-parentheses.py",
+          "code_sha256": "d80fb72949e0cb2d063b89884f57369b9c5f36675b819f709ab657da3b618bd1",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thoughts:",
+            "if we have adjacent balanced parenthesis we add then e.g. \"()()\" would be 2",
+            "if a balanced parentehsis string is a child of another, e.g. ((())), this would be 4 ",
+            "we can use use a stack, but how would we keep track of like what type of balanced parenthesis it is?",
+            "I think we only need to keep track of the nested parenthesis, everything else we can just add ",
+            "keep track of how deep the nest is",
+            "char == ')'"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2163537436",
+          "submitted_at": "2026-10-05T19:13:39+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "856-score-of-parentheses.py",
+          "code_sha256": "2a3a3d7a04d6af0d6dc78a1e146faf4f07072e4b95c5723858ea8abaafa3f48f",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thoughts:",
+            "if we have adjacent balanced parenthesis we add then e.g. \"()()\" would be 2",
+            "if a balanced parentehsis string is a child of another, e.g. ((())), this would be 4 ",
+            "we can use use a stack, but how would we keep track of like what type of balanced parenthesis it is?",
+            "I think we only need to keep track of the nested parenthesis, everything else we can just add ",
+            "keep track of how deep the nest is",
+            "char == ')'"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2163540006",
+          "submitted_at": "2026-10-05T19:17:13+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "856-score-of-parentheses.py",
+          "code_sha256": "3aaa4427107492d2a767595cf502303dc6ad27e3f45941804361563d545cd10d",
+          "runtime": "0 ms",
+          "memory": "19.1 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thoughts:",
+            "if we have adjacent balanced parenthesis we add then e.g. \"()()\" would be 2",
+            "if a balanced parentehsis string is a child of another, e.g. ((())), this would be 4 ",
+            "we can use use a stack, but how would we keep track of like what type of balanced parenthesis it is?",
+            "I think we only need to keep track of the nested parenthesis, everything else we can just add "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-05T19:17:13+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "729-my-calendar-i": {
+      "leetcode_id": "729",
+      "slug": "my-calendar-i",
+      "title": "My Calendar I",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Binary Search",
+        "Design",
+        "Segment Tree",
+        "Ordered Set"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/my-calendar-i/",
+      "first_solved_at": "2026-10-05T21:28:17+00:00",
+      "last_solved_at": "2026-10-05T21:39:51+00:00",
+      "attempts": [
+        {
+          "submission_id": "2163608656",
+          "submitted_at": "2026-10-05T21:28:17+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "729-my-calendar-i.py",
+          "code_sha256": "b8b71f4ce07ee005723620f0c5e091a85a8d58139b2256c7ff338bd261778c04",
+          "runtime": "756 ms",
+          "memory": "20.2 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we can just initialize an array and store the start and",
+            "end times as (startTime, endTime) and then ",
+            "we can sort by the start time and if endTime < the next startTime",
+            "we are within an interval andw e return false ",
+            "check if the start time is smaller than the end time",
+            "Your MyCalendar object will be instantiated and called as such:",
+            "obj = MyCalendar()",
+            "param_1 = obj.book(startTime,endTime)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2163609266",
+          "submitted_at": "2026-10-05T21:30:05+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "729-my-calendar-i.py",
+          "code_sha256": "bc3ddcf215f2e7b2dd32927bc32dad499b513c1eaafce0504a8de9729ec3a0c2",
+          "runtime": "748 ms",
+          "memory": "20.1 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we can just initialize an array and store the start and",
+            "end times as (startTime, endTime) and then ",
+            "we can sort by the start time and if endTime < the next startTime",
+            "we are within an interval andw e return false ",
+            "check if the start time is smaller than the end time",
+            "TC O(NlogN) because of sorting",
+            "SC O(n) beacuase we at most store all of the bookings ",
+            "Your MyCalendar object will be instantiated and called as such:",
+            "obj = MyCalendar()",
+            "param_1 = obj.book(startTime,endTime)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2163611027",
+          "submitted_at": "2026-10-05T21:35:11+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "729-my-calendar-i.py",
+          "code_sha256": "642205809866c4fe42b4e8a716a6bf0a64f74240408adc26cc0a3a00f8e2cb65",
+          "runtime": "523 ms",
+          "memory": "20.1 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we can just initialize an array and store the start and",
+            "end times as (startTime, endTime) and then ",
+            "we can sort by the start time and if endTime < the next startTime",
+            "we are within an interval andw e return false ",
+            "optimization: we only need to know where it goes ",
+            "check if the start time is smaller than the end time",
+            "TC O(N^2) because of sorting",
+            "SC O(n) beacuase we at most store all of the bookings ",
+            "Your MyCalendar object will be instantiated and called as such:",
+            "obj = MyCalendar()",
+            "param_1 = obj.book(startTime,endTime)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2163612273",
+          "submitted_at": "2026-10-05T21:38:44+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "729-my-calendar-i.py",
+          "code_sha256": "2703ac93856849c9a6fc6b5b113d16dbab7330079515cdde21cd4b99665d3d1e",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we can just initialize an array and store the start and",
+            "end times as (startTime, endTime) and then ",
+            "we can sort by the start time and if endTime < the next startTime",
+            "we are within an interval andw e return false ",
+            "optimization: we only need to know where it goes ",
+            "check interval previously appended",
+            "check interval after us",
+            "Your MyCalendar object will be instantiated and called as such:",
+            "obj = MyCalendar()",
+            "param_1 = obj.book(startTime,endTime)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2163612384",
+          "submitted_at": "2026-10-05T21:39:01+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "729-my-calendar-i.py",
+          "code_sha256": "b9c298ad2b7721983f3a1e31a676ac44e508bffd2070e5ed2aec62f9fd88b3aa",
+          "runtime": "28 ms",
+          "memory": "20.2 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we can just initialize an array and store the start and",
+            "end times as (startTime, endTime) and then ",
+            "we can sort by the start time and if endTime < the next startTime",
+            "we are within an interval andw e return false ",
+            "optimization: we only need to know where it goes ",
+            "check interval previously appended",
+            "check interval after us",
+            "Your MyCalendar object will be instantiated and called as such:",
+            "obj = MyCalendar()",
+            "param_1 = obj.book(startTime,endTime)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2163612694",
+          "submitted_at": "2026-10-05T21:39:51+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "729-my-calendar-i.py",
+          "code_sha256": "b9c298ad2b7721983f3a1e31a676ac44e508bffd2070e5ed2aec62f9fd88b3aa",
+          "runtime": "12 ms",
+          "memory": "20.2 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we can just initialize an array and store the start and",
+            "end times as (startTime, endTime) and then ",
+            "we can sort by the start time and if endTime < the next startTime",
+            "we are within an interval andw e return false ",
+            "optimization: we only need to know where it goes ",
+            "check interval previously appended",
+            "check interval after us",
+            "Your MyCalendar object will be instantiated and called as such:",
+            "obj = MyCalendar()",
+            "param_1 = obj.book(startTime,endTime)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-05T21:39:51+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "986-interval-list-intersections": {
+      "leetcode_id": "986",
+      "slug": "interval-list-intersections",
+      "title": "Interval List Intersections",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Two Pointers",
+        "Sweep Line"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/interval-list-intersections/",
+      "first_solved_at": "2026-10-05T22:32:48+00:00",
+      "last_solved_at": "2026-10-05T22:33:42+00:00",
+      "attempts": [
+        {
+          "submission_id": "2163629239",
+          "submitted_at": "2026-10-05T22:32:39+00:00",
+          "status": "Runtime Error",
+          "language": "python3",
+          "code_path": "986-interval-list-intersections.py",
+          "code_sha256": "6bf4c78e5ee19ca5dd757d0db8375e67a2437479554455af55fc8728dce2f6a9",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "both lists dont share any common number"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2163629276",
+          "submitted_at": "2026-10-05T22:32:48+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "986-interval-list-intersections.py",
+          "code_sha256": "9d5af6bbe716a9840531c499573e366021cf8af90ad752efad9bf71b2221a5d9",
+          "runtime": "3 ms",
+          "memory": "20.1 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "both lists dont share any common number"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2163629553",
+          "submitted_at": "2026-10-05T22:33:42+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "986-interval-list-intersections.py",
+          "code_sha256": "e9df351a199afde315630bd91cc4f520f49b3bf4805e8398bd4080ee71171180",
+          "runtime": "3 ms",
+          "memory": "20 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "both lists dont share any common number",
+            "O(n + m) ",
+            "O(n + m)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-05T22:33:42+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "523-continuous-subarray-sum": {
+      "leetcode_id": "523",
+      "slug": "continuous-subarray-sum",
+      "title": "Continuous Subarray Sum",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Math",
+        "Prefix Sum",
+        "Pigeonhole Principle"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/continuous-subarray-sum/",
+      "first_solved_at": "2026-10-05T23:01:39+00:00",
+      "last_solved_at": "2026-10-05T23:01:39+00:00",
+      "attempts": [
+        {
+          "submission_id": "2163637343",
+          "submitted_at": "2026-10-05T23:01:39+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "523-continuous-subarray-sum.py",
+          "code_sha256": "f4437238577a33f090c371733348187b9e512de5b73610f76dcc37d4bdc54585",
+          "runtime": "47 ms",
+          "memory": "39.6 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we would continuously build a prefix sum and continously check modulo k, if we've seen it before there is an existing contiguous subarray that satisfies what we want",
+            "if we've seen the remainder already"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-05T23:01:39+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "921-minimum-add-to-make-parentheses-valid": {
+      "leetcode_id": "921",
+      "slug": "minimum-add-to-make-parentheses-valid",
+      "title": "Minimum Add to Make Parentheses Valid",
+      "difficulty": "Medium",
+      "tags": [
+        "String",
+        "Stack",
+        "Greedy",
+        "Bracket Sequences"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/",
+      "first_solved_at": "2026-10-06T00:50:46+00:00",
+      "last_solved_at": "2026-10-06T00:50:46+00:00",
+      "attempts": [
+        {
+          "submission_id": "2163669420",
+          "submitted_at": "2026-10-06T00:50:46+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "921-minimum-add-to-make-parentheses-valid.py",
+          "code_sha256": "89124dc12a2b36fc18930ae59cac6e10c03f230454e100db3133e546d15d1f48",
+          "runtime": "3 ms",
+          "memory": "19.1 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "if the top of the stack is a closing parenthesis we can decrease the moves since its valid",
+            "the other option is that is another closing parenthesis so we have to add an additional move"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-06T00:50:46+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "525-contiguous-array": {
+      "leetcode_id": "525",
+      "slug": "contiguous-array",
+      "title": "Contiguous Array",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Prefix Sum"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/contiguous-array/",
+      "first_solved_at": "2026-10-06T02:09:38+00:00",
+      "last_solved_at": "2026-10-06T02:09:38+00:00",
+      "attempts": [
+        {
+          "submission_id": "2163700736",
+          "submitted_at": "2026-10-06T02:09:38+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "525-contiguous-array.py",
+          "code_sha256": "c9babb99a4bf9c598e02ca30fa70d622af3cfc7734d74675274fb12de25a5578",
+          "runtime": "87 ms",
+          "memory": "25.2 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "convert all the zeros into -1's"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-06T02:09:38+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "417-pacific-atlantic-water-flow": {
+      "leetcode_id": "417",
+      "slug": "pacific-atlantic-water-flow",
+      "title": "Pacific Atlantic Water Flow",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Depth-First Search",
+        "Breadth-First Search",
+        "Matrix"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/pacific-atlantic-water-flow/",
+      "first_solved_at": "2026-10-06T15:53:56+00:00",
+      "last_solved_at": "2026-10-06T15:56:35+00:00",
+      "attempts": [
+        {
+          "submission_id": "2164416602",
+          "submitted_at": "2026-10-06T15:53:56+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "417-pacific-atlantic-water-flow.py",
+          "code_sha256": "9bcfcaf8221965df5bf011cee2d90503feed73a51d3e3e52f6f1b32331bf2f00",
+          "runtime": "34 ms",
+          "memory": "22.2 MB",
+          "leetcode_notes": "[ Time taken: 7hrs 40m 14s ]",
+          "raw_comments": [
+            "out of bounds",
+            "Pacific = top and left",
+            "Atlantic = bottom and right"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2164419583",
+          "submitted_at": "2026-10-06T15:56:35+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "417-pacific-atlantic-water-flow.py",
+          "code_sha256": "c859cf3b455f5b9a6e83a6b6173a7332e4f35030a370a118e01ff12a7b742ef9",
+          "runtime": "30 ms",
+          "memory": "22.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "out of bounds",
+            "Pacific = top and left",
+            "Atlantic = bottom and right",
+            "TC: O(m*n)",
+            "SC: O(m*n)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "O(m*n)",
+            "space_complexity": "O(m*n)"
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-06T15:56:35+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "301-remove-invalid-parentheses": {
+      "leetcode_id": "301",
+      "slug": "remove-invalid-parentheses",
+      "title": "Remove Invalid Parentheses",
+      "difficulty": "Hard",
+      "tags": [
+        "String",
+        "Backtracking",
+        "Breadth-First Search"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/remove-invalid-parentheses/",
+      "first_solved_at": "2026-10-07T00:20:34+00:00",
+      "last_solved_at": "2026-10-07T00:21:32+00:00",
+      "attempts": [
+        {
+          "submission_id": "2164769799",
+          "submitted_at": "2026-10-07T00:20:34+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "301-remove-invalid-parentheses.py",
+          "code_sha256": "b85a2a983dcc802088b676ee86d99da33aaa8132c58d5d024d687d8e17e60c16",
+          "runtime": "2860 ms",
+          "memory": "19.6 MB",
+          "leetcode_notes": "[ Time taken: 7hrs 48m 20s ]",
+          "raw_comments": [
+            "since s.length is 25 we can do something like backtracking ",
+            "where we try all possible solutions ",
+            "state: for each decision, we want to see what we have tried, and if the state is valid, ",
+            "remove",
+            "keep",
+            "letters cannot be removed"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2164770059",
+          "submitted_at": "2026-10-07T00:21:32+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "301-remove-invalid-parentheses.py",
+          "code_sha256": "b85a2a983dcc802088b676ee86d99da33aaa8132c58d5d024d687d8e17e60c16",
+          "runtime": "2822 ms",
+          "memory": "19.5 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "since s.length is 25 we can do something like backtracking ",
+            "where we try all possible solutions ",
+            "state: for each decision, we want to see what we have tried, and if the state is valid, ",
+            "remove",
+            "keep",
+            "letters cannot be removed"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-07T00:21:32+00:00",
         "reps": 0,
         "lapses": 0
       }
