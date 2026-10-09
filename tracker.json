@@ -108,7 +108,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
       "first_solved_at": "2025-07-04T02:34:40+00:00",
-      "last_solved_at": "2026-09-19T00:56:31+00:00",
+      "last_solved_at": "2026-10-07T16:27:55+00:00",
       "attempts": [
         {
           "submission_id": "1685630009",
@@ -248,6 +248,28 @@
             "time_complexity": "",
             "space_complexity": ""
           }
+        },
+        {
+          "submission_id": "2165501474",
+          "submitted_at": "2026-10-07T16:27:55+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "121-best-time-to-buy-and-sell-stock.py",
+          "code_sha256": "a2df895c99f3f10bb2a9f968a51ab1fb7d19ac296414c61271a6446b0a0a2226",
+          "runtime": "23 ms",
+          "memory": "28.4 MB",
+          "leetcode_notes": "[ Time taken: 8hrs 17m 8s ]",
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -256,7 +278,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": "2026-09-19T00:56:31+00:00",
+        "next_review": "2026-10-07T16:27:55+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -2421,7 +2443,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/merge-intervals/",
       "first_solved_at": "2025-12-31T07:53:01+00:00",
-      "last_solved_at": "2026-09-23T18:54:53+00:00",
+      "last_solved_at": "2026-10-07T16:32:02+00:00",
       "attempts": [
         {
           "submission_id": "1870078700",
@@ -2556,6 +2578,30 @@
             "time_complexity": "",
             "space_complexity": ""
           }
+        },
+        {
+          "submission_id": "2165506346",
+          "submitted_at": "2026-10-07T16:32:02+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "56-merge-intervals.py",
+          "code_sha256": "801b1e9219c676e10a4b72538636d05a704c1425e889de9f703d3e76b20c4fa5",
+          "runtime": "0 ms",
+          "memory": "23.4 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "sort by start time"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -2564,7 +2610,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": "2026-09-23T18:54:53+00:00",
+        "next_review": "2026-10-07T16:32:02+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -14455,7 +14501,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/shortest-word-distance-ii/",
       "first_solved_at": "2026-09-26T02:25:24+00:00",
-      "last_solved_at": "2026-09-26T02:25:24+00:00",
+      "last_solved_at": "2026-10-07T14:57:26+00:00",
       "attempts": [
         {
           "submission_id": "2153449984",
@@ -14482,6 +14528,36 @@
             "time_complexity": "",
             "space_complexity": ""
           }
+        },
+        {
+          "submission_id": "2165406824",
+          "submitted_at": "2026-10-07T14:57:26+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "244-shortest-word-distance-ii.py",
+          "code_sha256": "a6af8420d646a150e6ffe0275ae675dcd58629a470824911f6e70c66c517c7e2",
+          "runtime": "4 ms",
+          "memory": "25.9 MB",
+          "leetcode_notes": "[ Time taken: 8hrs 11m 58s ]",
+          "raw_comments": [
+            "to find the shortest distancebetween two different strings, ",
+            "we need to keep track of their idx by creating a adj list",
+            "to find the shortest distance, find the index of word1 and word2 in the adj list that we stored",
+            "set up two pointers to go iterate throuhg all the words",
+            "Your WordDistance object will be instantiated and called as such:",
+            "obj = WordDistance(wordsDict)",
+            "param_1 = obj.shortest(word1,word2)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -14490,7 +14566,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": "2026-09-26T02:25:24+00:00",
+        "next_review": "2026-10-07T14:57:26+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -18579,6 +18655,57 @@
         "retrievability": null,
         "last_review": null,
         "next_review": "2026-10-07T00:21:32+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "1021-remove-outermost-parentheses": {
+      "leetcode_id": "1021",
+      "slug": "remove-outermost-parentheses",
+      "title": "Remove Outermost Parentheses",
+      "difficulty": "Easy",
+      "tags": [
+        "String",
+        "Stack",
+        "Bracket Sequences"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/remove-outermost-parentheses/",
+      "first_solved_at": "2026-10-08T04:13:45+00:00",
+      "last_solved_at": "2026-10-08T04:13:45+00:00",
+      "attempts": [
+        {
+          "submission_id": "2165912597",
+          "submitted_at": "2026-10-08T04:13:45+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "1021-remove-outermost-parentheses.py",
+          "code_sha256": "619afc3a4f32afddf04420cbc63410869785e8adc266b327402c396750189f59",
+          "runtime": "4 ms",
+          "memory": "19.2 MB",
+          "leetcode_notes": "[ Time taken: 7hrs 25m 2s ]",
+          "raw_comments": [
+            "we would have to keep track of like the depth",
+            "of the parenthesis while it is (, and if it is greater than one then we have a decomposition that can be done "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-08T04:13:45+00:00",
         "reps": 0,
         "lapses": 0
       }

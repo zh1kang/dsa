@@ -227,23 +227,24 @@ where do we go next
 % allows us to wrap back around ",,,,,,,,,new,,,,,,0,0
 55,Jump Game,jump-game,https://leetcode.com/problems/jump-game/,Medium,"Array, Dynamic Programming, Greedy",1805613521,2025-10-19T05:01:02+00:00,python3,9 ms,18.6 MB,55-jump-game.py,,,,,,,,,,,new,,,,,,0,0
 55,Jump Game,jump-game,https://leetcode.com/problems/jump-game/,Medium,"Array, Dynamic Programming, Greedy",1805619508,2025-10-19T05:10:47+00:00,python3,11 ms,18.7 MB,55-jump-game.py,,,,,,,,,,,new,,,,,,0,0
-56,Merge Intervals,merge-intervals,https://leetcode.com/problems/merge-intervals/,Medium,"Array, Sorting, Quicksort",1870078700,2025-12-31T07:53:01+00:00,python3,11 ms,21.5 MB,56-merge-intervals.py,,,,,,,,,,,new,2026-09-23T18:54:53+00:00,,,,,0,0
+56,Merge Intervals,merge-intervals,https://leetcode.com/problems/merge-intervals/,Medium,"Array, Sorting, Quicksort",1870078700,2025-12-31T07:53:01+00:00,python3,11 ms,21.5 MB,56-merge-intervals.py,,,,,,,,,,,new,2026-10-07T16:32:02+00:00,,,,,0,0
 56,Merge Intervals,merge-intervals,https://leetcode.com/problems/merge-intervals/,Medium,"Array, Sorting, Quicksort",2093684262,2026-08-04T08:19:57+00:00,python3,7 ms,22.5 MB,56-merge-intervals.py,[ Time taken: 23hrs 44m 42s ],"sort the interval by the starting time
 O(nlogn)
 initialize the list with the start times
 if the current start time is inside the interval of the last merged,
 put the current time into the interval
-if the current start time is not overlapping you can appendit safely",,,,,,,,,new,2026-09-23T18:54:53+00:00,,,,,0,0
+if the current start time is not overlapping you can appendit safely",,,,,,,,,new,2026-10-07T16:32:02+00:00,,,,,0,0
 56,Merge Intervals,merge-intervals,https://leetcode.com/problems/merge-intervals/,Medium,"Array, Sorting, Quicksort",2093688958,2026-08-04T08:24:28+00:00,python3,1 ms,22.2 MB,56-merge-intervals.py,,"sort the interval by the starting time
 O(nlogn)
 check if the start of the interval is greater than the last merged time 
-else the current interval is within the window and we have to take the largest end time",,,,,,,,,new,2026-09-23T18:54:53+00:00,,,,,0,0
+else the current interval is within the window and we have to take the largest end time",,,,,,,,,new,2026-10-07T16:32:02+00:00,,,,,0,0
 56,Merge Intervals,merge-intervals,https://leetcode.com/problems/merge-intervals/,Medium,"Array, Sorting, Quicksort",2151289493,2026-09-23T18:54:53+00:00,python3,7 ms,23.2 MB,56-merge-intervals.py,[ Time taken: 6hrs 54m 35s ],"thoughts:
 we can sort by the start time, and then compare the end time of one interval we are currently at with the start time of the next interval,
 if it is larger, we merge the two intervals
 sort by start time
 if the merged is empty and the start time larger so there is no overlap
-if there is an overlap we take the largest end value",,,,,,,,,new,2026-09-23T18:54:53+00:00,,,,,0,0
+if there is an overlap we take the largest end value",,,,,,,,,new,2026-10-07T16:32:02+00:00,,,,,0,0
+56,Merge Intervals,merge-intervals,https://leetcode.com/problems/merge-intervals/,Medium,"Array, Sorting, Quicksort",2165506346,2026-10-07T16:32:02+00:00,python3,0 ms,23.4 MB,56-merge-intervals.py,,sort by start time,,,,,,,,,new,2026-10-07T16:32:02+00:00,,,,,0,0
 57,Insert Interval,insert-interval,https://leetcode.com/problems/insert-interval/,Medium,Array,1748288818,2025-08-25T22:02:00+00:00,python3,3 ms,19.9 MB,57-insert-interval.py,,"Case 1, there are no overlapping intervals
 Case 2, overlapping
 Case 3, no overlapping after merging newInterval",,,,,,,,,new,2026-10-05T22:06:27+00:00,,,,,0,0
@@ -520,13 +521,14 @@ and if you reach the end for the 't' pointer, we have a possible subsequence but
 and then we can just store every possible answer in our cache to reuse
 TC: O(M*N) where m is length of s and n is length of t
 SC: O(M*N) since we cache all the possible states? ",,,,,O(M*N) where m is length of s and n is length of t,O(M*N) since we cache all the possible states?,new,2026-09-07T03:47:52+00:00,,,,,0,0
-121,Best Time to Buy and Sell Stock,best-time-to-buy-and-sell-stock,https://leetcode.com/problems/best-time-to-buy-and-sell-stock/,Easy,"Array, Dynamic Programming",1685630009,2025-07-04T02:34:40+00:00,python3,108 ms,27 MB,121-best-time-to-buy-and-sell-stock.py,,use sliding window ,,,,,,,,,new,2026-09-19T00:56:31+00:00,,,,,0,0
-121,Best Time to Buy and Sell Stock,best-time-to-buy-and-sell-stock,https://leetcode.com/problems/best-time-to-buy-and-sell-stock/,Easy,"Array, Dynamic Programming",1803169287,2025-10-16T08:01:36+00:00,python3,59 ms,26.9 MB,121-best-time-to-buy-and-sell-stock.py,,,,,,,,,,,new,2026-09-19T00:56:31+00:00,,,,,0,0
-121,Best Time to Buy and Sell Stock,best-time-to-buy-and-sell-stock,https://leetcode.com/problems/best-time-to-buy-and-sell-stock/,Easy,"Array, Dynamic Programming",1833454857,2025-11-18T17:39:26+00:00,python3,105 ms,27 MB,121-best-time-to-buy-and-sell-stock.py,,,,,,,,,,,new,2026-09-19T00:56:31+00:00,,,,,0,0
-121,Best Time to Buy and Sell Stock,best-time-to-buy-and-sell-stock,https://leetcode.com/problems/best-time-to-buy-and-sell-stock/,Easy,"Array, Dynamic Programming",2146196080,2026-09-19T00:51:02+00:00,python3,59 ms,28.6 MB,121-best-time-to-buy-and-sell-stock.py,,,,,,,,,,,new,2026-09-19T00:56:31+00:00,,,,,0,0
-121,Best Time to Buy and Sell Stock,best-time-to-buy-and-sell-stock,https://leetcode.com/problems/best-time-to-buy-and-sell-stock/,Easy,"Array, Dynamic Programming",2146196867,2026-09-19T00:54:27+00:00,python3,23 ms,28.7 MB,121-best-time-to-buy-and-sell-stock.py,,we can greedy and always sell when the price is smaller than min price,,,,,,,,,new,2026-09-19T00:56:31+00:00,,,,,0,0
+121,Best Time to Buy and Sell Stock,best-time-to-buy-and-sell-stock,https://leetcode.com/problems/best-time-to-buy-and-sell-stock/,Easy,"Array, Dynamic Programming",1685630009,2025-07-04T02:34:40+00:00,python3,108 ms,27 MB,121-best-time-to-buy-and-sell-stock.py,,use sliding window ,,,,,,,,,new,2026-10-07T16:27:55+00:00,,,,,0,0
+121,Best Time to Buy and Sell Stock,best-time-to-buy-and-sell-stock,https://leetcode.com/problems/best-time-to-buy-and-sell-stock/,Easy,"Array, Dynamic Programming",1803169287,2025-10-16T08:01:36+00:00,python3,59 ms,26.9 MB,121-best-time-to-buy-and-sell-stock.py,,,,,,,,,,,new,2026-10-07T16:27:55+00:00,,,,,0,0
+121,Best Time to Buy and Sell Stock,best-time-to-buy-and-sell-stock,https://leetcode.com/problems/best-time-to-buy-and-sell-stock/,Easy,"Array, Dynamic Programming",1833454857,2025-11-18T17:39:26+00:00,python3,105 ms,27 MB,121-best-time-to-buy-and-sell-stock.py,,,,,,,,,,,new,2026-10-07T16:27:55+00:00,,,,,0,0
+121,Best Time to Buy and Sell Stock,best-time-to-buy-and-sell-stock,https://leetcode.com/problems/best-time-to-buy-and-sell-stock/,Easy,"Array, Dynamic Programming",2146196080,2026-09-19T00:51:02+00:00,python3,59 ms,28.6 MB,121-best-time-to-buy-and-sell-stock.py,,,,,,,,,,,new,2026-10-07T16:27:55+00:00,,,,,0,0
+121,Best Time to Buy and Sell Stock,best-time-to-buy-and-sell-stock,https://leetcode.com/problems/best-time-to-buy-and-sell-stock/,Easy,"Array, Dynamic Programming",2146196867,2026-09-19T00:54:27+00:00,python3,23 ms,28.7 MB,121-best-time-to-buy-and-sell-stock.py,,we can greedy and always sell when the price is smaller than min price,,,,,,,,,new,2026-10-07T16:27:55+00:00,,,,,0,0
 121,Best Time to Buy and Sell Stock,best-time-to-buy-and-sell-stock,https://leetcode.com/problems/best-time-to-buy-and-sell-stock/,Easy,"Array, Dynamic Programming",2146197294,2026-09-19T00:56:31+00:00,python3,23 ms,28.9 MB,121-best-time-to-buy-and-sell-stock.py,,"we can greedy by keeping track of the min price every day
-assuming that today could be the best day to sell ",,,,,,,,,new,2026-09-19T00:56:31+00:00,,,,,0,0
+assuming that today could be the best day to sell ",,,,,,,,,new,2026-10-07T16:27:55+00:00,,,,,0,0
+121,Best Time to Buy and Sell Stock,best-time-to-buy-and-sell-stock,https://leetcode.com/problems/best-time-to-buy-and-sell-stock/,Easy,"Array, Dynamic Programming",2165501474,2026-10-07T16:27:55+00:00,python3,23 ms,28.4 MB,121-best-time-to-buy-and-sell-stock.py,[ Time taken: 8hrs 17m 8s ],,,,,,,,,,new,2026-10-07T16:27:55+00:00,,,,,0,0
 122,Best Time to Buy and Sell Stock II,best-time-to-buy-and-sell-stock-ii,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/,Medium,"Array, Dynamic Programming, Greedy",1803176734,2025-10-16T08:14:08+00:00,python3,0 ms,18.7 MB,122-best-time-to-buy-and-sell-stock-ii.py,,greedy approach,,,,,,,,,new,,,,,,0,0
 123,Best Time to Buy and Sell Stock III,best-time-to-buy-and-sell-stock-iii,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/,Hard,"Array, Dynamic Programming",2155551542,2026-09-28T04:36:02+00:00,python3,1779 ms,492.3 MB,123-best-time-to-buy-and-sell-stock-iii.py,[ Time taken: 5hrs 17m 15s ],"We own the stock, so we can sell it
 we don't own the stock so we have to buy ",,,,,,,,,new,2026-09-28T04:36:08+00:00,,,,,0,0
@@ -854,7 +856,14 @@ class TreeNode:
 242,Valid Anagram,valid-anagram,https://leetcode.com/problems/valid-anagram/,Easy,"Hash Table, String, Sorting",1874956747,2026-01-05T06:15:42+00:00,python3,14 ms,17.7 MB,242-valid-anagram.py,,,,,,,,,,,new,,,,,,0,0
 244,Shortest Word Distance II,shortest-word-distance-ii,https://leetcode.com/problems/shortest-word-distance-ii/,Medium,"Array, Hash Table, Two Pointers, String, Design",2153449984,2026-09-26T02:25:24+00:00,python3,7 ms,26 MB,244-shortest-word-distance-ii.py,,"Your WordDistance object will be instantiated and called as such:
 obj = WordDistance(wordsDict)
-param_1 = obj.shortest(word1,word2)",,,,,,,,,new,2026-09-26T02:25:24+00:00,,,,,0,0
+param_1 = obj.shortest(word1,word2)",,,,,,,,,new,2026-10-07T14:57:26+00:00,,,,,0,0
+244,Shortest Word Distance II,shortest-word-distance-ii,https://leetcode.com/problems/shortest-word-distance-ii/,Medium,"Array, Hash Table, Two Pointers, String, Design",2165406824,2026-10-07T14:57:26+00:00,python3,4 ms,25.9 MB,244-shortest-word-distance-ii.py,[ Time taken: 8hrs 11m 58s ],"to find the shortest distancebetween two different strings, 
+we need to keep track of their idx by creating a adj list
+to find the shortest distance, find the index of word1 and word2 in the adj list that we stored
+set up two pointers to go iterate throuhg all the words
+Your WordDistance object will be instantiated and called as such:
+obj = WordDistance(wordsDict)
+param_1 = obj.shortest(word1,word2)",,,,,,,,,new,2026-10-07T14:57:26+00:00,,,,,0,0
 245,Shortest Word Distance III,shortest-word-distance-iii,https://leetcode.com/problems/shortest-word-distance-iii/,Medium,"Array, String",2153491936,2026-09-26T04:08:45+00:00,python3,80 ms,38.2 MB,245-shortest-word-distance-iii.py,,,,,,,,,,,new,2026-09-26T04:10:00+00:00,,,,,0,0
 245,Shortest Word Distance III,shortest-word-distance-iii,https://leetcode.com/problems/shortest-word-distance-iii/,Medium,"Array, String",2153492153,2026-09-26T04:09:07+00:00,python3,85 ms,38 MB,245-shortest-word-distance-iii.py,,,,,,,,,,,new,2026-09-26T04:10:00+00:00,,,,,0,0
 245,Shortest Word Distance III,shortest-word-distance-iii,https://leetcode.com/problems/shortest-word-distance-iii/,Medium,"Array, String",2153492651,2026-09-26T04:10:00+00:00,python3,83 ms,38.1 MB,245-shortest-word-distance-iii.py,,,,,,,,,,,new,2026-09-26T04:10:00+00:00,,,,,0,0
@@ -1368,6 +1377,8 @@ if val < root.val, it will be to the right because it was appended to the right
 we can do this recusively
 if val is smaller then it has to be in some place right of the root ",,,,,,,,,new,2026-09-16T23:51:34+00:00,,,,,0,0
 1004,Max Consecutive Ones III,max-consecutive-ones-iii,https://leetcode.com/problems/max-consecutive-ones-iii/,Medium,"Array, Binary Search, Sliding Window, Prefix Sum",2084425263,2026-07-28T07:58:06+00:00,python3,59 ms,22.3 MB,1004-max-consecutive-ones-iii.py,,,,,,,,,,,new,,,,,,0,0
+1021,Remove Outermost Parentheses,remove-outermost-parentheses,https://leetcode.com/problems/remove-outermost-parentheses/,Easy,"String, Stack, Bracket Sequences",2165912597,2026-10-08T04:13:45+00:00,python3,4 ms,19.2 MB,1021-remove-outermost-parentheses.py,[ Time taken: 7hrs 25m 2s ],"we would have to keep track of like the depth
+of the parenthesis while it is (, and if it is greater than one then we have a decomposition that can be done ",,,,,,,,,new,2026-10-08T04:13:45+00:00,,,,,0,0
 1046,Last Stone Weight,last-stone-weight,https://leetcode.com/problems/last-stone-weight/,Easy,"Array, Heap (Priority Queue)",2127344601,2026-09-01T14:51:22+00:00,python3,0 ms,19.4 MB,1046-last-stone-weight.py,,"we can use a max heap and store the two heaviest stones and then compare them in the heap
 heaviest stone
 second heaviest stone",,,,,,,,,new,2026-09-01T14:54:04+00:00,,,,,0,0
