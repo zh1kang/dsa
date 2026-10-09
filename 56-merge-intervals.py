@@ -129,3 +129,26 @@ class Solution:
 
 
        
+
+# submission 2165506346 - 2026-10-07T16:32:02+00:00
+class Solution:
+    def merge(self, intervals: list[list[int]]) -> list[list[int]]:
+        # sort by start time
+        intervals.sort(key=lambda x: x[0])
+        merged = []
+
+
+        for start, end in intervals:
+
+            if not merged or merged[-1][1] < start:
+                merged.append([start, end])
+            else:
+                merged[-1][1] = max(end, merged[-1][1])
+
+        return merged
+
+
+
+            
+
+            
