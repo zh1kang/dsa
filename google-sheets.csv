@@ -490,6 +490,12 @@ class TreeNode:
         self.right = right
 bfs
 initilize queue",,,,,,,,,new,2026-09-17T00:08:22+00:00,,,,,0,0
+112,Path Sum,path-sum,https://leetcode.com/problems/path-sum/,Easy,"Tree, Depth-First Search, Breadth-First Search, Binary Tree",2167885871,2026-10-10T06:21:34+00:00,python3,0 ms,20.1 MB,112-path-sum.py,,"Definition for a binary tree node.
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right",,,,,,,,,new,2026-10-10T06:21:34+00:00,,,,,0,0
 115,Distinct Subsequences,distinct-subsequences,https://leetcode.com/problems/distinct-subsequences/,Hard,"String, Dynamic Programming",2133430855,2026-09-07T03:47:52+00:00,python3,975 ms,254.5 MB,115-distinct-subsequences.py,,"thoughts:
 dp? we can use top down memoziation to cache our choices and reuse them
 initially I thought backtracking but I think that would be too inefficient
@@ -697,6 +703,10 @@ param_2 = obj.search(word)",,,,,,,,,new,,,,,,0,0
 obj = WordDictionary()
 obj.addWord(word)
 param_2 = obj.search(word)",,,,,,,,,new,,,,,,0,0
+213,House Robber II,house-robber-ii,https://leetcode.com/problems/house-robber-ii/,Medium,"Array, Dynamic Programming",2167872593,2026-10-10T06:04:32+00:00,python3,0 ms,19.3 MB,213-house-robber-ii.py,,"this is a dp problem, we either choose to rob the first house which means we cant rob the last house nums[0] - nums[n-1]
+or we rob the last house but cant rob the first nums[1] - nums[n]
+from house robber 1",,,,,,,,,new,2026-10-10T06:08:26+00:00,,,,,0,0
+213,House Robber II,house-robber-ii,https://leetcode.com/problems/house-robber-ii/,Medium,"Array, Dynamic Programming",2167875691,2026-10-10T06:08:26+00:00,python3,0 ms,19.2 MB,213-house-robber-ii.py,,,,,,,,,,,new,2026-10-10T06:08:26+00:00,,,,,0,0
 215,Kth Largest Element in an Array,kth-largest-element-in-an-array,https://leetcode.com/problems/kth-largest-element-in-an-array/,Medium,"Array, Divide and Conquer, Sorting, Heap (Priority Queue), Quickselect",2126511257,2026-08-31T18:50:47+00:00,python3,51 ms,31 MB,215-kth-largest-element-in-an-array.py,[ Time taken: 17m 8s ],"we can solve this using a min heap of size k
 since we want the kth largest element, we push values that are larger than the current value
 and then by the end the kth largest value should just be the value sitting on top of the heap 
@@ -854,6 +864,7 @@ class TreeNode:
         self.right = None",,,,,,,,,new,,,,,,0,0
 238,Product of Array Except Self,product-of-array-except-self,https://leetcode.com/problems/product-of-array-except-self/,Medium,"Array, Prefix Sum",1812739427,2025-10-27T02:53:26+00:00,python3,34 ms,27 MB,238-product-of-array-except-self.py,,,,,,,,,,,new,,,,,,0,0
 242,Valid Anagram,valid-anagram,https://leetcode.com/problems/valid-anagram/,Easy,"Hash Table, String, Sorting",1874956747,2026-01-05T06:15:42+00:00,python3,14 ms,17.7 MB,242-valid-anagram.py,,,,,,,,,,,new,,,,,,0,0
+243,Shortest Word Distance,shortest-word-distance,https://leetcode.com/problems/shortest-word-distance/,Easy,"Array, String",2167919717,2026-10-10T07:05:56+00:00,python3,3 ms,21.5 MB,243-shortest-word-distance.py,,,,,,,,,,,new,2026-10-10T07:05:56+00:00,,,,,0,0
 244,Shortest Word Distance II,shortest-word-distance-ii,https://leetcode.com/problems/shortest-word-distance-ii/,Medium,"Array, Hash Table, Two Pointers, String, Design",2153449984,2026-09-26T02:25:24+00:00,python3,7 ms,26 MB,244-shortest-word-distance-ii.py,,"Your WordDistance object will be instantiated and called as such:
 obj = WordDistance(wordsDict)
 param_1 = obj.shortest(word1,word2)",,,,,,,,,new,2026-10-07T14:57:26+00:00,,,,,0,0
@@ -890,6 +901,7 @@ codec.decode(codec.encode(strs))",,,,,,,,,new,2026-10-01T01:41:51+00:00,,,,,0,0
 274,H-Index,h-index,https://leetcode.com/problems/h-index/,Medium,"Array, Sorting, Counting Sort",1812735700,2025-10-27T02:46:03+00:00,python3,0 ms,18.3 MB,274-h-index.py,,,,,,,,,,,new,,,,,,0,0
 278,First Bad Version,first-bad-version,https://leetcode.com/problems/first-bad-version/,Easy,"Binary Search, Interactive",2078595406,2026-07-23T15:48:16+00:00,python3,46 ms,19.1 MB,278-first-bad-version.py,,"The isBadVersion API is already defined for you.
 def isBadVersion(version: int) -> bool:",,,,,,,,,new,,,,,,0,0
+290,Word Pattern,word-pattern,https://leetcode.com/problems/word-pattern/,Easy,"Hash Table, String",2167904441,2026-10-10T06:45:30+00:00,python3,0 ms,19.2 MB,290-word-pattern.py,,hash map !,,,,,,,,,new,2026-10-10T06:45:30+00:00,,,,,0,0
 297,Serialize and Deserialize Binary Tree,serialize-and-deserialize-binary-tree,https://leetcode.com/problems/serialize-and-deserialize-binary-tree/,Hard,"String, Tree, Depth-First Search, Breadth-First Search, Design, Binary Tree",1876020551,2026-01-06T05:01:15+00:00,python3,85 ms,22.9 MB,297-serialize-and-deserialize-binary-tree.py,,"Definition for a binary tree node.
 class TreeNode(object):
     def __init__(self, x):
@@ -1031,6 +1043,15 @@ is uniform, so we can merge them into a single leaf
 otherwise, the current node is not a leaf and keeps the 4 children
 
 dfs(r, c, n) = build the quadtree for the n x n region starting at (r, c)",,,,,,,,,new,2026-09-26T03:52:01+00:00,,,,,0,0
+435,Non-overlapping Intervals,non-overlapping-intervals,https://leetcode.com/problems/non-overlapping-intervals/,Medium,"Array, Dynamic Programming, Greedy, Sorting",2167857094,2026-10-10T05:44:12+00:00,python3,87 ms,49.2 MB,435-non-overlapping-intervals.py,,"this is similar to the overlapping intervals problem
+where we can sort by starting time and then look for the overlapping intervals
+but then we need to delete it, so how do we delete it in an efficient manner?
+we can greedily remove the interval with the larger end time becasue that keeps the smaller end time and minimizes the chances we overlap with another time
+sort by starting time 
+we have an overlap
+we don't have an overlap and we just continue on 
+TC: O(nlogn) for sorting
+SC: O(n)",,,,,,,O(nlogn) for sorting,O(n),new,2026-10-10T05:44:12+00:00,,,,,0,0
 438,Find All Anagrams in a String,find-all-anagrams-in-a-string,https://leetcode.com/problems/find-all-anagrams-in-a-string/,Medium,"Hash Table, String, Sliding Window",2094035281,2026-08-04T13:32:07+00:00,python3,46 ms,19.8 MB,438-find-all-anagrams-in-a-string.py,,"Intial thoughts, create a frequency/anagram map of p so we know how many characters there are 
 Then we have a sliding window to go through s, and the window size is len(p)
 we scan and if the frequency map is not 0, then it is not an anagram and we proceed to the next window",,,,,,,,,new,,,,,,0,0
@@ -1433,6 +1454,12 @@ best up to i",,,,,,,,,new,,,,,,0,0
 1510,Stone Game IV,stone-game-iv,https://leetcode.com/problems/stone-game-iv/,Hard,"Math, Dynamic Programming, Minimax, Game Theory, Nim Game, Sprague–Grundy Theorem, Zero-Sum Game",2101501764,2026-08-10T12:11:38+00:00,python3,1776 ms,50.2 MB,1510-stone-game-iv.py,,"so if n is a perfect root, Alice will win always because she can win in one move 
 we try all the possible non-zero square number less than or equal to the remaining stones ",,,,,,,,,new,,,,,,0,0
 1510,Stone Game IV,stone-game-iv,https://leetcode.com/problems/stone-game-iv/,Hard,"Math, Dynamic Programming, Minimax, Game Theory, Nim Game, Sprague–Grundy Theorem, Zero-Sum Game",2101507647,2026-08-10T12:18:01+00:00,python3,602 ms,20.1 MB,1510-stone-game-iv.py,,"so if n is a perfect root, Alice will win always because she can win in one move ",,,,,,,,,new,,,,,,0,0
+1541,Minimum Insertions to Balance a Parentheses String,minimum-insertions-to-balance-a-parentheses-string,https://leetcode.com/problems/minimum-insertions-to-balance-a-parentheses-string/,Medium,"String, Stack, Greedy, Bracket Sequences",2166868492,2026-10-09T03:17:10+00:00,python3,59 ms,19.8 MB,1541-minimum-insertions-to-balance-a-parentheses-string.py,[ Time taken: 7hrs 54m 33s ],"can we just keep track of how many opening and closing parenthesis we have
+and then if the closing parenthesis lets say x % 2 != 0, we have to add a closing parenthesis until? and then there are always 2x the closing parenthesis as there are opening parenthesis for validity
+there are three cases where:
+()) is valid 
+())( needs 2
+and ))( needs 3 moves ",,,,,,,,,new,2026-10-09T03:17:10+00:00,,,,,0,0
 1614,Maximum Nesting Depth of the Parentheses,maximum-nesting-depth-of-the-parentheses,https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/,Easy,"String, Stack, Bracket Sequences",2155450746,2026-09-28T01:31:22+00:00,python3,0 ms,19.5 MB,1614-maximum-nesting-depth-of-the-parentheses.py,[ Time taken: 2hrs 35m 21s ],,,,,,,,,,new,2026-09-28T01:31:22+00:00,,,,,0,0
 1658,Minimum Operations to Reduce X to Zero,minimum-operations-to-reduce-x-to-zero,https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/,Medium,"Array, Hash Table, Binary Search, Sliding Window, Prefix Sum",2150300665,2026-09-23T01:08:46+00:00,python3,67 ms,31.4 MB,1658-minimum-operations-to-reduce-x-to-zero.py,,the target is how many values we can keep,,,,,,,,,new,2026-09-23T01:08:46+00:00,,,,,0,0
 1768,Merge Strings Alternately,merge-strings-alternately,https://leetcode.com/problems/merge-strings-alternately/,Easy,"Two Pointers, String",1516230580,2025-01-21T21:48:55+00:00,java,1 ms,42 MB,1768-merge-strings-alternately.java,,,,,,,,,,,new,,,,,,0,0
@@ -1629,6 +1656,13 @@ how much we get if we sell (h,w) directly
 choice 1: we don't cut it and just sell it directly
 choice 2: we cut it horizontally
 choice 3: we cut it vertically",,,,,,,,,new,2026-09-22T01:59:10+00:00,,,,,0,0
+2333,Minimum Sum of Squared Difference,minimum-sum-of-squared-difference,https://leetcode.com/problems/minimum-sum-of-squared-difference/,Medium,"Array, Binary Search, Greedy, Sorting, Heap (Priority Queue)",2167841358,2026-10-10T05:21:44+00:00,python3,590 ms,36.5 MB,2333-minimum-sum-of-squared-difference.py,,"to minimize the square difference we want the smallest value of 
+(nums1[i] - nums2[i]) which means that the difference between these two numbers needs to be as small as possible. 
+i dont think the +1, -1 stuff matters because you can just do it to whichever number, so we don't need to focus on that
+Can we just greedily reduce the one with the greatest difference with our k's? 
+reduce all the diffs down to target
+distribute any leftover remaining k by decrementing elements equal to target",,,,,,,,,new,2026-10-10T05:21:44+00:00,,,,,0,0
+2778,Sum of Squares of Special Elements ,sum-of-squares-of-special-elements,https://leetcode.com/problems/sum-of-squares-of-special-elements/,Easy,"Array, Enumeration",2168950658,2026-10-11T05:41:39+00:00,python3,0 ms,19.3 MB,2778-sum-of-squares-of-special-elements.py,,,,,,,,,,,new,2026-10-11T05:41:39+00:00,,,,,0,0
 2958,Length of Longest Subarray With at Most K Frequency,length-of-longest-subarray-with-at-most-k-frequency,https://leetcode.com/problems/length-of-longest-subarray-with-at-most-k-frequency/,Medium,"Array, Hash Table, Sliding Window",2104147210,2026-08-12T12:17:49+00:00,python3,247 ms,35.3 MB,2958-length-of-longest-subarray-with-at-most-k-frequency.py,[ Time taken: 2d 23hrs 5m 47s ],"first thoughts, we populate a frequency map with the number of
 elements we have in our nums array
 then, we can use a sliding window and expand our window as long as each value that we have is within k, if not we remove the first element and expand right ",,,,,,,,,new,,,,,,0,0
@@ -1733,6 +1767,12 @@ priority queue stores (curr_dist, node)
 skip if shorter path to u was already processed
 relax edges
 if shorter path v is found",,,,,,,,,new,2026-09-22T02:19:33+00:00,,,,,0,0
+3727,Maximum Alternating Sum of Squares,maximum-alternating-sum-of-squares,https://leetcode.com/problems/maximum-alternating-sum-of-squares/,Medium,"Array, Greedy, Sorting",2170874332,2026-10-13T06:05:28+00:00,python3,260 ms,32.9 MB,3727-maximum-alternating-sum-of-squares.py,,"to maximize the alternating sum we want it so that everytime we subtract a value, the number is as small as possible 
+sign doesn't matter here since it is a sum of squares 
+for even indicies we take the largest number
+for odd indicies we take the smallest number
+can we sort the nums by abs value and then for the right pointer we take it, and then increment and then for left pointer we take the smallest and increment
+even so we take the right",,,,,,,,,new,2026-10-13T06:05:28+00:00,,,,,0,0
 3731,Find Missing Elements,find-missing-elements,https://leetcode.com/problems/find-missing-elements/,Easy,"Array, Hash Table, Sorting",2093734853,2026-08-04T09:02:37+00:00,python3,0 ms,19.4 MB,3731-find-missing-elements.py,,,,,,,,,,,new,,,,,,0,0
 3870,Count Commas in Range,count-commas-in-range,https://leetcode.com/problems/count-commas-in-range/,Easy,Math,2135191325,2026-09-08T14:09:32+00:00,python3,0 ms,19.1 MB,3870-count-commas-in-range.py,,,,,,,,,,,new,2026-09-08T14:09:32+00:00,,,,,0,0
 3875,Construct Uniform Parity Array I,construct-uniform-parity-array-i,https://leetcode.com/problems/construct-uniform-parity-array-i/,Easy,"Array, Math",2127857876,2026-09-02T02:12:26+00:00,python3,3 ms,19.2 MB,3875-construct-uniform-parity-array-i.py,,,,,,,,,,,new,2026-09-02T02:13:28+00:00,,,,,0,0

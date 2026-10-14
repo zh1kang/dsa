@@ -18709,6 +18709,556 @@
         "reps": 0,
         "lapses": 0
       }
+    },
+    "1541-minimum-insertions-to-balance-a-parentheses-string": {
+      "leetcode_id": "1541",
+      "slug": "minimum-insertions-to-balance-a-parentheses-string",
+      "title": "Minimum Insertions to Balance a Parentheses String",
+      "difficulty": "Medium",
+      "tags": [
+        "String",
+        "Stack",
+        "Greedy",
+        "Bracket Sequences"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/minimum-insertions-to-balance-a-parentheses-string/",
+      "first_solved_at": "2026-10-09T03:17:10+00:00",
+      "last_solved_at": "2026-10-09T03:17:10+00:00",
+      "attempts": [
+        {
+          "submission_id": "2166868492",
+          "submitted_at": "2026-10-09T03:17:10+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "1541-minimum-insertions-to-balance-a-parentheses-string.py",
+          "code_sha256": "a87157391f630f35b0775fd7194897ecf0f114379e2e253121c40b460ebb2c4e",
+          "runtime": "59 ms",
+          "memory": "19.8 MB",
+          "leetcode_notes": "[ Time taken: 7hrs 54m 33s ]",
+          "raw_comments": [
+            "can we just keep track of how many opening and closing parenthesis we have",
+            "and then if the closing parenthesis lets say x % 2 != 0, we have to add a closing parenthesis until? and then there are always 2x the closing parenthesis as there are opening parenthesis for validity",
+            "there are three cases where:",
+            "()) is valid ",
+            "())( needs 2",
+            "and ))( needs 3 moves "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-09T03:17:10+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "2333-minimum-sum-of-squared-difference": {
+      "leetcode_id": "2333",
+      "slug": "minimum-sum-of-squared-difference",
+      "title": "Minimum Sum of Squared Difference",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Binary Search",
+        "Greedy",
+        "Sorting",
+        "Heap (Priority Queue)"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/minimum-sum-of-squared-difference/",
+      "first_solved_at": "2026-10-10T05:21:44+00:00",
+      "last_solved_at": "2026-10-10T05:21:44+00:00",
+      "attempts": [
+        {
+          "submission_id": "2167760039",
+          "submitted_at": "2026-10-10T02:42:50+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "2333-minimum-sum-of-squared-difference.py",
+          "code_sha256": "37f9e2eaac8ac05dec37164d9db753a5bc9e9a871223858079de90c09ef87688",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "to minimize the square difference we want the smallest value of ",
+            "(nums1[i] - nums2[i]) which means that the difference between these two numbers needs to be as small as possible. ",
+            "i dont think the +1, -1 stuff matters because you can just do it to whichever number, so we don't need to focus on that",
+            "Can we just greedily reduce the one with the greatest difference with our k's? ",
+            "reduce all the diffs down to target",
+            "distribute any leftover remaining k by decrementing elements equal to target"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2167841358",
+          "submitted_at": "2026-10-10T05:21:44+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "2333-minimum-sum-of-squared-difference.py",
+          "code_sha256": "1848160ae31640369ccc0bc251269f88f425e255039e01af206f1f6a30c038b3",
+          "runtime": "590 ms",
+          "memory": "36.5 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "to minimize the square difference we want the smallest value of ",
+            "(nums1[i] - nums2[i]) which means that the difference between these two numbers needs to be as small as possible. ",
+            "i dont think the +1, -1 stuff matters because you can just do it to whichever number, so we don't need to focus on that",
+            "Can we just greedily reduce the one with the greatest difference with our k's? ",
+            "reduce all the diffs down to target",
+            "distribute any leftover remaining k by decrementing elements equal to target"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-10T05:21:44+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "435-non-overlapping-intervals": {
+      "leetcode_id": "435",
+      "slug": "non-overlapping-intervals",
+      "title": "Non-overlapping Intervals",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Dynamic Programming",
+        "Greedy",
+        "Sorting"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/non-overlapping-intervals/",
+      "first_solved_at": "2026-10-10T05:44:12+00:00",
+      "last_solved_at": "2026-10-10T05:44:12+00:00",
+      "attempts": [
+        {
+          "submission_id": "2167857094",
+          "submitted_at": "2026-10-10T05:44:12+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "435-non-overlapping-intervals.py",
+          "code_sha256": "85b559361cd5e9f5a54635c9b176b6c5176d7c38c9f34d3bf0698da80fb0a243",
+          "runtime": "87 ms",
+          "memory": "49.2 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "this is similar to the overlapping intervals problem",
+            "where we can sort by starting time and then look for the overlapping intervals",
+            "but then we need to delete it, so how do we delete it in an efficient manner?",
+            "we can greedily remove the interval with the larger end time becasue that keeps the smaller end time and minimizes the chances we overlap with another time",
+            "sort by starting time ",
+            "we have an overlap",
+            "we don't have an overlap and we just continue on ",
+            "TC: O(nlogn) for sorting",
+            "SC: O(n)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "O(nlogn) for sorting",
+            "space_complexity": "O(n)"
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-10T05:44:12+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "213-house-robber-ii": {
+      "leetcode_id": "213",
+      "slug": "house-robber-ii",
+      "title": "House Robber II",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Dynamic Programming"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/house-robber-ii/",
+      "first_solved_at": "2026-10-10T06:04:32+00:00",
+      "last_solved_at": "2026-10-10T06:08:26+00:00",
+      "attempts": [
+        {
+          "submission_id": "2167872593",
+          "submitted_at": "2026-10-10T06:04:32+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "213-house-robber-ii.py",
+          "code_sha256": "bec7adb494c39ad6f418c4d4964383fb8916b1bb92d291a55998a120fd7a58d8",
+          "runtime": "0 ms",
+          "memory": "19.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "this is a dp problem, we either choose to rob the first house which means we cant rob the last house nums[0] - nums[n-1]",
+            "or we rob the last house but cant rob the first nums[1] - nums[n]",
+            "from house robber 1"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2167875691",
+          "submitted_at": "2026-10-10T06:08:26+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "213-house-robber-ii.py",
+          "code_sha256": "f583d46789803f4fbc1b0a50faf636a2410f6d05f0748be5dfc18f430fafe64d",
+          "runtime": "0 ms",
+          "memory": "19.2 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-10T06:08:26+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "112-path-sum": {
+      "leetcode_id": "112",
+      "slug": "path-sum",
+      "title": "Path Sum",
+      "difficulty": "Easy",
+      "tags": [
+        "Tree",
+        "Depth-First Search",
+        "Breadth-First Search",
+        "Binary Tree"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/path-sum/",
+      "first_solved_at": "2026-10-10T06:21:34+00:00",
+      "last_solved_at": "2026-10-10T06:21:34+00:00",
+      "attempts": [
+        {
+          "submission_id": "2167885871",
+          "submitted_at": "2026-10-10T06:21:34+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "112-path-sum.py",
+          "code_sha256": "d3e525b55694a58a868bf311d4bc4e533cd0e3de6034ffd03c2588ea4ded125d",
+          "runtime": "0 ms",
+          "memory": "20.1 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "Definition for a binary tree node.",
+            "class TreeNode:",
+            "    def __init__(self, val=0, left=None, right=None):",
+            "        self.val = val",
+            "        self.left = left",
+            "        self.right = right"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-10T06:21:34+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "290-word-pattern": {
+      "leetcode_id": "290",
+      "slug": "word-pattern",
+      "title": "Word Pattern",
+      "difficulty": "Easy",
+      "tags": [
+        "Hash Table",
+        "String"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/word-pattern/",
+      "first_solved_at": "2026-10-10T06:45:30+00:00",
+      "last_solved_at": "2026-10-10T06:45:30+00:00",
+      "attempts": [
+        {
+          "submission_id": "2167904441",
+          "submitted_at": "2026-10-10T06:45:30+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "290-word-pattern.py",
+          "code_sha256": "41dea7fafaf383568cfa9fe8f9aa7cd81d2f472b6a556c02cc5396c8239c410f",
+          "runtime": "0 ms",
+          "memory": "19.2 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "hash map !"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-10T06:45:30+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "243-shortest-word-distance": {
+      "leetcode_id": "243",
+      "slug": "shortest-word-distance",
+      "title": "Shortest Word Distance",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "String"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/shortest-word-distance/",
+      "first_solved_at": "2026-10-10T07:05:56+00:00",
+      "last_solved_at": "2026-10-10T07:05:56+00:00",
+      "attempts": [
+        {
+          "submission_id": "2167919354",
+          "submitted_at": "2026-10-10T07:05:25+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "243-shortest-word-distance.py",
+          "code_sha256": "a5d8112bcea4d0b1f0fcce126abbe1ebfafcd0eeb34fcf732603ea5472e45300",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2167919717",
+          "submitted_at": "2026-10-10T07:05:56+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "243-shortest-word-distance.py",
+          "code_sha256": "f8c5d586df1f1df5a14840ad8939731d5e71aaf2cdb1ca817ef8e5f0c58b1fb9",
+          "runtime": "3 ms",
+          "memory": "21.5 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-10T07:05:56+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "2778-sum-of-squares-of-special-elements": {
+      "leetcode_id": "2778",
+      "slug": "sum-of-squares-of-special-elements",
+      "title": "Sum of Squares of Special Elements ",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Enumeration"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/sum-of-squares-of-special-elements/",
+      "first_solved_at": "2026-10-11T05:41:39+00:00",
+      "last_solved_at": "2026-10-11T05:41:39+00:00",
+      "attempts": [
+        {
+          "submission_id": "2168950658",
+          "submitted_at": "2026-10-11T05:41:39+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "2778-sum-of-squares-of-special-elements.py",
+          "code_sha256": "6589eeccf94ec1ab6b7b1fcc99ef2264e903642abf2dec4a927ee7adf78e5145",
+          "runtime": "0 ms",
+          "memory": "19.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-11T05:41:39+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "3727-maximum-alternating-sum-of-squares": {
+      "leetcode_id": "3727",
+      "slug": "maximum-alternating-sum-of-squares",
+      "title": "Maximum Alternating Sum of Squares",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Sorting"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/maximum-alternating-sum-of-squares/",
+      "first_solved_at": "2026-10-13T06:05:28+00:00",
+      "last_solved_at": "2026-10-13T06:05:28+00:00",
+      "attempts": [
+        {
+          "submission_id": "2170874332",
+          "submitted_at": "2026-10-13T06:05:28+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "3727-maximum-alternating-sum-of-squares.py",
+          "code_sha256": "1dcb24a11c30529602c373e6702e563597fda5695b264c66273f7cbccf0d1d47",
+          "runtime": "260 ms",
+          "memory": "32.9 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "to maximize the alternating sum we want it so that everytime we subtract a value, the number is as small as possible ",
+            "sign doesn't matter here since it is a sum of squares ",
+            "for even indicies we take the largest number",
+            "for odd indicies we take the smallest number",
+            "can we sort the nums by abs value and then for the right pointer we take it, and then increment and then for left pointer we take the smallest and increment",
+            "even so we take the right"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-13T06:05:28+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
     }
   }
 }
