@@ -19259,6 +19259,1487 @@
         "reps": 0,
         "lapses": 0
       }
+    },
+    "294-flip-game-ii": {
+      "leetcode_id": "294",
+      "slug": "flip-game-ii",
+      "title": "Flip Game II",
+      "difficulty": "Medium",
+      "tags": [
+        "Math",
+        "Dynamic Programming",
+        "Backtracking",
+        "Memoization",
+        "Minimax",
+        "Game Theory",
+        "Sprague–Grundy Theorem",
+        "Impartial Game"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/flip-game-ii/",
+      "first_solved_at": "2026-10-18T18:36:57+00:00",
+      "last_solved_at": "2026-10-18T18:36:57+00:00",
+      "attempts": [
+        {
+          "submission_id": "2175637754",
+          "submitted_at": "2026-10-18T18:11:20+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "294-flip-game-ii.py",
+          "code_sha256": "caec70051875480c45ab5a6a18bbc35db2efc8b6dade2567567aae5d0d3fe632",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2175639613",
+          "submitted_at": "2026-10-18T18:13:25+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "294-flip-game-ii.py",
+          "code_sha256": "2a625f83a78b3681bc5f739b85a27290a34018ca1dca1138ff10352af97f9939",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2175654781",
+          "submitted_at": "2026-10-18T18:31:03+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "294-flip-game-ii.py",
+          "code_sha256": "0e4fefa089b2bdb903b93577798a747667fbe84a9436c4cc6a27a1349ba74d91",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thoughts:",
+            "the constraints are small enough to where we can try and look for every possible combination of flips with backtracking and if just one of them results in us winning we return true ",
+            "this would be O(2^N), but we can also memoize and store combinations we've already tried",
+            "if we find two consectuive ++'s replace them with --"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2175656070",
+          "submitted_at": "2026-10-18T18:32:52+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "294-flip-game-ii.py",
+          "code_sha256": "0eff2bb2481597035ed453d529be00e66a40a0935af6bba4ae8aa2ed86511905",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thoughts:",
+            "the constraints are small enough to where we can try and look for every possible combination of flips with backtracking and if just one of them results in us winning we return true ",
+            "this would be O(2^N), but we can also memoize and store combinations we've already tried",
+            "if we find two consectuive ++'s replace them with --"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2175658924",
+          "submitted_at": "2026-10-18T18:36:57+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "294-flip-game-ii.py",
+          "code_sha256": "84998a7b22de392433a422dc91dd5b51ed925a6f6e7731882640da41715253f5",
+          "runtime": "8 ms",
+          "memory": "19.6 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thoughts:",
+            "the constraints are small enough to where we can try and look for every possible combination of flips with backtracking and if just one of them results in us winning we return true ",
+            "this would be O(2^N), but we can also memoize and store combinations we've already tried",
+            "if we find two consectuive ++'s replace them with --"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-18T18:36:57+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "846-hand-of-straights": {
+      "leetcode_id": "846",
+      "slug": "hand-of-straights",
+      "title": "Hand of Straights",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Greedy",
+        "Sorting"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/hand-of-straights/",
+      "first_solved_at": "2026-10-18T19:00:49+00:00",
+      "last_solved_at": "2026-10-18T19:02:54+00:00",
+      "attempts": [
+        {
+          "submission_id": "2175664873",
+          "submitted_at": "2026-10-18T18:45:30+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "846-hand-of-straights.py",
+          "code_sha256": "0ea545e15e89e1aa34c18c3ec1e9bfcf49be9aa12df1ff90ceea39f9351e5678",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2175667745",
+          "submitted_at": "2026-10-18T18:49:54+00:00",
+          "status": "Runtime Error",
+          "language": "python3",
+          "code_path": "846-hand-of-straights.py",
+          "code_sha256": "880f265f0debb459cca27618fcab54bcec0114d4fb988323b00e96ba3d091896",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2175667832",
+          "submitted_at": "2026-10-18T18:50:01+00:00",
+          "status": "Runtime Error",
+          "language": "python3",
+          "code_path": "846-hand-of-straights.py",
+          "code_sha256": "0e90092680d7ddec40f30ceaa762b2f8f6c71fc95092bc0a4de7b1fb1e795fd0",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2175667899",
+          "submitted_at": "2026-10-18T18:50:08+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "846-hand-of-straights.py",
+          "code_sha256": "84e90815e588bc3d13ad48af110bc56eba943e0d512165dde3292254b39d35e9",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2175667983",
+          "submitted_at": "2026-10-18T18:50:17+00:00",
+          "status": "Runtime Error",
+          "language": "python3",
+          "code_path": "846-hand-of-straights.py",
+          "code_sha256": "b2b65204503b1e97fc30baef570b6da83e8165d5c6ef6ce7cdfe45b8b58068b3",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2175668368",
+          "submitted_at": "2026-10-18T18:50:51+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "846-hand-of-straights.py",
+          "code_sha256": "5aff9b48039f23a4731c74111688a43d243233b69cafb617aae5c0c7406679fa",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2175674781",
+          "submitted_at": "2026-10-18T19:00:49+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "846-hand-of-straights.py",
+          "code_sha256": "48ea305f1c2a70797ab4343033439a0001d2426e320cd63e64f735d4027fd914",
+          "runtime": "28 ms",
+          "memory": "21 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2175676026",
+          "submitted_at": "2026-10-18T19:02:54+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "846-hand-of-straights.py",
+          "code_sha256": "39c699b9cc8cf6248287d364f98ad694be855e3ed870476258acc52a1e895f24",
+          "runtime": "34 ms",
+          "memory": "20.9 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we check for the next possible numbers that can be within this group",
+            ""
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-18T19:02:54+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "261-graph-valid-tree": {
+      "leetcode_id": "261",
+      "slug": "graph-valid-tree",
+      "title": "Graph Valid Tree",
+      "difficulty": "Medium",
+      "tags": [
+        "Depth-First Search",
+        "Breadth-First Search",
+        "Union-Find",
+        "Graph Theory"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/graph-valid-tree/",
+      "first_solved_at": "2026-10-18T19:18:35+00:00",
+      "last_solved_at": "2026-10-18T19:19:52+00:00",
+      "attempts": [
+        {
+          "submission_id": "2175685346",
+          "submitted_at": "2026-10-18T19:18:35+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "261-graph-valid-tree.py",
+          "code_sha256": "825f09d6731e70d1b3346bfa4cfd32591c899fdfa5923af8cb13cb1cf572b6b5",
+          "runtime": "0 ms",
+          "memory": "20.4 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2175686086",
+          "submitted_at": "2026-10-18T19:19:52+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "261-graph-valid-tree.py",
+          "code_sha256": "825f09d6731e70d1b3346bfa4cfd32591c899fdfa5923af8cb13cb1cf572b6b5",
+          "runtime": "0 ms",
+          "memory": "20.2 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-18T19:19:52+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "518-coin-change-ii": {
+      "leetcode_id": "518",
+      "slug": "coin-change-ii",
+      "title": "Coin Change II",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Dynamic Programming",
+        "Knapsack Problem",
+        "Complete Knapsack"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/coin-change-ii/",
+      "first_solved_at": "2026-10-18T21:13:07+00:00",
+      "last_solved_at": "2026-10-18T21:21:15+00:00",
+      "attempts": [
+        {
+          "submission_id": "2175736352",
+          "submitted_at": "2026-10-18T21:11:34+00:00",
+          "status": "Time Limit Exceeded",
+          "language": "python3",
+          "code_path": "518-coin-change-ii.py",
+          "code_sha256": "50dae0a39f08a0697d646824eae4bb620b74fa72f589b9e4cd1950a9034ec50b",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "skip the curr value",
+            "reuse the coin"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2175736856",
+          "submitted_at": "2026-10-18T21:13:07+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "518-coin-change-ii.py",
+          "code_sha256": "b47ab248af03c09901ccae3e8af4f120bce03c513f9e4fd42b7fa0284ef96aa7",
+          "runtime": "2015 ms",
+          "memory": "378.2 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "skip the curr value",
+            "reuse the coin"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2175736902",
+          "submitted_at": "2026-10-18T21:13:13+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "518-coin-change-ii.py",
+          "code_sha256": "b47ab248af03c09901ccae3e8af4f120bce03c513f9e4fd42b7fa0284ef96aa7",
+          "runtime": "2095 ms",
+          "memory": "378 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "skip the curr value",
+            "reuse the coin"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2175739575",
+          "submitted_at": "2026-10-18T21:21:15+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "518-coin-change-ii.py",
+          "code_sha256": "4a6b3186edb465302a986809c91988e94c69f0a4d8bff9967ecf98a275417af1",
+          "runtime": "215 ms",
+          "memory": "19.4 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-18T21:21:15+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "309-best-time-to-buy-and-sell-stock-with-cooldown": {
+      "leetcode_id": "309",
+      "slug": "best-time-to-buy-and-sell-stock-with-cooldown",
+      "title": "Best Time to Buy and Sell Stock with Cooldown",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Dynamic Programming"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/",
+      "first_solved_at": "2026-10-18T21:38:37+00:00",
+      "last_solved_at": "2026-10-18T21:51:02+00:00",
+      "attempts": [
+        {
+          "submission_id": "2175745143",
+          "submitted_at": "2026-10-18T21:37:37+00:00",
+          "status": "Time Limit Exceeded",
+          "language": "python3",
+          "code_path": "309-best-time-to-buy-and-sell-stock-with-cooldown.py",
+          "code_sha256": "8d5919f6d6ad8a656212411a72527d287608c313979b606f16e03734cf294d21",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thoughts:",
+            "we have three choices to pick for each individual state, ",
+            "which naturally leads to dp, on a particular state we check whether or not we are on cooldown, if we are we cannot do anything but skip to the next day",
+            "if we are not on cool down, we can choose either to buy or sell our stock",
+            "skip",
+            "sell, then skip the next day "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2175745450",
+          "submitted_at": "2026-10-18T21:38:37+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "309-best-time-to-buy-and-sell-stock-with-cooldown.py",
+          "code_sha256": "0755003c5c234694e5145c5145e9b50010e4de7953357beeb0e7c332068a73fa",
+          "runtime": "9 ms",
+          "memory": "21.1 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thoughts:",
+            "we have three choices to pick for each individual state, ",
+            "which naturally leads to dp, on a particular state we check whether or not we are on cooldown, if we are we cannot do anything but skip to the next day",
+            "if we are not on cool down, we can choose either to buy or sell our stock",
+            "skip",
+            "sell, then skip the next day "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2175747464",
+          "submitted_at": "2026-10-18T21:45:08+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "309-best-time-to-buy-and-sell-stock-with-cooldown.py",
+          "code_sha256": "90bbded18ffe713ff4e122c51e6128cf8f0fd9420ae7d3099f4a940ac0f8af2c",
+          "runtime": "3 ms",
+          "memory": "19.6 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thoughts:",
+            "we have three choices to pick for each individual state, ",
+            "which naturally leads to dp, on a particular state we check whether or not we are on cooldown, if we are we cannot do anything but skip to the next day",
+            "if we are not on cool down, we can choose either to buy or sell our stock",
+            "holding a stock currently",
+            "not holding a stock"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2175749357",
+          "submitted_at": "2026-10-18T21:51:02+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "309-best-time-to-buy-and-sell-stock-with-cooldown.py",
+          "code_sha256": "90bbded18ffe713ff4e122c51e6128cf8f0fd9420ae7d3099f4a940ac0f8af2c",
+          "runtime": "2 ms",
+          "memory": "19.8 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thoughts:",
+            "we have three choices to pick for each individual state, ",
+            "which naturally leads to dp, on a particular state we check whether or not we are on cooldown, if we are we cannot do anything but skip to the next day",
+            "if we are not on cool down, we can choose either to buy or sell our stock",
+            "holding a stock currently",
+            "not holding a stock"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-18T21:51:02+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "31-next-permutation": {
+      "leetcode_id": "31",
+      "slug": "next-permutation",
+      "title": "Next Permutation",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Two Pointers"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/next-permutation/",
+      "first_solved_at": "2026-10-18T22:23:56+00:00",
+      "last_solved_at": "2026-10-18T22:23:56+00:00",
+      "attempts": [
+        {
+          "submission_id": "2175758696",
+          "submitted_at": "2026-10-18T22:22:58+00:00",
+          "status": "Runtime Error",
+          "language": "python3",
+          "code_path": "31-next-permutation.py",
+          "code_sha256": "12436bc4a9c5b8cfba4ecb3b4a912c53c478f1689b9ecff7db7837c665730479",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "\n        Do not return anything, modify nums in-place instead.\n        "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2175758935",
+          "submitted_at": "2026-10-18T22:23:56+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "31-next-permutation.py",
+          "code_sha256": "06d430cb56a13e39c69a3d3b5d09d2ce0c56a6bf30f42ec14f4278da3972dfa1",
+          "runtime": "0 ms",
+          "memory": "19.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "\n        Do not return anything, modify nums in-place instead.\n        "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-18T22:23:56+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "344-reverse-string": {
+      "leetcode_id": "344",
+      "slug": "reverse-string",
+      "title": "Reverse String",
+      "difficulty": "Easy",
+      "tags": [
+        "Two Pointers",
+        "String"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/reverse-string/",
+      "first_solved_at": "2026-10-18T22:32:17+00:00",
+      "last_solved_at": "2026-10-18T22:32:17+00:00",
+      "attempts": [
+        {
+          "submission_id": "2175761130",
+          "submitted_at": "2026-10-18T22:32:17+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "344-reverse-string.py",
+          "code_sha256": "7a4298be5c92af2882903c7d435baad94ec8d82d42402734c1a76972266a7b23",
+          "runtime": "3 ms",
+          "memory": "23.5 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "\n        Do not return anything, modify s in-place instead.\n        "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-18T22:32:17+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "904-fruit-into-baskets": {
+      "leetcode_id": "904",
+      "slug": "fruit-into-baskets",
+      "title": "Fruit Into Baskets",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Sliding Window"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/fruit-into-baskets/",
+      "first_solved_at": "2026-10-19T00:07:43+00:00",
+      "last_solved_at": "2026-10-19T00:07:43+00:00",
+      "attempts": [
+        {
+          "submission_id": "2175784955",
+          "submitted_at": "2026-10-19T00:07:43+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "904-fruit-into-baskets.py",
+          "code_sha256": "53e3005466856ad4b1d159f5a3dcce52d62bb00a8113a0602ab909c4e503f4bb",
+          "runtime": "177 ms",
+          "memory": "25.6 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "freq map -> sliding window",
+            "if we have more than two types we shorten the window"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-19T00:07:43+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "205-isomorphic-strings": {
+      "leetcode_id": "205",
+      "slug": "isomorphic-strings",
+      "title": "Isomorphic Strings",
+      "difficulty": "Easy",
+      "tags": [
+        "Hash Table",
+        "String"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/isomorphic-strings/",
+      "first_solved_at": "2026-10-19T00:42:25+00:00",
+      "last_solved_at": "2026-10-19T00:42:25+00:00",
+      "attempts": [
+        {
+          "submission_id": "2175794329",
+          "submitted_at": "2026-10-19T00:42:25+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "205-isomorphic-strings.py",
+          "code_sha256": "b1db683dfb858ec8cf322112a2916456cf3583ea17dc94fee8b688ceb89045cb",
+          "runtime": "4 ms",
+          "memory": "19.2 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-19T00:42:25+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "2913-subarrays-distinct-element-sum-of-squares-i": {
+      "leetcode_id": "2913",
+      "slug": "subarrays-distinct-element-sum-of-squares-i",
+      "title": "Subarrays Distinct Element Sum of Squares I",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Binary Indexed Tree",
+        "Segment Tree"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/subarrays-distinct-element-sum-of-squares-i/",
+      "first_solved_at": "2026-10-19T01:23:45+00:00",
+      "last_solved_at": "2026-10-19T01:23:45+00:00",
+      "attempts": [
+        {
+          "submission_id": "2175805758",
+          "submitted_at": "2026-10-19T01:23:45+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "2913-subarrays-distinct-element-sum-of-squares-i.py",
+          "code_sha256": "8bcf447d7754ab8fbbcd72da11366e8976a93c26fa2dd8fd2f7e1f1e2647faca",
+          "runtime": "21 ms",
+          "memory": "19.2 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-19T01:23:45+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "323-number-of-connected-components-in-an-undirected-graph": {
+      "leetcode_id": "323",
+      "slug": "number-of-connected-components-in-an-undirected-graph",
+      "title": "Number of Connected Components in an Undirected Graph",
+      "difficulty": "Medium",
+      "tags": [
+        "Depth-First Search",
+        "Breadth-First Search",
+        "Union-Find",
+        "Graph Theory"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/",
+      "first_solved_at": "2026-10-19T01:31:36+00:00",
+      "last_solved_at": "2026-10-19T01:31:36+00:00",
+      "attempts": [
+        {
+          "submission_id": "2175807704",
+          "submitted_at": "2026-10-19T01:30:29+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "323-number-of-connected-components-in-an-undirected-graph.py",
+          "code_sha256": "4e6a3a684d330dd3f045d5765c77c14f33cdd33e2f606ce1af344cc9b77b193c",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2175807999",
+          "submitted_at": "2026-10-19T01:31:36+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "323-number-of-connected-components-in-an-undirected-graph.py",
+          "code_sha256": "e9fe3ee15c4ae9958ecfae92796c4e0ffdc294ecca147a80e028dc24a8ca829c",
+          "runtime": "6 ms",
+          "memory": "21.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-19T01:31:36+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "225-implement-stack-using-queues": {
+      "leetcode_id": "225",
+      "slug": "implement-stack-using-queues",
+      "title": "Implement Stack using Queues",
+      "difficulty": "Easy",
+      "tags": [
+        "Stack",
+        "Design",
+        "Queue"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/implement-stack-using-queues/",
+      "first_solved_at": "2026-10-19T01:46:46+00:00",
+      "last_solved_at": "2026-10-19T01:47:05+00:00",
+      "attempts": [
+        {
+          "submission_id": "2175812459",
+          "submitted_at": "2026-10-19T01:46:46+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "225-implement-stack-using-queues.py",
+          "code_sha256": "6fdbff77707c5e5014125d526f84d5bf55e9cb3bdbc03b52e12172ca20007afc",
+          "runtime": "1 ms",
+          "memory": "19.5 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "stack is lifo so the value we append should go to the back ",
+            "this for loop rotates all the values in the current queue",
+            "to the right to simulate LIFO",
+            "Your MyStack object will be instantiated and called as such:",
+            "obj = MyStack()",
+            "obj.push(x)",
+            "param_2 = obj.pop()",
+            "param_3 = obj.top()",
+            "param_4 = obj.empty()"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2175812567",
+          "submitted_at": "2026-10-19T01:47:05+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "225-implement-stack-using-queues.py",
+          "code_sha256": "6fdbff77707c5e5014125d526f84d5bf55e9cb3bdbc03b52e12172ca20007afc",
+          "runtime": "1 ms",
+          "memory": "19.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "stack is lifo so the value we append should go to the back ",
+            "this for loop rotates all the values in the current queue",
+            "to the right to simulate LIFO",
+            "Your MyStack object will be instantiated and called as such:",
+            "obj = MyStack()",
+            "obj.push(x)",
+            "param_2 = obj.pop()",
+            "param_3 = obj.top()",
+            "param_4 = obj.empty()"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-19T01:47:05+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "2089-find-target-indices-after-sorting-array": {
+      "leetcode_id": "2089",
+      "slug": "find-target-indices-after-sorting-array",
+      "title": "Find Target Indices After Sorting Array",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Binary Search",
+        "Sorting"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/find-target-indices-after-sorting-array/",
+      "first_solved_at": "2026-10-19T03:31:57+00:00",
+      "last_solved_at": "2026-10-19T03:31:57+00:00",
+      "attempts": [
+        {
+          "submission_id": "2175852935",
+          "submitted_at": "2026-10-19T03:31:57+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "2089-find-target-indices-after-sorting-array.py",
+          "code_sha256": "874b1af4c9bee8012cad44a203c48c02af8b59e2d115fc863c251d6c32644f55",
+          "runtime": "0 ms",
+          "memory": "19.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-19T03:31:57+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "3295-report-spam-message": {
+      "leetcode_id": "3295",
+      "slug": "report-spam-message",
+      "title": "Report Spam Message",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/report-spam-message/",
+      "first_solved_at": "2026-10-19T04:47:28+00:00",
+      "last_solved_at": "2026-10-19T04:47:28+00:00",
+      "attempts": [
+        {
+          "submission_id": "2175894853",
+          "submitted_at": "2026-10-19T04:47:28+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "3295-report-spam-message.py",
+          "code_sha256": "c05e4594a31e61c4d5e9b77a82068b712906f0fe395846544dfd9e1f728ad39e",
+          "runtime": "51 ms",
+          "memory": "48 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-19T04:47:28+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "778-swim-in-rising-water": {
+      "leetcode_id": "778",
+      "slug": "swim-in-rising-water",
+      "title": "Swim in Rising Water",
+      "difficulty": "Hard",
+      "tags": [
+        "Array",
+        "Binary Search",
+        "Depth-First Search",
+        "Breadth-First Search",
+        "Union-Find",
+        "Minimax",
+        "Heap (Priority Queue)",
+        "Matrix",
+        "Dijkstra's Algorithm"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/swim-in-rising-water/",
+      "first_solved_at": "2026-10-19T20:20:39+00:00",
+      "last_solved_at": "2026-10-19T20:20:39+00:00",
+      "attempts": [
+        {
+          "submission_id": "2176576432",
+          "submitted_at": "2026-10-19T20:20:39+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "778-swim-in-rising-water.py",
+          "code_sha256": "ae401efcc9f04235c2d42749753849d33f00b234458c3efacf90f05fa88364fb",
+          "runtime": "19 ms",
+          "memory": "19.5 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thoughts:",
+            "would we use dijkstras to find the shortest path, and then the minimum time we reach the bottom right square is just the largest value on our shortest path since we have to wait until t is equal to t so that it is reachable",
+            "but in this case wearen't minimizing edge eights but we are minimizing the elevation of the water that we traverse through because we want to wait the shortest amount of time to reach the bottom ",
+            "initialize the min height for the entire grid to be inf ",
+            "initialize our starting point (0,0)",
+            "initialize pq with (cumulative_cost, row, col)",
+            "if we find a height that is bigger ",
+            "if we find a new height that is smaller than current min height, we add to pq"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-19T20:20:39+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "1186-maximum-subarray-sum-with-one-deletion": {
+      "leetcode_id": "1186",
+      "slug": "maximum-subarray-sum-with-one-deletion",
+      "title": "Maximum Subarray Sum with One Deletion",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Dynamic Programming"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/maximum-subarray-sum-with-one-deletion/",
+      "first_solved_at": "2026-10-19T20:56:47+00:00",
+      "last_solved_at": "2026-10-19T20:56:47+00:00",
+      "attempts": [
+        {
+          "submission_id": "2176592297",
+          "submitted_at": "2026-10-19T20:56:47+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "1186-maximum-subarray-sum-with-one-deletion.py",
+          "code_sha256": "7b98162214f4967e85dece369f18ec53a3f0a253a4ec2bc8260d3eb4e847d1f5",
+          "runtime": "18 ms",
+          "memory": "27.8 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we can do a sort of prefix sum idea where we remove the value at the index where our prefix is decreasing? - Kadanes",
+            "we can either skip by using the same value of no_delete or we take the value of one delete and add it to the current value, take the max of both choices"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-19T20:56:47+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "2812-find-the-safest-path-in-a-grid": {
+      "leetcode_id": "2812",
+      "slug": "find-the-safest-path-in-a-grid",
+      "title": "Find the Safest Path in a Grid",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Binary Search",
+        "Breadth-First Search",
+        "Union-Find",
+        "Heap (Priority Queue)",
+        "Matrix"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/find-the-safest-path-in-a-grid/",
+      "first_solved_at": "2026-10-19T21:31:20+00:00",
+      "last_solved_at": "2026-10-19T21:45:13+00:00",
+      "attempts": [
+        {
+          "submission_id": "2176605195",
+          "submitted_at": "2026-10-19T21:31:20+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "2812-find-the-safest-path-in-a-grid.py",
+          "code_sha256": "6fb76d59d417c597c6fc8e86e9ffd6068ee1f7edc3c2477e7e7a0c850a43643e",
+          "runtime": "2273 ms",
+          "memory": "28.1 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thoughts:",
+            "we can use bfs to find the minimum distance of a theif to any of the nodes",
+            "and then we can use dijkstras to essentially prune the shortest distances in order to get the maximum safetness factor of a path",
+            "if the start or end has a we just return 0 ",
+            "bfs ",
+            "initiallize all the thief distances to 0 and append the locations to queue",
+            "find the minimum distance of the thieves to each cell",
+            "dijkstra's: we use a max heap to find the path that maximizes the distance between any cell and the thieves",
+            "heap should be initialized with the largest distance and the location of it "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2176609782",
+          "submitted_at": "2026-10-19T21:45:13+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "2812-find-the-safest-path-in-a-grid.py",
+          "code_sha256": "38a3759e2e257713e75061c2f1f84788aa4640d540b70b1ba4917de2d2c7d44d",
+          "runtime": "2350 ms",
+          "memory": "31.1 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thoughts:",
+            "we can use bfs to find the minimum distance of a theif to any of the nodes",
+            "and then we can use dijkstras to essentially prune the shortest distances in order to get the maximum safetness factor of a path",
+            "if the start or end has a we just return 0 ",
+            "bfs ",
+            "initiallize all the thief distances to 0 and append the locations to queue",
+            "find the minimum distance of the thieves to each cell",
+            "dijkstra's: we use a max heap to find the path that maximizes the distance between any cell and the thieves",
+            "heap should be initialized with the largest distance and the location of it "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-19T21:45:13+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "394-decode-string": {
+      "leetcode_id": "394",
+      "slug": "decode-string",
+      "title": "Decode String",
+      "difficulty": "Medium",
+      "tags": [
+        "String",
+        "Stack",
+        "Recursion"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/decode-string/",
+      "first_solved_at": "2026-10-19T22:08:25+00:00",
+      "last_solved_at": "2026-10-19T22:08:25+00:00",
+      "attempts": [
+        {
+          "submission_id": "2176616859",
+          "submitted_at": "2026-10-19T22:08:25+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "394-decode-string.py",
+          "code_sha256": "afe3469379bb5abeedbac7d369010d51474281c9c8ea39e5d9cb77999c6c6b5b",
+          "runtime": "0 ms",
+          "memory": "19.1 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "deal with mutli-digit numbers properly e.g. 12 or 130",
+            "if we reached a opening bracket we append to the stack and reset "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-19T22:08:25+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
     }
   }
 }
