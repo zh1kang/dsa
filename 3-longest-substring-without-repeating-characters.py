@@ -68,3 +68,23 @@ class Solution:
         
         return best
 
+
+# submission 2177510651 - 2026-10-21T01:33:33+00:00
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        # essentially we use a sliding window and every time we find a duplicate character we shirnk the window from the left and continue
+
+        char_set = set()
+        left, best = 0, 0
+
+        for right in range(len(s)):
+
+            while s[right] in char_set:
+                char_set.remove(s[left])
+                left += 1
+
+            char_set.add(s[right])
+            best = max(best, right - left + 1)
+
+        return best
+        
