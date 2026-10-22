@@ -107,3 +107,69 @@ class Solution:
                     dp[i][j] = max(dp[i-1][j], dp[i][j-1])
 
         return dp[m][n]
+
+# submission 2178158799 - 2026-10-21T16:55:33+00:00
+class Solution:
+    def longestCommonSubsequence(self, text1: str, text2: str) -> int:      
+        m, n = len(text1), len(text2)
+
+        # we have to make sure that we follow the strict ordering but we can just go through each of the two strings and compare characters 
+
+        memo = {}
+
+        def dp(t1, t2):
+
+            if t1 == len(text1) or t2 == len(text2):
+                return 0
+            
+            if (t1, t2) in memo:
+                return memo[(t1, t2)]
+
+            # case 1: we have matching characters
+            if text1[t1] == text2[t12]:
+                memo[(t1, t2)] = 1 + dp(t1 +1, t2 + 1)
+
+            # case 2: the letters aren't matching, so we take the max of either t1 or t2 
+            else:
+                memo[(t1, t2)] = max(dp(t1 + 1, t2), dp(t1, t2 + 1))
+
+            
+            return memo[(t1, t2)]
+
+        return dp(0,0)
+ 
+    
+            
+
+# submission 2178158896 - 2026-10-21T16:55:39+00:00
+class Solution:
+    def longestCommonSubsequence(self, text1: str, text2: str) -> int:      
+        m, n = len(text1), len(text2)
+
+        # we have to make sure that we follow the strict ordering but we can just go through each of the two strings and compare characters 
+
+        memo = {}
+
+        def dp(t1, t2):
+
+            if t1 == len(text1) or t2 == len(text2):
+                return 0
+            
+            if (t1, t2) in memo:
+                return memo[(t1, t2)]
+
+            # case 1: we have matching characters
+            if text1[t1] == text2[t2]:
+                memo[(t1, t2)] = 1 + dp(t1 +1, t2 + 1)
+
+            # case 2: the letters aren't matching, so we take the max of either t1 or t2 
+            else:
+                memo[(t1, t2)] = max(dp(t1 + 1, t2), dp(t1, t2 + 1))
+
+            
+            return memo[(t1, t2)]
+
+        return dp(0,0)
+ 
+    
+            
