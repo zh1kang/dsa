@@ -30,3 +30,32 @@ class Solution:
         return maxTrap
 
         
+
+# submission 2178061389 - 2026-10-21T15:09:40+00:00
+class Solution:
+    def maxArea(self, height: list[int]) -> int:
+
+        l, r = 0, len(height) - 1
+        max_water = 0
+
+        while l < r:
+            width = r - l 
+            min_height = min(height[l], height[r])
+
+            max_water = max(max_water, min_height * width)
+
+
+            if height[l] < height[r]:
+                l += 1
+
+            else:
+                r -= 1
+
+        
+        return max_water 
+
+
+
+
+
+        
