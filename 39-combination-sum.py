@@ -55,3 +55,64 @@ class Solution:
 
 
         
+
+# submission 2178149016 - 2026-10-21T16:45:48+00:00
+class Solution:
+    def combinationSum(self, candidates: list[int], target: int) -> list[list[int]]:
+
+        res = []
+
+        def backtrack(idx, total, path):
+
+            if total == target:
+                res.append(path[:])
+
+            elif total > target:
+                return 
+
+            for i in range(idx, len(candidates)):
+                path.append(candidates[i])
+                remaining = total + candidates[i]
+                backtrack(i, remaining, path)
+                path.pop()
+
+        backtrack(0, 0, [])
+        return res 
+                
+
+            
+
+
+        
+
+# submission 2178150886 - 2026-10-21T16:47:40+00:00
+class Solution:
+    def combinationSum(self, candidates: list[int], target: int) -> list[list[int]]:
+
+        res = []
+
+        def backtrack(idx, total, path):
+
+            if total == target:
+                res.append(path[:])
+                return
+
+            elif total > target or idx >= len(candidates):
+                return 
+
+            # option 1 we stay with the current number because of infinite reuse
+            path.append(candidates[idx])
+            backtrack(idx, total + candidates[idx], path)
+            path.pop()
+
+            # option 2 we skip
+            backtrack(idx + 1, total, path)
+
+        backtrack(0, 0, [])
+        return res 
+                
+
+            
+
+
+        
