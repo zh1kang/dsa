@@ -1317,7 +1317,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/longest-palindromic-substring/",
       "first_solved_at": "2025-11-19T05:04:01+00:00",
-      "last_solved_at": "2025-11-19T05:04:01+00:00",
+      "last_solved_at": "2026-10-21T14:46:50+00:00",
       "attempts": [
         {
           "submission_id": "1833873930",
@@ -1340,6 +1340,50 @@
             "space_complexity": ""
           },
           "code_sha256": "1afcb0d0b8459a99f0b985053f422b9bfed23636f28ddb21193e6d52b4a5bb1c"
+        },
+        {
+          "submission_id": "2178041383",
+          "submitted_at": "2026-10-21T14:45:53+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "5-longest-palindromic-substring.py",
+          "code_sha256": "db4efd8e96389fdb79673e8f941e38545085678e8b8d182a4043bb23fa5c19be",
+          "runtime": "253 ms",
+          "memory": "19.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2178042194",
+          "submitted_at": "2026-10-21T14:46:50+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "5-longest-palindromic-substring.py",
+          "code_sha256": "db4efd8e96389fdb79673e8f941e38545085678e8b8d182a4043bb23fa5c19be",
+          "runtime": "252 ms",
+          "memory": "19.1 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -1348,7 +1392,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": null,
+        "next_review": "2026-10-21T14:46:50+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -1364,7 +1408,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/two-sum/",
       "first_solved_at": "2025-11-19T05:14:41+00:00",
-      "last_solved_at": "2025-11-19T05:14:41+00:00",
+      "last_solved_at": "2026-10-21T17:12:42+00:00",
       "attempts": [
         {
           "submission_id": "1833882558",
@@ -1387,6 +1431,28 @@
             "space_complexity": ""
           },
           "code_sha256": "a15f0b4e9e0ad3f144bf0dfc8d671c05f8959585bcd3771e1eecaa1c702ed508"
+        },
+        {
+          "submission_id": "2178176774",
+          "submitted_at": "2026-10-21T17:12:42+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "1-two-sum.py",
+          "code_sha256": "d8737e53f811a416d7261da42f7f68c85b474269b36f8bf4bf6904ca2778ad8d",
+          "runtime": "0 ms",
+          "memory": "20.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -1395,7 +1461,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": null,
+        "next_review": "2026-10-21T17:12:42+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -1414,7 +1480,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/number-of-islands/",
       "first_solved_at": "2025-11-19T05:36:51+00:00",
-      "last_solved_at": "2026-08-01T05:41:49+00:00",
+      "last_solved_at": "2026-10-21T02:05:20+00:00",
       "attempts": [
         {
           "submission_id": "1833900761",
@@ -1487,6 +1553,30 @@
             "space_complexity": ""
           },
           "code_sha256": "3ae3accf51cf7544d544161d64c994879b97a9ad0a6bd989139c8cb75ea17f4d"
+        },
+        {
+          "submission_id": "2177521090",
+          "submitted_at": "2026-10-21T02:05:20+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "200-number-of-islands.py",
+          "code_sha256": "d26f1e52a67fe7242b4b98a2c290e76a6ca87bab5b9cc17ae20ee196426f5f0f",
+          "runtime": "248 ms",
+          "memory": "21.6 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "set as visited"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -1495,7 +1585,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": null,
+        "next_review": "2026-10-21T02:05:20+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -1512,7 +1602,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
       "first_solved_at": "2025-11-20T05:27:35+00:00",
-      "last_solved_at": "2026-07-25T15:11:26+00:00",
+      "last_solved_at": "2026-10-21T01:33:33+00:00",
       "attempts": [
         {
           "submission_id": "1834855306",
@@ -1583,6 +1673,30 @@
             "space_complexity": ""
           },
           "code_sha256": "b76914066b1ce1555f2880b35938a890af8f71ae2394d33707cd600a2bf13e6e"
+        },
+        {
+          "submission_id": "2177510651",
+          "submitted_at": "2026-10-21T01:33:33+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "3-longest-substring-without-repeating-characters.py",
+          "code_sha256": "096b216fd3aa3841f70bcda5cc8dec26f3e890ac67295982940b4978ab68eec6",
+          "runtime": "210 ms",
+          "memory": "19.8 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "essentially we use a sliding window and every time we find a duplicate character we shirnk the window from the left and continue"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -1591,7 +1705,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": null,
+        "next_review": "2026-10-21T01:33:33+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -1610,7 +1724,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/trapping-rain-water/",
       "first_solved_at": "2025-11-21T03:15:37+00:00",
-      "last_solved_at": "2026-09-11T03:16:55+00:00",
+      "last_solved_at": "2026-10-21T17:31:35+00:00",
       "attempts": [
         {
           "submission_id": "1835651592",
@@ -1681,6 +1795,57 @@
             "time_complexity": "",
             "space_complexity": ""
           }
+        },
+        {
+          "submission_id": "2178190920",
+          "submitted_at": "2026-10-21T17:25:52+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "42-trapping-rain-water.py",
+          "code_sha256": "c9cc26f48eca699efcef10bdfbe4b37d6ff645e06a0a305650c71a7154732fdc",
+          "runtime": "11 ms",
+          "memory": "21.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "stores the idx of the heights",
+            "we want to check if the current height is larger than the previous height on the stack, if it is we pop and calculate how much can fit in this area",
+            "if the stack is empty, we dont have a left boundary to hold any of the water",
+            "our left wall is the top of the stack"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2178197045",
+          "submitted_at": "2026-10-21T17:31:35+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "42-trapping-rain-water.py",
+          "code_sha256": "7b3f43500a3d27b467bd636753acdf70edceea55f52f2e5ac45a71f637d0bb8f",
+          "runtime": "9 ms",
+          "memory": "21.2 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "update the max seen on each side"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -1689,7 +1854,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": "2026-09-11T03:16:55+00:00",
+        "next_review": "2026-10-21T17:31:35+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -1706,7 +1871,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/container-with-most-water/",
       "first_solved_at": "2025-11-21T03:31:04+00:00",
-      "last_solved_at": "2025-11-21T03:31:17+00:00",
+      "last_solved_at": "2026-10-21T15:09:40+00:00",
       "attempts": [
         {
           "submission_id": "1835659706",
@@ -1751,6 +1916,28 @@
             "space_complexity": ""
           },
           "code_sha256": "08a5484c30efb5d8fe6a049a058663120ee38e7d85cd405e0090fa972cdb5160"
+        },
+        {
+          "submission_id": "2178061389",
+          "submitted_at": "2026-10-21T15:09:40+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "11-container-with-most-water.py",
+          "code_sha256": "123a7276ad6ae41ad6fdf1ed5a3f4e8a7def3ad48550dd26fb55fdce4636030b",
+          "runtime": "63 ms",
+          "memory": "29.6 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -1759,7 +1946,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": null,
+        "next_review": "2026-10-21T15:09:40+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -1777,7 +1964,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/group-anagrams/",
       "first_solved_at": "2025-11-22T04:23:15+00:00",
-      "last_solved_at": "2025-11-22T04:23:15+00:00",
+      "last_solved_at": "2026-10-21T15:18:20+00:00",
       "attempts": [
         {
           "submission_id": "1836439777",
@@ -1800,6 +1987,32 @@
             "space_complexity": ""
           },
           "code_sha256": "58a8e2a830a6a249648c5a8bbcdbd2cd499cf799e660fbe6eeed7ecce820913c"
+        },
+        {
+          "submission_id": "2178068579",
+          "submitted_at": "2026-10-21T15:18:20+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "49-group-anagrams.py",
+          "code_sha256": "d519f73950c3027442894dec0e7aee31b71ce66e739f6b3236669131c6f4fe4f",
+          "runtime": "20 ms",
+          "memory": "23.4 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we need a freq_map of the characters of each string in the list",
+            "for results we just append the one with the exact same number of word counts ",
+            "initialize the count for all 26 letters"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -1808,7 +2021,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": null,
+        "next_review": "2026-10-21T15:18:20+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -2294,7 +2507,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/combination-sum/",
       "first_solved_at": "2025-12-29T06:32:25+00:00",
-      "last_solved_at": "2026-07-30T14:11:19+00:00",
+      "last_solved_at": "2026-10-21T16:47:40+00:00",
       "attempts": [
         {
           "submission_id": "1868151342",
@@ -2343,6 +2556,53 @@
             "space_complexity": ""
           },
           "code_sha256": "7ad4e56b4937d564270b3a099cbfb90365597150aca6c721ce716380b3204ec0"
+        },
+        {
+          "submission_id": "2178149016",
+          "submitted_at": "2026-10-21T16:45:48+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "39-combination-sum.py",
+          "code_sha256": "19c2aed9a7f4ad8763338fdd8b1d2f6a237b0853e996c1955c1643a4e5e91bbf",
+          "runtime": "9 ms",
+          "memory": "19.4 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2178150886",
+          "submitted_at": "2026-10-21T16:47:40+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "39-combination-sum.py",
+          "code_sha256": "bf0f32e0d3ae23fea0d74034a1903d07cbee58a2524cdd8f4c371c17c0743d3c",
+          "runtime": "13 ms",
+          "memory": "19.6 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "option 1 we stay with the current number because of infinite reuse",
+            "option 2 we skip"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -2351,7 +2611,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": null,
+        "next_review": "2026-10-21T16:47:40+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -2443,7 +2703,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/merge-intervals/",
       "first_solved_at": "2025-12-31T07:53:01+00:00",
-      "last_solved_at": "2026-10-07T16:32:02+00:00",
+      "last_solved_at": "2026-10-21T15:26:36+00:00",
       "attempts": [
         {
           "submission_id": "1870078700",
@@ -2602,6 +2862,34 @@
             "time_complexity": "",
             "space_complexity": ""
           }
+        },
+        {
+          "submission_id": "2178075442",
+          "submitted_at": "2026-10-21T15:26:36+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "56-merge-intervals.py",
+          "code_sha256": "b32b9324e226c590de52b4d9bd88a560b7a668a99b1aee8bfedf5510f4b90934",
+          "runtime": "6 ms",
+          "memory": "23.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we want to sort the intervals by starting time so we can compare ",
+            "the end times with the start time of the very next interval",
+            "if the end time is greater than the start time of the next interval",
+            "we are overlapping and we merge them.",
+            "sort by start time O(nlogn)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -2610,7 +2898,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": "2026-10-07T16:32:02+00:00",
+        "next_review": "2026-10-21T15:26:36+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -2704,7 +2992,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/validate-binary-search-tree/",
       "first_solved_at": "2025-12-31T08:12:41+00:00",
-      "last_solved_at": "2025-12-31T08:15:55+00:00",
+      "last_solved_at": "2026-10-21T15:54:34+00:00",
       "attempts": [
         {
           "submission_id": "1870091084",
@@ -2763,6 +3051,35 @@
             "space_complexity": ""
           },
           "code_sha256": "0fd0d2e848c41049b609ac95ba55870ae2ed4bfaf1503f823b15391ecfdefeca"
+        },
+        {
+          "submission_id": "2178099398",
+          "submitted_at": "2026-10-21T15:54:34+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "98-validate-binary-search-tree.py",
+          "code_sha256": "7a5bdf756518b50fb6a5b00cba3fac74f22352a7039b2b219b556cc2e50a58f0",
+          "runtime": "0 ms",
+          "memory": "21.1 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "Definition for a binary tree node.",
+            "class TreeNode:",
+            "    def __init__(self, val=0, left=None, right=None):",
+            "        self.val = val",
+            "        self.left = left",
+            "        self.right = right"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -2771,7 +3088,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": null,
+        "next_review": "2026-10-21T15:54:34+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -4684,7 +5001,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/subsets/",
       "first_solved_at": "2026-01-08T06:29:31+00:00",
-      "last_solved_at": "2026-07-29T14:15:13+00:00",
+      "last_solved_at": "2026-10-21T16:01:56+00:00",
       "attempts": [
         {
           "submission_id": "1878402392",
@@ -4755,6 +5072,28 @@
             "space_complexity": ""
           },
           "code_sha256": "ecfead9d050cfc4ea1b61d643d8aa937327d8705cca0771dd9eb5d8fca478d5a"
+        },
+        {
+          "submission_id": "2178106338",
+          "submitted_at": "2026-10-21T16:01:56+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "78-subsets.py",
+          "code_sha256": "541855c562367fa2325c0392a14b9362df21ba67fca866331fc2c2f51a120d88",
+          "runtime": "0 ms",
+          "memory": "19.2 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -4763,7 +5102,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": null,
+        "next_review": "2026-10-21T16:01:56+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -6167,7 +6506,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/search-in-rotated-sorted-array/",
       "first_solved_at": "2026-07-23T15:38:58+00:00",
-      "last_solved_at": "2026-07-23T15:38:58+00:00",
+      "last_solved_at": "2026-10-21T01:56:06+00:00",
       "attempts": [
         {
           "submission_id": "2078584102",
@@ -6194,6 +6533,34 @@
             "space_complexity": ""
           },
           "code_sha256": "f913a0c4262626c90c9b69b5f56b9f8867c41442e7b1b6b24766955ccb9f95eb"
+        },
+        {
+          "submission_id": "2177518017",
+          "submitted_at": "2026-10-21T01:56:06+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "33-search-in-rotated-sorted-array.py",
+          "code_sha256": "81cf6fd457421ab92990172a15bd36ec53e774b8c9647e52e18a42b51bb19e86",
+          "runtime": "0 ms",
+          "memory": "19.4 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "this is binary search since we have to do this in O(log n)       ",
+            "the tricky part is that this is rotated, so we have to check ",
+            "whether or not we are in the lower sorted portion of the array or the higher sorted portion of the array",
+            "check if the first half is sorted:",
+            "else right half is sorted"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -6202,7 +6569,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": null,
+        "next_review": "2026-10-21T01:56:06+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -6501,7 +6868,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/longest-repeating-character-replacement/",
       "first_solved_at": "2026-07-28T08:09:36+00:00",
-      "last_solved_at": "2026-07-28T08:09:36+00:00",
+      "last_solved_at": "2026-10-21T14:26:21+00:00",
       "attempts": [
         {
           "submission_id": "2084436132",
@@ -6524,6 +6891,31 @@
             "space_complexity": ""
           },
           "code_sha256": "a2e6706f8257bb1811b0b41956c969f4efaf640ff57b1861d6276d917ac8aa79"
+        },
+        {
+          "submission_id": "2178024618",
+          "submitted_at": "2026-10-21T14:26:21+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "424-longest-repeating-character-replacement.py",
+          "code_sha256": "e22202d7170abbec8972c99e067d3bb14f2dba2b407ed9b9bde8c6e40ddac6bf",
+          "runtime": "74 ms",
+          "memory": "19.5 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "keep track of the max freq of character we have so far",
+            "if our current window is longer than window - max_freq (of one character), we cannot switch enough characters so we have to shrink"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -6532,7 +6924,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": null,
+        "next_review": "2026-10-21T14:26:21+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -9784,7 +10176,7 @@
         "state": "review",
         "stability": 1.2931,
         "difficulty": 5.112170705601056,
-        "retrievability": 0.5721107473121206,
+        "retrievability": 0.5703426266949514,
         "last_review": "2026-09-02T18:59:57.341203+00:00",
         "next_review": "2026-09-03T18:59:57.341203+00:00",
         "reps": 1,
@@ -10080,7 +10472,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/top-k-frequent-elements/",
       "first_solved_at": "2026-09-01T15:52:05+00:00",
-      "last_solved_at": "2026-09-07T15:35:01+00:00",
+      "last_solved_at": "2026-10-21T01:45:03+00:00",
       "attempts": [
         {
           "submission_id": "2127414583",
@@ -10142,6 +10534,28 @@
             "time_complexity": "",
             "space_complexity": ""
           }
+        },
+        {
+          "submission_id": "2177514393",
+          "submitted_at": "2026-10-21T01:45:03+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "347-top-k-frequent-elements.py",
+          "code_sha256": "b832e8dc9862f78e80f5b26a73029f3953d7a216b1d30912fc2b274400da1e94",
+          "runtime": "4 ms",
+          "memory": "23 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -10150,7 +10564,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": "2026-09-07T15:35:01+00:00",
+        "next_review": "2026-10-21T01:45:03+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -10167,7 +10581,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/daily-temperatures/",
       "first_solved_at": "2026-09-01T16:12:51+00:00",
-      "last_solved_at": "2026-09-13T21:42:47+00:00",
+      "last_solved_at": "2026-10-21T15:37:25+00:00",
       "attempts": [
         {
           "submission_id": "2127440892",
@@ -10249,6 +10663,31 @@
             "time_complexity": "",
             "space_complexity": ""
           }
+        },
+        {
+          "submission_id": "2178084529",
+          "submitted_at": "2026-10-21T15:37:25+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "739-daily-temperatures.py",
+          "code_sha256": "7bdf9fe86586a0e144c3a97ce700984f279318db97af5d33fd1c595df18bc8a4",
+          "runtime": "98 ms",
+          "memory": "28.4 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we can use a monotonic stack to keep track of the temperatures' idx",
+            "and we pop when we find a temperature larger the temperature on the top "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -10257,7 +10696,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": "2026-09-13T21:42:47+00:00",
+        "next_review": "2026-10-21T15:37:25+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -17105,7 +17544,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/longest-common-subsequence/",
       "first_solved_at": "2026-10-02T03:54:55+00:00",
-      "last_solved_at": "2026-10-02T04:00:11+00:00",
+      "last_solved_at": "2026-10-21T16:55:39+00:00",
       "attempts": [
         {
           "submission_id": "2159748112",
@@ -17214,6 +17653,58 @@
             "time_complexity": "",
             "space_complexity": ""
           }
+        },
+        {
+          "submission_id": "2178158799",
+          "submitted_at": "2026-10-21T16:55:33+00:00",
+          "status": "Runtime Error",
+          "language": "python3",
+          "code_path": "1143-longest-common-subsequence.py",
+          "code_sha256": "cce8750a52e2049345d0d618faa9fa3ea7de4bdd420d9b3f88c31d1b9e73f126",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we have to make sure that we follow the strict ordering but we can just go through each of the two strings and compare characters ",
+            "case 1: we have matching characters",
+            "case 2: the letters aren't matching, so we take the max of either t1 or t2 "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2178158896",
+          "submitted_at": "2026-10-21T16:55:39+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "1143-longest-common-subsequence.py",
+          "code_sha256": "1e479a542e162bb2385f124e462e5c5a7d55ae901d161b88ac60c4b3280aa59d",
+          "runtime": "1909 ms",
+          "memory": "316.5 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we have to make sure that we follow the strict ordering but we can just go through each of the two strings and compare characters ",
+            "case 1: we have matching characters",
+            "case 2: the letters aren't matching, so we take the max of either t1 or t2 "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -17222,7 +17713,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": "2026-10-02T04:00:11+00:00",
+        "next_review": "2026-10-21T16:55:39+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -20737,6 +21228,225 @@
         "retrievability": null,
         "last_review": null,
         "next_review": "2026-10-19T22:08:25+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "153-find-minimum-in-rotated-sorted-array": {
+      "leetcode_id": "153",
+      "slug": "find-minimum-in-rotated-sorted-array",
+      "title": "Find Minimum in Rotated Sorted Array",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Binary Search"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/",
+      "first_solved_at": "2026-10-21T02:50:13+00:00",
+      "last_solved_at": "2026-10-21T02:51:18+00:00",
+      "attempts": [
+        {
+          "submission_id": "2177536915",
+          "submitted_at": "2026-10-21T02:47:34+00:00",
+          "status": "Runtime Error",
+          "language": "python3",
+          "code_path": "153-find-minimum-in-rotated-sorted-array.py",
+          "code_sha256": "20f2ab5a797aaa273c9907efa89dde1d156054293efcaa4c49756b3c395ff432",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2177538023",
+          "submitted_at": "2026-10-21T02:50:13+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "153-find-minimum-in-rotated-sorted-array.py",
+          "code_sha256": "90b61459dddc154738501c7606910dfcf5970f113bfb749c01524331fa4df3e8",
+          "runtime": "0 ms",
+          "memory": "19.4 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2177538468",
+          "submitted_at": "2026-10-21T02:51:18+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "153-find-minimum-in-rotated-sorted-array.py",
+          "code_sha256": "90b61459dddc154738501c7606910dfcf5970f113bfb749c01524331fa4df3e8",
+          "runtime": "0 ms",
+          "memory": "19.4 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-21T02:51:18+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "300-longest-increasing-subsequence": {
+      "leetcode_id": "300",
+      "slug": "longest-increasing-subsequence",
+      "title": "Longest Increasing Subsequence",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Binary Search",
+        "Dynamic Programming",
+        "Longest Increasing Subsequence"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/longest-increasing-subsequence/",
+      "first_solved_at": "2026-10-21T03:13:11+00:00",
+      "last_solved_at": "2026-10-21T03:13:11+00:00",
+      "attempts": [
+        {
+          "submission_id": "2177548004",
+          "submitted_at": "2026-10-21T03:13:11+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "300-longest-increasing-subsequence.py",
+          "code_sha256": "29799cd1e81741d45572a1a757cd4681a72843dfa56f79b3153240f5d9ad3216",
+          "runtime": "1258 ms",
+          "memory": "19.4 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-21T03:13:11+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "152-maximum-product-subarray": {
+      "leetcode_id": "152",
+      "slug": "maximum-product-subarray",
+      "title": "Maximum Product Subarray",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Dynamic Programming"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/maximum-product-subarray/",
+      "first_solved_at": "2026-10-21T14:11:06+00:00",
+      "last_solved_at": "2026-10-21T14:11:06+00:00",
+      "attempts": [
+        {
+          "submission_id": "2178008118",
+          "submitted_at": "2026-10-21T14:07:37+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "152-maximum-product-subarray.py",
+          "code_sha256": "4314ab567f4960cd48bed85c6e28fc3e2a60f9288b34c6cd749c84f1994a7920",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "We can implement kadane's but we have to modify it ",
+            "we keep track of curr_max, curr_min, and global_max",
+            "if we encounter a negative number we switch the max and mins to multiply ",
+            "if we find a negative we flip to properly keep track of max"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2178011113",
+          "submitted_at": "2026-10-21T14:11:06+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "152-maximum-product-subarray.py",
+          "code_sha256": "5e77e7b2b6393584cd9aefbdd12112b869fd53760ead2c225d94075ae94c6b08",
+          "runtime": "3 ms",
+          "memory": "19.6 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "We can implement kadane's but we have to modify it ",
+            "we keep track of curr_max, curr_min, and global_max",
+            "if we encounter a negative number we switch the max and mins to multiply ",
+            "if we find a negative we flip to properly keep track of max"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-21T14:11:06+00:00",
         "reps": 0,
         "lapses": 0
       }
