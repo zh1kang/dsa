@@ -81,3 +81,28 @@ class Solution:
         return res 
 
         
+
+# submission 2178084529 - 2026-10-21T15:37:25+00:00
+class Solution:
+    def dailyTemperatures(self, temperatures: list[int]) -> list[int]:
+        # we can use a monotonic stack to keep track of the temperatures' idx
+        # and we pop when we find a temperature larger the temperature on the top 
+
+        res = [0] * len(temperatures)
+        stack = []
+
+
+        for idx, temp in enumerate(temperatures):
+
+            while stack and temperatures[stack[-1]] < temp: 
+                prev_idx = stack.pop()
+                res[prev_idx] = idx - prev_idx
+
+            stack.append(idx)
+
+       
+
+        return res 
+
+       
+        
