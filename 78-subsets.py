@@ -71,3 +71,20 @@ class Solution:
 
 
         
+
+# submission 2178106338 - 2026-10-21T16:01:56+00:00
+class Solution:
+    def subsets(self, nums: list[int]) -> list[list[int]]:
+        
+        res = []
+        def backtracking(idx, subset):
+            res.append(subset[:])
+
+            for i in range(idx, len(nums)):
+                subset.append(nums[i])
+                backtracking(i + 1, subset)
+                subset.pop()
+        
+        
+        backtracking(0, [])
+        return res 
