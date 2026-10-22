@@ -152,3 +152,26 @@ class Solution:
             
 
             
+
+# submission 2178075442 - 2026-10-21T15:26:36+00:00
+class Solution:
+    def merge(self, intervals: list[list[int]]) -> list[list[int]]:
+
+        # we want to sort the intervals by starting time so we can compare 
+        # the end times with the start time of the very next interval
+        # if the end time is greater than the start time of the next interval
+        # we are overlapping and we merge them.
+
+        intervals.sort(key=lambda x : x[0]) # sort by start time O(nlogn)
+        merged = []
+
+        for start, end in intervals:
+
+            if not merged or merged[-1][1] < start:
+                merged.append([start, end])
+            else:
+                merged[-1][1] = max(merged[-1][1], end)
+
+        return merged       
+
+            
