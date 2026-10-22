@@ -64,3 +64,28 @@ class Solution:
             
         
        
+
+# submission 2177514393 - 2026-10-21T01:45:03+00:00
+class Solution:
+    def topKFrequent(self, nums: list[int], k: int) -> list[int]:
+
+        num_count = Counter(nums)
+
+        min_heap = []
+
+        for num, freq in num_count.items():
+            heapq.heappush(min_heap, (freq, num))
+
+            if len(min_heap) > k:
+                heapq.heappop(min_heap)
+
+        
+        return [num for freq, num in min_heap]
+
+            
+
+
+
+
+        
+        
