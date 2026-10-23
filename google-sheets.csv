@@ -378,6 +378,15 @@ O(n)",,,,,,,,,new,,,,,,0,0
         Do not return anything, modify nums1 in-place instead.
         ",,,,,,,,,new,,,,,,0,0
 90,Subsets II,subsets-ii,https://leetcode.com/problems/subsets-ii/,Medium,"Array, Backtracking, Bit Manipulation",2142026779,2026-09-14T22:08:38+00:00,python3,0 ms,19.5 MB,90-subsets-ii.py,,,,,,,,,,,new,2026-09-14T22:08:38+00:00,,,,,0,0
+91,Decode Ways,decode-ways,https://leetcode.com/problems/decode-ways/,Medium,"String, Dynamic Programming",2179204673,2026-10-22T21:41:03+00:00,python3,1 ms,19.3 MB,91-decode-ways.py,,"we can solve this using dynamic programming
+we have two choices for a encoded message 
+e.g. if we have 11, we either process individuall '1' and '1' 
+or '11', the max number we can do this with is 26 e.g. z
+if we have a larger number like 51 first, we just process incrementally
+base case: we reached the end of the string 
+if we encounter a 0 just return 0 since there is no letter that starts with that and we cant decode it
+choice 1: we process individually
+choise 2: there are two digits so we process them together",,,,,,,,,new,2026-10-22T21:41:03+00:00,,,,,0,0
 94,Binary Tree Inorder Traversal,binary-tree-inorder-traversal,https://leetcode.com/problems/binary-tree-inorder-traversal/,Easy,"Stack, Tree, Depth-First Search, Binary Tree",2144167749,2026-09-16T23:55:09+00:00,python3,0 ms,19.2 MB,94-binary-tree-inorder-traversal.py,,"Definition for a binary tree node.
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
@@ -678,6 +687,7 @@ both empty
 if len(s) is < len(t) then it we focus on inserting
 we dont have to actually insert, we just have to check that there is place to insert this character and return true ",,,,,,,,,new,2026-10-03T17:19:32+00:00,,,,,0,0
 162,Find Peak Element,find-peak-element,https://leetcode.com/problems/find-peak-element/,Medium,"Array, Binary Search",2161441986,2026-10-03T19:47:16+00:00,python3,0 ms,19.2 MB,162-find-peak-element.py,,,,,,,,,,,new,2026-10-03T19:47:16+00:00,,,,,0,0
+163,Missing Ranges,missing-ranges,https://leetcode.com/problems/missing-ranges/,Easy,Array,2179200268,2026-10-22T21:27:34+00:00,python3,0 ms,19.1 MB,163-missing-ranges.py,,,,,,,,,,,new,2026-10-22T21:27:34+00:00,,,,,0,0
 164,Maximum Gap,maximum-gap,https://leetcode.com/problems/maximum-gap/,Medium,"Array, Sorting, Bucket Sort, Radix Sort, Pigeonhole Principle",2162535201,2026-10-04T21:18:56+00:00,python3,160 ms,32.1 MB,164-maximum-gap.py,,"ceil((mx - mn) / (n - 1))
 enough buckets to cover [mn, mx]
 Put each number into its bucket
@@ -940,6 +950,9 @@ param_1 = obj.shortest(word1,word2)",,,,,,,,,new,2026-10-07T14:57:26+00:00,,,,,0
 245,Shortest Word Distance III,shortest-word-distance-iii,https://leetcode.com/problems/shortest-word-distance-iii/,Medium,"Array, String",2153491936,2026-09-26T04:08:45+00:00,python3,80 ms,38.2 MB,245-shortest-word-distance-iii.py,,,,,,,,,,,new,2026-09-26T04:10:00+00:00,,,,,0,0
 245,Shortest Word Distance III,shortest-word-distance-iii,https://leetcode.com/problems/shortest-word-distance-iii/,Medium,"Array, String",2153492153,2026-09-26T04:09:07+00:00,python3,85 ms,38 MB,245-shortest-word-distance-iii.py,,,,,,,,,,,new,2026-09-26T04:10:00+00:00,,,,,0,0
 245,Shortest Word Distance III,shortest-word-distance-iii,https://leetcode.com/problems/shortest-word-distance-iii/,Medium,"Array, String",2153492651,2026-09-26T04:10:00+00:00,python3,83 ms,38.1 MB,245-shortest-word-distance-iii.py,,,,,,,,,,,new,2026-09-26T04:10:00+00:00,,,,,0,0
+249,Group Shifted Strings,group-shifted-strings,https://leetcode.com/problems/group-shifted-strings/,Medium,"Array, Hash Table, String",2179191962,2026-10-22T21:04:21+00:00,python3,0 ms,19.2 MB,249-group-shifted-strings.py,,"all the characters within the string should shift by the same amount
+we can store this in a dict and just append all the ones that have. the same ""difference""
+convert to tuple so that it can be a key",,,,,,,,,new,2026-10-22T21:04:21+00:00,,,,,0,0
 252,Meeting Rooms,meeting-rooms,https://leetcode.com/problems/meeting-rooms/,Easy,"Array, Sorting, Quicksort",2155413262,2026-09-27T23:26:31+00:00,python3,0 ms,21.4 MB,252-meeting-rooms.py,,"sort by start time
 then check if the next start time is smaller than the end time of the current interval",,,,,,,,,new,2026-09-27T23:26:31+00:00,,,,,0,0
 253,Meeting Rooms II,meeting-rooms-ii,https://leetcode.com/problems/meeting-rooms-ii/,Medium,"Array, Two Pointers, Greedy, Sorting, Heap (Priority Queue), Prefix Sum",2155417283,2026-09-27T23:42:51+00:00,python3,4 ms,21.4 MB,253-meeting-rooms-ii.py,,"thoughts:
@@ -1068,6 +1081,9 @@ the state is the remaining amount we need to get to the target",,,,,,,,,new,,,,,
 344,Reverse String,reverse-string,https://leetcode.com/problems/reverse-string/,Easy,"Two Pointers, String",2175761130,2026-10-18T22:32:17+00:00,python3,3 ms,23.5 MB,344-reverse-string.py,,"
         Do not return anything, modify s in-place instead.
         ",,,,,,,,,new,2026-10-18T22:32:17+00:00,,,,,0,0
+346,Moving Average from Data Stream,moving-average-from-data-stream,https://leetcode.com/problems/moving-average-from-data-stream/,Easy,"Array, Design, Queue, Data Stream",2179185599,2026-10-22T20:48:01+00:00,python3,15 ms,22.2 MB,346-moving-average-from-data-stream.py,,"Your MovingAverage object will be instantiated and called as such:
+obj = MovingAverage(size)
+param_1 = obj.next(val)",,,,,,,,,new,2026-10-22T20:48:01+00:00,,,,,0,0
 347,Top K Frequent Elements,top-k-frequent-elements,https://leetcode.com/problems/top-k-frequent-elements/,Medium,"Array, Hash Table, Divide and Conquer, Sorting, Heap (Priority Queue), Bucket Sort, Counting, Quickselect",2127414583,2026-09-01T15:52:05+00:00,python3,2 ms,22.8 MB,347-top-k-frequent-elements.py,,"keep track of the frequencies in nums and push it onto the heap
 if size of heap is > k pop the least frequent number
 push these values onto the heap
@@ -1632,7 +1648,7 @@ move pointers
 if < 2 points were found, return [-1, -1]
 max dist is the distance from the last crit index and first","initially thought I had to store in a hashmap but we can just do find local min/max on the fly
 max dist is always the distance between the last and first crit index we find 
-TC: O(n) and O(1) space ",,,,,O(n) and O(1) space,,review,2026-09-03T18:59:57.341203+00:00,2026-09-02T18:59:57.341203+00:00,1.2931,5.112170705601056,0.5703426266949514,1,0
+TC: O(n) and O(1) space ",,,,,O(n) and O(1) space,,review,2026-09-03T18:59:57.341203+00:00,2026-09-02T18:59:57.341203+00:00,1.2931,5.112170705601056,0.5686146051205031,1,0
 2058,Find the Minimum and Maximum Number of Nodes Between Critical Points,find-the-minimum-and-maximum-number-of-nodes-between-critical-points,https://leetcode.com/problems/find-the-minimum-and-maximum-number-of-nodes-between-critical-points/,Medium,Linked List,2126389151,2026-08-31T17:12:32+00:00,python3,89 ms,63.2 MB,2058-find-the-minimum-and-maximum-number-of-nodes-between-critical-points.py,,"Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -1675,7 +1691,7 @@ move pointers
 if < 2 points were found, return [-1, -1]
 max dist is the distance from the last crit index and first","initially thought I had to store in a hashmap but we can just do find local min/max on the fly
 max dist is always the distance between the last and first crit index we find 
-TC: O(n) and O(1) space ",,,,,O(n) and O(1) space,,review,2026-09-03T18:59:57.341203+00:00,2026-09-02T18:59:57.341203+00:00,1.2931,5.112170705601056,0.5703426266949514,1,0
+TC: O(n) and O(1) space ",,,,,O(n) and O(1) space,,review,2026-09-03T18:59:57.341203+00:00,2026-09-02T18:59:57.341203+00:00,1.2931,5.112170705601056,0.5686146051205031,1,0
 2058,Find the Minimum and Maximum Number of Nodes Between Critical Points,find-the-minimum-and-maximum-number-of-nodes-between-critical-points,https://leetcode.com/problems/find-the-minimum-and-maximum-number-of-nodes-between-critical-points/,Medium,Linked List,2128875517,2026-09-02T18:51:50+00:00,python3,86 ms,62.9 MB,2058-find-the-minimum-and-maximum-number-of-nodes-between-critical-points.py,,"Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -1689,7 +1705,7 @@ if point is a critical point, we save the index
 else we already have an index and we can find the min dist
 increment the pointers
 check if there is fewer than two distinct cirtical points:
-max dist is always the latest crit point and the first crit point",,,,,,,,,review,2026-09-03T18:59:57.341203+00:00,2026-09-02T18:59:57.341203+00:00,1.2931,5.112170705601056,0.5703426266949514,1,0
+max dist is always the latest crit point and the first crit point",,,,,,,,,review,2026-09-03T18:59:57.341203+00:00,2026-09-02T18:59:57.341203+00:00,1.2931,5.112170705601056,0.5686146051205031,1,0
 2089,Find Target Indices After Sorting Array,find-target-indices-after-sorting-array,https://leetcode.com/problems/find-target-indices-after-sorting-array/,Easy,"Array, Binary Search, Sorting",2175852935,2026-10-19T03:31:57+00:00,python3,0 ms,19.3 MB,2089-find-target-indices-after-sorting-array.py,,,,,,,,,,,new,2026-10-19T03:31:57+00:00,,,,,0,0
 2091,Removing Minimum and Maximum From Array,removing-minimum-and-maximum-from-array,https://leetcode.com/problems/removing-minimum-and-maximum-from-array/,Medium,"Array, Greedy",2124621450,2026-08-30T04:34:09+00:00,python3,21 ms,33.7 MB,2091-removing-minimum-and-maximum-from-array.py,,"first we can do one pass to find the max and min
 after that, there are essentially three ways to find the number of deletions
@@ -1955,3 +1971,13 @@ TC: O(n) looping throuhg the arrays at most once
 SC: O(n) since you store at most n numbers in both prefix and suffix ",,,,,O(n) looping throuhg the arrays at most once,O(n) since you store at most n numbers in both prefix and suffix,new,2026-09-04T14:28:50+00:00,,,,,0,0
 3904,Smallest Stable Index II,smallest-stable-index-ii,https://leetcode.com/problems/smallest-stable-index-ii/,Medium,"Array, Prefix Sum",2132045925,2026-09-05T18:17:30+00:00,python3,239 ms,33.3 MB,3904-smallest-stable-index-ii.py,,"this shit the same thing as stable index i
 create a prefix and suffix and loop through both to find the max and min and then compare",,,,,,,,,new,2026-09-05T18:17:30+00:00,,,,,0,0
+3942,Minimum Operations to Sort a Permutation,minimum-operations-to-sort-a-permutation,https://leetcode.com/problems/minimum-operations-to-sort-a-permutation/,Medium,Array,2179171891,2026-10-22T20:16:15+00:00,python3,89 ms,31.5 MB,3942-minimum-operations-to-sort-a-permutation.py,[ Time taken: 1hr 13m 47s ],"we want to sort the array given two possible operations
+1. reverse the entire array 
+2. rotate left by one e.g. moving first value to the end and shifting everything left 
+first thing is to figure out what permutations are impossible to sort
+all of the numbers should have the same neighbors, reverse and rotating never change the respective neighbors of each number
+count decreses in circular array
+case 1: rotating ascending array 
+either rotate left k times or simulate right rotation
+case 2: rotated descending array
+rotate left then reverse",,,,,,,,,new,2026-10-22T20:16:15+00:00,,,,,0,0
