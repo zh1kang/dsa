@@ -6711,7 +6711,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/maximum-subarray/",
       "first_solved_at": "2026-07-25T14:56:53+00:00",
-      "last_solved_at": "2026-07-25T14:56:53+00:00",
+      "last_solved_at": "2026-10-25T22:11:11+00:00",
       "attempts": [
         {
           "submission_id": "2080872105",
@@ -6738,6 +6738,28 @@
             "space_complexity": ""
           },
           "code_sha256": "fe75716d12f8dd94f31f3a44a5e4bb2e2ccd6d9e47c6f91d08e3dea131d5c90c"
+        },
+        {
+          "submission_id": "2181761167",
+          "submitted_at": "2026-10-25T22:11:11+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "53-maximum-subarray.py",
+          "code_sha256": "21cec14f9894c310dfc40df3d76a5576880e008296592df97541fab8a50751f8",
+          "runtime": "29 ms",
+          "memory": "31.5 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -6746,7 +6768,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": null,
+        "next_review": "2026-10-25T22:11:11+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -10176,7 +10198,7 @@
         "state": "review",
         "stability": 1.2931,
         "difficulty": 5.112170705601056,
-        "retrievability": 0.5652722997918987,
+        "retrievability": 0.563654976915126,
         "last_review": "2026-09-02T18:59:57.341203+00:00",
         "next_review": "2026-09-03T18:59:57.341203+00:00",
         "reps": 1,
@@ -21712,6 +21734,1071 @@
         "retrievability": null,
         "last_review": null,
         "next_review": "2026-10-22T21:41:03+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "3644-maximum-k-to-sort-a-permutation": {
+      "leetcode_id": "3644",
+      "slug": "maximum-k-to-sort-a-permutation",
+      "title": "Maximum K to Sort a Permutation",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Bit Manipulation"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/maximum-k-to-sort-a-permutation/",
+      "first_solved_at": "2026-10-23T04:47:12+00:00",
+      "last_solved_at": "2026-10-23T04:47:12+00:00",
+      "attempts": [
+        {
+          "submission_id": "2179343512",
+          "submitted_at": "2026-10-23T04:42:37+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "3644-maximum-k-to-sort-a-permutation.py",
+          "code_sha256": "fcdbf3a6d23455589037e5b427891304ab87cab9490ec5d2ffacf68f7d3d7ff9",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "can we just take the bitwise AND of all values that are not in their position and return the max of this value"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2179345538",
+          "submitted_at": "2026-10-23T04:45:43+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "3644-maximum-k-to-sort-a-permutation.py",
+          "code_sha256": "d5f5a170a7b6a80177acec63400e8ef4bd2c310c1f427ef500f721984a0e8d08",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "can we just take the bitwise AND of all values that are not in their position and return the max of this value"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2179346460",
+          "submitted_at": "2026-10-23T04:47:12+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "3644-maximum-k-to-sort-a-permutation.py",
+          "code_sha256": "c414db643d1086c97e11e10e91b33ce34ebc9337dc42b0377660d5c83754565b",
+          "runtime": "39 ms",
+          "memory": "34.2 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "can we just take the bitwise AND of all values that are not in their position and return the max of this value"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-23T04:47:12+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "74-search-a-2d-matrix": {
+      "leetcode_id": "74",
+      "slug": "search-a-2d-matrix",
+      "title": "Search a 2D Matrix",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Binary Search",
+        "Matrix"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/search-a-2d-matrix/",
+      "first_solved_at": "2026-10-23T18:05:54+00:00",
+      "last_solved_at": "2026-10-23T18:05:54+00:00",
+      "attempts": [
+        {
+          "submission_id": "2179911400",
+          "submitted_at": "2026-10-23T18:05:54+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "74-search-a-2d-matrix.py",
+          "code_sha256": "79c3135285f0dafba31fb72b123c267463c841d743908aacf50525bc0a4c82cd",
+          "runtime": "0 ms",
+          "memory": "19.5 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "simple binary search but with a 2d matrix",
+            "high should be r*c - 1",
+            "for the conditions we check if the current mid value is greater than the end value of the curr row if it is we shift to the next row, if it is less than we shift the high down to the current row "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-23T18:05:54+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "92-reverse-linked-list-ii": {
+      "leetcode_id": "92",
+      "slug": "reverse-linked-list-ii",
+      "title": "Reverse Linked List II",
+      "difficulty": "Medium",
+      "tags": [
+        "Linked List"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/reverse-linked-list-ii/",
+      "first_solved_at": "2026-10-23T20:11:25+00:00",
+      "last_solved_at": "2026-10-23T20:11:25+00:00",
+      "attempts": [
+        {
+          "submission_id": "2179992001",
+          "submitted_at": "2026-10-23T20:11:25+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "92-reverse-linked-list-ii.py",
+          "code_sha256": "5b4b393006c4b5a4f8709d61e808b607895a51e313f23fe22ef444139bed0184",
+          "runtime": "0 ms",
+          "memory": "19.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "Definition for singly-linked list.",
+            "class ListNode:",
+            "    def __init__(self, val=0, next=None):",
+            "        self.val = val",
+            "        self.next = next",
+            "beginning of the reversed list"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-23T20:11:25+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "93-restore-ip-addresses": {
+      "leetcode_id": "93",
+      "slug": "restore-ip-addresses",
+      "title": "Restore IP Addresses",
+      "difficulty": "Medium",
+      "tags": [
+        "String",
+        "Backtracking"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/restore-ip-addresses/",
+      "first_solved_at": "2026-10-23T20:33:00+00:00",
+      "last_solved_at": "2026-10-23T20:33:00+00:00",
+      "attempts": [
+        {
+          "submission_id": "2180001109",
+          "submitted_at": "2026-10-23T20:33:00+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "93-restore-ip-addresses.py",
+          "code_sha256": "76fdc7ed3ca089f152baef05cbf8fd6813e105977836981758535704879633fb",
+          "runtime": "1 ms",
+          "memory": "19.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we need a method to validate the numbers",
+            "this looks like typical backtracking"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-23T20:33:00+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "1603-design-parking-system": {
+      "leetcode_id": "1603",
+      "slug": "design-parking-system",
+      "title": "Design Parking System",
+      "difficulty": "Easy",
+      "tags": [
+        "Design",
+        "Simulation",
+        "Counting"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/design-parking-system/",
+      "first_solved_at": "2026-10-24T19:39:04+00:00",
+      "last_solved_at": "2026-10-24T19:46:23+00:00",
+      "attempts": [
+        {
+          "submission_id": "2180825535",
+          "submitted_at": "2026-10-24T19:39:04+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "1603-design-parking-system.py",
+          "code_sha256": "58b94eba9f53cffaf2fd123035e8d035e528796fa09a0a58b75381a0670e7898",
+          "runtime": "43 ms",
+          "memory": "19.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "create a freq map with the sizes and how many sizes there is ",
+            "Your ParkingSystem object will be instantiated and called as such:",
+            "obj = ParkingSystem(big, medium, small)",
+            "param_1 = obj.addCar(carType)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2180828919",
+          "submitted_at": "2026-10-24T19:45:28+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "1603-design-parking-system.py",
+          "code_sha256": "f294983840ce1993151da4042ffe3eaceb36dc66330fa75ba6f7635de6db60e7",
+          "runtime": "38 ms",
+          "memory": "19.6 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "create a freq map with the sizes and how many sizes there is ",
+            "Your ParkingSystem object will be instantiated and called as such:",
+            "obj = ParkingSystem(big, medium, small)",
+            "param_1 = obj.addCar(carType)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2180829390",
+          "submitted_at": "2026-10-24T19:46:23+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "1603-design-parking-system.py",
+          "code_sha256": "fc3c4a5f665eb0cc3509f23e3c5ee4c533508dc24cc6430ec7a3e0bb87254921",
+          "runtime": "48 ms",
+          "memory": "19.7 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "create a freq map with the sizes and how many sizes there is ",
+            "Your ParkingSystem object will be instantiated and called as such:",
+            "obj = ParkingSystem(big, medium, small)",
+            "param_1 = obj.addCar(carType)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-24T19:46:23+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "2409-count-days-spent-together": {
+      "leetcode_id": "2409",
+      "slug": "count-days-spent-together",
+      "title": "Count Days Spent Together",
+      "difficulty": "Easy",
+      "tags": [
+        "Math",
+        "String"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/count-days-spent-together/",
+      "first_solved_at": "2026-10-24T20:05:08+00:00",
+      "last_solved_at": "2026-10-24T20:05:08+00:00",
+      "attempts": [
+        {
+          "submission_id": "2180838622",
+          "submitted_at": "2026-10-24T20:05:08+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "2409-count-days-spent-together.py",
+          "code_sha256": "483f81b4e415ef16d18767d991d3fab12569a9e689ac9827c0d1c83501f9e6a4",
+          "runtime": "0 ms",
+          "memory": "19.2 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "for them to be together, either alice or bob's end date has to be within the start date of the other",
+            "if not we just return 0",
+            "want to find the overlapping dates, we use the maximum start date between alice and bob and take the min of the leave dates, if the leave date >= arrive, they overlap"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-24T20:05:08+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "705-design-hashset": {
+      "leetcode_id": "705",
+      "slug": "design-hashset",
+      "title": "Design HashSet",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Linked List",
+        "Design",
+        "Hash Function"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/design-hashset/",
+      "first_solved_at": "2026-10-24T20:11:56+00:00",
+      "last_solved_at": "2026-10-24T20:11:56+00:00",
+      "attempts": [
+        {
+          "submission_id": "2180841956",
+          "submitted_at": "2026-10-24T20:11:56+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "705-design-hashset.py",
+          "code_sha256": "93cd7050829b605f3b958d24550af5e5edf4c51ecb228bdaa0da5f03c1ad6602",
+          "runtime": "810 ms",
+          "memory": "24.5 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "Your MyHashSet object will be instantiated and called as such:",
+            "obj = MyHashSet()",
+            "obj.add(key)",
+            "obj.remove(key)",
+            "param_3 = obj.contains(key)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-24T20:11:56+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "348-design-tic-tac-toe": {
+      "leetcode_id": "348",
+      "slug": "design-tic-tac-toe",
+      "title": "Design Tic-Tac-Toe",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Design",
+        "Matrix",
+        "Simulation"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/design-tic-tac-toe/",
+      "first_solved_at": "2026-10-24T20:57:05+00:00",
+      "last_solved_at": "2026-10-24T20:57:05+00:00",
+      "attempts": [
+        {
+          "submission_id": "2180855466",
+          "submitted_at": "2026-10-24T20:43:10+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "348-design-tic-tac-toe.py",
+          "code_sha256": "f776ccff0c79eeedd0b47d20c4db6359b59ce1b78c1f788a96a05c9188735543",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "the conditions for winning are: 3 in a row, or 3 diagonal in either direction",
+            "check horiontal rows",
+            "check vertical columns",
+            "check diagonals top left to bottom right",
+            "check diagonal bottom left to top right",
+            "Your TicTacToe object will be instantiated and called as such:",
+            "obj = TicTacToe(n)",
+            "param_1 = obj.move(row,col,player)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2180860451",
+          "submitted_at": "2026-10-24T20:55:43+00:00",
+          "status": "Runtime Error",
+          "language": "python3",
+          "code_path": "348-design-tic-tac-toe.py",
+          "code_sha256": "ca03694e27cd577045f3ce802706ff2c7b666bb9824d0dd558b3672c3b849452",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "player 1 = + 1, player 2 = - 1",
+            "check winner",
+            "Your TicTacToe object will be instantiated and called as such:",
+            "obj = TicTacToe(n)",
+            "param_1 = obj.move(row,col,player)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2180860512",
+          "submitted_at": "2026-10-24T20:55:52+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "348-design-tic-tac-toe.py",
+          "code_sha256": "d5b283bb93723515dcd57d8b8f686ba232a5fa630aa2b5bcbf4f7d63ae02f006",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "player 1 = + 1, player 2 = - 1",
+            "check winner",
+            "Your TicTacToe object will be instantiated and called as such:",
+            "obj = TicTacToe(n)",
+            "param_1 = obj.move(row,col,player)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2180860705",
+          "submitted_at": "2026-10-24T20:56:23+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "348-design-tic-tac-toe.py",
+          "code_sha256": "50872d482f2c4ca55b5a197066640375abf039e6ee9aa28d9dac709d636cb5c0",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "player 1 = + 1, player 2 = - 1",
+            "check winner",
+            "Your TicTacToe object will be instantiated and called as such:",
+            "obj = TicTacToe(n)",
+            "param_1 = obj.move(row,col,player)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2180860989",
+          "submitted_at": "2026-10-24T20:57:05+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "348-design-tic-tac-toe.py",
+          "code_sha256": "7357d4a1b1cf67e66db43e0b6ef066ca0529a5b691221962b5f0561645d0e423",
+          "runtime": "79 ms",
+          "memory": "21.4 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "player 1 = + 1, player 2 = - 1",
+            "check winner",
+            "Your TicTacToe object will be instantiated and called as such:",
+            "obj = TicTacToe(n)",
+            "param_1 = obj.move(row,col,player)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-24T20:57:05+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "256-paint-house": {
+      "leetcode_id": "256",
+      "slug": "paint-house",
+      "title": "Paint House",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Dynamic Programming"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/paint-house/",
+      "first_solved_at": "2026-10-24T21:31:37+00:00",
+      "last_solved_at": "2026-10-24T21:31:37+00:00",
+      "attempts": [
+        {
+          "submission_id": "2180872895",
+          "submitted_at": "2026-10-24T21:31:37+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "256-paint-house.py",
+          "code_sha256": "73f90ec40378b42538206643fdd651307229f9ded19d875c062e7b27d205d3e6",
+          "runtime": "1 ms",
+          "memory": "19.1 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "this seems like a dynamic programming problem",
+            "we have a choice of painting the current house but then we have to skip the next adjacent house if we do paint it ",
+            "we have to keep track of whawt the previous house was painted ",
+            "for bottom up, what is the cheapest way to paint houses all the way up to i given house i is painted a particular color ",
+            "base case",
+            "painting ith house red",
+            "blue",
+            "green"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-24T21:31:37+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "1254-number-of-closed-islands": {
+      "leetcode_id": "1254",
+      "slug": "number-of-closed-islands",
+      "title": "Number of Closed Islands",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Depth-First Search",
+        "Breadth-First Search",
+        "Union-Find",
+        "Matrix"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/number-of-closed-islands/",
+      "first_solved_at": "2026-10-25T15:17:00+00:00",
+      "last_solved_at": "2026-10-25T15:17:52+00:00",
+      "attempts": [
+        {
+          "submission_id": "2181495589",
+          "submitted_at": "2026-10-25T15:17:00+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "1254-number-of-closed-islands.py",
+          "code_sha256": "1c31e5c663ff6d58116679b41c83cb79c0fd040e3e5383cc2a3889fcdbd59f62",
+          "runtime": "16 ms",
+          "memory": "20 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "flood fill ",
+            "set as visited",
+            "then we check and make sure that the zeros are not on the border if thy are we flood fill them "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2181496211",
+          "submitted_at": "2026-10-25T15:17:52+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "1254-number-of-closed-islands.py",
+          "code_sha256": "a4d9b0636c989d8a9ad8a1ef11c5c267692c7f7024b3c9931fbff1953fcc7cd4",
+          "runtime": "17 ms",
+          "memory": "19.9 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "set as visited",
+            "then we check and make sure that the zeros are not on the border if thy are we flood fill them "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-25T15:17:52+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "35-search-insert-position": {
+      "leetcode_id": "35",
+      "slug": "search-insert-position",
+      "title": "Search Insert Position",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Binary Search"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/search-insert-position/",
+      "first_solved_at": "2026-10-25T15:28:49+00:00",
+      "last_solved_at": "2026-10-25T15:28:49+00:00",
+      "attempts": [
+        {
+          "submission_id": "2181503937",
+          "submitted_at": "2026-10-25T15:28:44+00:00",
+          "status": "Runtime Error",
+          "language": "python3",
+          "code_path": "35-search-insert-position.py",
+          "code_sha256": "e4a4bb41c4704b6fed35dd00e7e853f868bd9db28ea0dc45607155f89707a56e",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2181503991",
+          "submitted_at": "2026-10-25T15:28:49+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "35-search-insert-position.py",
+          "code_sha256": "0d5dd1b52af52fe3017c0e1f1d174a865c0f0f6bab2ae9d4f73586b406223aec",
+          "runtime": "0 ms",
+          "memory": "19.8 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-25T15:28:49+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "14-longest-common-prefix": {
+      "leetcode_id": "14",
+      "slug": "longest-common-prefix",
+      "title": "Longest Common Prefix",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "String",
+        "Trie"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/longest-common-prefix/",
+      "first_solved_at": "2026-10-25T20:28:59+00:00",
+      "last_solved_at": "2026-10-25T20:28:59+00:00",
+      "attempts": [
+        {
+          "submission_id": "2181725329",
+          "submitted_at": "2026-10-25T20:28:59+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "14-longest-common-prefix.py",
+          "code_sha256": "f815db87e16a09ac3e898c3569641172dfb227c04c59f2708a4e63f9f12b9645",
+          "runtime": "0 ms",
+          "memory": "19.2 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "thoughts: ",
+            "we assume the prefix is the first string",
+            "and then we compare it with all the other strings within the list",
+            "and as the strings don't match, we decrement the length",
+            "if we get to 0, we have no matching prefix and we just return an emptry string",
+            "if we do have a matching string we can just return strs[0][:prefix_len]"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-25T20:28:59+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "86-partition-list": {
+      "leetcode_id": "86",
+      "slug": "partition-list",
+      "title": "Partition List",
+      "difficulty": "Medium",
+      "tags": [
+        "Linked List",
+        "Two Pointers"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/partition-list/",
+      "first_solved_at": "2026-10-25T20:43:37+00:00",
+      "last_solved_at": "2026-10-25T20:43:37+00:00",
+      "attempts": [
+        {
+          "submission_id": "2181731650",
+          "submitted_at": "2026-10-25T20:43:37+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "86-partition-list.py",
+          "code_sha256": "2eea634197f8de40bac408c9f556c532744d8306400db9ddc55c9cc6f99aa40d",
+          "runtime": "0 ms",
+          "memory": "19.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "Definition for singly-linked list.",
+            "class ListNode:",
+            "    def __init__(self, val=0, next=None):",
+            "        self.val = val",
+            "        self.next = next",
+            "pointers for the dummy nodes"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-25T20:43:37+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "130-surrounded-regions": {
+      "leetcode_id": "130",
+      "slug": "surrounded-regions",
+      "title": "Surrounded Regions",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Depth-First Search",
+        "Breadth-First Search",
+        "Union-Find",
+        "Matrix"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/surrounded-regions/",
+      "first_solved_at": "2026-10-25T21:10:21+00:00",
+      "last_solved_at": "2026-10-25T21:10:21+00:00",
+      "attempts": [
+        {
+          "submission_id": "2181741030",
+          "submitted_at": "2026-10-25T21:08:00+00:00",
+          "status": "Time Limit Exceeded",
+          "language": "python3",
+          "code_path": "130-surrounded-regions.py",
+          "code_sha256": "cc1d31b32cdd2fbd963d50fc08f40f6fc1f7883b9877829cb26e2b52e2b5aac2",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "\n        Do not return anything, modify board in-place instead.\n        ",
+            "we can dfs out from the 'O's and if they are surrounded by x's we can capture them, however, we don't dfs on O's that are on the borders becasue they're uncapturable? but like for consecutive O's that are in line can still be captured because the connected component is surrounded. ",
+            "we are guaranteed that O's that are not on the border are completely enclosed, so I think this will be fine. ",
+            "visited ",
+            "we only want to search the regions that are not the boarders ",
+            "capture surrounded O's and restore safe ones"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2181741402",
+          "submitted_at": "2026-10-25T21:09:04+00:00",
+          "status": "Time Limit Exceeded",
+          "language": "python3",
+          "code_path": "130-surrounded-regions.py",
+          "code_sha256": "a34bb2d0b07cbffbc8679381f65f2a25c1f68bb57cdecc2274f65476a10640fd",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "\n        Do not return anything, modify board in-place instead.\n        ",
+            "we can dfs out from the 'O's and if they are surrounded by x's we can capture them, however, we don't dfs on O's that are on the borders becasue they're uncapturable? but like for consecutive O's that are in line can still be captured because the connected component is surrounded. ",
+            "we are guaranteed that O's that are not on the border are completely enclosed, so I think this will be fine. ",
+            "visited ",
+            "we only want to search the regions that are not the boarders ",
+            "capture surrounded O's and restore safe ones"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2181741865",
+          "submitted_at": "2026-10-25T21:10:21+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "130-surrounded-regions.py",
+          "code_sha256": "1874a50f7728ec710fdafe85452f8692b0541ac743b5d8e36bedb65a0da7e9d8",
+          "runtime": "5 ms",
+          "memory": "22.4 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "\n        Do not return anything, modify board in-place instead.\n        ",
+            "we can dfs out from the 'O's and if they are surrounded by x's we can capture them, however, we don't dfs on O's that are on the borders becasue they're uncapturable? but like for consecutive O's that are in line can still be captured because the connected component is surrounded. ",
+            "we are guaranteed that O's that are not on the border are completely enclosed, so I think this will be fine. ",
+            "visited ",
+            "we only want to search the regions that are not the boarders ",
+            "capture surrounded O's and restore safe ones"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-25T21:10:21+00:00",
         "reps": 0,
         "lapses": 0
       }
