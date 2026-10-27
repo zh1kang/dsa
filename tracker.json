@@ -22802,6 +22802,60 @@
         "reps": 0,
         "lapses": 0
       }
+    },
+    "3619-count-islands-with-total-value-divisible-by-k": {
+      "leetcode_id": "3619",
+      "slug": "count-islands-with-total-value-divisible-by-k",
+      "title": "Count Islands With Total Value Divisible by K",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Depth-First Search",
+        "Breadth-First Search",
+        "Union-Find",
+        "Matrix"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/count-islands-with-total-value-divisible-by-k/",
+      "first_solved_at": "2026-10-26T23:01:10+00:00",
+      "last_solved_at": "2026-10-26T23:01:10+00:00",
+      "attempts": [
+        {
+          "submission_id": "2182641713",
+          "submitted_at": "2026-10-26T23:01:10+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "3619-count-islands-with-total-value-divisible-by-k.py",
+          "code_sha256": "ab4d84d46bb9d8f3fc895e7bc93d5e1d9fa21e0ec64e8e609e9c13dbb34ff961",
+          "runtime": "430 ms",
+          "memory": "62.2 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we want to essentially dfs fro mall the spots with numbers to find the number of islands",
+            "then we sum the islands and divide by k and then return the number of isalnds that % k == 0.",
+            "mark as visited"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-26T23:01:10+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
     }
   }
 }
