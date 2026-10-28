@@ -108,7 +108,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
       "first_solved_at": "2025-07-04T02:34:40+00:00",
-      "last_solved_at": "2026-10-07T16:27:55+00:00",
+      "last_solved_at": "2026-10-27T21:25:58+00:00",
       "attempts": [
         {
           "submission_id": "1685630009",
@@ -270,6 +270,28 @@
             "time_complexity": "",
             "space_complexity": ""
           }
+        },
+        {
+          "submission_id": "2183451792",
+          "submitted_at": "2026-10-27T21:25:58+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "121-best-time-to-buy-and-sell-stock.py",
+          "code_sha256": "a2df895c99f3f10bb2a9f968a51ab1fb7d19ac296414c61271a6446b0a0a2226",
+          "runtime": "24 ms",
+          "memory": "28.6 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -278,7 +300,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": "2026-10-07T16:27:55+00:00",
+        "next_review": "2026-10-27T21:25:58+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -5791,7 +5813,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/merge-k-sorted-lists/",
       "first_solved_at": "2026-02-01T22:47:56+00:00",
-      "last_solved_at": "2026-10-05T23:22:25+00:00",
+      "last_solved_at": "2026-10-27T21:09:00+00:00",
       "attempts": [
         {
           "submission_id": "1904855367",
@@ -5850,6 +5872,43 @@
             "time_complexity": "",
             "space_complexity": ""
           }
+        },
+        {
+          "submission_id": "2183446166",
+          "submitted_at": "2026-10-27T21:09:00+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "23-merge-k-sorted-lists.py",
+          "code_sha256": "782dbf5b58e6ae6e993aa057c4ca913bf8e6d630c77dafe1ecb1a069c52ced15",
+          "runtime": "12 ms",
+          "memory": "22.7 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "Definition for singly-linked list.",
+            "class ListNode:",
+            "    def __init__(self, val=0, next=None):",
+            "        self.val = val",
+            "        self.next = next",
+            "we can utilize a min heap to do this efficiently, we create a dummy list and push all the vlaues within the linked list into a min heap and then pop them off, that way we will have a linked list in ascending order",
+            "popping from the top takes O(1) but rebuilding the list should take O(n) because we have to go throuhg the entire list",
+            "we use the idx for tiebreaker",
+            "O(N) is the length of the list",
+            "O(logk) for heappop operations due to rebalancing the tree, k is the amount of linked lists there are ",
+            "increment ",
+            "if there is another node we push it onto the min heap",
+            "TC: O(N*logk) ",
+            "SC: O(n) because we store at most n nodes in our minheap"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "O(N*logk)",
+            "space_complexity": "O(n) because we store at most n nodes in our minheap"
+          }
         }
       ],
       "review": {
@@ -5858,7 +5917,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": "2026-10-05T23:22:25+00:00",
+        "next_review": "2026-10-27T21:09:00+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -10198,7 +10257,7 @@
         "state": "review",
         "stability": 1.2931,
         "difficulty": 5.112170705601056,
-        "retrievability": 0.5620716602488707,
+        "retrievability": 0.560521039120928,
         "last_review": "2026-09-02T18:59:57.341203+00:00",
         "next_review": "2026-09-03T18:59:57.341203+00:00",
         "reps": 1,
@@ -11733,7 +11792,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/gas-station/",
       "first_solved_at": "2026-09-07T05:19:49+00:00",
-      "last_solved_at": "2026-09-07T05:19:49+00:00",
+      "last_solved_at": "2026-10-27T21:24:08+00:00",
       "attempts": [
         {
           "submission_id": "2133502146",
@@ -11760,6 +11819,30 @@
             "time_complexity": "O(n) because we just loop",
             "space_complexity": "O(1) since we are just returning start_idx"
           }
+        },
+        {
+          "submission_id": "2183451206",
+          "submitted_at": "2026-10-27T21:24:08+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "134-gas-station.py",
+          "code_sha256": "9ae6c94e3be262f8dad967029c4d9078a0a5a47e985deab09794d13c70db8818",
+          "runtime": "17 ms",
+          "memory": "25.7 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we can just loop through and if the total gas falls below 0 we cannot use that as a starting index so we just try the next"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -11768,7 +11851,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": "2026-09-07T05:19:49+00:00",
+        "next_review": "2026-10-27T21:24:08+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -22591,7 +22674,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/longest-common-prefix/",
       "first_solved_at": "2026-10-25T20:28:59+00:00",
-      "last_solved_at": "2026-10-25T20:28:59+00:00",
+      "last_solved_at": "2026-10-27T18:25:46+00:00",
       "attempts": [
         {
           "submission_id": "2181725329",
@@ -22621,6 +22704,67 @@
             "time_complexity": "",
             "space_complexity": ""
           }
+        },
+        {
+          "submission_id": "2183353636",
+          "submitted_at": "2026-10-27T18:21:28+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "14-longest-common-prefix.py",
+          "code_sha256": "4756a5941b1ddbe558449b846b588abcd9a9624f424e8c926b29eddc7bf097a3",
+          "runtime": "0 ms",
+          "memory": "19.2 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we can take the first word in the string list to be the prefix",
+            "every time the other words do not match the word we chose, we decrement",
+            "if we get to len = 0, we just reutn an empty string",
+            "else, we return the prefix",
+            "we skip the first word since that is already what we chose for the prefix"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2183357845",
+          "submitted_at": "2026-10-27T18:25:46+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "14-longest-common-prefix.py",
+          "code_sha256": "bba78f1d1884b4c9d8865fc0f669f70753c114608651b3d51bd421f28c6e0360",
+          "runtime": "0 ms",
+          "memory": "19.1 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we can take the first word in the string list to be the prefix",
+            "every time the other words do not match the word we chose, we decrement",
+            "if we get to len = 0, we just reutn an empty string",
+            "else, we return the prefix",
+            "we skip the first word since that is already what we chose for the prefix",
+            "O(N)",
+            "O(M) where m is length of maximum string",
+            "O(N)",
+            "TC: O(N*M)",
+            "SC: O(M)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "O(N*M)",
+            "space_complexity": "O(M)"
+          }
         }
       ],
       "review": {
@@ -22629,7 +22773,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": "2026-10-25T20:28:59+00:00",
+        "next_review": "2026-10-27T18:25:46+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -22853,6 +22997,538 @@
         "retrievability": null,
         "last_review": null,
         "next_review": "2026-10-26T23:01:10+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "3963-create-grid-with-exactly-one-path": {
+      "leetcode_id": "3963",
+      "slug": "create-grid-with-exactly-one-path",
+      "title": "Create Grid With Exactly One Path",
+      "difficulty": "Easy",
+      "tags": [],
+      "leetcode_url": "https://leetcode.com/problems/create-grid-with-exactly-one-path/",
+      "first_solved_at": "2026-10-27T01:02:25+00:00",
+      "last_solved_at": "2026-10-27T01:04:44+00:00",
+      "attempts": [
+        {
+          "submission_id": "2182673753",
+          "submitted_at": "2026-10-27T01:02:25+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "3963-create-grid-with-exactly-one-path.py",
+          "code_sha256": "27cc4a13f672a374e324febbeeaeb3c235042f84709cabaa0dd6acf9c757a136",
+          "runtime": "2 ms",
+          "memory": "19.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2182674520",
+          "submitted_at": "2026-10-27T01:04:44+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "3963-create-grid-with-exactly-one-path.py",
+          "code_sha256": "ea9a6ff914bc14649747cb88f55049ef329131dfb2abe0096d04b5b7b82bbd9d",
+          "runtime": "0 ms",
+          "memory": "19.1 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-27T01:04:44+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "266-palindrome-permutation": {
+      "leetcode_id": "266",
+      "slug": "palindrome-permutation",
+      "title": "Palindrome Permutation",
+      "difficulty": "Easy",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Bit Manipulation"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/palindrome-permutation/",
+      "first_solved_at": "2026-10-27T01:23:24+00:00",
+      "last_solved_at": "2026-10-27T01:23:24+00:00",
+      "attempts": [
+        {
+          "submission_id": "2182678603",
+          "submitted_at": "2026-10-27T01:17:05+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "266-palindrome-permutation.py",
+          "code_sha256": "f72c665ea32d34a446fba8b1de1c18b766a933e5e9e30ba40c5bd7957f23db5a",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we check the count of each letter, and if the string is odd length we can return true if we have a letter with an odd count but if it is even and it is odd then we return false"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2182680676",
+          "submitted_at": "2026-10-27T01:23:24+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "266-palindrome-permutation.py",
+          "code_sha256": "7311da29aa0728a835004ad53ea2bc6d8dcd41f6ae34465491dae4e5484442f4",
+          "runtime": "0 ms",
+          "memory": "19.1 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "for even length strings, it must have 0 odd counts",
+            "for odd length strings, it must have exactly one "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-27T01:23:24+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "267-palindrome-permutation-ii": {
+      "leetcode_id": "267",
+      "slug": "palindrome-permutation-ii",
+      "title": "Palindrome Permutation II",
+      "difficulty": "Medium",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Backtracking"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/palindrome-permutation-ii/",
+      "first_solved_at": "2026-10-27T04:34:19+00:00",
+      "last_solved_at": "2026-10-27T04:34:19+00:00",
+      "attempts": [
+        {
+          "submission_id": "2182767812",
+          "submitted_at": "2026-10-27T04:33:57+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "267-palindrome-permutation-ii.py",
+          "code_sha256": "9905450de00c02afabd916ffae2757323643d763fd23afd6a2d2cc303fe52568",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we want to count the number of characters sand make sure that the amount of odd count characters does not exceed 1, if it does then we just return [] because we do not have a palindrome",
+            "choose the character",
+            "explore",
+            "undo"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2182768055",
+          "submitted_at": "2026-10-27T04:34:19+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "267-palindrome-permutation-ii.py",
+          "code_sha256": "db9fd65c7027b55f7a84359db01c899c24763ea8b74e3fcb6a168591acac41dc",
+          "runtime": "64 ms",
+          "memory": "23.8 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we want to count the number of characters sand make sure that the amount of odd count characters does not exceed 1, if it does then we just return [] because we do not have a palindrome",
+            "choose the character",
+            "explore",
+            "undo"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-27T04:34:19+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "389-find-the-difference": {
+      "leetcode_id": "389",
+      "slug": "find-the-difference",
+      "title": "Find the Difference",
+      "difficulty": "Easy",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Bit Manipulation",
+        "Sorting"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/find-the-difference/",
+      "first_solved_at": "2026-10-27T04:40:55+00:00",
+      "last_solved_at": "2026-10-27T04:40:55+00:00",
+      "attempts": [
+        {
+          "submission_id": "2182772334",
+          "submitted_at": "2026-10-27T04:40:55+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "389-find-the-difference.py",
+          "code_sha256": "4b4e71ccf41ae451ec0beec4a26e63c67495b270f05339e6a12164f9d9078a36",
+          "runtime": "2 ms",
+          "memory": "18.8 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-27T04:40:55+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "572-subtree-of-another-tree": {
+      "leetcode_id": "572",
+      "slug": "subtree-of-another-tree",
+      "title": "Subtree of Another Tree",
+      "difficulty": "Easy",
+      "tags": [
+        "Tree",
+        "Depth-First Search",
+        "String Matching",
+        "Binary Tree",
+        "Hash Function"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/subtree-of-another-tree/",
+      "first_solved_at": "2026-10-27T05:18:04+00:00",
+      "last_solved_at": "2026-10-27T05:18:04+00:00",
+      "attempts": [
+        {
+          "submission_id": "2182798506",
+          "submitted_at": "2026-10-27T05:18:04+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "572-subtree-of-another-tree.py",
+          "code_sha256": "89aaf86ef32695cd69107de0f86c541cc485d2681119ba26e1a6fb8c10c49ef6",
+          "runtime": "71 ms",
+          "memory": "19.4 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "Definition for a binary tree node.",
+            "class TreeNode:",
+            "    def __init__(self, val=0, left=None, right=None):",
+            "        self.val = val",
+            "        self.left = left",
+            "        self.right = right",
+            "empty tree is always a subtree",
+            "non-empty sub root cannot be in an empty root",
+            "create a method to check if two roots are the same tree",
+            "recrusively ensure the left and right stuctures match"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-27T05:18:04+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "1903-largest-odd-number-in-string": {
+      "leetcode_id": "1903",
+      "slug": "largest-odd-number-in-string",
+      "title": "Largest Odd Number in String",
+      "difficulty": "Easy",
+      "tags": [
+        "Math",
+        "String",
+        "Greedy"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/largest-odd-number-in-string/",
+      "first_solved_at": "2026-10-27T22:56:57+00:00",
+      "last_solved_at": "2026-10-27T22:56:57+00:00",
+      "attempts": [
+        {
+          "submission_id": "2183477367",
+          "submitted_at": "2026-10-27T22:56:57+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "1903-largest-odd-number-in-string.py",
+          "code_sha256": "c3644b1b6f6945c291df84d98785301a1a0219caeeb487c0d6b1528767332809",
+          "runtime": "7 ms",
+          "memory": "20 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-27T22:56:57+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "703-kth-largest-element-in-a-stream": {
+      "leetcode_id": "703",
+      "slug": "kth-largest-element-in-a-stream",
+      "title": "Kth Largest Element in a Stream",
+      "difficulty": "Easy",
+      "tags": [
+        "Tree",
+        "Design",
+        "Binary Search Tree",
+        "Heap (Priority Queue)",
+        "Binary Tree",
+        "Data Stream"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/kth-largest-element-in-a-stream/",
+      "first_solved_at": "2026-10-27T23:24:58+00:00",
+      "last_solved_at": "2026-10-27T23:24:58+00:00",
+      "attempts": [
+        {
+          "submission_id": "2183484153",
+          "submitted_at": "2026-10-27T23:24:58+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "703-kth-largest-element-in-a-stream.py",
+          "code_sha256": "8f90791a9142f3c4a7d1d02d78fcf9498868d014384c9cd01c07b111df63ac69",
+          "runtime": "34 ms",
+          "memory": "25.7 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "Your KthLargest object will be instantiated and called as such:",
+            "obj = KthLargest(k, nums)",
+            "param_1 = obj.add(val)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-27T23:24:58+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "293-flip-game": {
+      "leetcode_id": "293",
+      "slug": "flip-game",
+      "title": "Flip Game",
+      "difficulty": "Easy",
+      "tags": [
+        "String"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/flip-game/",
+      "first_solved_at": "2026-10-27T23:52:02+00:00",
+      "last_solved_at": "2026-10-27T23:52:02+00:00",
+      "attempts": [
+        {
+          "submission_id": "2183490628",
+          "submitted_at": "2026-10-27T23:52:02+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "293-flip-game.py",
+          "code_sha256": "4ed16f2d7c2df7998960adc74bc91d832728473639bb5a5d321138dc465cebaa",
+          "runtime": "0 ms",
+          "memory": "19.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-27T23:52:02+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "3882-minimum-xor-path-in-a-grid": {
+      "leetcode_id": "3882",
+      "slug": "minimum-xor-path-in-a-grid",
+      "title": "Minimum XOR Path in a Grid",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Dynamic Programming",
+        "Bit Manipulation",
+        "Matrix"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/minimum-xor-path-in-a-grid/",
+      "first_solved_at": "2026-10-28T00:12:18+00:00",
+      "last_solved_at": "2026-10-28T00:12:18+00:00",
+      "attempts": [
+        {
+          "submission_id": "2183495609",
+          "submitted_at": "2026-10-28T00:12:18+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "3882-minimum-xor-path-in-a-grid.py",
+          "code_sha256": "cced4cf96e17c9e63b50703e6e17c85b6e21f2544369d80b901294a9b16ac3d6",
+          "runtime": "2266 ms",
+          "memory": "64.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "we can use dynamic programming, we can use bottom up dp to track the minimum values for each previous xor ",
+            "this will store a set for all XOR sums to reach dp[i][j]"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-28T00:12:18+00:00",
         "reps": 0,
         "lapses": 0
       }

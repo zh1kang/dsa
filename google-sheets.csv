@@ -60,7 +60,22 @@ we assume the prefix is the first string
 and then we compare it with all the other strings within the list
 and as the strings don't match, we decrement the length
 if we get to 0, we have no matching prefix and we just return an emptry string
-if we do have a matching string we can just return strs[0][:prefix_len]",,,,,,,,,new,2026-10-25T20:28:59+00:00,,,,,0,0
+if we do have a matching string we can just return strs[0][:prefix_len]",,,,,,,,,new,2026-10-27T18:25:46+00:00,,,,,0,0
+14,Longest Common Prefix,longest-common-prefix,https://leetcode.com/problems/longest-common-prefix/,Easy,"Array, String, Trie",2183353636,2026-10-27T18:21:28+00:00,python3,0 ms,19.2 MB,14-longest-common-prefix.py,,"we can take the first word in the string list to be the prefix
+every time the other words do not match the word we chose, we decrement
+if we get to len = 0, we just reutn an empty string
+else, we return the prefix
+we skip the first word since that is already what we chose for the prefix",,,,,,,,,new,2026-10-27T18:25:46+00:00,,,,,0,0
+14,Longest Common Prefix,longest-common-prefix,https://leetcode.com/problems/longest-common-prefix/,Easy,"Array, String, Trie",2183357845,2026-10-27T18:25:46+00:00,python3,0 ms,19.1 MB,14-longest-common-prefix.py,,"we can take the first word in the string list to be the prefix
+every time the other words do not match the word we chose, we decrement
+if we get to len = 0, we just reutn an empty string
+else, we return the prefix
+we skip the first word since that is already what we chose for the prefix
+O(N)
+O(M) where m is length of maximum string
+O(N)
+TC: O(N*M)
+SC: O(M)",,,,,,,O(N*M),O(M),new,2026-10-27T18:25:46+00:00,,,,,0,0
 15,3Sum,3sum,https://leetcode.com/problems/3sum/,Medium,"Array, Two Pointers, Sorting",1874633682,2026-01-04T20:27:33+00:00,python3,570 ms,20.3 MB,15-3sum.py,,,,,,,,,,,new,2026-09-29T04:33:55+00:00,,,,,0,0
 15,3Sum,3sum,https://leetcode.com/problems/3sum/,Medium,"Array, Two Pointers, Sorting",2156646576,2026-09-29T04:32:46+00:00,python3,615 ms,22.3 MB,15-3sum.py,,if we have a duplicate continue incrementing until we dont have a duplicate ,,,,,,,,,new,2026-09-29T04:33:55+00:00,,,,,0,0
 15,3Sum,3sum,https://leetcode.com/problems/3sum/,Medium,"Array, Two Pointers, Sorting",2156647521,2026-09-29T04:33:55+00:00,python3,609 ms,22.2 MB,15-3sum.py,,"increment/decrement i and j to decrease the search space after finding one valid solution 
@@ -113,14 +128,28 @@ if the amount of closing parenthesis is less than open parenthesis we append the
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
-        self.next = next",,,,,,,,,new,2026-10-05T23:22:25+00:00,,,,,0,0
+        self.next = next",,,,,,,,,new,2026-10-27T21:09:00+00:00,,,,,0,0
 23,Merge k Sorted Lists,merge-k-sorted-lists,https://leetcode.com/problems/merge-k-sorted-lists/,Hard,"Linked List, Divide and Conquer, Heap (Priority Queue), Merge Sort, Tournament Sort",2163642685,2026-10-05T23:22:25+00:00,python3,11 ms,23 MB,23-merge-k-sorted-lists.py,,"Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
 you can just use a minheap, append all the nodes and then just pop them top down i think and then just like convert it back to a linked list 
-push everything onto the min heap",,,,,,,,,new,2026-10-05T23:22:25+00:00,,,,,0,0
+push everything onto the min heap",,,,,,,,,new,2026-10-27T21:09:00+00:00,,,,,0,0
+23,Merge k Sorted Lists,merge-k-sorted-lists,https://leetcode.com/problems/merge-k-sorted-lists/,Hard,"Linked List, Divide and Conquer, Heap (Priority Queue), Merge Sort, Tournament Sort",2183446166,2026-10-27T21:09:00+00:00,python3,12 ms,22.7 MB,23-merge-k-sorted-lists.py,,"Definition for singly-linked list.
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+we can utilize a min heap to do this efficiently, we create a dummy list and push all the vlaues within the linked list into a min heap and then pop them off, that way we will have a linked list in ascending order
+popping from the top takes O(1) but rebuilding the list should take O(n) because we have to go throuhg the entire list
+we use the idx for tiebreaker
+O(N) is the length of the list
+O(logk) for heappop operations due to rebalancing the tree, k is the amount of linked lists there are 
+increment 
+if there is another node we push it onto the min heap
+TC: O(N*logk) 
+SC: O(n) because we store at most n nodes in our minheap",,,,,,,O(N*logk),O(n) because we store at most n nodes in our minheap,new,2026-10-27T21:09:00+00:00,,,,,0,0
 26,Remove Duplicates from Sorted Array,remove-duplicates-from-sorted-array,https://leetcode.com/problems/remove-duplicates-from-sorted-array/,Easy,"Array, Two Pointers",1802183888,2025-10-15T07:21:28+00:00,python3,4 ms,18.7 MB,26-remove-duplicates-from-sorted-array.py,,,,,,,,,,,new,,,,,,0,0
 27,Remove Element,remove-element,https://leetcode.com/problems/remove-element/,Easy,"Array, Two Pointers",1802179845,2025-10-15T07:15:22+00:00,python3,0 ms,17.9 MB,27-remove-element.py,,,,,,,,,,,new,,,,,,0,0
 28,Find the Index of the First Occurrence in a String,find-the-index-of-the-first-occurrence-in-a-string,https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/,Easy,"Two Pointers, String, String Matching, Z Algorithm, Knuth–Morris–Pratt Algorithm, Boyer–Moore String-Search Algorithm",2155410243,2026-09-27T23:14:37+00:00,python3,0 ms,19.3 MB,28-find-the-index-of-the-first-occurrence-in-a-string.py,,,,,,,,,,,new,2026-09-27T23:23:03+00:00,,,,,0,0
@@ -597,14 +626,15 @@ and if you reach the end for the 't' pointer, we have a possible subsequence but
 and then we can just store every possible answer in our cache to reuse
 TC: O(M*N) where m is length of s and n is length of t
 SC: O(M*N) since we cache all the possible states? ",,,,,O(M*N) where m is length of s and n is length of t,O(M*N) since we cache all the possible states?,new,2026-09-07T03:47:52+00:00,,,,,0,0
-121,Best Time to Buy and Sell Stock,best-time-to-buy-and-sell-stock,https://leetcode.com/problems/best-time-to-buy-and-sell-stock/,Easy,"Array, Dynamic Programming",1685630009,2025-07-04T02:34:40+00:00,python3,108 ms,27 MB,121-best-time-to-buy-and-sell-stock.py,,use sliding window ,,,,,,,,,new,2026-10-07T16:27:55+00:00,,,,,0,0
-121,Best Time to Buy and Sell Stock,best-time-to-buy-and-sell-stock,https://leetcode.com/problems/best-time-to-buy-and-sell-stock/,Easy,"Array, Dynamic Programming",1803169287,2025-10-16T08:01:36+00:00,python3,59 ms,26.9 MB,121-best-time-to-buy-and-sell-stock.py,,,,,,,,,,,new,2026-10-07T16:27:55+00:00,,,,,0,0
-121,Best Time to Buy and Sell Stock,best-time-to-buy-and-sell-stock,https://leetcode.com/problems/best-time-to-buy-and-sell-stock/,Easy,"Array, Dynamic Programming",1833454857,2025-11-18T17:39:26+00:00,python3,105 ms,27 MB,121-best-time-to-buy-and-sell-stock.py,,,,,,,,,,,new,2026-10-07T16:27:55+00:00,,,,,0,0
-121,Best Time to Buy and Sell Stock,best-time-to-buy-and-sell-stock,https://leetcode.com/problems/best-time-to-buy-and-sell-stock/,Easy,"Array, Dynamic Programming",2146196080,2026-09-19T00:51:02+00:00,python3,59 ms,28.6 MB,121-best-time-to-buy-and-sell-stock.py,,,,,,,,,,,new,2026-10-07T16:27:55+00:00,,,,,0,0
-121,Best Time to Buy and Sell Stock,best-time-to-buy-and-sell-stock,https://leetcode.com/problems/best-time-to-buy-and-sell-stock/,Easy,"Array, Dynamic Programming",2146196867,2026-09-19T00:54:27+00:00,python3,23 ms,28.7 MB,121-best-time-to-buy-and-sell-stock.py,,we can greedy and always sell when the price is smaller than min price,,,,,,,,,new,2026-10-07T16:27:55+00:00,,,,,0,0
+121,Best Time to Buy and Sell Stock,best-time-to-buy-and-sell-stock,https://leetcode.com/problems/best-time-to-buy-and-sell-stock/,Easy,"Array, Dynamic Programming",1685630009,2025-07-04T02:34:40+00:00,python3,108 ms,27 MB,121-best-time-to-buy-and-sell-stock.py,,use sliding window ,,,,,,,,,new,2026-10-27T21:25:58+00:00,,,,,0,0
+121,Best Time to Buy and Sell Stock,best-time-to-buy-and-sell-stock,https://leetcode.com/problems/best-time-to-buy-and-sell-stock/,Easy,"Array, Dynamic Programming",1803169287,2025-10-16T08:01:36+00:00,python3,59 ms,26.9 MB,121-best-time-to-buy-and-sell-stock.py,,,,,,,,,,,new,2026-10-27T21:25:58+00:00,,,,,0,0
+121,Best Time to Buy and Sell Stock,best-time-to-buy-and-sell-stock,https://leetcode.com/problems/best-time-to-buy-and-sell-stock/,Easy,"Array, Dynamic Programming",1833454857,2025-11-18T17:39:26+00:00,python3,105 ms,27 MB,121-best-time-to-buy-and-sell-stock.py,,,,,,,,,,,new,2026-10-27T21:25:58+00:00,,,,,0,0
+121,Best Time to Buy and Sell Stock,best-time-to-buy-and-sell-stock,https://leetcode.com/problems/best-time-to-buy-and-sell-stock/,Easy,"Array, Dynamic Programming",2146196080,2026-09-19T00:51:02+00:00,python3,59 ms,28.6 MB,121-best-time-to-buy-and-sell-stock.py,,,,,,,,,,,new,2026-10-27T21:25:58+00:00,,,,,0,0
+121,Best Time to Buy and Sell Stock,best-time-to-buy-and-sell-stock,https://leetcode.com/problems/best-time-to-buy-and-sell-stock/,Easy,"Array, Dynamic Programming",2146196867,2026-09-19T00:54:27+00:00,python3,23 ms,28.7 MB,121-best-time-to-buy-and-sell-stock.py,,we can greedy and always sell when the price is smaller than min price,,,,,,,,,new,2026-10-27T21:25:58+00:00,,,,,0,0
 121,Best Time to Buy and Sell Stock,best-time-to-buy-and-sell-stock,https://leetcode.com/problems/best-time-to-buy-and-sell-stock/,Easy,"Array, Dynamic Programming",2146197294,2026-09-19T00:56:31+00:00,python3,23 ms,28.9 MB,121-best-time-to-buy-and-sell-stock.py,,"we can greedy by keeping track of the min price every day
-assuming that today could be the best day to sell ",,,,,,,,,new,2026-10-07T16:27:55+00:00,,,,,0,0
-121,Best Time to Buy and Sell Stock,best-time-to-buy-and-sell-stock,https://leetcode.com/problems/best-time-to-buy-and-sell-stock/,Easy,"Array, Dynamic Programming",2165501474,2026-10-07T16:27:55+00:00,python3,23 ms,28.4 MB,121-best-time-to-buy-and-sell-stock.py,[ Time taken: 8hrs 17m 8s ],,,,,,,,,,new,2026-10-07T16:27:55+00:00,,,,,0,0
+assuming that today could be the best day to sell ",,,,,,,,,new,2026-10-27T21:25:58+00:00,,,,,0,0
+121,Best Time to Buy and Sell Stock,best-time-to-buy-and-sell-stock,https://leetcode.com/problems/best-time-to-buy-and-sell-stock/,Easy,"Array, Dynamic Programming",2165501474,2026-10-07T16:27:55+00:00,python3,23 ms,28.4 MB,121-best-time-to-buy-and-sell-stock.py,[ Time taken: 8hrs 17m 8s ],,,,,,,,,,new,2026-10-27T21:25:58+00:00,,,,,0,0
+121,Best Time to Buy and Sell Stock,best-time-to-buy-and-sell-stock,https://leetcode.com/problems/best-time-to-buy-and-sell-stock/,Easy,"Array, Dynamic Programming",2183451792,2026-10-27T21:25:58+00:00,python3,24 ms,28.6 MB,121-best-time-to-buy-and-sell-stock.py,,,,,,,,,,,new,2026-10-27T21:25:58+00:00,,,,,0,0
 122,Best Time to Buy and Sell Stock II,best-time-to-buy-and-sell-stock-ii,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/,Medium,"Array, Dynamic Programming, Greedy",1803176734,2025-10-16T08:14:08+00:00,python3,0 ms,18.7 MB,122-best-time-to-buy-and-sell-stock-ii.py,,greedy approach,,,,,,,,,new,,,,,,0,0
 123,Best Time to Buy and Sell Stock III,best-time-to-buy-and-sell-stock-iii,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/,Hard,"Array, Dynamic Programming",2155551542,2026-09-28T04:36:02+00:00,python3,1779 ms,492.3 MB,123-best-time-to-buy-and-sell-stock-iii.py,[ Time taken: 5hrs 17m 15s ],"We own the stock, so we can sell it
 we don't own the stock so we have to buy ",,,,,,,,,new,2026-09-28T04:36:08+00:00,,,,,0,0
@@ -639,7 +669,8 @@ class Node:
 ",,,,,,,,,new,,,,,,0,0
 134,Gas Station,gas-station,https://leetcode.com/problems/gas-station/,Medium,"Array, Greedy",2133502146,2026-09-07T05:19:49+00:00,python3,15 ms,26 MB,134-gas-station.py,[ Time taken: 28m 59s ],"if tank is negative we cannot make it to the next station so we try a new starting index
 TC: O(n) because we just loop
-SC: O(1) since we are just returning start_idx ",,,,,,,O(n) because we just loop,O(1) since we are just returning start_idx,new,2026-09-07T05:19:49+00:00,,,,,0,0
+SC: O(1) since we are just returning start_idx ",,,,,,,O(n) because we just loop,O(1) since we are just returning start_idx,new,2026-10-27T21:24:08+00:00,,,,,0,0
+134,Gas Station,gas-station,https://leetcode.com/problems/gas-station/,Medium,"Array, Greedy",2183451206,2026-10-27T21:24:08+00:00,python3,17 ms,25.7 MB,134-gas-station.py,,we can just loop through and if the total gas falls below 0 we cannot use that as a starting index so we just try the next,,,,,,,,,new,2026-10-27T21:24:08+00:00,,,,,0,0
 136,Single Number,single-number,https://leetcode.com/problems/single-number/,Easy,"Array, Bit Manipulation",2147052427,2026-09-19T21:28:24+00:00,python3,0 ms,21.2 MB,136-single-number.py,,,,,,,,,,,new,2026-09-19T21:28:24+00:00,,,,,0,0
 138,Copy List with Random Pointer,copy-list-with-random-pointer,https://leetcode.com/problems/copy-list-with-random-pointer/,Medium,"Hash Table, Linked List",1839178566,2025-11-25T06:57:42+00:00,python3,40 ms,18.4 MB,138-copy-list-with-random-pointer.py,[ Time taken: 8 hrs 52 m 28 s ],"
 # Definition for a Node.
@@ -1002,6 +1033,12 @@ blue
 green",,,,,,,,,new,2026-10-24T21:31:37+00:00,,,,,0,0
 261,Graph Valid Tree,graph-valid-tree,https://leetcode.com/problems/graph-valid-tree/,Medium,"Depth-First Search, Breadth-First Search, Union-Find, Graph Theory",2175685346,2026-10-18T19:18:35+00:00,python3,0 ms,20.4 MB,261-graph-valid-tree.py,,,,,,,,,,,new,2026-10-18T19:19:52+00:00,,,,,0,0
 261,Graph Valid Tree,graph-valid-tree,https://leetcode.com/problems/graph-valid-tree/,Medium,"Depth-First Search, Breadth-First Search, Union-Find, Graph Theory",2175686086,2026-10-18T19:19:52+00:00,python3,0 ms,20.2 MB,261-graph-valid-tree.py,,,,,,,,,,,new,2026-10-18T19:19:52+00:00,,,,,0,0
+266,Palindrome Permutation,palindrome-permutation,https://leetcode.com/problems/palindrome-permutation/,Easy,"Hash Table, String, Bit Manipulation",2182680676,2026-10-27T01:23:24+00:00,python3,0 ms,19.1 MB,266-palindrome-permutation.py,,"for even length strings, it must have 0 odd counts
+for odd length strings, it must have exactly one ",,,,,,,,,new,2026-10-27T01:23:24+00:00,,,,,0,0
+267,Palindrome Permutation II,palindrome-permutation-ii,https://leetcode.com/problems/palindrome-permutation-ii/,Medium,"Hash Table, String, Backtracking",2182768055,2026-10-27T04:34:19+00:00,python3,64 ms,23.8 MB,267-palindrome-permutation-ii.py,,"we want to count the number of characters sand make sure that the amount of odd count characters does not exceed 1, if it does then we just return [] because we do not have a palindrome
+choose the character
+explore
+undo",,,,,,,,,new,2026-10-27T04:34:19+00:00,,,,,0,0
 268,Missing Number,missing-number,https://leetcode.com/problems/missing-number/,Easy,"Array, Hash Table, Math, Binary Search, Bit Manipulation, Sorting",1870083547,2025-12-31T08:00:29+00:00,python3,3 ms,18.7 MB,268-missing-number.py,,,,,,,,,,,new,2026-10-01T01:05:12+00:00,,,,,0,0
 268,Missing Number,missing-number,https://leetcode.com/problems/missing-number/,Easy,"Array, Hash Table, Math, Binary Search, Bit Manipulation, Sorting",2158671385,2026-10-01T01:05:12+00:00,python3,4 ms,21 MB,268-missing-number.py,[ Time taken: 1d 15hrs 46m 58s ],"add to set
 iterate through",,,,,,,,,new,2026-10-01T01:05:12+00:00,,,,,0,0
@@ -1020,6 +1057,7 @@ codec.decode(codec.encode(strs))",,,,,,,,,new,2026-10-01T01:41:51+00:00,,,,,0,0
 278,First Bad Version,first-bad-version,https://leetcode.com/problems/first-bad-version/,Easy,"Binary Search, Interactive",2078595406,2026-07-23T15:48:16+00:00,python3,46 ms,19.1 MB,278-first-bad-version.py,,"The isBadVersion API is already defined for you.
 def isBadVersion(version: int) -> bool:",,,,,,,,,new,,,,,,0,0
 290,Word Pattern,word-pattern,https://leetcode.com/problems/word-pattern/,Easy,"Hash Table, String",2167904441,2026-10-10T06:45:30+00:00,python3,0 ms,19.2 MB,290-word-pattern.py,,hash map !,,,,,,,,,new,2026-10-10T06:45:30+00:00,,,,,0,0
+293,Flip Game,flip-game,https://leetcode.com/problems/flip-game/,Easy,String,2183490628,2026-10-27T23:52:02+00:00,python3,0 ms,19.3 MB,293-flip-game.py,,,,,,,,,,,new,2026-10-27T23:52:02+00:00,,,,,0,0
 294,Flip Game II,flip-game-ii,https://leetcode.com/problems/flip-game-ii/,Medium,"Math, Dynamic Programming, Backtracking, Memoization, Minimax, Game Theory, Sprague–Grundy Theorem, Impartial Game",2175658924,2026-10-18T18:36:57+00:00,python3,8 ms,19.6 MB,294-flip-game-ii.py,,"thoughts:
 the constraints are small enough to where we can try and look for every possible combination of flips with backtracking and if just one of them results in us winning we return true 
 this would be O(2^N), but we can also memoize and store combinations we've already tried
@@ -1165,6 +1203,7 @@ obj = HitCounter()
 obj.hit(timestamp)
 param_2 = obj.getHits(timestamp)",,,,,,,,,new,2026-10-01T02:18:29+00:00,,,,,0,0
 383,Ransom Note,ransom-note,https://leetcode.com/problems/ransom-note/,Easy,"Hash Table, String, Counting",1873655784,2026-01-04T00:35:07+00:00,python3,25 ms,17.7 MB,383-ransom-note.py,,,,,,,,,,,new,,,,,,0,0
+389,Find the Difference,find-the-difference,https://leetcode.com/problems/find-the-difference/,Easy,"Hash Table, String, Bit Manipulation, Sorting",2182772334,2026-10-27T04:40:55+00:00,python3,2 ms,18.8 MB,389-find-the-difference.py,,,,,,,,,,,new,2026-10-27T04:40:55+00:00,,,,,0,0
 394,Decode String,decode-string,https://leetcode.com/problems/decode-string/,Medium,"String, Stack, Recursion",2176616859,2026-10-19T22:08:25+00:00,python3,0 ms,19.1 MB,394-decode-string.py,,"deal with mutli-digit numbers properly e.g. 12 or 130
 if we reached a opening bracket we append to the stack and reset ",,,,,,,,,new,2026-10-19T22:08:25+00:00,,,,,0,0
 409,Longest Palindrome,longest-palindrome,https://leetcode.com/problems/longest-palindrome/,Easy,"Hash Table, String, Greedy",1876003480,2026-01-06T04:43:17+00:00,python3,3 ms,17.3 MB,409-longest-palindrome.py,,,,,,,,,,,new,,,,,,0,0
@@ -1275,6 +1314,16 @@ class TreeNode:
         self.left = left
         self.right = right
 base case",,,,,,,,,new,,,,,,0,0
+572,Subtree of Another Tree,subtree-of-another-tree,https://leetcode.com/problems/subtree-of-another-tree/,Easy,"Tree, Depth-First Search, String Matching, Binary Tree, Hash Function",2182798506,2026-10-27T05:18:04+00:00,python3,71 ms,19.4 MB,572-subtree-of-another-tree.py,,"Definition for a binary tree node.
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+empty tree is always a subtree
+non-empty sub root cannot be in an empty root
+create a method to check if two roots are the same tree
+recrusively ensure the left and right stuctures match",,,,,,,,,new,2026-10-27T05:18:04+00:00,,,,,0,0
 621,Task Scheduler,task-scheduler,https://leetcode.com/problems/task-scheduler/,Medium,"Array, Hash Table, Greedy, Sorting, Heap (Priority Queue), Counting",1873942524,2026-01-04T07:32:39+00:00,python3,120 ms,19.6 MB,621-task-scheduler.py,,,,,,,,,,,new,,,,,,0,0
 647,Palindromic Substrings,palindromic-substrings,https://leetcode.com/problems/palindromic-substrings/,Medium,"Two Pointers, String, Dynamic Programming",2144272002,2026-09-17T04:03:09+00:00,python3,1281 ms,285.8 MB,647-palindromic-substrings.py,,"thoughts:
 we are asked to give a total number of palindromic substrings
@@ -1320,6 +1369,9 @@ Move to the next element in nums
 Backtrack / Undo choice
 Pruning Optimization: Avoid duplicate work
 If this bucket is 0, trying subsequent empty buckets yields the same result",,,,,,,,,new,,,,,,0,0
+703,Kth Largest Element in a Stream,kth-largest-element-in-a-stream,https://leetcode.com/problems/kth-largest-element-in-a-stream/,Easy,"Tree, Design, Binary Search Tree, Heap (Priority Queue), Binary Tree, Data Stream",2183484153,2026-10-27T23:24:58+00:00,python3,34 ms,25.7 MB,703-kth-largest-element-in-a-stream.py,,"Your KthLargest object will be instantiated and called as such:
+obj = KthLargest(k, nums)
+param_1 = obj.add(val)",,,,,,,,,new,2026-10-27T23:24:58+00:00,,,,,0,0
 704,Binary Search,binary-search,https://leetcode.com/problems/binary-search/,Easy,"Array, Binary Search",1877105946,2026-01-07T03:36:00+00:00,python3,0 ms,20.6 MB,704-binary-search.py,,,,,,,,,,,new,,,,,,0,0
 705,Design HashSet,design-hashset,https://leetcode.com/problems/design-hashset/,Easy,"Array, Hash Table, Linked List, Design, Hash Function",2180841956,2026-10-24T20:11:56+00:00,python3,810 ms,24.5 MB,705-design-hashset.py,,"Your MyHashSet object will be instantiated and called as such:
 obj = MyHashSet()
@@ -1669,6 +1721,7 @@ param_1 = obj.addCar(carType)",,,,,,,,,new,2026-10-24T19:46:23+00:00,,,,,0,0
 1658,Minimum Operations to Reduce X to Zero,minimum-operations-to-reduce-x-to-zero,https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/,Medium,"Array, Hash Table, Binary Search, Sliding Window, Prefix Sum",2150300665,2026-09-23T01:08:46+00:00,python3,67 ms,31.4 MB,1658-minimum-operations-to-reduce-x-to-zero.py,,the target is how many values we can keep,,,,,,,,,new,2026-09-23T01:08:46+00:00,,,,,0,0
 1768,Merge Strings Alternately,merge-strings-alternately,https://leetcode.com/problems/merge-strings-alternately/,Easy,"Two Pointers, String",1516230580,2025-01-21T21:48:55+00:00,java,1 ms,42 MB,1768-merge-strings-alternately.java,,,,,,,,,,,new,,,,,,0,0
 1807,Evaluate the Bracket Pairs of a String,evaluate-the-bracket-pairs-of-a-string,https://leetcode.com/problems/evaluate-the-bracket-pairs-of-a-string/,Medium,"Array, Hash Table, String",2153442142,2026-09-26T01:58:24+00:00,python3,50 ms,51.9 MB,1807-evaluate-the-bracket-pairs-of-a-string.py,[ Time taken: 1d 4hrs 37m 2s ],,,,,,,,,,new,2026-09-26T01:58:24+00:00,,,,,0,0
+1903,Largest Odd Number in String,largest-odd-number-in-string,https://leetcode.com/problems/largest-odd-number-in-string/,Easy,"Math, String, Greedy",2183477367,2026-10-27T22:56:57+00:00,python3,7 ms,20 MB,1903-largest-odd-number-in-string.py,,,,,,,,,,,new,2026-10-27T22:56:57+00:00,,,,,0,0
 2043,Simple Bank System,simple-bank-system,https://leetcode.com/problems/simple-bank-system/,Medium,"Array, Hash Table, Design, Simulation",2093621009,2026-08-04T07:13:34+00:00,python3,25 ms,49.6 MB,2043-simple-bank-system.py,[ Time taken: 23hrs 33m 56s ],"Your Bank object will be instantiated and called as such:
 obj = Bank(balance)
 param_1 = obj.transfer(account1,account2,money)
@@ -1716,7 +1769,7 @@ move pointers
 if < 2 points were found, return [-1, -1]
 max dist is the distance from the last crit index and first","initially thought I had to store in a hashmap but we can just do find local min/max on the fly
 max dist is always the distance between the last and first crit index we find 
-TC: O(n) and O(1) space ",,,,,O(n) and O(1) space,,review,2026-09-03T18:59:57.341203+00:00,2026-09-02T18:59:57.341203+00:00,1.2931,5.112170705601056,0.5620716602488707,1,0
+TC: O(n) and O(1) space ",,,,,O(n) and O(1) space,,review,2026-09-03T18:59:57.341203+00:00,2026-09-02T18:59:57.341203+00:00,1.2931,5.112170705601056,0.560521039120928,1,0
 2058,Find the Minimum and Maximum Number of Nodes Between Critical Points,find-the-minimum-and-maximum-number-of-nodes-between-critical-points,https://leetcode.com/problems/find-the-minimum-and-maximum-number-of-nodes-between-critical-points/,Medium,Linked List,2126389151,2026-08-31T17:12:32+00:00,python3,89 ms,63.2 MB,2058-find-the-minimum-and-maximum-number-of-nodes-between-critical-points.py,,"Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -1759,7 +1812,7 @@ move pointers
 if < 2 points were found, return [-1, -1]
 max dist is the distance from the last crit index and first","initially thought I had to store in a hashmap but we can just do find local min/max on the fly
 max dist is always the distance between the last and first crit index we find 
-TC: O(n) and O(1) space ",,,,,O(n) and O(1) space,,review,2026-09-03T18:59:57.341203+00:00,2026-09-02T18:59:57.341203+00:00,1.2931,5.112170705601056,0.5620716602488707,1,0
+TC: O(n) and O(1) space ",,,,,O(n) and O(1) space,,review,2026-09-03T18:59:57.341203+00:00,2026-09-02T18:59:57.341203+00:00,1.2931,5.112170705601056,0.560521039120928,1,0
 2058,Find the Minimum and Maximum Number of Nodes Between Critical Points,find-the-minimum-and-maximum-number-of-nodes-between-critical-points,https://leetcode.com/problems/find-the-minimum-and-maximum-number-of-nodes-between-critical-points/,Medium,Linked List,2128875517,2026-09-02T18:51:50+00:00,python3,86 ms,62.9 MB,2058-find-the-minimum-and-maximum-number-of-nodes-between-critical-points.py,,"Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -1773,7 +1826,7 @@ if point is a critical point, we save the index
 else we already have an index and we can find the min dist
 increment the pointers
 check if there is fewer than two distinct cirtical points:
-max dist is always the latest crit point and the first crit point",,,,,,,,,review,2026-09-03T18:59:57.341203+00:00,2026-09-02T18:59:57.341203+00:00,1.2931,5.112170705601056,0.5620716602488707,1,0
+max dist is always the latest crit point and the first crit point",,,,,,,,,review,2026-09-03T18:59:57.341203+00:00,2026-09-02T18:59:57.341203+00:00,1.2931,5.112170705601056,0.560521039120928,1,0
 2089,Find Target Indices After Sorting Array,find-target-indices-after-sorting-array,https://leetcode.com/problems/find-target-indices-after-sorting-array/,Easy,"Array, Binary Search, Sorting",2175852935,2026-10-19T03:31:57+00:00,python3,0 ms,19.3 MB,2089-find-target-indices-after-sorting-array.py,,,,,,,,,,,new,2026-10-19T03:31:57+00:00,,,,,0,0
 2091,Removing Minimum and Maximum From Array,removing-minimum-and-maximum-from-array,https://leetcode.com/problems/removing-minimum-and-maximum-from-array/,Medium,"Array, Greedy",2124621450,2026-08-30T04:34:09+00:00,python3,21 ms,33.7 MB,2091-removing-minimum-and-maximum-from-array.py,,"first we can do one pass to find the max and min
 after that, there are essentially three ways to find the number of deletions
@@ -2025,6 +2078,8 @@ if the minimum is even, we can't change the parity of an array with mixed values
 this is for if the entire nums1 array have all the same parity; O(n)
 TC: O(n), we linear scan through the array 
 SC: O(1), we store at most one constant value",,,,,,,"O(n), we linear scan through the array","O(1), we store at most one constant value",new,2026-09-03T15:42:57+00:00,,,,,0,0
+3882,Minimum XOR Path in a Grid,minimum-xor-path-in-a-grid,https://leetcode.com/problems/minimum-xor-path-in-a-grid/,Medium,"Array, Dynamic Programming, Bit Manipulation, Matrix",2183495609,2026-10-28T00:12:18+00:00,python3,2266 ms,64.3 MB,3882-minimum-xor-path-in-a-grid.py,,"we can use dynamic programming, we can use bottom up dp to track the minimum values for each previous xor 
+this will store a set for all XOR sums to reach dp[i][j]",,,,,,,,,new,2026-10-28T00:12:18+00:00,,,,,0,0
 3903,Smallest Stable Index I,smallest-stable-index-i,https://leetcode.com/problems/smallest-stable-index-i/,Easy,"Array, Prefix Sum",2130792590,2026-09-04T14:28:50+00:00,python3,4 ms,19.1 MB,3903-smallest-stable-index-i.py,,"thoughts:
 we can just do prefix and suffix sum here, and we constantly find the max in our prefix and then the min in our suffix,
 we start with the max of the prefix being the very first value, and looping throuhg and keeping track of the currentm ax at each index
@@ -2056,3 +2111,5 @@ case 1: rotating ascending array
 either rotate left k times or simulate right rotation
 case 2: rotated descending array
 rotate left then reverse",,,,,,,,,new,2026-10-22T20:16:15+00:00,,,,,0,0
+3963,Create Grid With Exactly One Path,create-grid-with-exactly-one-path,https://leetcode.com/problems/create-grid-with-exactly-one-path/,Easy,,2182673753,2026-10-27T01:02:25+00:00,python3,2 ms,19.3 MB,3963-create-grid-with-exactly-one-path.py,,,,,,,,,,,new,2026-10-27T01:04:44+00:00,,,,,0,0
+3963,Create Grid With Exactly One Path,create-grid-with-exactly-one-path,https://leetcode.com/problems/create-grid-with-exactly-one-path/,Easy,,2182674520,2026-10-27T01:04:44+00:00,python3,0 ms,19.1 MB,3963-create-grid-with-exactly-one-path.py,,,,,,,,,,,new,2026-10-27T01:04:44+00:00,,,,,0,0
