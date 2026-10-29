@@ -108,7 +108,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
       "first_solved_at": "2025-07-04T02:34:40+00:00",
-      "last_solved_at": "2026-10-27T21:25:58+00:00",
+      "last_solved_at": "2026-10-28T17:11:00+00:00",
       "attempts": [
         {
           "submission_id": "1685630009",
@@ -292,6 +292,53 @@
             "time_complexity": "",
             "space_complexity": ""
           }
+        },
+        {
+          "submission_id": "2184115214",
+          "submitted_at": "2026-10-28T17:10:21+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "121-best-time-to-buy-and-sell-stock.py",
+          "code_sha256": "812a25c9834da80a7fcf78d01c9c396b4e63b95aeda1f68583f649bc643a9f36",
+          "runtime": "39 ms",
+          "memory": "28.6 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2184115849",
+          "submitted_at": "2026-10-28T17:11:00+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "121-best-time-to-buy-and-sell-stock.py",
+          "code_sha256": "37287586388797b3c2a94d47d7deec731c88bfd422e26b013ed2a6e01fe8917a",
+          "runtime": "40 ms",
+          "memory": "28.5 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "TC: O(N)",
+            "SC: O(1)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "O(N)",
+            "space_complexity": "O(1)"
+          }
         }
       ],
       "review": {
@@ -300,7 +347,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": "2026-10-27T21:25:58+00:00",
+        "next_review": "2026-10-28T17:11:00+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -443,7 +490,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/merge-sorted-array/",
       "first_solved_at": "2025-10-15T07:09:13+00:00",
-      "last_solved_at": "2025-10-15T07:09:13+00:00",
+      "last_solved_at": "2026-10-28T18:27:53+00:00",
       "attempts": [
         {
           "submission_id": "1802174392",
@@ -492,6 +539,30 @@
             "space_complexity": ""
           },
           "code_sha256": "c32954159279ab74fba4f5a1c10678c18c11c002daf15c439fab04f5e0b3d53b"
+        },
+        {
+          "submission_id": "2184191822",
+          "submitted_at": "2026-10-28T18:27:53+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "88-merge-sorted-array.py",
+          "code_sha256": "b44706eafb041a9937408d1c185aca5281cf03990262dd6ac82c600e962cb722",
+          "runtime": "0 ms",
+          "memory": "19.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "\n        Do not return anything, modify nums1 in-place instead.\n        "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -500,7 +571,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": null,
+        "next_review": "2026-10-28T18:27:53+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -3628,7 +3699,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/reverse-linked-list/",
       "first_solved_at": "2026-01-02T08:01:51+00:00",
-      "last_solved_at": "2026-01-02T08:01:51+00:00",
+      "last_solved_at": "2026-10-28T18:35:18+00:00",
       "attempts": [
         {
           "submission_id": "1871792876",
@@ -3657,6 +3728,62 @@
             "space_complexity": ""
           },
           "code_sha256": "c266f949cb0369e281f7a9cd2ffdbfc0becbb8579e8518f7605f7293814c2f38"
+        },
+        {
+          "submission_id": "2184197916",
+          "submitted_at": "2026-10-28T18:34:48+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "206-reverse-linked-list.py",
+          "code_sha256": "7a3ffbc5d1420ec4fd6071411dcc42c9b620d274cc955a72bd4bd9afd60b4d6c",
+          "runtime": "0 ms",
+          "memory": "20.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "Definition for singly-linked list.",
+            "class ListNode:",
+            "    def __init__(self, val=0, next=None):",
+            "        self.val = val",
+            "        self.next = next"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2184198321",
+          "submitted_at": "2026-10-28T18:35:18+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "206-reverse-linked-list.py",
+          "code_sha256": "7a3ffbc5d1420ec4fd6071411dcc42c9b620d274cc955a72bd4bd9afd60b4d6c",
+          "runtime": "0 ms",
+          "memory": "20.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "Definition for singly-linked list.",
+            "class ListNode:",
+            "    def __init__(self, val=0, next=None):",
+            "        self.val = val",
+            "        self.next = next"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -3665,7 +3792,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": null,
+        "next_review": "2026-10-28T18:35:18+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -4448,7 +4575,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/valid-anagram/",
       "first_solved_at": "2026-01-05T06:15:42+00:00",
-      "last_solved_at": "2026-01-05T06:15:42+00:00",
+      "last_solved_at": "2026-10-28T18:02:05+00:00",
       "attempts": [
         {
           "submission_id": "1874956747",
@@ -4471,6 +4598,50 @@
             "space_complexity": ""
           },
           "code_sha256": "0b2a9f06ab3cf386403cbf805625e3d3608193fcf838c9e8534b958cc71f4e19"
+        },
+        {
+          "submission_id": "2184152395",
+          "submitted_at": "2026-10-28T17:47:46+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "242-valid-anagram.py",
+          "code_sha256": "f6818e4619a9f6d5926f83e135c26af414ca3ce19e0dea56e8de5c44fdf1594c",
+          "runtime": "5 ms",
+          "memory": "19.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2184166328",
+          "submitted_at": "2026-10-28T18:02:05+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "242-valid-anagram.py",
+          "code_sha256": "a349577146cacafb3f4adad6a6d62000e85ccc80ff3f1497af24525f87e06cab",
+          "runtime": "5 ms",
+          "memory": "19.4 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -4479,7 +4650,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": null,
+        "next_review": "2026-10-28T18:02:05+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -8033,7 +8204,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/climbing-stairs/",
       "first_solved_at": "2026-08-04T08:43:43+00:00",
-      "last_solved_at": "2026-08-04T08:43:43+00:00",
+      "last_solved_at": "2026-10-28T18:38:41+00:00",
       "attempts": [
         {
           "submission_id": "2093710740",
@@ -8056,6 +8227,72 @@
             "space_complexity": ""
           },
           "code_sha256": "da8bee01fc65fb98007142c41b0dbe07f36443633250b1e3da94f018d2c4bfa2"
+        },
+        {
+          "submission_id": "2184200572",
+          "submitted_at": "2026-10-28T18:38:15+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "70-climbing-stairs.py",
+          "code_sha256": "99fdb65d20d88c4124e052c60ae9fccda5650ffb42230ccc3078252ff5c318ec",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2184200759",
+          "submitted_at": "2026-10-28T18:38:29+00:00",
+          "status": "Runtime Error",
+          "language": "python3",
+          "code_path": "70-climbing-stairs.py",
+          "code_sha256": "a23f01f95ab8d8396b751620c24b1bd570b37160393179f4a6c0bc1aa3d679c7",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2184200885",
+          "submitted_at": "2026-10-28T18:38:41+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "70-climbing-stairs.py",
+          "code_sha256": "91953476e60d19c4da6228586bf3037cd02220907d951f16638ac13bbd51f1da",
+          "runtime": "1 ms",
+          "memory": "19.2 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
         }
       ],
       "review": {
@@ -8064,7 +8301,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": null,
+        "next_review": "2026-10-28T18:38:41+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -8836,7 +9073,7 @@
       ],
       "leetcode_url": "https://leetcode.com/problems/valid-palindrome/",
       "first_solved_at": "2026-08-07T13:41:24+00:00",
-      "last_solved_at": "2026-08-07T13:42:03+00:00",
+      "last_solved_at": "2026-10-28T18:09:57+00:00",
       "attempts": [
         {
           "submission_id": "2098000684",
@@ -8905,6 +9142,75 @@
             "space_complexity": ""
           },
           "code_sha256": "6cd3329141255b9c5f00f85a1a5e49c35676d7bff238f704989b47997ad166d3"
+        },
+        {
+          "submission_id": "2184169517",
+          "submitted_at": "2026-10-28T18:05:19+00:00",
+          "status": "Wrong Answer",
+          "language": "python3",
+          "code_path": "125-valid-palindrome.py",
+          "code_sha256": "634d7d6e3eb98e4a52e3fc0864c78b56c7411d264916a5066e3470e0f3eac65d",
+          "runtime": "N/A",
+          "memory": "N/A",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2184173601",
+          "submitted_at": "2026-10-28T18:09:25+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "125-valid-palindrome.py",
+          "code_sha256": "bb3f8ca9d238e0d83c6ab69f89734f329e1916ddeeb667fa6d4838360cd80972",
+          "runtime": "7 ms",
+          "memory": "19.5 MB",
+          "leetcode_notes": null,
+          "raw_comments": [],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        },
+        {
+          "submission_id": "2184174163",
+          "submitted_at": "2026-10-28T18:09:57+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "125-valid-palindrome.py",
+          "code_sha256": "5f966da907e750594323e0685fc82837819344d462db7c7cdea5f444f7ff8bf3",
+          "runtime": "9 ms",
+          "memory": "19.5 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "TC: O(n)",
+            "SC: O(1)"
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "O(n)",
+            "space_complexity": "O(1)"
+          }
         }
       ],
       "review": {
@@ -8913,7 +9219,7 @@
         "difficulty": null,
         "retrievability": null,
         "last_review": null,
-        "next_review": null,
+        "next_review": "2026-10-28T18:09:57+00:00",
         "reps": 0,
         "lapses": 0
       }
@@ -10257,7 +10563,7 @@
         "state": "review",
         "stability": 1.2931,
         "difficulty": 5.112170705601056,
-        "retrievability": 0.560521039120928,
+        "retrievability": 0.559001875526734,
         "last_review": "2026-09-02T18:59:57.341203+00:00",
         "next_review": "2026-09-03T18:59:57.341203+00:00",
         "reps": 1,
@@ -23529,6 +23835,55 @@
         "retrievability": null,
         "last_review": null,
         "next_review": "2026-10-28T00:12:18+00:00",
+        "reps": 0,
+        "lapses": 0
+      }
+    },
+    "283-move-zeroes": {
+      "leetcode_id": "283",
+      "slug": "move-zeroes",
+      "title": "Move Zeroes",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Two Pointers"
+      ],
+      "leetcode_url": "https://leetcode.com/problems/move-zeroes/",
+      "first_solved_at": "2026-10-28T18:21:09+00:00",
+      "last_solved_at": "2026-10-28T18:21:09+00:00",
+      "attempts": [
+        {
+          "submission_id": "2184185302",
+          "submitted_at": "2026-10-28T18:21:09+00:00",
+          "status": "Accepted",
+          "language": "python3",
+          "code_path": "283-move-zeroes.py",
+          "code_sha256": "f21d5f360a1526e4bf90fc1a3e3fa352a9902329f82a45891b71331be2154483",
+          "runtime": "5 ms",
+          "memory": "20.3 MB",
+          "leetcode_notes": null,
+          "raw_comments": [
+            "\n        Do not return anything, modify nums in-place instead.\n        "
+          ],
+          "notes": {
+            "thought_process": "",
+            "notes": "",
+            "core_insight": "",
+            "pattern": "",
+            "mistakes": "",
+            "edge_cases": "",
+            "time_complexity": "",
+            "space_complexity": ""
+          }
+        }
+      ],
+      "review": {
+        "state": "new",
+        "stability": null,
+        "difficulty": null,
+        "retrievability": null,
+        "last_review": null,
+        "next_review": "2026-10-28T18:21:09+00:00",
         "reps": 0,
         "lapses": 0
       }
